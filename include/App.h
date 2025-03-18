@@ -11,6 +11,8 @@ public:
     bool ShouldRun() {return !m_exitCall;}
     virtual void Init() = 0;
     virtual void Update() = 0;
+    virtual void Run() = 0;
+
 private:
     bool m_exitCall {false};
 };

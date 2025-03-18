@@ -13,16 +13,8 @@ public:
     virtual void Init() override = 0;
     virtual void Update() override = 0;
     virtual void Draw() const override = 0;
+    virtual void Run() override = 0;
 
-    void Run()
-    {
-        Init();
-        while (ShouldRun())
-        {
-            Update();
-            Draw();
-        }
-    }
 private:
 };
 
