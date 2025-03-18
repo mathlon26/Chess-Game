@@ -6,8 +6,11 @@
 class HumanPlayer : public Player
 {
 public:
-    HumanPlayer();
+    HumanPlayer(Color color);
     ~HumanPlayer();
+
+    std::string GetInput() const override;
+    std::string GetName() const override;
 private:
 };
 

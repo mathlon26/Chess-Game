@@ -8,7 +8,7 @@ class CanvasApp : public Canvas, public App
 {
 public:
     CanvasApp() : Canvas{}, App{} {};
-    ~CanvasApp() {};
+    ~CanvasApp() = default;;
 
     virtual void Init() override = 0;
     virtual void Update() override = 0;

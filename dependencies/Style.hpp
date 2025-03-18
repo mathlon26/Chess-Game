@@ -11,7 +11,7 @@
 #include <cstdio>
 
 // Extended color enumeration, including a DEFAULT for resetting styles.
-enum class Color { RED, GREEN, BLUE, CYAN, MAGENTA, YELLOW, LIGHT_GREEN, PINK, DEFAULT };
+enum class Color { WHITE, BLACK, RED, GREEN, BLUE, CYAN, MAGENTA, YELLOW, LIGHT_GREEN, PINK, DEFAULT };
 
 class Style
 {    
@@ -21,6 +21,8 @@ public:
     {
         switch(color)
         {
+            case Color::WHITE:       return "\033[37m";
+            case Color::BLACK:       return "\033[30m";
             case Color::RED:         return "\033[31m";
             case Color::GREEN:       return "\033[32m";
             case Color::YELLOW:      return "\033[33m";
@@ -31,6 +33,26 @@ public:
             case Color::PINK:        return "\033[95m"; // Bright magenta.
             case Color::DEFAULT:
             default:                 return "\033[0m";
+        }
+    }
+
+    // Convert a Color to its corresponding string.
+    static inline std::string Cts(Color color)
+    {
+        switch(color)
+        {
+            case Color::WHITE:       return "white";
+            case Color::BLACK:       return "black";
+            case Color::RED:         return "red";
+            case Color::GREEN:       return "green";
+            case Color::YELLOW:      return "yellow";
+            case Color::BLUE:        return "blue";
+            case Color::MAGENTA:     return "magenta";
+            case Color::CYAN:        return "cyan";
+            case Color::LIGHT_GREEN: return "light green";
+            case Color::PINK:        return "pink";
+            case Color::DEFAULT:
+            default:                 return "";
         }
     }
 
@@ -185,11 +207,6 @@ public:
         std::cout << "\033[2J\033[H";
     }
 
-    static inline void GetInput(const std::string &prompt, const std::string &title = "", Color color = Color::YELLOW)
-    {
-        PrintColored(prompt, color);
-        std::cin.get();
-    }
 
     static inline bool GetBoolInput(const std::string &prompt, const std::string &title = "", Color color = Color::YELLOW, Color titleColor = Color::CYAN)
     {
@@ -207,7 +224,7 @@ public:
     static inline std::string GetStringInput(const std::string &prompt, const std::string &title = "", Color color = Color::YELLOW, Color titleColor = Color::CYAN)
     {
         if (!title.empty())
-            PrintTitle(title, titleColor);
+            PrintColoredLine(BoldText(title), titleColor);
         
         PrintColored(prompt, color);
         std::string input;

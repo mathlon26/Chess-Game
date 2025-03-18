@@ -6,8 +6,11 @@
 class BotPlayer : public Player
 {
 public:
-    BotPlayer();
+    BotPlayer(Color color);
     ~BotPlayer();
+
+    std::string GetInput() const override;
+    std::string GetName() const override;
 private:
 };
 

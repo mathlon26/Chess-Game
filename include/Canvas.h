@@ -7,7 +7,7 @@ class Canvas : public Style
 {
 public:
     Canvas() : Style{} {};
-    ~Canvas() {};
+    ~Canvas() = default;
 
     virtual void Draw() const = 0;
 private:

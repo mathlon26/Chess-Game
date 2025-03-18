@@ -5,7 +5,7 @@ class App
 {
 public:
     App() {};
-    ~App() {};
+    ~App() = default;
 
     void Exit() {m_exitCall = true;}
     bool ShouldRun() {return !m_exitCall;}

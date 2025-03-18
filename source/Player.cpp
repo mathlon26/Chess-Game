@@ -2,7 +2,8 @@
 
 Player::Player(Color color)
     :
-    m_color{color}
+    m_color{color},
+    m_captures{}
 {
 }
 
@@ -10,7 +11,12 @@ Player::~Player()
 {
 }
 
-Color Player::GetColor() 
+std::vector<Piece*> Player::GetCaptures() const
+{
+    return m_captures;
+}
+
+Color Player::GetColor() const
 {
     return m_color;
 }

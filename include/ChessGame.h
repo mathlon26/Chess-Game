@@ -3,6 +3,7 @@
 
 #include "CanvasApp.h"
 #include "TwoPlayerGame.h"
+#include "Board.h"
 
 class ChessGame : public CanvasApp, public TwoPlayerGame
 {
@@ -16,8 +17,9 @@ public:
     void Update() override;
     void Draw() const override;
 
-    Move& GetPlayerMove();
+    Move GetPlayerMove();
 private:
+    Board* m_board;
 };
 
 #endif // CHESS_GAME__H
