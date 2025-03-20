@@ -204,6 +204,10 @@ public:
     // Clear the console screen (works on Unix-like systems with ANSI support).
     static inline void ClearConsole()
     {
+        #ifdef DEBUG
+            std::cout << std::endl;
+            return;
+        #endif
         std::cout << "\033[2J\033[H";
     }
 

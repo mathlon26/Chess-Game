@@ -1,6 +1,6 @@
 #include "../include/Player.h"
 
-Player::Player(Color color)
+Player::Player(PlayerColor color)
     :
     m_color{color},
     m_captures{}
@@ -16,7 +16,12 @@ std::vector<Piece*> Player::GetCaptures() const
     return m_captures;
 }
 
-Color Player::GetColor() const
+void Player::AddCapture(Piece* captured)
+{
+    m_captures.push_back(captured);
+}
+
+PlayerColor Player::Color() const
 {
     return m_color;
 }

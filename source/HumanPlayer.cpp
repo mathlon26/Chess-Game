@@ -1,7 +1,7 @@
 #include "../include/HumanPlayer.h"
 #include "../dependencies/Style.hpp"
 
-HumanPlayer::HumanPlayer(Color color)
+HumanPlayer::HumanPlayer(PlayerColor color)
     :
     Player{color}
 {
@@ -9,14 +9,16 @@ HumanPlayer::HumanPlayer(Color color)
 
 HumanPlayer::~HumanPlayer()
 {
+    for (Piece* piece : m_captures)
+        delete piece;
 }
 
-std::string HumanPlayer::GetName() const
+std::string HumanPlayer::Name() const
 {
     return Style::Cts(m_color) + " (Player)";
 }
 
-std::string HumanPlayer::GetInput() const
+std::string HumanPlayer::GetInput(const Board* const board) const
 {
     return Style::GetStringInput(
         " >> ",

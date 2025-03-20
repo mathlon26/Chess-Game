@@ -2,18 +2,33 @@
 #define PIECE__H
 
 #include "../dependencies/Style.hpp"
+#include "Board.h"
+#include "Move.h"
+
+// for Color() function
+typedef Color PieceColor;
+
+class Move;
+class Board;
 
 class Piece
 {
 public:
-    Piece(Color color) : m_color{color} {}
+    Piece(PieceColor color) : m_color{color} {}
     virtual ~Piece() = default;
+    PieceColor Color() const {return m_color;}
 
-    virtual std::string GetSymbol() = 0;
+    
 
-    Color GetColor() {return m_color;}
+    virtual std::string Symbol() const = 0;
+    virtual std::vector<Move> PossibleMoves(Board* board, int currentX, int currentY) const = 0;
+    virtual bool IsValidMove(Piece* target, Board* board, Move& move, Piece*& setReplacement) const = 0;
+
+    virtual bool IsKing() const {return false;}
+
 protected:
-    Color m_color;
+    
+    PieceColor m_color;
 };
 
 #endif // PIECE__H

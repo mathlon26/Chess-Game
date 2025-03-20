@@ -6,20 +6,26 @@
 #include "../dependencies/Style.hpp"
 #include <string>
 
+typedef Color PlayerColor;
+
 class Player
 {
 public:
-    Player(Color color);
+    Player(PlayerColor color);
     virtual ~Player() = 0;
 
-    virtual std::string GetInput() const = 0;
-    virtual std::string GetName() const = 0;
+    virtual std::string GetInput(const Board* const board) const = 0;
+    virtual std::string Name() const = 0;
 
-    Color GetColor() const;
-    std::vector<Piece*> GetCaptures() const;
+    virtual bool IsBot() {return false;}
+
+    PlayerColor Color() const;
+    std::vector<Piece *> GetCaptures() const;
+    void AddCapture(Piece *captured);
+
 protected:
-    Color m_color;
-    std::vector<Piece*> m_captures;
+    PlayerColor m_color;
+    std::vector<Piece *> m_captures;
 };
 
 #endif // PLAYER__H

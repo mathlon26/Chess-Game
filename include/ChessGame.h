@@ -17,6 +17,9 @@ public:
     void Update() override;
     void Draw() const override;
 
+    void EndGame(Player* winner, bool resign=false, bool notime=false);
+
+    void SetupTimers();
     Move GetPlayerMove();
 private:
     Board* m_board;

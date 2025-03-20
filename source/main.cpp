@@ -1,4 +1,6 @@
+#define DEBUG
 #include "../include/ChessGame.h"
+
 
 
 int main()

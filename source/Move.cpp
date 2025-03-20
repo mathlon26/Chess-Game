@@ -21,18 +21,23 @@ Move::Move(const std::string& moveStr)
     parseMoveString(moveStr);
 }
 
+bool Move::empty() const
+{
+    return startX == 0 && startY == 0 && endX == 0 && endY == 0;
+}
+
 // Helper function to check if a given coordinate pair is within the chessboard bounds (0-7)
 void Move::validateCoordinates(int x, int y) const
 {
     if (x < 0 || x >= 8 || y < 0 || y >= 8)
     {
-        throw std::out_of_range("Coordinates out of bounds. Valid range is 0 to 7 for both x and y.");
+        throw std::out_of_range("Coordinates out of bounds. Valid range is a to h for x and 1 to 8 for y.");
     }
 }
 
 // Parses a move string of the format \"[a-h][1-8][a-h][1-8]\" and sets the coordinates accordingly
 void Move::parseMoveString(const std::string& moveStr)
-{
+{    
     if (moveStr.length() != 4)
     {
         throw std::invalid_argument("Move string must be exactly 4 characters long.");
@@ -43,19 +48,11 @@ void Move::parseMoveString(const std::string& moveStr)
     char endFile = moveStr[2];
     char endRank = moveStr[3];
 
-    if (startFile < 'a' || startFile > 'h' ||
-        endFile   < 'a' || endFile   > 'h' ||
-        startRank < '1' || startRank > '8' ||
-        endRank   < '1' || endRank   > '8')
-    {
-        throw std::invalid_argument("Invalid move string format. Must be in format [a-h][1-8][a-h][1-8].");
-    }
-
     // Convert the algebraic notation into 0-indexed board coordinates
     startX = startFile - 'a';
-    startY = startRank - '1';
+    startY = '8' - startRank;
     endX   = endFile   - 'a';
-    endY   = endRank   - '1';
+    endY   = '8' - endRank;
 
     // Validate the computed coordinates
     validateCoordinates(startX, startY);
@@ -75,9 +72,9 @@ bool Move::isValid() const
 std::string Move::toString() const
 {
     char startFile = 'a' + startX;
-    char startRank = '1' + startY;
+    char startRank = '8' - startY;
     char endFile   = 'a' + endX;
-    char endRank   = '1' + endY;
+    char endRank   = '8' - endY;
     return std::string() + startFile + startRank + endFile + endRank;
 }
 

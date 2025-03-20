@@ -25,6 +25,7 @@ public:
     // Utility Functions
     bool isValid() const;  // Validates if the move is within chessboard bounds
     std::string toString() const; // Converts back to chess notation
+    bool empty() const;
 
     // Comparison Operator
     bool operator==(const Move& other) const;
