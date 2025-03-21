@@ -13,21 +13,25 @@ Pawn::Pawn(PieceColor color) : Piece{color}
 }
 
 // Helper function to promote a pawn.
-void promote(Piece* &setReplacement, PieceColor color)
+void promote(Piece** setReplacement, PieceColor color)
 {
+    *setReplacement = new Queen{color};
+
+    /*
     std::string promotion = Style::GetStringInput(
         "Choose from:\n Queen\nRook\nBishop\nKnight\n >> ",
         Style::Cta(color) + Style::Cts(color) + Style::Cta(Color::GREEN) + " may promote their pawn."
     );
     if (promotion == "Rook") {
-        setReplacement = new Rook{color};
+        *setReplacement = new Rook{color};
     } else if (promotion == "Bishop") {
-        setReplacement = new Bishop{color};
+        *setReplacement = new Bishop{color};
     } else if (promotion == "Knight") {
-        setReplacement = new Knight{color};
+        *setReplacement = new Knight{color};
     } else {
-        setReplacement = new Queen{color};
+        *setReplacement = new Queen{color};
     }
+    */
 }
 
 // Generates all possible moves for a pawn from its current position.
@@ -108,9 +112,9 @@ bool Pawn::IsValidMove(Piece* target, Board* board, Move& move, Piece*& setRepla
         return false;
     
     // Check for promotion: if the move ends on the promotion row, prompt for promotion.
-    int promotionRow = (m_color == PieceColor::WHITE) ? 7 : 0;
+    int promotionRow = (m_color == PieceColor::WHITE) ? 0 : 7;
     if (endY == promotionRow)
-        promote(setReplacement, m_color);
+        promote(&setReplacement, m_color);
     
     return true;
 }

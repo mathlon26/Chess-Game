@@ -169,7 +169,7 @@ bool Board::ExecuteMove(Move &move, Player* executor)
 
     // If a capture was made, record it.
     if (record.capturedPiece)
-    executor->AddCapture(record.capturedPiece);
+        executor->AddCapture(record.capturedPiece);
 
 
     // Update check state for opponent.

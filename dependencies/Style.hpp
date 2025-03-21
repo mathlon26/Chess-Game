@@ -215,7 +215,7 @@ public:
     static inline bool GetBoolInput(const std::string &prompt, const std::string &title = "", Color color = Color::YELLOW, Color titleColor = Color::CYAN)
     {
         if (!title.empty())
-            PrintTitle(title, titleColor);
+            PrintColoredLine(BoldText(title), titleColor);
         
         PrintColored(prompt + " [Y/n] ", color);
         char in = std::cin.get();
