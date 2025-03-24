@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classPlayer" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>Player</compoundname>
+    <derivedcompoundref refid="classBotPlayer" prot="public" virt="non-virtual">BotPlayer</derivedcompoundref>
+    <derivedcompoundref refid="classHumanPlayer" prot="public" virt="non-virtual">HumanPlayer</derivedcompoundref>
+    <includes refid="Player_8h" local="no">Player.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42" prot="protected" static="no" mutable="no">
+        <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">PlayerColor</ref></type>
+        <definition>PlayerColor Player::m_color</definition>
+        <argsstring></argsstring>
+        <name>m_color</name>
+        <qualifiedname>Player::m_color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" line="27" column="17" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classPlayer_1aaef4079e864580e1b197620491d74130" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classPiece" kindref="compound">Piece</ref> * &gt;</type>
+        <definition>std::vector&lt;Piece *&gt; Player::m_captures</definition>
+        <argsstring></argsstring>
+        <name>m_captures</name>
+        <qualifiedname>Player::m_captures</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" line="28" column="17" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classPlayer_1ad061cf938c523c0e7d529d5591224250" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Player::Player</definition>
+        <argsstring>(PlayerColor color)</argsstring>
+        <name>Player</name>
+        <qualifiedname>Player::Player</qualifiedname>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">PlayerColor</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" line="14" column="5" bodyfile="Player.cpp" bodystart="3" bodyend="8"/>
+        <references refid="classPlayer_1aaef4079e864580e1b197620491d74130" compoundref="Player_8h" startline="28">m_captures</references>
+        <references refid="classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42" compoundref="Player_8h" startline="27">m_color</references>
+      </memberdef>
+      <memberdef kind="function" id="classPlayer_1a278aa7f854813b3d53589d51e74c6cf1" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type></type>
+        <definition>Player::~Player</definition>
+        <argsstring>()=0</argsstring>
+        <name>~Player</name>
+        <qualifiedname>Player::~Player</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" line="15" column="13" bodyfile="Player.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlayer_1a5afb4b96be0f18b4bc840f44e06072cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string Player::GetInput</definition>
+        <argsstring>(const Board *const board) const =0</argsstring>
+        <name>GetInput</name>
+        <qualifiedname>Player::GetInput</qualifiedname>
+        <reimplementedby refid="classBotPlayer_1aa6c9035eac0ad8b34c124eeb3876d92a">GetInput</reimplementedby>
+        <reimplementedby refid="classHumanPlayer_1a445fac75f6cac55fd6879ed277f010ac">GetInput</reimplementedby>
+        <param>
+          <type>const <ref refid="classBoard" kindref="compound">Board</ref> *const</type>
+          <declname>board</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" line="17" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlayer_1a313b6e73fb54e242e318579901ee93da" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string Player::Name</definition>
+        <argsstring>() const =0</argsstring>
+        <name>Name</name>
+        <qualifiedname>Player::Name</qualifiedname>
+        <reimplementedby refid="classBotPlayer_1aaf2580fa12448259b5142bff4062f0ab">Name</reimplementedby>
+        <reimplementedby refid="classHumanPlayer_1a4999d6c988fcc037600e3e8db6f9bbf4">Name</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" line="18" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlayer_1a09eaaa8872fcb43e72c7739ab619c866" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>bool</type>
+        <definition>virtual bool Player::IsBot</definition>
+        <argsstring>()</argsstring>
+        <name>IsBot</name>
+        <qualifiedname>Player::IsBot</qualifiedname>
+        <reimplementedby refid="classBotPlayer_1a5e79536cccb4c8d9452a79950a598351">IsBot</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" line="20" column="18" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classPlayer_1af97f460cbb2594def32e32d9046f73ec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">PlayerColor</ref></type>
+        <definition>PlayerColor Player::Color</definition>
+        <argsstring>() const</argsstring>
+        <name>Color</name>
+        <qualifiedname>Player::Color</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" line="22" column="17" bodyfile="Player.cpp" bodystart="24" bodyend="27"/>
+        <references refid="classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42" compoundref="Player_8h" startline="27">m_color</references>
+      </memberdef>
+      <memberdef kind="function" id="classPlayer_1a8248c589e9edeb32a290f48d82bad7ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classPiece" kindref="compound">Piece</ref> * &gt;</type>
+        <definition>std::vector&lt; Piece * &gt; Player::GetCaptures</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCaptures</name>
+        <qualifiedname>Player::GetCaptures</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" line="23" column="17" bodyfile="Player.cpp" bodystart="14" bodyend="17"/>
+        <references refid="classPlayer_1aaef4079e864580e1b197620491d74130" compoundref="Player_8h" startline="28">m_captures</references>
+      </memberdef>
+      <memberdef kind="function" id="classPlayer_1a8600584d0d313d9c9183f8676e30b9c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Player::AddCapture</definition>
+        <argsstring>(Piece *captured)</argsstring>
+        <name>AddCapture</name>
+        <qualifiedname>Player::AddCapture</qualifiedname>
+        <param>
+          <type><ref refid="classPiece" kindref="compound">Piece</ref> *</type>
+          <declname>captured</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" line="24" column="10" bodyfile="Player.cpp" bodystart="19" bodyend="22"/>
+        <references refid="classPlayer_1aaef4079e864580e1b197620491d74130" compoundref="Player_8h" startline="28">m_captures</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BotPlayer</label>
+        <link refid="classBotPlayer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>HumanPlayer</label>
+        <link refid="classHumanPlayer"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Player</label>
+        <link refid="classPlayer"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" line="11" column="1" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Player.h" bodystart="12" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classPlayer_1a8600584d0d313d9c9183f8676e30b9c2" prot="public" virt="non-virtual"><scope>Player</scope><name>AddCapture</name></member>
+      <member refid="classPlayer_1af97f460cbb2594def32e32d9046f73ec" prot="public" virt="non-virtual"><scope>Player</scope><name>Color</name></member>
+      <member refid="classPlayer_1a8248c589e9edeb32a290f48d82bad7ac" prot="public" virt="non-virtual"><scope>Player</scope><name>GetCaptures</name></member>
+      <member refid="classPlayer_1a5afb4b96be0f18b4bc840f44e06072cb" prot="public" virt="pure-virtual"><scope>Player</scope><name>GetInput</name></member>
+      <member refid="classPlayer_1a09eaaa8872fcb43e72c7739ab619c866" prot="public" virt="virtual"><scope>Player</scope><name>IsBot</name></member>
+      <member refid="classPlayer_1aaef4079e864580e1b197620491d74130" prot="protected" virt="non-virtual"><scope>Player</scope><name>m_captures</name></member>
+      <member refid="classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42" prot="protected" virt="non-virtual"><scope>Player</scope><name>m_color</name></member>
+      <member refid="classPlayer_1a313b6e73fb54e242e318579901ee93da" prot="public" virt="pure-virtual"><scope>Player</scope><name>Name</name></member>
+      <member refid="classPlayer_1ad061cf938c523c0e7d529d5591224250" prot="public" virt="non-virtual"><scope>Player</scope><name>Player</name></member>
+      <member refid="classPlayer_1a278aa7f854813b3d53589d51e74c6cf1" prot="public" virt="pure-virtual"><scope>Player</scope><name>~Player</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Bishop_8h_source" xml:lang="en-US">
+<title>Bishop.h</title>
+<indexterm><primary>/home/huplo/Coding/Projects/C++/chess-game/include/Bishop.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;BISHOP__H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;BISHOP__H</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Piece_8h">Piece.h</link>&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Move_8h">Move.h</link>&quot;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Player_8h">Player.h</link>&quot;</emphasis>
+7 
+8 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classBishop_1a91c9938c3f7722ab62942875041ba05f">Bishop</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f">Piece</link>
+9 {
+10 <emphasis role="keyword">public</emphasis>:
+11 &#32;&#32;&#32;&#32;<link linkend="_classBishop_1a91c9938c3f7722ab62942875041ba05f">Bishop</link>(<link linkend="_Piece_8h_1a3287fa298adf5d748c8fe84b0b2742ec">PieceColor</link>&#32;color);
+12 &#32;&#32;&#32;&#32;<link linkend="_classBishop_1a3705b4537a39d09a59143fe01a62442f">~Bishop</link>()&#32;{};
+13 
+14 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classBishop_1ab0ca2dd9d66fbbe8169431083b2eb171">Symbol</link>()&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+15 &#32;&#32;&#32;&#32;std::vector&lt;Move&gt;&#32;<link linkend="_classBishop_1a399c419d4fe7882b795b65be5503b2b8">PossibleMoves</link>(<link linkend="_classBoard">Board</link>*&#32;board,&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentX,&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentY)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+16 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classBishop_1aada80a713ad52b68be931e2fa01848dd">IsValidMove</link>(<link linkend="_classPiece">Piece</link>*&#32;target,&#32;<link linkend="_classBoard">Board</link>*&#32;board,&#32;<link linkend="_classMove">Move</link>&amp;&#32;move,&#32;<link linkend="_classPiece">Piece</link>*&amp;&#32;setReplacement)&#32;<emphasis role="keyword">const&#32;override</emphasis>&#32;;
+17 
+18 <emphasis role="keyword">private</emphasis>:
+19 };
+20 
+21 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;BISHOP__H</emphasis>
+</programlisting></section>

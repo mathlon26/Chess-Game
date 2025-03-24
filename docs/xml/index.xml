@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.13.2" xml:lang="en-US">
+  <compound refid="classApp" kind="class"><name>App</name>
+    <member refid="classApp_1a93dfaeba98776eb3383c2cfd0f6ebeef" kind="variable"><name>m_exitCall</name></member>
+    <member refid="classApp_1acb8cbf3e285b91d0170ffe87df5989c5" kind="function"><name>App</name></member>
+    <member refid="classApp_1a871e34a8ba713040bfdebd47db0b86cf" kind="function"><name>~App</name></member>
+    <member refid="classApp_1a7fe3a49eeb945cbd1b235e6ff47805a3" kind="function"><name>Exit</name></member>
+    <member refid="classApp_1afb17a1d7013faefdbe00bf333399de50" kind="function"><name>ShouldRun</name></member>
+    <member refid="classApp_1a406fc89b043fc613f5f0352d8919fa44" kind="function"><name>Init</name></member>
+    <member refid="classApp_1a73531ddfa01620f063c673a5e7ab212c" kind="function"><name>Update</name></member>
+    <member refid="classApp_1a7c901bf280261b153ca7aa39d5c3e357" kind="function"><name>Run</name></member>
+  </compound>
+  <compound refid="classBishop" kind="class"><name>Bishop</name>
+    <member refid="classBishop_1a91c9938c3f7722ab62942875041ba05f" kind="function"><name>Bishop</name></member>
+    <member refid="classBishop_1a3705b4537a39d09a59143fe01a62442f" kind="function"><name>~Bishop</name></member>
+    <member refid="classBishop_1ab0ca2dd9d66fbbe8169431083b2eb171" kind="function"><name>Symbol</name></member>
+    <member refid="classBishop_1a399c419d4fe7882b795b65be5503b2b8" kind="function"><name>PossibleMoves</name></member>
+    <member refid="classBishop_1aada80a713ad52b68be931e2fa01848dd" kind="function"><name>IsValidMove</name></member>
+  </compound>
+  <compound refid="classBoard" kind="class"><name>Board</name>
+    <member refid="classBoard_1ab07b33733f3642dd3a7d79fecb539b56" kind="variable"><name>m_board</name></member>
+    <member refid="classBoard_1afc0acfd6acdfdbb9b727d037a1dcbc61" kind="variable"><name>m_enPassantAvailable</name></member>
+    <member refid="classBoard_1a20260f0f856c9d5fefa53cf2eb893482" kind="variable"><name>m_enPassantX</name></member>
+    <member refid="classBoard_1ae7ef5afab53e5e0b350fcee51334e788" kind="variable"><name>m_enPassantY</name></member>
+    <member refid="classBoard_1a1c7f6768ebc507fc7794264b08005898" kind="variable"><name>m_whiteKingInCheck</name></member>
+    <member refid="classBoard_1a766125015e752a33b705f5ae695f65e8" kind="variable"><name>m_blackKingInCheck</name></member>
+    <member refid="classBoard_1a9ee491d4fea680cf69b033374a9fdfcb" kind="function"><name>Board</name></member>
+    <member refid="classBoard_1af73f45730119a1fd8f6670f53f959e68" kind="function"><name>~Board</name></member>
+    <member refid="classBoard_1a54a0fe14d04fa09928d8d6fc26a85cc2" kind="function"><name>Draw</name></member>
+    <member refid="classBoard_1af1f69a1b91ec7fa07d0a85ce04d103ec" kind="function"><name>ExecuteMove</name></member>
+    <member refid="classBoard_1a23d1fdbb5e49d70b51c0cda70d003597" kind="function"><name>CommitMoveRecord</name></member>
+    <member refid="classBoard_1ab9670780329f8763c49881cfada761c2" kind="function"><name>RevertMoveRecord</name></member>
+    <member refid="classBoard_1ad23c997a2d137d40511dfd327248de3d" kind="function"><name>GetPiece</name></member>
+    <member refid="classBoard_1a1ff64194b703edb37a5c9770de17e48a" kind="function"><name>GetPossibleMoves</name></member>
+    <member refid="classBoard_1aa178becb7490422c52bf03c5956446e9" kind="function"><name>IsEnPassantTarget</name></member>
+    <member refid="classBoard_1a4da590b5c737674de91dcea89780db69" kind="function"><name>ClearEnPassantTarget</name></member>
+    <member refid="classBoard_1a20bcaee5725f1fc0e57b0e59a004153a" kind="function"><name>IsKingChecked</name></member>
+    <member refid="classBoard_1af39b4dc6727c480c32925388ed95ae04" kind="function"><name>SetKingChecked</name></member>
+    <member refid="classBoard_1a06c43f3ee4262259aa3535990ccd59f2" kind="function"><name>initializeBoard</name></member>
+  </compound>
+  <compound refid="classBotPlayer" kind="class"><name>BotPlayer</name>
+    <member refid="classBotPlayer_1a18677df3a38def55539f32ddfa87e9e8" kind="variable"><name>m_cache</name></member>
+    <member refid="classBotPlayer_1ad520b04b07027663107b8ad003753fff" kind="function"><name>BotPlayer</name></member>
+    <member refid="classBotPlayer_1a526b7fc1214d8e2e2c009679f18e177d" kind="function"><name>~BotPlayer</name></member>
+    <member refid="classBotPlayer_1a5e79536cccb4c8d9452a79950a598351" kind="function"><name>IsBot</name></member>
+    <member refid="classBotPlayer_1aa6c9035eac0ad8b34c124eeb3876d92a" kind="function"><name>GetInput</name></member>
+    <member refid="classBotPlayer_1aaf2580fa12448259b5142bff4062f0ab" kind="function"><name>Name</name></member>
+    <member refid="classBotPlayer_1a36fb5ce4f6a78a751d7a95b7b8ebc1ea" kind="function"><name>AddCache</name></member>
+    <member refid="classBotPlayer_1ada837bf49ac76c75947bc77d4af07088" kind="function"><name>EmptyCache</name></member>
+  </compound>
+  <compound refid="classCanvas" kind="class"><name>Canvas</name>
+    <member refid="classCanvas_1a5fce53f080ad6540094901f9768805a8" kind="function"><name>Canvas</name></member>
+    <member refid="classCanvas_1ac64895ae1cdfc39c58e95097873e861e" kind="function"><name>~Canvas</name></member>
+    <member refid="classCanvas_1a2b7be68cbe6f527b77c35416ae066f7f" kind="function"><name>Draw</name></member>
+  </compound>
+  <compound refid="classCanvasApp" kind="class"><name>CanvasApp</name>
+    <member refid="classCanvasApp_1af9ee675c88f6e09bc052de53d5afd4b5" kind="function"><name>CanvasApp</name></member>
+    <member refid="classCanvasApp_1a40ee66de67fa04811c27cb883bbca3ba" kind="function"><name>~CanvasApp</name></member>
+    <member refid="classCanvasApp_1a676b5e32d8b2d3073d2bcaa908ca4e6c" kind="function"><name>Init</name></member>
+    <member refid="classCanvasApp_1aaa5e049733d0a342e6826f3a609d614f" kind="function"><name>Update</name></member>
+    <member refid="classCanvasApp_1a7ce1991bf3631e05017d04781f0d49e3" kind="function"><name>Draw</name></member>
+    <member refid="classCanvasApp_1a25ea309d5cd14e5ee4683c10d6336d63" kind="function"><name>Run</name></member>
+  </compound>
+  <compound refid="classChessGame" kind="class"><name>ChessGame</name>
+    <member refid="classChessGame_1ab808fc8bc94aa65a846f9a25a8473a6e" kind="variable"><name>m_board</name></member>
+    <member refid="classChessGame_1a7e2085b7f6a5cd82a20480e829275088" kind="variable"><name>m_increment</name></member>
+    <member refid="classChessGame_1a75a90032e234efe603b3d89018e5e2e2" kind="variable"><name>m_timerOne</name></member>
+    <member refid="classChessGame_1a840ec1fd2cb40308c353ce9e04562c63" kind="variable"><name>m_timerTwo</name></member>
+    <member refid="classChessGame_1a5d401c8f79d7193e58982238346ed303" kind="variable"><name>m_timerActive</name></member>
+    <member refid="classChessGame_1a41f52fcab7d6826866396a856b22ab65" kind="variable"><name>m_moveStartTime</name></member>
+    <member refid="classChessGame_1a51ce25426f69f98bbf87d01272f5a865" kind="variable"><name>m_timerThread</name></member>
+    <member refid="classChessGame_1a7c9d1caa97c7ca5737f187a6066662b2" kind="function"><name>ChessGame</name></member>
+    <member refid="classChessGame_1a9c7f4475dcd31ab4e1f98f033fb0c60f" kind="function"><name>~ChessGame</name></member>
+    <member refid="classChessGame_1a5db0ea5be23412676881812bd9056e56" kind="function"><name>Run</name></member>
+    <member refid="classChessGame_1a2640c47a2ac9aa47f4db38d5e521c123" kind="function"><name>SetupPlayers</name></member>
+    <member refid="classChessGame_1af3b9c1ca3bdb26f1e808487b94e0ddde" kind="function"><name>Init</name></member>
+    <member refid="classChessGame_1ab121238a7f75644fb772fec4491865a8" kind="function"><name>Update</name></member>
+    <member refid="classChessGame_1a84e2d266d40a56cc33e094087a205b8f" kind="function"><name>Draw</name></member>
+    <member refid="classChessGame_1a435491b07e8ed046f58f6ab6aa6b642c" kind="function"><name>EndGame</name></member>
+    <member refid="classChessGame_1a8da52c5aea5b9eb826ee1f2ea4bccb47" kind="function"><name>SetupTimers</name></member>
+    <member refid="classChessGame_1ada39148a5117f4ad234761eea1381280" kind="function"><name>TimerThreadFunction</name></member>
+    <member refid="classChessGame_1ab09da31d868fcfd772b7746670add659" kind="function"><name>StartTimer</name></member>
+    <member refid="classChessGame_1a9d0066f004b8097e53bdc941d4d6c34d" kind="function"><name>StopTimer</name></member>
+    <member refid="classChessGame_1a87facfa390c37a8fcaf36279c098fc1e" kind="function"><name>GetPlayerMove</name></member>
+  </compound>
+  <compound refid="classHumanPlayer" kind="class"><name>HumanPlayer</name>
+    <member refid="classHumanPlayer_1a0d9e4734d10e497c6b7c7944bfda4a76" kind="function"><name>HumanPlayer</name></member>
+    <member refid="classHumanPlayer_1abdeb9d120fc74c8d82ec0c688883f16f" kind="function"><name>~HumanPlayer</name></member>
+    <member refid="classHumanPlayer_1a445fac75f6cac55fd6879ed277f010ac" kind="function"><name>GetInput</name></member>
+    <member refid="classHumanPlayer_1a4999d6c988fcc037600e3e8db6f9bbf4" kind="function"><name>Name</name></member>
+  </compound>
+  <compound refid="classKing" kind="class"><name>King</name>
+    <member refid="classKing_1ac7a820e20220f49bec5e38a95d5cc307" kind="function"><name>King</name></member>
+    <member refid="classKing_1aac368ce96e2b12f62e3608d27262e941" kind="function"><name>~King</name></member>
+    <member refid="classKing_1a665e0aa25a08ca43bfa3fbaa7f68d24b" kind="function"><name>Symbol</name></member>
+    <member refid="classKing_1adceeb19b6efe066f1d6882aa859925fd" kind="function"><name>PossibleMoves</name></member>
+    <member refid="classKing_1ad69ed8cd25086881cabde8d3ad9bb503" kind="function"><name>IsValidMove</name></member>
+    <member refid="classKing_1ae5f6eaa800f8ef88416ab92953451265" kind="function"><name>IsKing</name></member>
+  </compound>
+  <compound refid="classKnight" kind="class"><name>Knight</name>
+    <member refid="classKnight_1ae9ca30e7b96ba6e49701152dd811113e" kind="function"><name>Knight</name></member>
+    <member refid="classKnight_1a2754123d6876babe915f4da8f761361b" kind="function"><name>~Knight</name></member>
+    <member refid="classKnight_1a69fee9f48cef83fddc0db12895a3daa8" kind="function"><name>Symbol</name></member>
+    <member refid="classKnight_1a5480f41f242d9069cf48603212124f33" kind="function"><name>PossibleMoves</name></member>
+    <member refid="classKnight_1a356a4572773c6b3d415eb4ceaa676bb8" kind="function"><name>IsValidMove</name></member>
+  </compound>
+  <compound refid="classMove" kind="class"><name>Move</name>
+    <member refid="classMove_1adffa38920811f46a17dd07be4ce4e82f" kind="variable"><name>startX</name></member>
+    <member refid="classMove_1aa217487271e2eb8fbd87d28af4b08c3c" kind="variable"><name>startY</name></member>
+    <member refid="classMove_1a1c557dde425b7624f0ca7e6e7f33baa5" kind="variable"><name>endX</name></member>
+    <member refid="classMove_1a1223cbd38258e9b08f977ea6670f1357" kind="variable"><name>endY</name></member>
+    <member refid="classMove_1a4b1acc3a67d30c385ad9a6000526393a" kind="function"><name>Move</name></member>
+    <member refid="classMove_1ab9d9c5897fa433018d6834db27ef5713" kind="function"><name>Move</name></member>
+    <member refid="classMove_1af1a99100f5604c805ab1feaa7d911513" kind="function"><name>Move</name></member>
+    <member refid="classMove_1a84785acbf70f76c103df5b0aadbc58d5" kind="function"><name>~Move</name></member>
+    <member refid="classMove_1ae5b75e6f1d977e5eacac7e85d991ed27" kind="function"><name>getStartX</name></member>
+    <member refid="classMove_1afb1961349a3fb940e4596ee12d28cf1f" kind="function"><name>getStartY</name></member>
+    <member refid="classMove_1a2d670ad83efcfd894e7877252fce69de" kind="function"><name>getEndX</name></member>
+    <member refid="classMove_1a3b5509b1d995526c851561f73d327ff3" kind="function"><name>getEndY</name></member>
+    <member refid="classMove_1a6e80a6c039ba805bac3ff6402c56b76c" kind="function"><name>isValid</name></member>
+    <member refid="classMove_1a1f1dd54e4ef974f1f24277ee14c61beb" kind="function"><name>toString</name></member>
+    <member refid="classMove_1aee300c99f25c630acd8500fe2141b05e" kind="function"><name>empty</name></member>
+    <member refid="classMove_1a93f3c3240fd5974d8b90ee7fbaefdf4a" kind="function"><name>operator==</name></member>
+    <member refid="classMove_1aae174b66ede3027a9cbd261a6a3f0301" kind="function"><name>validateCoordinates</name></member>
+    <member refid="classMove_1a03ae04ea9e8071a878e3c3a11ae609c3" kind="function"><name>parseMoveString</name></member>
+  </compound>
+  <compound refid="structMoveRecord" kind="struct"><name>MoveRecord</name>
+    <member refid="structMoveRecord_1ad01bd3d9191228198472736d116fac7d" kind="variable"><name>x0</name></member>
+    <member refid="structMoveRecord_1ac38a2c9028ec26e1fc2362231dc44e5f" kind="variable"><name>y0</name></member>
+    <member refid="structMoveRecord_1a0ba5bf01546d407c234f3419dbf21d83" kind="variable"><name>x1</name></member>
+    <member refid="structMoveRecord_1ad12e234364e89f435991293fff175a72" kind="variable"><name>y1</name></member>
+    <member refid="structMoveRecord_1a07bcb9f0bafd4ccc53cdccae68c20c0f" kind="variable"><name>movedPiece</name></member>
+    <member refid="structMoveRecord_1a28419c377c24b254ab4070a60d782901" kind="variable"><name>capturedPiece</name></member>
+    <member refid="structMoveRecord_1ae26c28a77959d5f472206fdfdae0d493" kind="variable"><name>replacementPiece</name></member>
+    <member refid="structMoveRecord_1add054033b276ec4e0d25daab459255a9" kind="variable"><name>enPassantUsed</name></member>
+    <member refid="structMoveRecord_1a3f089cda41c1adcebd9c9b1f0116de98" kind="variable"><name>prevEnPassantAvailable</name></member>
+    <member refid="structMoveRecord_1ae45c86ca85a0de5db14a7e8bbd59a40d" kind="variable"><name>prevEnPassantX</name></member>
+    <member refid="structMoveRecord_1a9c30403d5f210cdb51ae3060d94e7ac8" kind="variable"><name>prevEnPassantY</name></member>
+  </compound>
+  <compound refid="classPawn" kind="class"><name>Pawn</name>
+    <member refid="classPawn_1a7bdce6cc89b699f6deb9f176256d2bbd" kind="function"><name>Pawn</name></member>
+    <member refid="classPawn_1a3095938fb8326469c3bd05da0b8f50af" kind="function"><name>~Pawn</name></member>
+    <member refid="classPawn_1a04ed6a9744fe13c85fee3331df8c8aca" kind="function"><name>Symbol</name></member>
+    <member refid="classPawn_1a8e427faba3cb063c2564f8ee7f2cb7f3" kind="function"><name>PossibleMoves</name></member>
+    <member refid="classPawn_1af11d10b5d5f2456eb97d835bf0d8b4f8" kind="function"><name>IsValidMove</name></member>
+  </compound>
+  <compound refid="classPiece" kind="class"><name>Piece</name>
+    <member refid="classPiece_1a757a577b6dfb06c6558021b828ca7c1d" kind="variable"><name>m_color</name></member>
+    <member refid="classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f" kind="function"><name>Piece</name></member>
+    <member refid="classPiece_1ab63f5b3faabe6ce60c9eb1806511ff9d" kind="function"><name>~Piece</name></member>
+    <member refid="classPiece_1ad31a695453335fbbc36a9c749395f7c1" kind="function"><name>Color</name></member>
+    <member refid="classPiece_1abc54f78cfc3e6c4ed3d103ddaeb1d96f" kind="function"><name>Symbol</name></member>
+    <member refid="classPiece_1a1c67fd5e66c3e7b6c1f4ebf3207e65e2" kind="function"><name>PossibleMoves</name></member>
+    <member refid="classPiece_1a363193ff97c3e10b77feb6aec81d1a35" kind="function"><name>IsValidMove</name></member>
+    <member refid="classPiece_1a392fecd481d60993e7d6d73116b2e171" kind="function"><name>IsKing</name></member>
+  </compound>
+  <compound refid="classPlayer" kind="class"><name>Player</name>
+    <member refid="classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42" kind="variable"><name>m_color</name></member>
+    <member refid="classPlayer_1aaef4079e864580e1b197620491d74130" kind="variable"><name>m_captures</name></member>
+    <member refid="classPlayer_1ad061cf938c523c0e7d529d5591224250" kind="function"><name>Player</name></member>
+    <member refid="classPlayer_1a278aa7f854813b3d53589d51e74c6cf1" kind="function"><name>~Player</name></member>
+    <member refid="classPlayer_1a5afb4b96be0f18b4bc840f44e06072cb" kind="function"><name>GetInput</name></member>
+    <member refid="classPlayer_1a313b6e73fb54e242e318579901ee93da" kind="function"><name>Name</name></member>
+    <member refid="classPlayer_1a09eaaa8872fcb43e72c7739ab619c866" kind="function"><name>IsBot</name></member>
+    <member refid="classPlayer_1af97f460cbb2594def32e32d9046f73ec" kind="function"><name>Color</name></member>
+    <member refid="classPlayer_1a8248c589e9edeb32a290f48d82bad7ac" kind="function"><name>GetCaptures</name></member>
+    <member refid="classPlayer_1a8600584d0d313d9c9183f8676e30b9c2" kind="function"><name>AddCapture</name></member>
+  </compound>
+  <compound refid="classQueen" kind="class"><name>Queen</name>
+    <member refid="classQueen_1a7bc18f0f7ff523bda16987a48d66514d" kind="function"><name>Queen</name></member>
+    <member refid="classQueen_1aa22f6c1a49a583b549bd1f940e50721d" kind="function"><name>~Queen</name></member>
+    <member refid="classQueen_1a60a43f14bf5934550dd3a4d1830754b3" kind="function"><name>Symbol</name></member>
+    <member refid="classQueen_1aa5e962499e46e9ea8cdfa25c24404f6d" kind="function"><name>PossibleMoves</name></member>
+    <member refid="classQueen_1a2263566de92069f92c77f74b0e2175f8" kind="function"><name>IsValidMove</name></member>
+  </compound>
+  <compound refid="classRook" kind="class"><name>Rook</name>
+    <member refid="classRook_1ab931760f937ec2cc6934c38c5b92aa86" kind="function"><name>Rook</name></member>
+    <member refid="classRook_1a70d445b94848b22ded850b6f58bc2972" kind="function"><name>~Rook</name></member>
+    <member refid="classRook_1ae7a3c121c8b653efeae7e1b248dffd0a" kind="function"><name>Symbol</name></member>
+    <member refid="classRook_1a0fe3c6cddea8fefe9972c663400bce27" kind="function"><name>PossibleMoves</name></member>
+    <member refid="classRook_1a7ede965f60fe8acd7d673475b04430a7" kind="function"><name>IsValidMove</name></member>
+  </compound>
+  <compound refid="classStyle" kind="class"><name>Style</name>
+    <member refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" kind="function"><name>Cta</name></member>
+    <member refid="classStyle_1a38a11d09d6371559e5795c952d44f9d0" kind="function"><name>Cts</name></member>
+    <member refid="classStyle_1a2d36d13fd41a5853a88c269494976e6d" kind="function"><name>BoldText</name></member>
+    <member refid="classStyle_1ae8e0c4a440744134528e61f912cb5fde" kind="function"><name>UnderlineText</name></member>
+    <member refid="classStyle_1aa4a805980672163f52cedd6e54082bfe" kind="function"><name>LinkText</name></member>
+    <member refid="classStyle_1ac28a3cd98cd6983e617e7d455bd4098e" kind="function"><name>ResetColor</name></member>
+    <member refid="classStyle_1a05aca5e3ba0656e599a9355d5bfa3793" kind="function"><name>DisplayLength</name></member>
+    <member refid="classStyle_1a3b124c68a49d02984eda201c45582731" kind="function"><name>PrintColored</name></member>
+    <member refid="classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6" kind="function"><name>PrintColoredLine</name></member>
+    <member refid="classStyle_1afbf27e0a1814fcdb41a52431451a5752" kind="function"><name>PrintLine</name></member>
+    <member refid="classStyle_1a350f6310e8e2c5ed0a3781d56a9617a3" kind="function"><name>PrintTitle</name></member>
+    <member refid="classStyle_1a5614a5f517f754485702cc7067efc823" kind="function"><name>PrintBox</name></member>
+    <member refid="classStyle_1aa8360afc84f1305765126889fc2fdca1" kind="function"><name>PrintSuccess</name></member>
+    <member refid="classStyle_1ae625221bb6eca80773f7f9d2ccada911" kind="function"><name>PrintWarning</name></member>
+    <member refid="classStyle_1a0a7907c969753a314a4d49c0f94ba636" kind="function"><name>PrintError</name></member>
+    <member refid="classStyle_1a32fd215387199b8a96cf7bac5a7fada8" kind="function"><name>PrintErrorExit</name></member>
+    <member refid="classStyle_1afa7af12144de17dbf2e3c5bb35547ca0" kind="function"><name>PrintInfo</name></member>
+    <member refid="classStyle_1a86d28d05ce8974b1ff88317c5d294eb5" kind="function"><name>ClearConsole</name></member>
+    <member refid="classStyle_1a75154acfcb8de2f37fb8d340cef4e83e" kind="function"><name>GetBoolInput</name></member>
+    <member refid="classStyle_1ae6c4e5b5dce135d7d912be726271fb3f" kind="function"><name>GetStringInput</name></member>
+    <member refid="classStyle_1a40fea464a1020972692160df497f3efb" kind="function"><name>PrintDivider</name></member>
+    <member refid="classStyle_1afe6790c9756b548e74177f1aac11efbd" kind="function"><name>PrintTable</name></member>
+  </compound>
+  <compound refid="classTwoPlayerGame" kind="class"><name>TwoPlayerGame</name>
+    <member refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kind="variable"><name>m_playerOne</name></member>
+    <member refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" kind="variable"><name>m_playerTwo</name></member>
+    <member refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kind="variable"><name>m_playerOnTurn</name></member>
+    <member refid="classTwoPlayerGame_1ab72050bd05184152737eac9567c63aa9" kind="function"><name>TwoPlayerGame</name></member>
+    <member refid="classTwoPlayerGame_1ad7fa6281a4685c1df35238afda1e3008" kind="function"><name>~TwoPlayerGame</name></member>
+    <member refid="classTwoPlayerGame_1ada483d74a31419d9cceba7001badc8a4" kind="function"><name>GetPlayerOnTurn</name></member>
+    <member refid="classTwoPlayerGame_1aae0d82cc749714dbbc29282391ae22de" kind="function"><name>SwitchTurn</name></member>
+    <member refid="classTwoPlayerGame_1ac9ad5060f04c7c3b7851c4466fb3571a" kind="function"><name>SetupPlayers</name></member>
+  </compound>
+  <compound refid="Style_8hpp" kind="file"><name>Style.hpp</name>
+    <member refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kind="enum"><name>Color</name></member>
+    <member refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" kind="enumvalue"><name>WHITE</name></member>
+    <member refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965" kind="enumvalue"><name>BLACK</name></member>
+    <member refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0" kind="enumvalue"><name>RED</name></member>
+    <member refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0" kind="enumvalue"><name>GREEN</name></member>
+    <member refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f" kind="enumvalue"><name>BLUE</name></member>
+    <member refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749" kind="enumvalue"><name>CYAN</name></member>
+    <member refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cac634ffea7195608364671ac52ee59a61" kind="enumvalue"><name>MAGENTA</name></member>
+    <member refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e" kind="enumvalue"><name>YELLOW</name></member>
+    <member refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca555a47662547aa7870851b2ef9ade925" kind="enumvalue"><name>LIGHT_GREEN</name></member>
+    <member refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca2536bd3910cf3069e2cd184e614ea97d" kind="enumvalue"><name>PINK</name></member>
+    <member refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" kind="enumvalue"><name>DEFAULT</name></member>
+  </compound>
+  <compound refid="App_8h" kind="file"><name>App.h</name>
+  </compound>
+  <compound refid="Bishop_8h" kind="file"><name>Bishop.h</name>
+  </compound>
+  <compound refid="Board_8h" kind="file"><name>Board.h</name>
+  </compound>
+  <compound refid="BotPlayer_8h" kind="file"><name>BotPlayer.h</name>
+  </compound>
+  <compound refid="Canvas_8h" kind="file"><name>Canvas.h</name>
+  </compound>
+  <compound refid="CanvasApp_8h" kind="file"><name>CanvasApp.h</name>
+  </compound>
+  <compound refid="ChessGame_8h" kind="file"><name>ChessGame.h</name>
+  </compound>
+  <compound refid="HumanPlayer_8h" kind="file"><name>HumanPlayer.h</name>
+  </compound>
+  <compound refid="King_8h" kind="file"><name>King.h</name>
+  </compound>
+  <compound refid="Knight_8h" kind="file"><name>Knight.h</name>
+  </compound>
+  <compound refid="Move_8h" kind="file"><name>Move.h</name>
+  </compound>
+  <compound refid="Pawn_8h" kind="file"><name>Pawn.h</name>
+  </compound>
+  <compound refid="Piece_8h" kind="file"><name>Piece.h</name>
+    <member refid="Piece_8h_1a3287fa298adf5d748c8fe84b0b2742ec" kind="typedef"><name>PieceColor</name></member>
+  </compound>
+  <compound refid="Player_8h" kind="file"><name>Player.h</name>
+    <member refid="Player_8h_1a301cfd5fe9a22cb30292f6e1523247d7" kind="typedef"><name>PlayerColor</name></member>
+  </compound>
+  <compound refid="Queen_8h" kind="file"><name>Queen.h</name>
+  </compound>
+  <compound refid="Rook_8h" kind="file"><name>Rook.h</name>
+  </compound>
+  <compound refid="TwoPlayerGame_8h" kind="file"><name>TwoPlayerGame.h</name>
+  </compound>
+  <compound refid="README_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="Bishop_8cpp" kind="file"><name>Bishop.cpp</name>
+  </compound>
+  <compound refid="Board_8cpp" kind="file"><name>Board.cpp</name>
+    <member refid="Board_8cpp_1aac919280662b1a7e6284a0cacbeba5d1" kind="function"><name>LogMoveRecord</name></member>
+  </compound>
+  <compound refid="BotPlayer_8cpp" kind="file"><name>BotPlayer.cpp</name>
+  </compound>
+  <compound refid="ChessGame_8cpp" kind="file"><name>ChessGame.cpp</name>
+  </compound>
+  <compound refid="HumanPlayer_8cpp" kind="file"><name>HumanPlayer.cpp</name>
+  </compound>
+  <compound refid="King_8cpp" kind="file"><name>King.cpp</name>
+  </compound>
+  <compound refid="Knight_8cpp" kind="file"><name>Knight.cpp</name>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1ad72dbcf6d0153db1b8d8a58001feed83" kind="define"><name>DEBUG</name></member>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="Move_8cpp" kind="file"><name>Move.cpp</name>
+  </compound>
+  <compound refid="Pawn_8cpp" kind="file"><name>Pawn.cpp</name>
+    <member refid="Pawn_8cpp_1a3c12b4f5901ce1e94c819c559c0e199a" kind="function"><name>promote</name></member>
+  </compound>
+  <compound refid="Piece_8cpp" kind="file"><name>Piece.cpp</name>
+  </compound>
+  <compound refid="Player_8cpp" kind="file"><name>Player.cpp</name>
+  </compound>
+  <compound refid="Queen_8cpp" kind="file"><name>Queen.cpp</name>
+  </compound>
+  <compound refid="Rook_8cpp" kind="file"><name>Rook.cpp</name>
+  </compound>
+  <compound refid="TwoPlayerGame_8cpp" kind="file"><name>TwoPlayerGame.cpp</name>
+  </compound>
+  <compound refid="dir_ad0530cb1f8052897640e112eb83a9d7" kind="dir"><name>/home/huplo/Coding/Projects/C++/chess-game/dependencies</name>
+  </compound>
+  <compound refid="dir_d44c64559bbebec7f509842c48db8b23" kind="dir"><name>/home/huplo/Coding/Projects/C++/chess-game/include</name>
+  </compound>
+</doxygenindex>

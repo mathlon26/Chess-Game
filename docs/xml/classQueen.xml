@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classQueen" kind="class" language="C++" prot="public">
+    <compoundname>Queen</compoundname>
+    <basecompoundref refid="classPiece" prot="public" virt="non-virtual">Piece</basecompoundref>
+    <includes refid="Queen_8h" local="no">Queen.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classQueen_1a7bc18f0f7ff523bda16987a48d66514d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Queen::Queen</definition>
+        <argsstring>(PieceColor color)</argsstring>
+        <name>Queen</name>
+        <qualifiedname>Queen::Queen</qualifiedname>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">PieceColor</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Queen.h" line="11" column="5" bodyfile="Queen.cpp" bodystart="3" bodyend="7"/>
+        <references refid="classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f" compoundref="Piece_8h" startline="17" endline="17">Piece::Piece</references>
+      </memberdef>
+      <memberdef kind="function" id="classQueen_1aa22f6c1a49a583b549bd1f940e50721d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Queen::~Queen</definition>
+        <argsstring>()</argsstring>
+        <name>~Queen</name>
+        <qualifiedname>Queen::~Queen</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Queen.h" line="12" column="5" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Queen.h" bodystart="12" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classQueen_1a60a43f14bf5934550dd3a4d1830754b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string Queen::Symbol</definition>
+        <argsstring>() const override</argsstring>
+        <name>Symbol</name>
+        <qualifiedname>Queen::Symbol</qualifiedname>
+        <reimplements refid="classPiece_1abc54f78cfc3e6c4ed3d103ddaeb1d96f">Symbol</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Queen.h" line="14" column="17" bodyfile="Queen.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classQueen_1aa5e962499e46e9ea8cdfa25c24404f6d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::vector&lt; <ref refid="classMove" kindref="compound">Move</ref> &gt;</type>
+        <definition>std::vector&lt; Move &gt; Queen::PossibleMoves</definition>
+        <argsstring>(Board *board, int currentX, int currentY) const override</argsstring>
+        <name>PossibleMoves</name>
+        <qualifiedname>Queen::PossibleMoves</qualifiedname>
+        <reimplements refid="classPiece_1a1c67fd5e66c3e7b6c1f4ebf3207e65e2">PossibleMoves</reimplements>
+        <param>
+          <type><ref refid="classBoard" kindref="compound">Board</ref> *</type>
+          <declname>board</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>currentX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>currentY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Queen.h" line="15" column="17" bodyfile="Queen.cpp" bodystart="17" bodyend="43"/>
+        <references refid="classPiece_1ad31a695453335fbbc36a9c749395f7c1" compoundref="Piece_8h" startline="19" endline="19">Piece::Color</references>
+        <references refid="classBoard_1ad23c997a2d137d40511dfd327248de3d" compoundref="Board_8cpp" startline="191" endline="194">Board::GetPiece</references>
+        <references refid="classPiece_1a757a577b6dfb06c6558021b828ca7c1d" compoundref="Piece_8h" startline="31">Piece::m_color</references>
+        <references refid="classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f" compoundref="Piece_8h" startline="17" endline="17">Piece::Piece</references>
+      </memberdef>
+      <memberdef kind="function" id="classQueen_1a2263566de92069f92c77f74b0e2175f8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool Queen::IsValidMove</definition>
+        <argsstring>(Piece *target, Board *board, Move &amp;move, Piece *&amp;setReplacement) const override</argsstring>
+        <name>IsValidMove</name>
+        <qualifiedname>Queen::IsValidMove</qualifiedname>
+        <reimplements refid="classPiece_1a363193ff97c3e10b77feb6aec81d1a35">IsValidMove</reimplements>
+        <param>
+          <type><ref refid="classPiece" kindref="compound">Piece</ref> *</type>
+          <declname>target</declname>
+        </param>
+        <param>
+          <type><ref refid="classBoard" kindref="compound">Board</ref> *</type>
+          <declname>board</declname>
+        </param>
+        <param>
+          <type><ref refid="classMove" kindref="compound">Move</ref> &amp;</type>
+          <declname>move</declname>
+        </param>
+        <param>
+          <type><ref refid="classPiece" kindref="compound">Piece</ref> *&amp;</type>
+          <declname>setReplacement</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Queen.h" line="16" column="10" bodyfile="Queen.cpp" bodystart="46" bodyend="56"/>
+        <references refid="classMove_1a2d670ad83efcfd894e7877252fce69de" compoundref="Move_8h" startline="22" endline="22">Move::getEndX</references>
+        <references refid="classMove_1a3b5509b1d995526c851561f73d327ff3" compoundref="Move_8h" startline="23" endline="23">Move::getEndY</references>
+        <references refid="classMove_1ae5b75e6f1d977e5eacac7e85d991ed27" compoundref="Move_8h" startline="20" endline="20">Move::getStartX</references>
+        <references refid="classMove_1afb1961349a3fb940e4596ee12d28cf1f" compoundref="Move_8h" startline="21" endline="21">Move::getStartY</references>
+        <references refid="classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f" compoundref="Piece_8h" startline="17" endline="17">Piece::Piece</references>
+        <references refid="classQueen_1aa5e962499e46e9ea8cdfa25c24404f6d" compoundref="Queen_8cpp" startline="17" endline="43">PossibleMoves</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Piece</label>
+        <link refid="classPiece"/>
+      </node>
+      <node id="1">
+        <label>Queen</label>
+        <link refid="classQueen"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Piece</label>
+        <link refid="classPiece"/>
+      </node>
+      <node id="1">
+        <label>Queen</label>
+        <link refid="classQueen"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Queen.h" line="8" column="1" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Queen.h" bodystart="9" bodyend="19"/>
+    <listofallmembers>
+      <member refid="classPiece_1ad31a695453335fbbc36a9c749395f7c1" prot="public" virt="non-virtual"><scope>Queen</scope><name>Color</name></member>
+      <member refid="classPiece_1a392fecd481d60993e7d6d73116b2e171" prot="public" virt="virtual"><scope>Queen</scope><name>IsKing</name></member>
+      <member refid="classQueen_1a2263566de92069f92c77f74b0e2175f8" prot="public" virt="virtual"><scope>Queen</scope><name>IsValidMove</name></member>
+      <member refid="classPiece_1a757a577b6dfb06c6558021b828ca7c1d" prot="protected" virt="non-virtual"><scope>Queen</scope><name>m_color</name></member>
+      <member refid="classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f" prot="public" virt="non-virtual"><scope>Queen</scope><name>Piece</name></member>
+      <member refid="classQueen_1aa5e962499e46e9ea8cdfa25c24404f6d" prot="public" virt="virtual"><scope>Queen</scope><name>PossibleMoves</name></member>
+      <member refid="classQueen_1a7bc18f0f7ff523bda16987a48d66514d" prot="public" virt="non-virtual"><scope>Queen</scope><name>Queen</name></member>
+      <member refid="classQueen_1a60a43f14bf5934550dd3a4d1830754b3" prot="public" virt="virtual"><scope>Queen</scope><name>Symbol</name></member>
+      <member refid="classPiece_1ab63f5b3faabe6ce60c9eb1806511ff9d" prot="public" virt="virtual"><scope>Queen</scope><name>~Piece</name></member>
+      <member refid="classQueen_1aa22f6c1a49a583b549bd1f940e50721d" prot="public" virt="non-virtual"><scope>Queen</scope><name>~Queen</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classMove" xml:lang="en-US">
+<title>Move Class Reference</title>
+<indexterm><primary>Move</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Move.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classMove_1a4b1acc3a67d30c385ad9a6000526393a">Move</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classMove_1ab9d9c5897fa433018d6834db27ef5713">Move</link> (int startX, int startY, int endX, int endY)</para>
+</listitem>
+            <listitem><para><link linkend="_classMove_1af1a99100f5604c805ab1feaa7d911513">Move</link> (const std::string &amp;moveStr)</para>
+</listitem>
+            <listitem><para><link linkend="_classMove_1a84785acbf70f76c103df5b0aadbc58d5">~Move</link> ()=default</para>
+</listitem>
+            <listitem><para>int <link linkend="_classMove_1ae5b75e6f1d977e5eacac7e85d991ed27">getStartX</link> () const</para>
+</listitem>
+            <listitem><para>int <link linkend="_classMove_1afb1961349a3fb940e4596ee12d28cf1f">getStartY</link> () const</para>
+</listitem>
+            <listitem><para>int <link linkend="_classMove_1a2d670ad83efcfd894e7877252fce69de">getEndX</link> () const</para>
+</listitem>
+            <listitem><para>int <link linkend="_classMove_1a3b5509b1d995526c851561f73d327ff3">getEndY</link> () const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classMove_1a6e80a6c039ba805bac3ff6402c56b76c">isValid</link> () const</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classMove_1a1f1dd54e4ef974f1f24277ee14c61beb">toString</link> () const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classMove_1aee300c99f25c630acd8500fe2141b05e">empty</link> () const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classMove_1a93f3c3240fd5974d8b90ee7fbaefdf4a">operator==</link> (const <link linkend="_classMove">Move</link> &amp;other) const</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classMove_1a4b1acc3a67d30c385ad9a6000526393a"/><section>
+    <title>Move()<computeroutput>[1/3]</computeroutput></title>
+<indexterm><primary>Move</primary><secondary>Move</secondary></indexterm>
+<indexterm><primary>Move</primary><secondary>Move</secondary></indexterm>
+<para><computeroutput>Move::Move ( )</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classMove_a4b1acc3a67d30c385ad9a6000526393a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classMove_1ab9d9c5897fa433018d6834db27ef5713"/><section>
+    <title>Move()<computeroutput>[2/3]</computeroutput></title>
+<indexterm><primary>Move</primary><secondary>Move</secondary></indexterm>
+<indexterm><primary>Move</primary><secondary>Move</secondary></indexterm>
+<para><computeroutput>Move::Move (int startX, int startY, int endX, int endY)</computeroutput></para></section>
+<anchor xml:id="_classMove_1af1a99100f5604c805ab1feaa7d911513"/><section>
+    <title>Move()<computeroutput>[3/3]</computeroutput></title>
+<indexterm><primary>Move</primary><secondary>Move</secondary></indexterm>
+<indexterm><primary>Move</primary><secondary>Move</secondary></indexterm>
+<para><computeroutput>Move::Move (const std::string &amp; moveStr)</computeroutput></para></section>
+<anchor xml:id="_classMove_1a84785acbf70f76c103df5b0aadbc58d5"/><section>
+    <title>~Move()</title>
+<indexterm><primary>~Move</primary><secondary>Move</secondary></indexterm>
+<indexterm><primary>Move</primary><secondary>~Move</secondary></indexterm>
+<para><computeroutput>Move::~Move ( )<computeroutput>[default]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classMove_1aee300c99f25c630acd8500fe2141b05e"/><section>
+    <title>empty()</title>
+<indexterm><primary>empty</primary><secondary>Move</secondary></indexterm>
+<indexterm><primary>Move</primary><secondary>empty</secondary></indexterm>
+<para><computeroutput>bool Move::empty ( ) const</computeroutput></para></section>
+<anchor xml:id="_classMove_1a2d670ad83efcfd894e7877252fce69de"/><section>
+    <title>getEndX()</title>
+<indexterm><primary>getEndX</primary><secondary>Move</secondary></indexterm>
+<indexterm><primary>Move</primary><secondary>getEndX</secondary></indexterm>
+<para><computeroutput>int Move::getEndX ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classMove_1a3b5509b1d995526c851561f73d327ff3"/><section>
+    <title>getEndY()</title>
+<indexterm><primary>getEndY</primary><secondary>Move</secondary></indexterm>
+<indexterm><primary>Move</primary><secondary>getEndY</secondary></indexterm>
+<para><computeroutput>int Move::getEndY ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classMove_1ae5b75e6f1d977e5eacac7e85d991ed27"/><section>
+    <title>getStartX()</title>
+<indexterm><primary>getStartX</primary><secondary>Move</secondary></indexterm>
+<indexterm><primary>Move</primary><secondary>getStartX</secondary></indexterm>
+<para><computeroutput>int Move::getStartX ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classMove_1afb1961349a3fb940e4596ee12d28cf1f"/><section>
+    <title>getStartY()</title>
+<indexterm><primary>getStartY</primary><secondary>Move</secondary></indexterm>
+<indexterm><primary>Move</primary><secondary>getStartY</secondary></indexterm>
+<para><computeroutput>int Move::getStartY ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classMove_1a6e80a6c039ba805bac3ff6402c56b76c"/><section>
+    <title>isValid()</title>
+<indexterm><primary>isValid</primary><secondary>Move</secondary></indexterm>
+<indexterm><primary>Move</primary><secondary>isValid</secondary></indexterm>
+<para><computeroutput>bool Move::isValid ( ) const</computeroutput></para></section>
+<anchor xml:id="_classMove_1a93f3c3240fd5974d8b90ee7fbaefdf4a"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>Move</secondary></indexterm>
+<indexterm><primary>Move</primary><secondary>operator==</secondary></indexterm>
+<para><computeroutput>bool Move::operator== (const <link linkend="_classMove">Move</link> &amp; other) const</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classMove_a93f3c3240fd5974d8b90ee7fbaefdf4a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classMove_1a1f1dd54e4ef974f1f24277ee14c61beb"/><section>
+    <title>toString()</title>
+<indexterm><primary>toString</primary><secondary>Move</secondary></indexterm>
+<indexterm><primary>Move</primary><secondary>toString</secondary></indexterm>
+<para><computeroutput>std::string Move::toString ( ) const</computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/huplo/Coding/Projects/C++/chess-game/include/<link linkend="_Move_8h">Move.h</link><link linkend="_Move_8cpp">Move.cpp</link></section>
+</section>

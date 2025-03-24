@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_d44c64559bbebec7f509842c48db8b23" kind="dir">
+    <compoundname>/home/huplo/Coding/Projects/C++/chess-game/include</compoundname>
+    <innerfile refid="App_8h">App.h</innerfile>
+    <innerfile refid="Bishop_8h">Bishop.h</innerfile>
+    <innerfile refid="Board_8h">Board.h</innerfile>
+    <innerfile refid="BotPlayer_8h">BotPlayer.h</innerfile>
+    <innerfile refid="Canvas_8h">Canvas.h</innerfile>
+    <innerfile refid="CanvasApp_8h">CanvasApp.h</innerfile>
+    <innerfile refid="ChessGame_8h">ChessGame.h</innerfile>
+    <innerfile refid="HumanPlayer_8h">HumanPlayer.h</innerfile>
+    <innerfile refid="King_8h">King.h</innerfile>
+    <innerfile refid="Knight_8h">Knight.h</innerfile>
+    <innerfile refid="Move_8h">Move.h</innerfile>
+    <innerfile refid="Pawn_8h">Pawn.h</innerfile>
+    <innerfile refid="Piece_8h">Piece.h</innerfile>
+    <innerfile refid="Player_8h">Player.h</innerfile>
+    <innerfile refid="Queen_8h">Queen.h</innerfile>
+    <innerfile refid="Rook_8h">Rook.h</innerfile>
+    <innerfile refid="TwoPlayerGame_8h">TwoPlayerGame.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/include/"/>
+  </compounddef>
+</doxygen>

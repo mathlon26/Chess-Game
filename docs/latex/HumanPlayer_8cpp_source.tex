@@ -1,0 +1,33 @@
+\doxysection{Human\+Player.\+cpp}
+\hypertarget{HumanPlayer_8cpp_source}{}\label{HumanPlayer_8cpp_source}\index{source/HumanPlayer.cpp@{source/HumanPlayer.cpp}}
+\mbox{\hyperlink{HumanPlayer_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}../include/HumanPlayer.h"{}}}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}../dependencies/Style.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00004}00004\ HumanPlayer::HumanPlayer(PlayerColor\ color)}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00005}00005\ \ \ \ \ :}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00006}00006\ \ \ \ \ Player\{color\}}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00008}00008\ \}}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00010}00010\ HumanPlayer::\string~HumanPlayer()}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00011}00011\ \{}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{for}\ (Piece*\ piece\ :\ m\_captures)}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ piece;}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00016}00016\ std::string\ HumanPlayer::Name()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00017}00017\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{keywordflow}{return}\ Style::Cts(m\_color)\ +\ \textcolor{stringliteral}{"{}\ (Player)"{}};}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00021}00021\ std::string\ HumanPlayer::GetInput(\textcolor{keyword}{const}\ Board*\ \textcolor{keyword}{const}\ board)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00022}00022\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{return}\ Style::GetStringInput(}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ >>\ "{}},}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ Style::Cta(m\_color)\ +\ Style::Cts(m\_color)\ +\ Style::Cta(Color::GREEN)\ +\ \textcolor{stringliteral}{"{}\ may\ make\ a\ move."{}}}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00026}00026\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{HumanPlayer_8cpp_source_l00027}00027\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,5 @@
+<map id="MoveRecord" name="MoveRecord">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,128,101,155"/>
+<area shape="rect" id="Node000002" href="$classPiece.html" title=" " alt="" coords="26,5,80,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,48,56,127,50,127,50,48"/>
+</map>

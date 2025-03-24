@@ -1,0 +1,132 @@
+.TH "Style" 3 "Version V4.2.0" "Chess Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Style
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Style\&.hpp>\fP
+.PP
+Inherited by \fBCanvas\fP\&.
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static std::string \fBCta\fP (\fBColor\fP color)"
+.br
+.ti -1c
+.RI "static std::string \fBCts\fP (\fBColor\fP color)"
+.br
+.ti -1c
+.RI "static std::string \fBBoldText\fP (const std::string &text)"
+.br
+.ti -1c
+.RI "static std::string \fBUnderlineText\fP (const std::string &text)"
+.br
+.ti -1c
+.RI "static std::string \fBLinkText\fP (const std::string &text, \fBColor\fP continueColor=\fBColor::DEFAULT\fP)"
+.br
+.ti -1c
+.RI "static std::string \fBResetColor\fP ()"
+.br
+.ti -1c
+.RI "static size_t \fBDisplayLength\fP (const std::string &text)"
+.br
+.ti -1c
+.RI "static void \fBPrintColored\fP (const std::string &text, \fBColor\fP color=\fBColor::DEFAULT\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintColoredLine\fP (const std::string &text, \fBColor\fP color=\fBColor::DEFAULT\fP, bool endl=true)"
+.br
+.ti -1c
+.RI "static void \fBPrintLine\fP (std::string ch='─', int length=50, \fBColor\fP color=\fBColor::DEFAULT\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintTitle\fP (const std::string &title, \fBColor\fP color=\fBColor::CYAN\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintBox\fP (const std::string &text, const std::string &title='', \fBColor\fP color=\fBColor::GREEN\fP, int fixOffset=0)"
+.br
+.ti -1c
+.RI "static void \fBPrintSuccess\fP (const std::string &message)"
+.br
+.ti -1c
+.RI "static void \fBPrintWarning\fP (const std::string &message)"
+.br
+.ti -1c
+.RI "static void \fBPrintError\fP (const std::string &message)"
+.br
+.ti -1c
+.RI "static void \fBPrintErrorExit\fP (const std::string &error, int code=\-1)"
+.br
+.ti -1c
+.RI "static void \fBPrintInfo\fP (const std::string &message)"
+.br
+.ti -1c
+.RI "static void \fBClearConsole\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBGetBoolInput\fP (const std::string &prompt, const std::string &title='', \fBColor\fP color=\fBColor::YELLOW\fP, \fBColor\fP titleColor=\fBColor::CYAN\fP)"
+.br
+.ti -1c
+.RI "static std::string \fBGetStringInput\fP (const std::string &prompt, const std::string &title='', \fBColor\fP color=\fBColor::YELLOW\fP, \fBColor\fP titleColor=\fBColor::CYAN\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintDivider\fP (const std::string &message='', \fBColor\fP color=\fBColor::DEFAULT\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintTable\fP (const std::string &title, const std::vector< std::string > &header, const std::vector< std::vector< std::string > > &rows, \fBColor\fP color=\fBColor::DEFAULT\fP)"
+.br
+.in -1c
+.SH "Member Function Documentation"
+.PP 
+.SS "static std::string Style::BoldText (const std::string & text)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static void Style::ClearConsole ()\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static std::string Style::Cta (\fBColor\fP color)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static std::string Style::Cts (\fBColor\fP color)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static size_t Style::DisplayLength (const std::string & text)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static bool Style::GetBoolInput (const std::string & prompt, const std::string & title = \fR''\fP, \fBColor\fP color = \fR\fBColor::YELLOW\fP\fP, \fBColor\fP titleColor = \fR\fBColor::CYAN\fP\fP)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static std::string Style::GetStringInput (const std::string & prompt, const std::string & title = \fR''\fP, \fBColor\fP color = \fR\fBColor::YELLOW\fP\fP, \fBColor\fP titleColor = \fR\fBColor::CYAN\fP\fP)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static std::string Style::LinkText (const std::string & text, \fBColor\fP continueColor = \fR\fBColor::DEFAULT\fP\fP)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static void Style::PrintBox (const std::string & text, const std::string & title = \fR''\fP, \fBColor\fP color = \fR\fBColor::GREEN\fP\fP, int fixOffset = \fR0\fP)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static void Style::PrintColored (const std::string & text, \fBColor\fP color = \fR\fBColor::DEFAULT\fP\fP)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static void Style::PrintColoredLine (const std::string & text, \fBColor\fP color = \fR\fBColor::DEFAULT\fP\fP, bool endl = \fRtrue\fP)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static void Style::PrintDivider (const std::string & message = \fR''\fP, \fBColor\fP color = \fR\fBColor::DEFAULT\fP\fP)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static void Style::PrintError (const std::string & message)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static void Style::PrintErrorExit (const std::string & error, int code = \fR\-1\fP)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static void Style::PrintInfo (const std::string & message)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static void Style::PrintLine (std::string ch = \fR'─'\fP, int length = \fR50\fP, \fBColor\fP color = \fR\fBColor::DEFAULT\fP\fP)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static void Style::PrintSuccess (const std::string & message)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static void Style::PrintTable (const std::string & title, const std::vector< std::string > & header, const std::vector< std::vector< std::string > > & rows, \fBColor\fP color = \fR\fBColor::DEFAULT\fP\fP)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static void Style::PrintTitle (const std::string & title, \fBColor\fP color = \fR\fBColor::CYAN\fP\fP)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static void Style::PrintWarning (const std::string & message)\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static std::string Style::ResetColor ()\fR [inline]\fP, \fR [static]\fP"
+
+.SS "static std::string Style::UnderlineText (const std::string & text)\fR [inline]\fP, \fR [static]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chess Game from the source code\&.

@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classPlayer" xml:lang="en-US">
+<title>Player Class Reference</title>
+<indexterm><primary>Player</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Player.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Player:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classPlayer__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classPlayer_1ad061cf938c523c0e7d529d5591224250">Player</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> color)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_classPlayer_1a278aa7f854813b3d53589d51e74c6cf1">~Player</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual std::string <link linkend="_classPlayer_1a5afb4b96be0f18b4bc840f44e06072cb">GetInput</link> (const <link linkend="_classBoard">Board</link> *const board) const =0</para>
+</listitem>
+            <listitem><para>virtual std::string <link linkend="_classPlayer_1a313b6e73fb54e242e318579901ee93da">Name</link> () const =0</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_classPlayer_1a09eaaa8872fcb43e72c7739ab619c866">IsBot</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> <link linkend="_classPlayer_1af97f460cbb2594def32e32d9046f73ec">Color</link> () const</para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_classPiece">Piece</link> * &gt; <link linkend="_classPlayer_1a8248c589e9edeb32a290f48d82bad7ac">GetCaptures</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classPlayer_1a8600584d0d313d9c9183f8676e30b9c2">AddCapture</link> (<link linkend="_classPiece">Piece</link> *captured)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> <link linkend="_classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42">m_color</link></para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_classPiece">Piece</link> * &gt; <link linkend="_classPlayer_1aaef4079e864580e1b197620491d74130">m_captures</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classPlayer_1ad061cf938c523c0e7d529d5591224250"/><section>
+    <title>Player()</title>
+<indexterm><primary>Player</primary><secondary>Player</secondary></indexterm>
+<indexterm><primary>Player</primary><secondary>Player</secondary></indexterm>
+<para><computeroutput>Player::Player (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> color)</computeroutput></para></section>
+<anchor xml:id="_classPlayer_1a278aa7f854813b3d53589d51e74c6cf1"/><section>
+    <title>~Player()</title>
+<indexterm><primary>~Player</primary><secondary>Player</secondary></indexterm>
+<indexterm><primary>Player</primary><secondary>~Player</secondary></indexterm>
+<para><computeroutput>Player::~Player ( )<computeroutput>[pure virtual]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classPlayer_1a8600584d0d313d9c9183f8676e30b9c2"/><section>
+    <title>AddCapture()</title>
+<indexterm><primary>AddCapture</primary><secondary>Player</secondary></indexterm>
+<indexterm><primary>Player</primary><secondary>AddCapture</secondary></indexterm>
+<para><computeroutput>void Player::AddCapture (<link linkend="_classPiece">Piece</link> * captured)</computeroutput></para></section>
+<anchor xml:id="_classPlayer_1af97f460cbb2594def32e32d9046f73ec"/><section>
+    <title>Color()</title>
+<indexterm><primary>Color</primary><secondary>Player</secondary></indexterm>
+<indexterm><primary>Player</primary><secondary>Color</secondary></indexterm>
+<para><computeroutput><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> Player::Color ( ) const</computeroutput></para></section>
+<anchor xml:id="_classPlayer_1a8248c589e9edeb32a290f48d82bad7ac"/><section>
+    <title>GetCaptures()</title>
+<indexterm><primary>GetCaptures</primary><secondary>Player</secondary></indexterm>
+<indexterm><primary>Player</primary><secondary>GetCaptures</secondary></indexterm>
+<para><computeroutput>std::vector&lt; <link linkend="_classPiece">Piece</link> * &gt; Player::GetCaptures ( ) const</computeroutput></para></section>
+<anchor xml:id="_classPlayer_1a5afb4b96be0f18b4bc840f44e06072cb"/><section>
+    <title>GetInput()</title>
+<indexterm><primary>GetInput</primary><secondary>Player</secondary></indexterm>
+<indexterm><primary>Player</primary><secondary>GetInput</secondary></indexterm>
+<para><computeroutput>virtual std::string Player::GetInput (const <link linkend="_classBoard">Board</link> *const board) const<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_classBotPlayer_1aa6c9035eac0ad8b34c124eeb3876d92a">BotPlayer</link>, and <link linkend="_classHumanPlayer_1a445fac75f6cac55fd6879ed277f010ac">HumanPlayer</link>.</para>
+</section>
+<anchor xml:id="_classPlayer_1a09eaaa8872fcb43e72c7739ab619c866"/><section>
+    <title>IsBot()</title>
+<indexterm><primary>IsBot</primary><secondary>Player</secondary></indexterm>
+<indexterm><primary>Player</primary><secondary>IsBot</secondary></indexterm>
+<para><computeroutput>virtual bool Player::IsBot ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented in <link linkend="_classBotPlayer_1a5e79536cccb4c8d9452a79950a598351">BotPlayer</link>.</para>
+</section>
+<anchor xml:id="_classPlayer_1a313b6e73fb54e242e318579901ee93da"/><section>
+    <title>Name()</title>
+<indexterm><primary>Name</primary><secondary>Player</secondary></indexterm>
+<indexterm><primary>Player</primary><secondary>Name</secondary></indexterm>
+<para><computeroutput>virtual std::string Player::Name ( ) const<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_classBotPlayer_1aaf2580fa12448259b5142bff4062f0ab">BotPlayer</link>, and <link linkend="_classHumanPlayer_1a4999d6c988fcc037600e3e8db6f9bbf4">HumanPlayer</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classPlayer_1aaef4079e864580e1b197620491d74130"/><section>
+    <title>m_captures</title>
+<indexterm><primary>m_captures</primary><secondary>Player</secondary></indexterm>
+<indexterm><primary>Player</primary><secondary>m_captures</secondary></indexterm>
+<para><computeroutput>std::vector&lt;<link linkend="_classPiece">Piece</link> *&gt; Player::m_captures<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42"/><section>
+    <title>m_color</title>
+<indexterm><primary>m_color</primary><secondary>Player</secondary></indexterm>
+<indexterm><primary>Player</primary><secondary>m_color</secondary></indexterm>
+<para><computeroutput><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> Player::m_color<computeroutput>[protected]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/huplo/Coding/Projects/C++/chess-game/include/<link linkend="_Player_8h">Player.h</link><link linkend="_Player_8cpp">Player.cpp</link></section>
+</section>

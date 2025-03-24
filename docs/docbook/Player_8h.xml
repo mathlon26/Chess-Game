@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Player_8h" xml:lang="en-US">
+<title>/home/huplo/Coding/Projects/C++/chess-game/include/Player.h File Reference</title>
+<indexterm><primary>/home/huplo/Coding/Projects/C++/chess-game/include/Player.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;Move.h&quot;<?linebreak?>#include &quot;Piece.h&quot;<?linebreak?>#include &quot;../dependencies/Style.hpp&quot;<?linebreak?>#include &lt;string&gt;<?linebreak?></programlisting>Include dependency graph for Player.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="Player_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="Player_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classPlayer">Player</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> <link linkend="_Player_8h_1a301cfd5fe9a22cb30292f6e1523247d7">PlayerColor</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_Player_8h_1a301cfd5fe9a22cb30292f6e1523247d7"/><section>
+    <title>PlayerColor</title>
+<indexterm><primary>PlayerColor</primary><secondary>Player.h</secondary></indexterm>
+<indexterm><primary>Player.h</primary><secondary>PlayerColor</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link></computeroutput></para></section>
+</section>
+</section>

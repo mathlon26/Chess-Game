@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_CanvasApp_8h_source" xml:lang="en-US">
+<title>CanvasApp.h</title>
+<indexterm><primary>/home/huplo/Coding/Projects/C++/chess-game/include/CanvasApp.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;CANVAS_APP__H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;CANVAS_APP__H</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Canvas_8h">Canvas.h</link>&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_App_8h">App.h</link>&quot;</emphasis>
+6 
+7 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classCanvasApp_1af9ee675c88f6e09bc052de53d5afd4b5">CanvasApp</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classCanvas_1a5fce53f080ad6540094901f9768805a8">Canvas</link>,&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classApp_1acb8cbf3e285b91d0170ffe87df5989c5">App</link>
+8 {
+9 <emphasis role="keyword">public</emphasis>:
+10 &#32;&#32;&#32;&#32;<link linkend="_classCanvasApp_1af9ee675c88f6e09bc052de53d5afd4b5">CanvasApp</link>()&#32;:&#32;<link linkend="_classCanvas_1a5fce53f080ad6540094901f9768805a8">Canvas</link>{},&#32;<link linkend="_classApp_1acb8cbf3e285b91d0170ffe87df5989c5">App</link>{}&#32;{};
+11 &#32;&#32;&#32;&#32;<link linkend="_classCanvasApp_1a40ee66de67fa04811c27cb883bbca3ba">~CanvasApp</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;;
+12 
+13 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classCanvasApp_1a676b5e32d8b2d3073d2bcaa908ca4e6c">Init</link>()&#32;<emphasis role="keyword">override</emphasis>&#32;=&#32;0;
+14 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classCanvasApp_1aaa5e049733d0a342e6826f3a609d614f">Update</link>()&#32;<emphasis role="keyword">override</emphasis>&#32;=&#32;0;
+15 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classCanvasApp_1a7ce1991bf3631e05017d04781f0d49e3">Draw</link>()&#32;<emphasis role="keyword">const&#32;override</emphasis>&#32;=&#32;0;
+16 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classCanvasApp_1a25ea309d5cd14e5ee4683c10d6336d63">Run</link>()&#32;<emphasis role="keyword">override</emphasis>&#32;=&#32;0;
+17 
+18 <emphasis role="keyword">private</emphasis>:
+19 };
+20 
+21 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;CANVAS_APP__H</emphasis>
+</programlisting></section>

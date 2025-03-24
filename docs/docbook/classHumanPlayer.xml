@@ -1,0 +1,121 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classHumanPlayer" xml:lang="en-US">
+<title>HumanPlayer Class Reference</title>
+<indexterm><primary>HumanPlayer</primary></indexterm>
+<para>
+<computeroutput>#include &lt;HumanPlayer.h&gt;</computeroutput>
+</para>
+Inheritance diagram for HumanPlayer:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classHumanPlayer__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for HumanPlayer:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classHumanPlayer__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classHumanPlayer_1a0d9e4734d10e497c6b7c7944bfda4a76">HumanPlayer</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> color)</para>
+</listitem>
+            <listitem><para><link linkend="_classHumanPlayer_1abdeb9d120fc74c8d82ec0c688883f16f">~HumanPlayer</link> ()</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classHumanPlayer_1a445fac75f6cac55fd6879ed277f010ac">GetInput</link> (const <link linkend="_classBoard">Board</link> *const board) const override</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classHumanPlayer_1a4999d6c988fcc037600e3e8db6f9bbf4">Name</link> () const override</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_classPlayer">Player</link>        <itemizedlist>
+            <listitem><para><link linkend="_classPlayer_1ad061cf938c523c0e7d529d5591224250">Player</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> color)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_classPlayer_1a278aa7f854813b3d53589d51e74c6cf1">~Player</link> ()=0</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_classPlayer_1a09eaaa8872fcb43e72c7739ab619c866">IsBot</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> <link linkend="_classPlayer_1af97f460cbb2594def32e32d9046f73ec">Color</link> () const</para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_classPiece">Piece</link> * &gt; <link linkend="_classPlayer_1a8248c589e9edeb32a290f48d82bad7ac">GetCaptures</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classPlayer_1a8600584d0d313d9c9183f8676e30b9c2">AddCapture</link> (<link linkend="_classPiece">Piece</link> *captured)</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Attributes inherited from <link linkend="_classPlayer">Player</link>        <itemizedlist>
+            <listitem><para><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> <link linkend="_classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42">m_color</link></para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_classPiece">Piece</link> * &gt; <link linkend="_classPlayer_1aaef4079e864580e1b197620491d74130">m_captures</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classHumanPlayer_1a0d9e4734d10e497c6b7c7944bfda4a76"/><section>
+    <title>HumanPlayer()</title>
+<indexterm><primary>HumanPlayer</primary><secondary>HumanPlayer</secondary></indexterm>
+<indexterm><primary>HumanPlayer</primary><secondary>HumanPlayer</secondary></indexterm>
+<para><computeroutput>HumanPlayer::HumanPlayer (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> color)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classHumanPlayer_a0d9e4734d10e497c6b7c7944bfda4a76_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classHumanPlayer_1abdeb9d120fc74c8d82ec0c688883f16f"/><section>
+    <title>~HumanPlayer()</title>
+<indexterm><primary>~HumanPlayer</primary><secondary>HumanPlayer</secondary></indexterm>
+<indexterm><primary>HumanPlayer</primary><secondary>~HumanPlayer</secondary></indexterm>
+<para><computeroutput>HumanPlayer::~HumanPlayer ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classHumanPlayer_1a445fac75f6cac55fd6879ed277f010ac"/><section>
+    <title>GetInput()</title>
+<indexterm><primary>GetInput</primary><secondary>HumanPlayer</secondary></indexterm>
+<indexterm><primary>HumanPlayer</primary><secondary>GetInput</secondary></indexterm>
+<para><computeroutput>std::string HumanPlayer::GetInput (const <link linkend="_classBoard">Board</link> *const board) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classPlayer_1a5afb4b96be0f18b4bc840f44e06072cb">Player</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classHumanPlayer_a445fac75f6cac55fd6879ed277f010ac_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classHumanPlayer_1a4999d6c988fcc037600e3e8db6f9bbf4"/><section>
+    <title>Name()</title>
+<indexterm><primary>Name</primary><secondary>HumanPlayer</secondary></indexterm>
+<indexterm><primary>HumanPlayer</primary><secondary>Name</secondary></indexterm>
+<para><computeroutput>std::string HumanPlayer::Name ( ) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classPlayer_1a313b6e73fb54e242e318579901ee93da">Player</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classHumanPlayer_a4999d6c988fcc037600e3e8db6f9bbf4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/huplo/Coding/Projects/C++/chess-game/include/<link linkend="_HumanPlayer_8h">HumanPlayer.h</link><link linkend="_HumanPlayer_8cpp">HumanPlayer.cpp</link></section>
+</section>

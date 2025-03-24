@@ -1,0 +1,134 @@
+\doxysection{Knight Class Reference}
+\hypertarget{classKnight}{}\label{classKnight}\index{Knight@{Knight}}
+
+
+{\ttfamily \#include $<$Knight.\+h$>$}
+
+
+
+Inheritance diagram for Knight\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=124pt]{classKnight__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Knight\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=124pt]{classKnight__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKnight_ae9ca30e7b96ba6e49701152dd811113e}{Knight}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} color)
+\item 
+\mbox{\hyperlink{classKnight_a2754123d6876babe915f4da8f761361b}{\texorpdfstring{$\sim$}{\string~}\+Knight}} ()
+\item 
+std\+::string \mbox{\hyperlink{classKnight_a69fee9f48cef83fddc0db12895a3daa8}{Symbol}} () const override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classMove}{Move}} $>$ \mbox{\hyperlink{classKnight_a5480f41f242d9069cf48603212124f33}{Possible\+Moves}} (\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}board, int currentX, int currentY) const override
+\item 
+bool \mbox{\hyperlink{classKnight_a356a4572773c6b3d415eb4ceaa676bb8}{Is\+Valid\+Move}} (\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}target, \mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}board, \mbox{\hyperlink{classMove}{Move}} \&move, \mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}\&set\+Replacement) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPiece}{Piece}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f}{Piece}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} color)
+\item 
+virtual \mbox{\hyperlink{classPiece_ab63f5b3faabe6ce60c9eb1806511ff9d}{\texorpdfstring{$\sim$}{\string~}\+Piece}} ()=default
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} \mbox{\hyperlink{classPiece_ad31a695453335fbbc36a9c749395f7c1}{Color}} () const
+\item 
+virtual bool \mbox{\hyperlink{classPiece_a392fecd481d60993e7d6d73116b2e171}{Is\+King}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classPiece}{Piece}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} \mbox{\hyperlink{classPiece_a757a577b6dfb06c6558021b828ca7c1d}{m\+\_\+color}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classKnight_ae9ca30e7b96ba6e49701152dd811113e}\index{Knight@{Knight}!Knight@{Knight}}
+\index{Knight@{Knight}!Knight@{Knight}}
+\doxysubsubsection{\texorpdfstring{Knight()}{Knight()}}
+{\footnotesize\ttfamily \label{classKnight_ae9ca30e7b96ba6e49701152dd811113e} 
+Knight\+::\+Knight (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}}}]{color}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=265pt]{classKnight_ae9ca30e7b96ba6e49701152dd811113e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKnight_a2754123d6876babe915f4da8f761361b}\index{Knight@{Knight}!````~Knight@{\texorpdfstring{$\sim$}{\string~}Knight}}
+\index{````~Knight@{\texorpdfstring{$\sim$}{\string~}Knight}!Knight@{Knight}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Knight()}{\string~Knight()}}
+{\footnotesize\ttfamily \label{classKnight_a2754123d6876babe915f4da8f761361b} 
+Knight\+::\texorpdfstring{$\sim$}{\string~}\+Knight (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classKnight_a356a4572773c6b3d415eb4ceaa676bb8}\index{Knight@{Knight}!IsValidMove@{IsValidMove}}
+\index{IsValidMove@{IsValidMove}!Knight@{Knight}}
+\doxysubsubsection{\texorpdfstring{IsValidMove()}{IsValidMove()}}
+{\footnotesize\ttfamily \label{classKnight_a356a4572773c6b3d415eb4ceaa676bb8} 
+bool Knight\+::\+Is\+Valid\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}}]{target}{, }\item[{\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{\mbox{\hyperlink{classMove}{Move}} \&}]{move}{, }\item[{\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}\&}]{set\+Replacement}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_a363193ff97c3e10b77feb6aec81d1a35}{Piece}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKnight_a356a4572773c6b3d415eb4ceaa676bb8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKnight_a5480f41f242d9069cf48603212124f33}\index{Knight@{Knight}!PossibleMoves@{PossibleMoves}}
+\index{PossibleMoves@{PossibleMoves}!Knight@{Knight}}
+\doxysubsubsection{\texorpdfstring{PossibleMoves()}{PossibleMoves()}}
+{\footnotesize\ttfamily \label{classKnight_a5480f41f242d9069cf48603212124f33} 
+std\+::vector$<$ \mbox{\hyperlink{classMove}{Move}} $>$ Knight\+::\+Possible\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{int}]{currentX}{, }\item[{int}]{currentY}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_a1c67fd5e66c3e7b6c1f4ebf3207e65e2}{Piece}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classKnight_a5480f41f242d9069cf48603212124f33_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKnight_a69fee9f48cef83fddc0db12895a3daa8}\index{Knight@{Knight}!Symbol@{Symbol}}
+\index{Symbol@{Symbol}!Knight@{Knight}}
+\doxysubsubsection{\texorpdfstring{Symbol()}{Symbol()}}
+{\footnotesize\ttfamily \label{classKnight_a69fee9f48cef83fddc0db12895a3daa8} 
+std\+::string Knight\+::\+Symbol (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_abc54f78cfc3e6c4ed3d103ddaeb1d96f}{Piece}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/huplo/\+Coding/\+Projects/\+C++/chess-\/game/include/\mbox{\hyperlink{Knight_8h}{Knight.\+h}}\item 
+\mbox{\hyperlink{Knight_8cpp}{Knight.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,15 @@
+<map id="Board::SetKingChecked" name="Board::SetKingChecked">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,167,108"/>
+<area shape="rect" id="Node000002" href="$classBoard.html#a20bcaee5725f1fc0e57b0e59a004153a" title=" " alt="" coords="215,81,367,108"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="167,92,199,92,199,97,167,97"/>
+<area shape="rect" id="Node000003" href="$classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb" title=" " alt="" coords="433,5,530,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="324,78,414,42,429,36,431,41,416,46,326,83"/>
+<area shape="rect" id="Node000004" href="$classPiece.html#ad31a695453335fbbc36a9c749395f7c1" title=" " alt="" coords="435,56,528,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="367,82,420,75,420,80,368,87"/>
+<area shape="rect" id="Node000005" href="$classPiece.html#a392fecd481d60993e7d6d73116b2e171" title=" " alt="" coords="432,107,531,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="368,102,417,109,416,114,367,107"/>
+<area shape="rect" id="Node000006" href="$classPiece.html#a363193ff97c3e10b77feb6aec81d1a35" title=" " alt="" coords="415,157,548,184"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="326,106,416,143,431,149,429,154,414,148,324,111"/>
+<area shape="rect" id="Node000007" href="$classPiece.html#a4f0ea7928c9d57ec8f8b14c88358d01f" title=" " alt="" coords="596,157,692,184"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="549,168,581,168,581,173,549,173"/>
+</map>

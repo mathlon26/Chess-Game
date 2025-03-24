@@ -1,0 +1,53 @@
+\doxysection{Knight.\+cpp}
+\hypertarget{Knight_8cpp_source}{}\label{Knight_8cpp_source}\index{source/Knight.cpp@{source/Knight.cpp}}
+\mbox{\hyperlink{Knight_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}../include/Knight.h"{}}}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00003}00003\ Knight::Knight(PieceColor\ color)}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00004}00004\ \ \ \ \ :}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00005}00005\ \ \ \ \ Piece\{color\}}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00006}00006\ \{}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00007}00007\ \}}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00010}00010\ std::string\ Knight::Symbol()\textcolor{keyword}{\ const\ }}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00011}00011\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}H"{}};}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00013}00013\ \}}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00015}00015\ \textcolor{comment}{//\ Generates\ all\ possible\ moves\ for\ a\ knight\ from\ its\ current\ position.}}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00016}00016\ std::vector<Move>\ Knight::PossibleMoves(Board*\ board,\ \textcolor{keywordtype}{int}\ currentX,\ \textcolor{keywordtype}{int}\ currentY)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00017}00017\ \ \ \ \ std::vector<Move>\ moves;}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00018}00018\ \ \ \ \ \textcolor{comment}{//\ All\ L-\/shaped\ moves.}}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordtype}{int}\ offsets[8][2]\ =\ \{}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \{1,\ 2\},\ \{2,\ 1\},\ \{2,\ -\/1\},\ \{1,\ -\/2\},}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \{-\/1,\ -\/2\},\ \{-\/2,\ -\/1\},\ \{-\/2,\ 1\},\ \{-\/1,\ 2\}}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00022}00022\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ \&off\ :\ offsets)\ \{}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ x\ =\ currentX\ +\ off[0];}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00026}00026\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ y\ =\ currentY\ +\ off[1];}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ >=\ 0\ \&\&\ x\ <\ 8\ \&\&\ y\ >=\ 0\ \&\&\ y\ <\ 8)\ \{}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ Piece*\ piece\ =\ board-\/>GetPiece(x,\ y);}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (piece\ ==\ \textcolor{keyword}{nullptr}\ ||\ piece-\/>Color()\ !=\ m\_color)}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ moves.push\_back(Move\{currentX,\ currentY,\ x,\ y\});}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00032}00032\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{return}\ moves;}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00036}00036\ \textcolor{comment}{//\ Uses\ the\ list\ of\ possible\ moves\ to\ determine\ if\ the\ move\ is\ valid.}}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00037}00037\ \textcolor{keywordtype}{bool}\ Knight::IsValidMove(Piece*\ target,\ Board*\ board,\ Move\&\ move,\ Piece*\&\ setReplacement)\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{keyword}{auto}\ candidates\ =\ PossibleMoves(board,\ move.getStartX(),\ move.getStartY());}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ Move\&\ candidate\ :\ candidates)\ \{}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (candidate.getStartX()\ ==\ move.getStartX()\ \&\&}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ candidate.getStartY()\ ==\ move.getStartY()\ \&\&}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ candidate.getEndX()\ ==\ move.getEndX()\ \&\&}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ candidate.getEndY()\ ==\ move.getEndY())}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00045}00045\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Knight_8cpp_source_l00047}00047\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,129 @@
+\doxysection{Player Class Reference}
+\hypertarget{classPlayer}{}\label{classPlayer}\index{Player@{Player}}
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+
+
+Inheritance diagram for Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=232pt]{classPlayer__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer_ad061cf938c523c0e7d529d5591224250}{Player}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}} color)
+\item 
+virtual \mbox{\hyperlink{classPlayer_a278aa7f854813b3d53589d51e74c6cf1}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()=0
+\item 
+virtual std\+::string \mbox{\hyperlink{classPlayer_a5afb4b96be0f18b4bc840f44e06072cb}{Get\+Input}} (const \mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}const board) const =0
+\item 
+virtual std\+::string \mbox{\hyperlink{classPlayer_a313b6e73fb54e242e318579901ee93da}{Name}} () const =0
+\item 
+virtual bool \mbox{\hyperlink{classPlayer_a09eaaa8872fcb43e72c7739ab619c866}{Is\+Bot}} ()
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}} \mbox{\hyperlink{classPlayer_af97f460cbb2594def32e32d9046f73ec}{Color}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classPlayer_a8248c589e9edeb32a290f48d82bad7ac}{Get\+Captures}} () const
+\item 
+void \mbox{\hyperlink{classPlayer_a8600584d0d313d9c9183f8676e30b9c2}{Add\+Capture}} (\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}captured)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}} \mbox{\hyperlink{classPlayer_adff61d6fe8f9e732c4dbe5a6bbcb5e42}{m\+\_\+color}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classPlayer_aaef4079e864580e1b197620491d74130}{m\+\_\+captures}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPlayer_ad061cf938c523c0e7d529d5591224250}\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}}
+{\footnotesize\ttfamily \label{classPlayer_ad061cf938c523c0e7d529d5591224250} 
+Player\+::\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}}}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classPlayer_a278aa7f854813b3d53589d51e74c6cf1}\index{Player@{Player}!````~Player@{\texorpdfstring{$\sim$}{\string~}Player}}
+\index{````~Player@{\texorpdfstring{$\sim$}{\string~}Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Player()}{\string~Player()}}
+{\footnotesize\ttfamily \label{classPlayer_a278aa7f854813b3d53589d51e74c6cf1} 
+Player\+::\texorpdfstring{$\sim$}{\string~}\+Player (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPlayer_a8600584d0d313d9c9183f8676e30b9c2}\index{Player@{Player}!AddCapture@{AddCapture}}
+\index{AddCapture@{AddCapture}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{AddCapture()}{AddCapture()}}
+{\footnotesize\ttfamily \label{classPlayer_a8600584d0d313d9c9183f8676e30b9c2} 
+void Player\+::\+Add\+Capture (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}}]{captured}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classPlayer_af97f460cbb2594def32e32d9046f73ec}\index{Player@{Player}!Color@{Color}}
+\index{Color@{Color}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Color()}{Color()}}
+{\footnotesize\ttfamily \label{classPlayer_af97f460cbb2594def32e32d9046f73ec} 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}} Player\+::\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classPlayer_a8248c589e9edeb32a290f48d82bad7ac}\index{Player@{Player}!GetCaptures@{GetCaptures}}
+\index{GetCaptures@{GetCaptures}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetCaptures()}{GetCaptures()}}
+{\footnotesize\ttfamily \label{classPlayer_a8248c589e9edeb32a290f48d82bad7ac} 
+std\+::vector$<$ \mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ Player\+::\+Get\+Captures (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classPlayer_a5afb4b96be0f18b4bc840f44e06072cb}\index{Player@{Player}!GetInput@{GetInput}}
+\index{GetInput@{GetInput}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{GetInput()}{GetInput()}}
+{\footnotesize\ttfamily \label{classPlayer_a5afb4b96be0f18b4bc840f44e06072cb} 
+virtual std\+::string Player\+::\+Get\+Input (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}const}]{board}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classBotPlayer_aa6c9035eac0ad8b34c124eeb3876d92a}{Bot\+Player}}, and \mbox{\hyperlink{classHumanPlayer_a445fac75f6cac55fd6879ed277f010ac}{Human\+Player}}.
+
+\Hypertarget{classPlayer_a09eaaa8872fcb43e72c7739ab619c866}\index{Player@{Player}!IsBot@{IsBot}}
+\index{IsBot@{IsBot}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{IsBot()}{IsBot()}}
+{\footnotesize\ttfamily \label{classPlayer_a09eaaa8872fcb43e72c7739ab619c866} 
+virtual bool Player\+::\+Is\+Bot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classBotPlayer_a5e79536cccb4c8d9452a79950a598351}{Bot\+Player}}.
+
+\Hypertarget{classPlayer_a313b6e73fb54e242e318579901ee93da}\index{Player@{Player}!Name@{Name}}
+\index{Name@{Name}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Name()}{Name()}}
+{\footnotesize\ttfamily \label{classPlayer_a313b6e73fb54e242e318579901ee93da} 
+virtual std\+::string Player\+::\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classBotPlayer_aaf2580fa12448259b5142bff4062f0ab}{Bot\+Player}}, and \mbox{\hyperlink{classHumanPlayer_a4999d6c988fcc037600e3e8db6f9bbf4}{Human\+Player}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classPlayer_aaef4079e864580e1b197620491d74130}\index{Player@{Player}!m\_captures@{m\_captures}}
+\index{m\_captures@{m\_captures}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{m\_captures}{m\_captures}}
+{\footnotesize\ttfamily \label{classPlayer_aaef4079e864580e1b197620491d74130} 
+std\+::vector$<$\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}$>$ Player\+::m\+\_\+captures\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classPlayer_adff61d6fe8f9e732c4dbe5a6bbcb5e42}\index{Player@{Player}!m\_color@{m\_color}}
+\index{m\_color@{m\_color}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{m\_color}{m\_color}}
+{\footnotesize\ttfamily \label{classPlayer_adff61d6fe8f9e732c4dbe5a6bbcb5e42} 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}} Player\+::m\+\_\+color\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/huplo/\+Coding/\+Projects/\+C++/chess-\/game/include/\mbox{\hyperlink{Player_8h}{Player.\+h}}\item 
+\mbox{\hyperlink{Player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

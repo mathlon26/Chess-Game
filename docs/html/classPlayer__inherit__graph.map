@@ -1,0 +1,7 @@
+<map id="Player" name="Player">
+<area shape="rect" id="Node000001" title=" " alt="" coords="71,5,130,32"/>
+<area shape="rect" id="Node000002" href="$classBotPlayer.html" title=" " alt="" coords="5,80,84,107"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,46,56,81,52,78,79,43"/>
+<area shape="rect" id="Node000003" href="$classHumanPlayer.html" title=" " alt="" coords="108,80,208,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="122,43,150,78,146,81,118,46"/>
+</map>

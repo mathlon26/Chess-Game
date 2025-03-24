@@ -1,0 +1,82 @@
+.TH "Board" 3 "Version V4.2.0" "Chess Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Board
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Board\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBoard\fP ()"
+.br
+.ti -1c
+.RI "\fB~Board\fP ()"
+.br
+.ti -1c
+.RI "void \fBDraw\fP () const"
+.br
+.ti -1c
+.RI "bool \fBExecuteMove\fP (\fBMove\fP &move, \fBPlayer\fP *executor)"
+.br
+.ti -1c
+.RI "\fBMoveRecord\fP \fBCommitMoveRecord\fP (\fBMove\fP &move, \fBPiece\fP *replacement)"
+.br
+.ti -1c
+.RI "void \fBRevertMoveRecord\fP (const \fBMoveRecord\fP &record)"
+.br
+.ti -1c
+.RI "\fBPiece\fP * \fBGetPiece\fP (int x, int y) const"
+.br
+.ti -1c
+.RI "std::vector< \fBMove\fP > \fBGetPossibleMoves\fP (\fBColor\fP color) const"
+.br
+.ti -1c
+.RI "bool \fBIsEnPassantTarget\fP (int x, int y) const"
+.br
+.ti -1c
+.RI "void \fBClearEnPassantTarget\fP ()"
+.br
+.ti -1c
+.RI "bool \fBIsKingChecked\fP (\fBColor\fP color) const"
+.br
+.ti -1c
+.RI "bool \fBSetKingChecked\fP (\fBColor\fP color)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Board::Board ()"
+
+.SS "Board::~Board ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Board::ClearEnPassantTarget ()"
+
+.SS "\fBMoveRecord\fP Board::CommitMoveRecord (\fBMove\fP & move, \fBPiece\fP * replacement)"
+CommitMoveRecord: Performs the move on the board and returns a \fBMoveRecord\fP capturing the previous state\&. 
+.SS "void Board::Draw () const"
+
+.SS "bool Board::ExecuteMove (\fBMove\fP & move, \fBPlayer\fP * executor)"
+
+.SS "\fBPiece\fP * Board::GetPiece (int x, int y) const"
+
+.SS "std::vector< \fBMove\fP > Board::GetPossibleMoves (\fBColor\fP color) const"
+
+.SS "bool Board::IsEnPassantTarget (int x, int y) const"
+
+.SS "bool Board::IsKingChecked (\fBColor\fP color) const"
+
+.SS "void Board::RevertMoveRecord (const \fBMoveRecord\fP & record)"
+RevertMoveRecord: Reverts a move using the information stored in the \fBMoveRecord\fP\&. 
+.SS "bool Board::SetKingChecked (\fBColor\fP color)"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chess Game from the source code\&.

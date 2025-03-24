@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classBotPlayer" xml:lang="en-US">
+<title>BotPlayer Class Reference</title>
+<indexterm><primary>BotPlayer</primary></indexterm>
+<para>
+<computeroutput>#include &lt;BotPlayer.h&gt;</computeroutput>
+</para>
+Inheritance diagram for BotPlayer:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classBotPlayer__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for BotPlayer:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classBotPlayer__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classBotPlayer_1ad520b04b07027663107b8ad003753fff">BotPlayer</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> color)</para>
+</listitem>
+            <listitem><para><link linkend="_classBotPlayer_1a526b7fc1214d8e2e2c009679f18e177d">~BotPlayer</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classBotPlayer_1a5e79536cccb4c8d9452a79950a598351">IsBot</link> () override</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classBotPlayer_1aa6c9035eac0ad8b34c124eeb3876d92a">GetInput</link> (const <link linkend="_classBoard">Board</link> *const board) const override</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classBotPlayer_1aaf2580fa12448259b5142bff4062f0ab">Name</link> () const override</para>
+</listitem>
+            <listitem><para>void <link linkend="_classBotPlayer_1a36fb5ce4f6a78a751d7a95b7b8ebc1ea">AddCache</link> (std::string moveStr)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classBotPlayer_1ada837bf49ac76c75947bc77d4af07088">EmptyCache</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_classPlayer">Player</link>        <itemizedlist>
+            <listitem><para><link linkend="_classPlayer_1ad061cf938c523c0e7d529d5591224250">Player</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> color)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_classPlayer_1a278aa7f854813b3d53589d51e74c6cf1">~Player</link> ()=0</para>
+</listitem>
+            <listitem><para><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> <link linkend="_classPlayer_1af97f460cbb2594def32e32d9046f73ec">Color</link> () const</para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_classPiece">Piece</link> * &gt; <link linkend="_classPlayer_1a8248c589e9edeb32a290f48d82bad7ac">GetCaptures</link> () const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classPlayer_1a8600584d0d313d9c9183f8676e30b9c2">AddCapture</link> (<link linkend="_classPiece">Piece</link> *captured)</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Attributes inherited from <link linkend="_classPlayer">Player</link>        <itemizedlist>
+            <listitem><para><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> <link linkend="_classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42">m_color</link></para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_classPiece">Piece</link> * &gt; <link linkend="_classPlayer_1aaef4079e864580e1b197620491d74130">m_captures</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classBotPlayer_1ad520b04b07027663107b8ad003753fff"/><section>
+    <title>BotPlayer()</title>
+<indexterm><primary>BotPlayer</primary><secondary>BotPlayer</secondary></indexterm>
+<indexterm><primary>BotPlayer</primary><secondary>BotPlayer</secondary></indexterm>
+<para><computeroutput>BotPlayer::BotPlayer (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PlayerColor</link> color)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classBotPlayer_ad520b04b07027663107b8ad003753fff_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classBotPlayer_1a526b7fc1214d8e2e2c009679f18e177d"/><section>
+    <title>~BotPlayer()</title>
+<indexterm><primary>~BotPlayer</primary><secondary>BotPlayer</secondary></indexterm>
+<indexterm><primary>BotPlayer</primary><secondary>~BotPlayer</secondary></indexterm>
+<para><computeroutput>BotPlayer::~BotPlayer ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classBotPlayer_1a36fb5ce4f6a78a751d7a95b7b8ebc1ea"/><section>
+    <title>AddCache()</title>
+<indexterm><primary>AddCache</primary><secondary>BotPlayer</secondary></indexterm>
+<indexterm><primary>BotPlayer</primary><secondary>AddCache</secondary></indexterm>
+<para><computeroutput>void BotPlayer::AddCache (std::string moveStr)</computeroutput></para></section>
+<anchor xml:id="_classBotPlayer_1ada837bf49ac76c75947bc77d4af07088"/><section>
+    <title>EmptyCache()</title>
+<indexterm><primary>EmptyCache</primary><secondary>BotPlayer</secondary></indexterm>
+<indexterm><primary>BotPlayer</primary><secondary>EmptyCache</secondary></indexterm>
+<para><computeroutput>void BotPlayer::EmptyCache ( )</computeroutput></para></section>
+<anchor xml:id="_classBotPlayer_1aa6c9035eac0ad8b34c124eeb3876d92a"/><section>
+    <title>GetInput()</title>
+<indexterm><primary>GetInput</primary><secondary>BotPlayer</secondary></indexterm>
+<indexterm><primary>BotPlayer</primary><secondary>GetInput</secondary></indexterm>
+<para><computeroutput>std::string BotPlayer::GetInput (const <link linkend="_classBoard">Board</link> *const board) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classPlayer_1a5afb4b96be0f18b4bc840f44e06072cb">Player</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classBotPlayer_aa6c9035eac0ad8b34c124eeb3876d92a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classBotPlayer_1a5e79536cccb4c8d9452a79950a598351"/><section>
+    <title>IsBot()</title>
+<indexterm><primary>IsBot</primary><secondary>BotPlayer</secondary></indexterm>
+<indexterm><primary>BotPlayer</primary><secondary>IsBot</secondary></indexterm>
+<para><computeroutput>bool BotPlayer::IsBot ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Reimplemented from <link linkend="_classPlayer_1a09eaaa8872fcb43e72c7739ab619c866">Player</link>.</para>
+</section>
+<anchor xml:id="_classBotPlayer_1aaf2580fa12448259b5142bff4062f0ab"/><section>
+    <title>Name()</title>
+<indexterm><primary>Name</primary><secondary>BotPlayer</secondary></indexterm>
+<indexterm><primary>BotPlayer</primary><secondary>Name</secondary></indexterm>
+<para><computeroutput>std::string BotPlayer::Name ( ) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classPlayer_1a313b6e73fb54e242e318579901ee93da">Player</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classBotPlayer_aaf2580fa12448259b5142bff4062f0ab_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/huplo/Coding/Projects/C++/chess-game/include/<link linkend="_BotPlayer_8h">BotPlayer.h</link><link linkend="_BotPlayer_8cpp">BotPlayer.cpp</link></section>
+</section>

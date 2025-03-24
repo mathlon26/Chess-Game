@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="dir_b2f33c71d4aa5e7af42a1ca61ff5af1b" kind="dir">
+    <compoundname>source</compoundname>
+    <innerfile refid="Bishop_8cpp">Bishop.cpp</innerfile>
+    <innerfile refid="Board_8cpp">Board.cpp</innerfile>
+    <innerfile refid="BotPlayer_8cpp">BotPlayer.cpp</innerfile>
+    <innerfile refid="ChessGame_8cpp">ChessGame.cpp</innerfile>
+    <innerfile refid="HumanPlayer_8cpp">HumanPlayer.cpp</innerfile>
+    <innerfile refid="King_8cpp">King.cpp</innerfile>
+    <innerfile refid="Knight_8cpp">Knight.cpp</innerfile>
+    <innerfile refid="main_8cpp">main.cpp</innerfile>
+    <innerfile refid="Move_8cpp">Move.cpp</innerfile>
+    <innerfile refid="Pawn_8cpp">Pawn.cpp</innerfile>
+    <innerfile refid="Piece_8cpp">Piece.cpp</innerfile>
+    <innerfile refid="Player_8cpp">Player.cpp</innerfile>
+    <innerfile refid="Queen_8cpp">Queen.cpp</innerfile>
+    <innerfile refid="Rook_8cpp">Rook.cpp</innerfile>
+    <innerfile refid="TwoPlayerGame_8cpp">TwoPlayerGame.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="source/"/>
+  </compounddef>
+</doxygen>

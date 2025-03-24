@@ -1,0 +1,146 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="King_8h" kind="file" language="C++">
+    <compoundname>King.h</compoundname>
+    <includes refid="Piece_8h" local="yes">Piece.h</includes>
+    <includes refid="Move_8h" local="yes">Move.h</includes>
+    <includedby refid="Board_8cpp" local="yes">Board.cpp</includedby>
+    <includedby refid="King_8cpp" local="yes">King.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>../dependencies/Style.hpp</label>
+        <link refid="Style_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>Board.h</label>
+        <link refid="Board_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/King.h</label>
+        <link refid="King_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Move.h</label>
+        <link refid="Move_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Piece.h</label>
+        <link refid="Piece_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>array</label>
+      </node>
+      <node id="11">
+        <label>cstdio</label>
+      </node>
+      <node id="6">
+        <label>cstdlib</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="10">
+        <label>limits</label>
+      </node>
+      <node id="9">
+        <label>regex</label>
+      </node>
+      <node id="7">
+        <label>sstream</label>
+      </node>
+      <node id="14">
+        <label>stdexcept</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/King.h</label>
+        <link refid="King_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Board.cpp</label>
+        <link refid="Board_8cpp"/>
+      </node>
+      <node id="3">
+        <label>King.cpp</label>
+        <link refid="King_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classKing" prot="public">King</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>KING__H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KING__H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Piece_8h" kindref="compound">Piece.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Move_8h" kindref="compound">Move.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="classKing" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classKing_1ac7a820e20220f49bec5e38a95d5cc307" kindref="member">King</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f" kindref="member">Piece</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classKing_1ac7a820e20220f49bec5e38a95d5cc307" kindref="member">King</ref>(<ref refid="Piece_8h_1a3287fa298adf5d748c8fe84b0b2742ec" kindref="member">PieceColor</ref><sp/>color);</highlight></codeline>
+<codeline lineno="11" refid="classKing_1aac368ce96e2b12f62e3608d27262e941" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classKing_1aac368ce96e2b12f62e3608d27262e941" kindref="member">~King</ref>()<sp/>{};</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classKing_1a665e0aa25a08ca43bfa3fbaa7f68d24b" kindref="member">Symbol</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Move&gt;<sp/><ref refid="classKing_1adceeb19b6efe066f1d6882aa859925fd" kindref="member">PossibleMoves</ref>(<ref refid="classBoard" kindref="compound">Board</ref>*<sp/>board,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentY)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classKing_1ad69ed8cd25086881cabde8d3ad9bb503" kindref="member">IsValidMove</ref>(<ref refid="classPiece" kindref="compound">Piece</ref>*<sp/>target,<sp/><ref refid="classBoard" kindref="compound">Board</ref>*<sp/>board,<sp/><ref refid="classMove" kindref="compound">Move</ref>&amp;<sp/>move,<sp/><ref refid="classPiece" kindref="compound">Piece</ref>*&amp;<sp/>setReplacement)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal"><sp/>;</highlight></codeline>
+<codeline lineno="16" refid="classKing_1ae5f6eaa800f8ef88416ab92953451265" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classKing_1ae5f6eaa800f8ef88416ab92953451265" kindref="member">IsKing</ref>()</highlight><highlight class="keyword"><sp/>const<sp/>override<sp/></highlight><highlight class="normal">{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>KING__H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/include/King.h"/>
+  </compounddef>
+</doxygen>

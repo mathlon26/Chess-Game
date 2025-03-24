@@ -1,0 +1,128 @@
+\doxysection{Human\+Player Class Reference}
+\hypertarget{classHumanPlayer}{}\label{classHumanPlayer}\index{HumanPlayer@{HumanPlayer}}
+
+
+{\ttfamily \#include $<$Human\+Player.\+h$>$}
+
+
+
+Inheritance diagram for Human\+Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{classHumanPlayer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Human\+Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{classHumanPlayer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classHumanPlayer_a0d9e4734d10e497c6b7c7944bfda4a76}{Human\+Player}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}} color)
+\item 
+\mbox{\hyperlink{classHumanPlayer_abdeb9d120fc74c8d82ec0c688883f16f}{\texorpdfstring{$\sim$}{\string~}\+Human\+Player}} ()
+\item 
+std\+::string \mbox{\hyperlink{classHumanPlayer_a445fac75f6cac55fd6879ed277f010ac}{Get\+Input}} (const \mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}const board) const override
+\item 
+std\+::string \mbox{\hyperlink{classHumanPlayer_a4999d6c988fcc037600e3e8db6f9bbf4}{Name}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPlayer}{Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer_ad061cf938c523c0e7d529d5591224250}{Player}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}} color)
+\item 
+virtual \mbox{\hyperlink{classPlayer_a278aa7f854813b3d53589d51e74c6cf1}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()=0
+\item 
+virtual bool \mbox{\hyperlink{classPlayer_a09eaaa8872fcb43e72c7739ab619c866}{Is\+Bot}} ()
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}} \mbox{\hyperlink{classPlayer_af97f460cbb2594def32e32d9046f73ec}{Color}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classPlayer_a8248c589e9edeb32a290f48d82bad7ac}{Get\+Captures}} () const
+\item 
+void \mbox{\hyperlink{classPlayer_a8600584d0d313d9c9183f8676e30b9c2}{Add\+Capture}} (\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}captured)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classPlayer}{Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}} \mbox{\hyperlink{classPlayer_adff61d6fe8f9e732c4dbe5a6bbcb5e42}{m\+\_\+color}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classPlayer_aaef4079e864580e1b197620491d74130}{m\+\_\+captures}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classHumanPlayer_a0d9e4734d10e497c6b7c7944bfda4a76}\index{HumanPlayer@{HumanPlayer}!HumanPlayer@{HumanPlayer}}
+\index{HumanPlayer@{HumanPlayer}!HumanPlayer@{HumanPlayer}}
+\doxysubsubsection{\texorpdfstring{HumanPlayer()}{HumanPlayer()}}
+{\footnotesize\ttfamily \label{classHumanPlayer_a0d9e4734d10e497c6b7c7944bfda4a76} 
+Human\+Player\+::\+Human\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}}}]{color}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classHumanPlayer_a0d9e4734d10e497c6b7c7944bfda4a76_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classHumanPlayer_abdeb9d120fc74c8d82ec0c688883f16f}\index{HumanPlayer@{HumanPlayer}!````~HumanPlayer@{\texorpdfstring{$\sim$}{\string~}HumanPlayer}}
+\index{````~HumanPlayer@{\texorpdfstring{$\sim$}{\string~}HumanPlayer}!HumanPlayer@{HumanPlayer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}HumanPlayer()}{\string~HumanPlayer()}}
+{\footnotesize\ttfamily \label{classHumanPlayer_abdeb9d120fc74c8d82ec0c688883f16f} 
+Human\+Player\+::\texorpdfstring{$\sim$}{\string~}\+Human\+Player (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classHumanPlayer_a445fac75f6cac55fd6879ed277f010ac}\index{HumanPlayer@{HumanPlayer}!GetInput@{GetInput}}
+\index{GetInput@{GetInput}!HumanPlayer@{HumanPlayer}}
+\doxysubsubsection{\texorpdfstring{GetInput()}{GetInput()}}
+{\footnotesize\ttfamily \label{classHumanPlayer_a445fac75f6cac55fd6879ed277f010ac} 
+std\+::string Human\+Player\+::\+Get\+Input (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}const}]{board}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPlayer_a5afb4b96be0f18b4bc840f44e06072cb}{Player}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classHumanPlayer_a445fac75f6cac55fd6879ed277f010ac_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classHumanPlayer_a4999d6c988fcc037600e3e8db6f9bbf4}\index{HumanPlayer@{HumanPlayer}!Name@{Name}}
+\index{Name@{Name}!HumanPlayer@{HumanPlayer}}
+\doxysubsubsection{\texorpdfstring{Name()}{Name()}}
+{\footnotesize\ttfamily \label{classHumanPlayer_a4999d6c988fcc037600e3e8db6f9bbf4} 
+std\+::string Human\+Player\+::\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPlayer_a313b6e73fb54e242e318579901ee93da}{Player}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{classHumanPlayer_a4999d6c988fcc037600e3e8db6f9bbf4_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/huplo/\+Coding/\+Projects/\+C++/chess-\/game/include/\mbox{\hyperlink{HumanPlayer_8h}{Human\+Player.\+h}}\item 
+\mbox{\hyperlink{HumanPlayer_8cpp}{Human\+Player.\+cpp}}\end{DoxyCompactItemize}

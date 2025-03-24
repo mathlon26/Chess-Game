@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Move_8h_source" xml:lang="en-US">
+<title>Move.h</title>
+<indexterm><primary>/home/huplo/Coding/Projects/C++/chess-game/include/Move.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;MOVE__H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;MOVE__H</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&lt;stdexcept&gt;</emphasis>
+7 
+8 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classMove_1a4b1acc3a67d30c385ad9a6000526393a">Move</link>
+9 {
+10 <emphasis role="keyword">public</emphasis>:
+11 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Constructors</emphasis>
+12 &#32;&#32;&#32;&#32;<link linkend="_classMove_1a4b1acc3a67d30c385ad9a6000526393a">Move</link>();
+13 &#32;&#32;&#32;&#32;<link linkend="_classMove_1a4b1acc3a67d30c385ad9a6000526393a">Move</link>(<emphasis role="keywordtype">int</emphasis>&#32;startX,&#32;<emphasis role="keywordtype">int</emphasis>&#32;startY,&#32;<emphasis role="keywordtype">int</emphasis>&#32;endX,&#32;<emphasis role="keywordtype">int</emphasis>&#32;endY);
+14 &#32;&#32;&#32;&#32;<link linkend="_classMove_1a4b1acc3a67d30c385ad9a6000526393a">Move</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;moveStr);&#32;<emphasis role="comment">//&#32;e.g.,&#32;&quot;e2e4&quot;</emphasis>
+15 
+16 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Destructor</emphasis>
+17 &#32;&#32;&#32;&#32;<link linkend="_classMove_1a84785acbf70f76c103df5b0aadbc58d5">~Move</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+18 
+19 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Accessors</emphasis>
+20 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_classMove_1ae5b75e6f1d977e5eacac7e85d991ed27">getStartX</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;startX;&#32;}
+21 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_classMove_1afb1961349a3fb940e4596ee12d28cf1f">getStartY</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;startY;&#32;}
+22 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_classMove_1a2d670ad83efcfd894e7877252fce69de">getEndX</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;endX;&#32;}
+23 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_classMove_1a3b5509b1d995526c851561f73d327ff3">getEndY</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{&#32;<emphasis role="keywordflow">return</emphasis>&#32;endY;&#32;}
+24 
+25 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Utility&#32;Functions</emphasis>
+26 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classMove_1a6e80a6c039ba805bac3ff6402c56b76c">isValid</link>()&#32;<emphasis role="keyword">const</emphasis>;&#32;&#32;<emphasis role="comment">//&#32;Validates&#32;if&#32;the&#32;move&#32;is&#32;within&#32;chessboard&#32;bounds</emphasis>
+27 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classMove_1a1f1dd54e4ef974f1f24277ee14c61beb">toString</link>()&#32;<emphasis role="keyword">const</emphasis>;&#32;<emphasis role="comment">//&#32;Converts&#32;back&#32;to&#32;chess&#32;notation</emphasis>
+28 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classMove_1aee300c99f25c630acd8500fe2141b05e">empty</link>()&#32;<emphasis role="keyword">const</emphasis>;
+29 
+30 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Comparison&#32;Operator</emphasis>
+31 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classMove_1a93f3c3240fd5974d8b90ee7fbaefdf4a">operator==</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classMove">Move</link>&amp;&#32;other)&#32;<emphasis role="keyword">const</emphasis>;
+32 
+33 <emphasis role="keyword">private</emphasis>:
+34 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;startX,&#32;startY;
+35 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;endX,&#32;endY;
+36 
+37 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Helper&#32;functions</emphasis>
+38 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;validateCoordinates(<emphasis role="keywordtype">int</emphasis>&#32;x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y)&#32;<emphasis role="keyword">const</emphasis>;
+39 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;parseMoveString(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;moveStr);
+40 };
+41 
+42 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;MOVE_H</emphasis>
+</programlisting></section>

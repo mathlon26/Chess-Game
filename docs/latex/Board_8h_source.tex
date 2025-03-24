@@ -1,0 +1,69 @@
+\doxysection{Board.\+h}
+\hypertarget{Board_8h_source}{}\label{Board_8h_source}\index{/home/huplo/Coding/Projects/C++/chess-\/game/include/Board.h@{/home/huplo/Coding/Projects/C++/chess-\/game/include/Board.h}}
+\mbox{\hyperlink{Board_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BOARD\_\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BOARD\_\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Piece_8h}{Piece.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Move_8h}{Move.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <array>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPlayer}{Player}};}
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPiece}{Piece}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{comment}{//\ A\ structure\ that\ holds\ all\ information\ needed\ to\ undo\ a\ move.}}
+\DoxyCodeLine{00012\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structMoveRecord}{MoveRecord}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structMoveRecord_ad01bd3d9191228198472736d116fac7d}{x0}},\ \mbox{\hyperlink{structMoveRecord_ac38a2c9028ec26e1fc2362231dc44e5f}{y0}},\ \mbox{\hyperlink{structMoveRecord_a0ba5bf01546d407c234f3419dbf21d83}{x1}},\ \mbox{\hyperlink{structMoveRecord_ad12e234364e89f435991293fff175a72}{y1}};}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classPiece}{Piece}}*\ \mbox{\hyperlink{structMoveRecord_a07bcb9f0bafd4ccc53cdccae68c20c0f}{movedPiece}};\ \ \ \ \ \ \ \ \textcolor{comment}{//\ The\ piece\ originally\ at\ the\ start\ square.}}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classPiece}{Piece}}*\ \mbox{\hyperlink{structMoveRecord_a28419c377c24b254ab4070a60d782901}{capturedPiece}};\ \ \ \ \ \textcolor{comment}{//\ The\ piece\ that\ was\ captured\ (if\ any).\ For\ en\ passant,\ this\ is\ stored\ separately.}}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classPiece}{Piece}}*\ \mbox{\hyperlink{structMoveRecord_ae26c28a77959d5f472206fdfdae0d493}{replacementPiece}};\ \ \textcolor{comment}{//\ If\ a\ promotion\ occurred,\ this\ is\ the\ new\ piece.}}
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structMoveRecord_add054033b276ec4e0d25daab459255a9}{enPassantUsed}};\ \ \ \ \ \ \ \textcolor{comment}{//\ True\ if\ the\ move\ used\ an\ en\ passant\ capture.}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{comment}{//\ Save\ the\ en\ passant\ state\ from\ before\ the\ move.}}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{structMoveRecord_a3f089cda41c1adcebd9c9b1f0116de98}{prevEnPassantAvailable}};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structMoveRecord_ae45c86ca85a0de5db14a7e8bbd59a40d}{prevEnPassantX}};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{structMoveRecord_a9c30403d5f210cdb51ae3060d94e7ac8}{prevEnPassantY}};}
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBoard_a9ee491d4fea680cf69b033374a9fdfcb}{Board}}}
+\DoxyCodeLine{00027\ \{}
+\DoxyCodeLine{00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{classBoard_a9ee491d4fea680cf69b033374a9fdfcb}{Board}}();}
+\DoxyCodeLine{00030\ \ \ \ \ \mbox{\hyperlink{classBoard_af73f45730119a1fd8f6670f53f959e68}{\string~Board}}();}
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBoard_a54a0fe14d04fa09928d8d6fc26a85cc2}{Draw}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBoard_af1f69a1b91ec7fa07d0a85ce04d103ec}{ExecuteMove}}(\mbox{\hyperlink{classMove}{Move}}\ \&move,\ \mbox{\hyperlink{classPlayer}{Player}}*\ executor);}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{structMoveRecord}{MoveRecord}}\ \mbox{\hyperlink{classBoard_a23d1fdbb5e49d70b51c0cda70d003597}{CommitMoveRecord}}(\mbox{\hyperlink{classMove}{Move}}\ \&move,\ \mbox{\hyperlink{classPiece}{Piece}}*\ replacement);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBoard_ab9670780329f8763c49881cfada761c2}{RevertMoveRecord}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{structMoveRecord}{MoveRecord}}\ \&record);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \mbox{\hyperlink{classPiece}{Piece}}*\ \mbox{\hyperlink{classBoard_ad23c997a2d137d40511dfd327248de3d}{GetPiece}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ std::vector<Move>\ \mbox{\hyperlink{classBoard_a1ff64194b703edb37a5c9770de17e48a}{GetPossibleMoves}}(\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ color)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{comment}{//\ En\ passant\ support.}}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBoard_aa178becb7490422c52bf03c5956446e9}{IsEnPassantTarget}}(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBoard_a4da590b5c737674de91dcea89780db69}{ClearEnPassantTarget}}();}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{comment}{//\ Check\ support.}}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBoard_a20bcaee5725f1fc0e57b0e59a004153a}{IsKingChecked}}(\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ color)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBoard_af39b4dc6727c480c32925388ed95ae04}{SetKingChecked}}(\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ color);}
+\DoxyCodeLine{00047\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00048\ \ \ \ \ std::array<std::array<Piece*,\ 8>,\ 8>\ m\_board;}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{comment}{//\ En\ passant\ state.}}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_enPassantAvailable;}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_enPassantX;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_enPassantY;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ King\ state}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_whiteKingInCheck;}
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{bool}\ m\_blackKingInCheck;}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{comment}{//\ Helper\ function\ to\ initialize\ the\ board\ with\ all\ pieces.}}
+\DoxyCodeLine{00060\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeBoard();}
+\DoxyCodeLine{00061\ \};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOARD\_\_H}}
+
+\end{DoxyCode}

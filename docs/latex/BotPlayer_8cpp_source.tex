@@ -1,0 +1,73 @@
+\doxysection{Bot\+Player.\+cpp}
+\hypertarget{BotPlayer_8cpp_source}{}\label{BotPlayer_8cpp_source}\index{source/BotPlayer.cpp@{source/BotPlayer.cpp}}
+\mbox{\hyperlink{BotPlayer_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}../include/BotPlayer.h"{}}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}../include/Board.h"{}}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00005}00005\ BotPlayer::BotPlayer(PlayerColor\ color)}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00006}00006\ \ \ \ \ :}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00007}00007\ \ \ \ \ Player\{color\}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00008}00008\ \{}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00009}00009\ \}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00011}00011\ BotPlayer::\string~BotPlayer()}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00012}00012\ \{}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{for}\ (Piece*\ piece\ :\ m\_captures)}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ piece;}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00015}00015\ \}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00017}00017\ std::string\ BotPlayer::Name()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00018}00018\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00019}00019\ \ \ \ \ \textcolor{keywordflow}{return}\ Style::Cts(m\_color)\ +\ \textcolor{stringliteral}{"{}\ (Bot)"{}};}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00020}00020\ \}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00022}00022\ std::string\ BotPlayer::GetInput(\textcolor{keyword}{const}\ Board*\ \textcolor{keyword}{const}\ board)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00023}00023\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00024}00024\ \ \ \ \ std::vector<Move>\ moves\ =\ board-\/>GetPossibleMoves(m\_color);}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00025}00025\ \ \ \ \ std::vector<Move>\ validMoves\{\};}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{const}\ \textcolor{keyword}{auto}\&\ move\ :\ moves)}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00028}00028\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (std::find(m\_cache.begin(),\ m\_cache.end(),\ move.toString())\ ==\ m\_cache.end())}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ validMoves.push\_back(move);}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00033}00033\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00034}00034\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00038}00038\ \ \ \ \ \textcolor{comment}{//\ If\ no\ moves\ are\ available,\ return\ a\ "{}resign"{}\ command.}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordflow}{if}\ (validMoves.empty())}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}resign"{}};}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00041}00041\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ Initialize\ random\ engine\ with\ a\ random\ seed}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00043}00043\ \ \ \ \ std::random\_device\ rd;}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00044}00044\ \ \ \ \ std::mt19937\ gen(rd());}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00045}00045\ \ \ \ \ std::uniform\_int\_distribution<>\ dis(0,\ validMoves.size()\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ dis(gen);}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00048}00048\ \ \ \ \ Move\ chosenMove\ =\ validMoves[index];}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{return}\ chosenMove.toString();}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00052}00052\ \}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00054}00054\ \textcolor{keywordtype}{bool}\ BotPlayer::IsBot()}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00055}00055\ \{}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00059}00059\ \textcolor{keywordtype}{void}\ BotPlayer::AddCache(std::string\ moveStr)}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00060}00060\ \{}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00061}00061\ \ \ \ \ m\_cache.insert(moveStr);}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00062}00062\ \}}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00064}00064\ \textcolor{keywordtype}{void}\ BotPlayer::EmptyCache()}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00065}00065\ \{}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00066}00066\ \ \ \ \ m\_cache.clear();}
+\DoxyCodeLine{\Hypertarget{BotPlayer_8cpp_source_l00067}00067\ \}}
+
+\end{DoxyCode}

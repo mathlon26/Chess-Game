@@ -1,0 +1,115 @@
+.TH "Canvas" 3 "Version V4.2.0" "Chess Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Canvas
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Canvas\&.h>\fP
+.PP
+Inherits \fBStyle\fP\&.
+.PP
+Inherited by \fBCanvasApp\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCanvas\fP ()"
+.br
+.ti -1c
+.RI "\fB~Canvas\fP ()=default"
+.br
+.ti -1c
+.RI "virtual void \fBDraw\fP () const =0"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Static Public Member Functions inherited from \fBStyle\fP
+.in +1c
+.ti -1c
+.RI "static std::string \fBCta\fP (\fBColor\fP color)"
+.br
+.ti -1c
+.RI "static std::string \fBCts\fP (\fBColor\fP color)"
+.br
+.ti -1c
+.RI "static std::string \fBBoldText\fP (const std::string &text)"
+.br
+.ti -1c
+.RI "static std::string \fBUnderlineText\fP (const std::string &text)"
+.br
+.ti -1c
+.RI "static std::string \fBLinkText\fP (const std::string &text, \fBColor\fP continueColor=\fBColor::DEFAULT\fP)"
+.br
+.ti -1c
+.RI "static std::string \fBResetColor\fP ()"
+.br
+.ti -1c
+.RI "static size_t \fBDisplayLength\fP (const std::string &text)"
+.br
+.ti -1c
+.RI "static void \fBPrintColored\fP (const std::string &text, \fBColor\fP color=\fBColor::DEFAULT\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintColoredLine\fP (const std::string &text, \fBColor\fP color=\fBColor::DEFAULT\fP, bool endl=true)"
+.br
+.ti -1c
+.RI "static void \fBPrintLine\fP (std::string ch='─', int length=50, \fBColor\fP color=\fBColor::DEFAULT\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintTitle\fP (const std::string &title, \fBColor\fP color=\fBColor::CYAN\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintBox\fP (const std::string &text, const std::string &title='', \fBColor\fP color=\fBColor::GREEN\fP, int fixOffset=0)"
+.br
+.ti -1c
+.RI "static void \fBPrintSuccess\fP (const std::string &message)"
+.br
+.ti -1c
+.RI "static void \fBPrintWarning\fP (const std::string &message)"
+.br
+.ti -1c
+.RI "static void \fBPrintError\fP (const std::string &message)"
+.br
+.ti -1c
+.RI "static void \fBPrintErrorExit\fP (const std::string &error, int code=\-1)"
+.br
+.ti -1c
+.RI "static void \fBPrintInfo\fP (const std::string &message)"
+.br
+.ti -1c
+.RI "static void \fBClearConsole\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBGetBoolInput\fP (const std::string &prompt, const std::string &title='', \fBColor\fP color=\fBColor::YELLOW\fP, \fBColor\fP titleColor=\fBColor::CYAN\fP)"
+.br
+.ti -1c
+.RI "static std::string \fBGetStringInput\fP (const std::string &prompt, const std::string &title='', \fBColor\fP color=\fBColor::YELLOW\fP, \fBColor\fP titleColor=\fBColor::CYAN\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintDivider\fP (const std::string &message='', \fBColor\fP color=\fBColor::DEFAULT\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintTable\fP (const std::string &title, const std::vector< std::string > &header, const std::vector< std::vector< std::string > > &rows, \fBColor\fP color=\fBColor::DEFAULT\fP)"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Canvas::Canvas ()\fR [inline]\fP"
+
+.SS "Canvas::~Canvas ()\fR [default]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void Canvas::Draw () const\fR [pure virtual]\fP"
+
+.PP
+Implemented in \fBCanvasApp\fP, and \fBChessGame\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chess Game from the source code\&.

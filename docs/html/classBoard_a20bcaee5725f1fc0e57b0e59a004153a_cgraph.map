@@ -1,0 +1,13 @@
+<map id="Board::IsKingChecked" name="Board::IsKingChecked">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,158,108"/>
+<area shape="rect" id="Node000002" href="$classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb" title=" " alt="" coords="224,5,321,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,78,205,42,220,36,222,41,207,46,117,83"/>
+<area shape="rect" id="Node000003" href="$classPiece.html#ad31a695453335fbbc36a9c749395f7c1" title=" " alt="" coords="226,56,319,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="158,82,210,75,211,80,159,87"/>
+<area shape="rect" id="Node000004" href="$classPiece.html#a392fecd481d60993e7d6d73116b2e171" title=" " alt="" coords="223,107,322,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="159,102,207,109,207,114,158,107"/>
+<area shape="rect" id="Node000005" href="$classPiece.html#a363193ff97c3e10b77feb6aec81d1a35" title=" " alt="" coords="206,157,339,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="117,106,207,143,222,149,220,154,205,148,115,111"/>
+<area shape="rect" id="Node000006" href="$classPiece.html#a4f0ea7928c9d57ec8f8b14c88358d01f" title=" " alt="" coords="387,157,482,184"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="340,168,372,168,372,173,340,173"/>
+</map>

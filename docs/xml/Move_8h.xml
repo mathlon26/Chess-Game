@@ -1,0 +1,330 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="Move_8h" kind="file" language="C++">
+    <compoundname>Move.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">stdexcept</includes>
+    <includedby refid="Bishop_8h" local="yes">/home/huplo/Coding/Projects/C++/chess-game/include/Bishop.h</includedby>
+    <includedby refid="Board_8h" local="yes">/home/huplo/Coding/Projects/C++/chess-game/include/Board.h</includedby>
+    <includedby refid="King_8h" local="yes">/home/huplo/Coding/Projects/C++/chess-game/include/King.h</includedby>
+    <includedby refid="Knight_8h" local="yes">/home/huplo/Coding/Projects/C++/chess-game/include/Knight.h</includedby>
+    <includedby refid="Pawn_8h" local="yes">/home/huplo/Coding/Projects/C++/chess-game/include/Pawn.h</includedby>
+    <includedby refid="Piece_8h" local="yes">/home/huplo/Coding/Projects/C++/chess-game/include/Piece.h</includedby>
+    <includedby refid="Player_8h" local="yes">/home/huplo/Coding/Projects/C++/chess-game/include/Player.h</includedby>
+    <includedby refid="Queen_8h" local="yes">/home/huplo/Coding/Projects/C++/chess-game/include/Queen.h</includedby>
+    <includedby refid="Rook_8h" local="yes">/home/huplo/Coding/Projects/C++/chess-game/include/Rook.h</includedby>
+    <includedby refid="Board_8cpp" local="yes">Board.cpp</includedby>
+    <includedby refid="Move_8cpp" local="yes">Move.cpp</includedby>
+    <includedby refid="Pawn_8cpp" local="yes">Pawn.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/Move.h</label>
+        <link refid="Move_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>stdexcept</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/Bishop.h</label>
+        <link refid="Bishop_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/Board.h</label>
+        <link refid="Board_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/BotPlayer.h</label>
+        <link refid="BotPlayer_8h"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h</label>
+        <link refid="ChessGame_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/HumanPlayer.h</label>
+        <link refid="HumanPlayer_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/King.h</label>
+        <link refid="King_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/Knight.h</label>
+        <link refid="Knight_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/Move.h</label>
+        <link refid="Move_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/Pawn.h</label>
+        <link refid="Pawn_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/Piece.h</label>
+        <link refid="Piece_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/Player.h</label>
+        <link refid="Player_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/Queen.h</label>
+        <link refid="Queen_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/Rook.h</label>
+        <link refid="Rook_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h</label>
+        <link refid="TwoPlayerGame_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Bishop.cpp</label>
+        <link refid="Bishop_8cpp"/>
+      </node>
+      <node id="4">
+        <label>Board.cpp</label>
+        <link refid="Board_8cpp"/>
+      </node>
+      <node id="18">
+        <label>BotPlayer.cpp</label>
+        <link refid="BotPlayer_8cpp"/>
+      </node>
+      <node id="8">
+        <label>ChessGame.cpp</label>
+        <link refid="ChessGame_8cpp"/>
+      </node>
+      <node id="20">
+        <label>HumanPlayer.cpp</label>
+        <link refid="HumanPlayer_8cpp"/>
+      </node>
+      <node id="12">
+        <label>King.cpp</label>
+        <link refid="King_8cpp"/>
+      </node>
+      <node id="14">
+        <label>Knight.cpp</label>
+        <link refid="Knight_8cpp"/>
+      </node>
+      <node id="29">
+        <label>Move.cpp</label>
+        <link refid="Move_8cpp"/>
+      </node>
+      <node id="5">
+        <label>Pawn.cpp</label>
+        <link refid="Pawn_8cpp"/>
+      </node>
+      <node id="28">
+        <label>Piece.cpp</label>
+        <link refid="Piece_8cpp"/>
+      </node>
+      <node id="27">
+        <label>Player.cpp</label>
+        <link refid="Player_8cpp"/>
+      </node>
+      <node id="22">
+        <label>Queen.cpp</label>
+        <link refid="Queen_8cpp"/>
+      </node>
+      <node id="24">
+        <label>Rook.cpp</label>
+        <link refid="Rook_8cpp"/>
+      </node>
+      <node id="26">
+        <label>TwoPlayerGame.cpp</label>
+        <link refid="TwoPlayerGame_8cpp"/>
+      </node>
+      <node id="9">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classMove" prot="public">Move</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>MOVE__H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MOVE__H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8" refid="classMove" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classMove_1a4b1acc3a67d30c385ad9a6000526393a" kindref="member">Move</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Constructors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMove_1a4b1acc3a67d30c385ad9a6000526393a" kindref="member">Move</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMove_1a4b1acc3a67d30c385ad9a6000526393a" kindref="member">Move</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startY,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>endX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>endY);</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMove_1a4b1acc3a67d30c385ad9a6000526393a" kindref="member">Move</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>moveStr);<sp/></highlight><highlight class="comment">//<sp/>e.g.,<sp/>&quot;e2e4&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Destructor</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="classMove_1a84785acbf70f76c103df5b0aadbc58d5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMove_1a84785acbf70f76c103df5b0aadbc58d5" kindref="member">~Move</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Accessors</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classMove_1ae5b75e6f1d977e5eacac7e85d991ed27" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMove_1ae5b75e6f1d977e5eacac7e85d991ed27" kindref="member">getStartX</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>startX;<sp/>}</highlight></codeline>
+<codeline lineno="21" refid="classMove_1afb1961349a3fb940e4596ee12d28cf1f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMove_1afb1961349a3fb940e4596ee12d28cf1f" kindref="member">getStartY</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>startY;<sp/>}</highlight></codeline>
+<codeline lineno="22" refid="classMove_1a2d670ad83efcfd894e7877252fce69de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMove_1a2d670ad83efcfd894e7877252fce69de" kindref="member">getEndX</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>endX;<sp/>}</highlight></codeline>
+<codeline lineno="23" refid="classMove_1a3b5509b1d995526c851561f73d327ff3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classMove_1a3b5509b1d995526c851561f73d327ff3" kindref="member">getEndY</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>endY;<sp/>}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Utility<sp/>Functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classMove_1a6e80a6c039ba805bac3ff6402c56b76c" kindref="member">isValid</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Validates<sp/>if<sp/>the<sp/>move<sp/>is<sp/>within<sp/>chessboard<sp/>bounds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classMove_1a1f1dd54e4ef974f1f24277ee14c61beb" kindref="member">toString</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>Converts<sp/>back<sp/>to<sp/>chess<sp/>notation</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classMove_1aee300c99f25c630acd8500fe2141b05e" kindref="member">empty</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Comparison<sp/>Operator</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classMove_1a93f3c3240fd5974d8b90ee7fbaefdf4a" kindref="member">operator==</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classMove" kindref="compound">Move</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startX,<sp/>startY;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>endX,<sp/>endY;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Helper<sp/>functions</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>validateCoordinates(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>parseMoveString(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>moveStr);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>MOVE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h"/>
+  </compounddef>
+</doxygen>

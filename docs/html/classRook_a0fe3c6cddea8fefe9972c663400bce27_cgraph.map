@@ -1,0 +1,9 @@
+<map id="Rook::PossibleMoves" name="Rook::PossibleMoves">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,155,83"/>
+<area shape="rect" id="Node000002" href="$classPiece.html#ad31a695453335fbbc36a9c749395f7c1" title=" " alt="" coords="215,5,308,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="130,53,199,33,201,38,131,58"/>
+<area shape="rect" id="Node000003" href="$classBoard.html#ad23c997a2d137d40511dfd327248de3d" title=" " alt="" coords="203,56,320,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="155,67,187,67,187,72,155,72"/>
+<area shape="rect" id="Node000004" href="$classPiece.html#a4f0ea7928c9d57ec8f8b14c88358d01f" title=" " alt="" coords="214,107,309,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="131,81,200,100,198,105,130,86"/>
+</map>

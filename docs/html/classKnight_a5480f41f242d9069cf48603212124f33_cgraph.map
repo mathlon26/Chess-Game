@@ -1,0 +1,9 @@
+<map id="Knight::PossibleMoves" name="Knight::PossibleMoves">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,161,83"/>
+<area shape="rect" id="Node000002" href="$classPiece.html#ad31a695453335fbbc36a9c749395f7c1" title=" " alt="" coords="221,5,314,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="134,53,205,33,206,38,135,58"/>
+<area shape="rect" id="Node000003" href="$classBoard.html#ad23c997a2d137d40511dfd327248de3d" title=" " alt="" coords="209,56,326,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="161,67,193,67,193,72,161,72"/>
+<area shape="rect" id="Node000004" href="$classPiece.html#a4f0ea7928c9d57ec8f8b14c88358d01f" title=" " alt="" coords="220,107,315,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="135,81,205,100,204,105,134,86"/>
+</map>

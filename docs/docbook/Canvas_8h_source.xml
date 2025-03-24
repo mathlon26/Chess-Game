@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Canvas_8h_source" xml:lang="en-US">
+<title>Canvas.h</title>
+<indexterm><primary>/home/huplo/Coding/Projects/C++/chess-game/include/Canvas.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;CANVAS__H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;CANVAS__H</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Style_8hpp">../dependencies/Style.hpp</link>&quot;</emphasis>
+5 
+6 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classCanvas_1a5fce53f080ad6540094901f9768805a8">Canvas</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classStyle">Style</link>
+7 {
+8 <emphasis role="keyword">public</emphasis>:
+9 &#32;&#32;&#32;&#32;<link linkend="_classCanvas_1a5fce53f080ad6540094901f9768805a8">Canvas</link>()&#32;:&#32;<link linkend="_classStyle">Style</link>{}&#32;{};
+10 &#32;&#32;&#32;&#32;<link linkend="_classCanvas_1ac64895ae1cdfc39c58e95097873e861e">~Canvas</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+11 
+12 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classCanvas_1a2b7be68cbe6f527b77c35416ae066f7f">Draw</link>()&#32;<emphasis role="keyword">const</emphasis>&#32;=&#32;0;
+13 <emphasis role="keyword">private</emphasis>:
+14 };
+15 
+16 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;CANVAS__H</emphasis>
+</programlisting></section>

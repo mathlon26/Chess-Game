@@ -1,0 +1,144 @@
+\doxysection{King Class Reference}
+\hypertarget{classKing}{}\label{classKing}\index{King@{King}}
+
+
+{\ttfamily \#include $<$King.\+h$>$}
+
+
+
+Inheritance diagram for King\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=121pt]{classKing__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for King\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=121pt]{classKing__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classKing_ac7a820e20220f49bec5e38a95d5cc307}{King}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} color)
+\item 
+\mbox{\hyperlink{classKing_aac368ce96e2b12f62e3608d27262e941}{\texorpdfstring{$\sim$}{\string~}\+King}} ()
+\item 
+std\+::string \mbox{\hyperlink{classKing_a665e0aa25a08ca43bfa3fbaa7f68d24b}{Symbol}} () const override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classMove}{Move}} $>$ \mbox{\hyperlink{classKing_adceeb19b6efe066f1d6882aa859925fd}{Possible\+Moves}} (\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}board, int currentX, int currentY) const override
+\item 
+bool \mbox{\hyperlink{classKing_ad69ed8cd25086881cabde8d3ad9bb503}{Is\+Valid\+Move}} (\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}target, \mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}board, \mbox{\hyperlink{classMove}{Move}} \&move, \mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}\&set\+Replacement) const override
+\item 
+bool \mbox{\hyperlink{classKing_ae5f6eaa800f8ef88416ab92953451265}{Is\+King}} () const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPiece}{Piece}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f}{Piece}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} color)
+\item 
+virtual \mbox{\hyperlink{classPiece_ab63f5b3faabe6ce60c9eb1806511ff9d}{\texorpdfstring{$\sim$}{\string~}\+Piece}} ()=default
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} \mbox{\hyperlink{classPiece_ad31a695453335fbbc36a9c749395f7c1}{Color}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classPiece}{Piece}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} \mbox{\hyperlink{classPiece_a757a577b6dfb06c6558021b828ca7c1d}{m\+\_\+color}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classKing_ac7a820e20220f49bec5e38a95d5cc307}\index{King@{King}!King@{King}}
+\index{King@{King}!King@{King}}
+\doxysubsubsection{\texorpdfstring{King()}{King()}}
+{\footnotesize\ttfamily \label{classKing_ac7a820e20220f49bec5e38a95d5cc307} 
+King\+::\+King (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}}}]{color}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=249pt]{classKing_ac7a820e20220f49bec5e38a95d5cc307_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKing_aac368ce96e2b12f62e3608d27262e941}\index{King@{King}!````~King@{\texorpdfstring{$\sim$}{\string~}King}}
+\index{````~King@{\texorpdfstring{$\sim$}{\string~}King}!King@{King}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}King()}{\string~King()}}
+{\footnotesize\ttfamily \label{classKing_aac368ce96e2b12f62e3608d27262e941} 
+King\+::\texorpdfstring{$\sim$}{\string~}\+King (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classKing_ae5f6eaa800f8ef88416ab92953451265}\index{King@{King}!IsKing@{IsKing}}
+\index{IsKing@{IsKing}!King@{King}}
+\doxysubsubsection{\texorpdfstring{IsKing()}{IsKing()}}
+{\footnotesize\ttfamily \label{classKing_ae5f6eaa800f8ef88416ab92953451265} 
+bool King\+::\+Is\+King (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classPiece_a392fecd481d60993e7d6d73116b2e171}{Piece}}.
+
+\Hypertarget{classKing_ad69ed8cd25086881cabde8d3ad9bb503}\index{King@{King}!IsValidMove@{IsValidMove}}
+\index{IsValidMove@{IsValidMove}!King@{King}}
+\doxysubsubsection{\texorpdfstring{IsValidMove()}{IsValidMove()}}
+{\footnotesize\ttfamily \label{classKing_ad69ed8cd25086881cabde8d3ad9bb503} 
+bool King\+::\+Is\+Valid\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}}]{target}{, }\item[{\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{\mbox{\hyperlink{classMove}{Move}} \&}]{move}{, }\item[{\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}\&}]{set\+Replacement}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_a363193ff97c3e10b77feb6aec81d1a35}{Piece}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classKing_ad69ed8cd25086881cabde8d3ad9bb503_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKing_adceeb19b6efe066f1d6882aa859925fd}\index{King@{King}!PossibleMoves@{PossibleMoves}}
+\index{PossibleMoves@{PossibleMoves}!King@{King}}
+\doxysubsubsection{\texorpdfstring{PossibleMoves()}{PossibleMoves()}}
+{\footnotesize\ttfamily \label{classKing_adceeb19b6efe066f1d6882aa859925fd} 
+std\+::vector$<$ \mbox{\hyperlink{classMove}{Move}} $>$ King\+::\+Possible\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{int}]{currentX}{, }\item[{int}]{currentY}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_a1c67fd5e66c3e7b6c1f4ebf3207e65e2}{Piece}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classKing_adceeb19b6efe066f1d6882aa859925fd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classKing_a665e0aa25a08ca43bfa3fbaa7f68d24b}\index{King@{King}!Symbol@{Symbol}}
+\index{Symbol@{Symbol}!King@{King}}
+\doxysubsubsection{\texorpdfstring{Symbol()}{Symbol()}}
+{\footnotesize\ttfamily \label{classKing_a665e0aa25a08ca43bfa3fbaa7f68d24b} 
+std\+::string King\+::\+Symbol (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_abc54f78cfc3e6c4ed3d103ddaeb1d96f}{Piece}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/huplo/\+Coding/\+Projects/\+C++/chess-\/game/include/\mbox{\hyperlink{King_8h}{King.\+h}}\item 
+\mbox{\hyperlink{King_8cpp}{King.\+cpp}}\end{DoxyCompactItemize}

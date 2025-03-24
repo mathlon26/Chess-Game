@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="ChessGame_8cpp" kind="file" language="C++">
+    <compoundname>ChessGame.cpp</compoundname>
+    <includes refid="ChessGame_8h" local="yes">../include/ChessGame.h</includes>
+    <includes refid="HumanPlayer_8h" local="yes">../include/HumanPlayer.h</includes>
+    <includes refid="BotPlayer_8h" local="yes">../include/BotPlayer.h</includes>
+    <includes local="no">sstream</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>../dependencies/Style.hpp</label>
+        <link refid="Style_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>App.h</label>
+        <link refid="App_8h"/>
+      </node>
+      <node id="20">
+        <label>Board.h</label>
+        <link refid="Board_8h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>../include/BotPlayer.h</label>
+        <link refid="BotPlayer_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Canvas.h</label>
+        <link refid="Canvas_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CanvasApp.h</label>
+        <link refid="CanvasApp_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/ChessGame.h</label>
+        <link refid="ChessGame_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>../include/HumanPlayer.h</label>
+        <link refid="HumanPlayer_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>Move.h</label>
+        <link refid="Move_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>Piece.h</label>
+        <link refid="Piece_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>Player.h</label>
+        <link refid="Player_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>TwoPlayerGame.h</label>
+        <link refid="TwoPlayerGame_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ChessGame.cpp</label>
+        <link refid="ChessGame_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>array</label>
+      </node>
+      <node id="23">
+        <label>atomic</label>
+      </node>
+      <node id="22">
+        <label>chrono</label>
+      </node>
+      <node id="13">
+        <label>cstdio</label>
+      </node>
+      <node id="8">
+        <label>cstdlib</label>
+      </node>
+      <node id="6">
+        <label>iostream</label>
+      </node>
+      <node id="12">
+        <label>limits</label>
+      </node>
+      <node id="27">
+        <label>random</label>
+      </node>
+      <node id="11">
+        <label>regex</label>
+      </node>
+      <node id="9">
+        <label>sstream</label>
+      </node>
+      <node id="18">
+        <label>stdexcept</label>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="24">
+        <label>thread</label>
+      </node>
+      <node id="28">
+        <label>unordered_set</label>
+      </node>
+      <node id="10">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="ChessGame_8h" kindref="compound">../include/ChessGame.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="HumanPlayer_8h" kindref="compound">../include/HumanPlayer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="BotPlayer_8h" kindref="compound">../include/BotPlayer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;sstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="classChessGame_1a7c9d1caa97c7ca5737f187a6066662b2" refkind="member"><highlight class="normal"><ref refid="classChessGame_1a7c9d1caa97c7ca5737f187a6066662b2" kindref="member">ChessGame::ChessGame</ref>()</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>m_board{new<sp/><ref refid="classBoard" kindref="compound">Board</ref>{}},</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>m_timerOne{0},</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>m_timerTwo{0},</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>m_increment{0}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="classChessGame_1a9c7f4475dcd31ab4e1f98f033fb0c60f" refkind="member"><highlight class="normal"><ref refid="classChessGame_1a9c7f4475dcd31ab4e1f98f033fb0c60f" kindref="member">ChessGame::~ChessGame</ref>()</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="classChessGame_1a5db0ea5be23412676881812bd9056e56" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChessGame_1a5db0ea5be23412676881812bd9056e56" kindref="member">ChessGame::Run</ref>()</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>first<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChessGame_1af3b9c1ca3bdb26f1e808487b94e0ddde" kindref="member">Init</ref>();</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="classApp_1afb17a1d7013faefdbe00bf333399de50" kindref="member">ShouldRun</ref>())</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChessGame_1ab09da31d868fcfd772b7746670add659" kindref="member">StartTimer</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChessGame_1ab121238a7f75644fb772fec4491865a8" kindref="member">Update</ref>();</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChessGame_1a84e2d266d40a56cc33e094087a205b8f" kindref="member">Draw</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChessGame_1a9d0066f004b8097e53bdc941d4d6c34d" kindref="member">StopTimer</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwoPlayerGame_1aae0d82cc749714dbbc29282391ae22de" kindref="member">SwitchTurn</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classChessGame_1a2640c47a2ac9aa47f4db38d5e521c123" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChessGame_1a2640c47a2ac9aa47f4db38d5e521c123" kindref="member">ChessGame::SetupPlayers</ref>()</highlight></codeline>
+<codeline lineno="38"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>optP;<sp/></highlight><highlight class="comment">//<sp/>player<sp/>versus<sp/>X<sp/>option</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>optC{1};<sp/></highlight><highlight class="comment">//<sp/>player<sp/>color<sp/>option</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStyle_1a86d28d05ce8974b1ff88317c5d294eb5" kindref="member">ClearConsole</ref>();</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStyle_1a5614a5f517f754485702cc7067efc823" kindref="member">PrintBox</ref>(</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;1.<sp/>Player<sp/>versus<sp/>Player\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;2.<sp/>Player<sp/>versus<sp/>Bot&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>Game<sp/>Mode<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>optP<sp/>=<sp/>std::stoi(<ref refid="classStyle_1ae6c4e5b5dce135d7d912be726271fb3f" kindref="member">GetStringInput</ref>(</highlight><highlight class="stringliteral">&quot;<sp/>&gt;&gt;<sp/>&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Enter<sp/>a<sp/>number<sp/>(1,2)&quot;</highlight><highlight class="normal">).c_str());</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(optP<sp/>!=<sp/>1<sp/>&amp;&amp;<sp/>optP<sp/>!=<sp/>2<sp/>&amp;&amp;<sp/>optP<sp/>!=<sp/>3);<sp/></highlight><highlight class="comment">//<sp/>optP<sp/>3<sp/>is<sp/>hidden<sp/>to<sp/>play<sp/>Bot<sp/>V<sp/>Bot</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(optP<sp/>==<sp/>2)</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStyle_1a86d28d05ce8974b1ff88317c5d294eb5" kindref="member">ClearConsole</ref>();</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStyle_1a5614a5f517f754485702cc7067efc823" kindref="member">PrintBox</ref>(</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;1.<sp/>Player<sp/>plays<sp/>white\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;2.<sp/>Bot<sp/>plays<sp/>white&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>Player<sp/>Color<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>optC<sp/>=<sp/>std::stoi(<ref refid="classStyle_1ae6c4e5b5dce135d7d912be726271fb3f" kindref="member">GetStringInput</ref>(</highlight><highlight class="stringliteral">&quot;<sp/>&gt;&gt;<sp/>&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Enter<sp/>a<sp/>number<sp/>(1,2)&quot;</highlight><highlight class="normal">).c_str());</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(optC<sp/>!=<sp/>1<sp/>&amp;&amp;<sp/>optC<sp/>!=<sp/>2);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(optC<sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classHumanPlayer" kindref="compound">HumanPlayer</ref>{<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" kindref="member">Color::WHITE</ref>};</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" kindref="member">m_playerTwo</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classBotPlayer" kindref="compound">BotPlayer</ref>{<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965" kindref="member">Color::BLACK</ref>};</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classBotPlayer" kindref="compound">BotPlayer</ref>{<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" kindref="member">Color::WHITE</ref>};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" kindref="member">m_playerTwo</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classHumanPlayer" kindref="compound">HumanPlayer</ref>{<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965" kindref="member">Color::BLACK</ref>};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(optP<sp/>==<sp/>3)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classBotPlayer" kindref="compound">BotPlayer</ref>{<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" kindref="member">PlayerColor::WHITE</ref>};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" kindref="member">m_playerTwo</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classBotPlayer" kindref="compound">BotPlayer</ref>{<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965" kindref="member">PlayerColor::BLACK</ref>};</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classHumanPlayer" kindref="compound">HumanPlayer</ref>{<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" kindref="member">Color::WHITE</ref>};</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" kindref="member">m_playerTwo</ref><sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classHumanPlayer" kindref="compound">HumanPlayer</ref>{<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965" kindref="member">Color::BLACK</ref>};</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref><sp/>=<sp/><ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref>;</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStyle_1a86d28d05ce8974b1ff88317c5d294eb5" kindref="member">ClearConsole</ref>();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91" refid="classChessGame_1a8da52c5aea5b9eb826ee1f2ea4bccb47" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChessGame_1a8da52c5aea5b9eb826ee1f2ea4bccb47" kindref="member">ChessGame::SetupTimers</ref>()</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>optT{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>timer<sp/>bool</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>optD{0};<sp/></highlight><highlight class="comment">//<sp/>timer<sp/>duration<sp/>(minutes)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>optI{0};<sp/></highlight><highlight class="comment">//<sp/>timer<sp/>increment<sp/>(seconds)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStyle_1a86d28d05ce8974b1ff88317c5d294eb5" kindref="member">ClearConsole</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>optT<sp/>=<sp/><ref refid="classStyle_1a75154acfcb8de2f37fb8d340cef4e83e" kindref="member">GetBoolInput</ref>(</highlight><highlight class="stringliteral">&quot;<sp/>&gt;&gt;<sp/>&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Do<sp/>you<sp/>want<sp/>to<sp/>play<sp/>with<sp/>a<sp/>timer?&quot;</highlight><highlight class="normal">,<sp/><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0" kindref="member">Color::GREEN</ref>);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(optT)</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>optD<sp/>=<sp/>std::stoi(<ref refid="classStyle_1ae6c4e5b5dce135d7d912be726271fb3f" kindref="member">GetStringInput</ref>(</highlight><highlight class="stringliteral">&quot;<sp/>&gt;&gt;<sp/>&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Set<sp/>the<sp/>duration<sp/>of<sp/>the<sp/>timer<sp/>in<sp/>minutes<sp/>(&gt;=1).&quot;</highlight><highlight class="normal">).c_str());</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(optD<sp/>&lt;<sp/>1);</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>optI<sp/>=<sp/>std::stoi(<ref refid="classStyle_1ae6c4e5b5dce135d7d912be726271fb3f" kindref="member">GetStringInput</ref>(</highlight><highlight class="stringliteral">&quot;<sp/>&gt;&gt;<sp/>&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Set<sp/>the<sp/>increment<sp/>of<sp/>the<sp/>timer<sp/>in<sp/>seconds<sp/>(&gt;=0).&quot;</highlight><highlight class="normal">).c_str());</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(optI<sp/>&lt;<sp/>0);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_increment<sp/>=<sp/>optI;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialize<sp/>both<sp/>timers<sp/>to<sp/>the<sp/>user-set<sp/>duration<sp/>in<sp/>seconds.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_timerOne<sp/>=<sp/>optD<sp/>*<sp/>60;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_timerTwo<sp/>=<sp/>optD<sp/>*<sp/>60;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Enable<sp/>timer<sp/>thread.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_timerActive<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_timerThread<sp/>=<sp/>std::thread(&amp;<ref refid="classChessGame_1ada39148a5117f4ad234761eea1381280" kindref="member">ChessGame::TimerThreadFunction</ref>,<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStyle_1a86d28d05ce8974b1ff88317c5d294eb5" kindref="member">ClearConsole</ref>();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126" refid="classChessGame_1ada39148a5117f4ad234761eea1381280" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChessGame_1ada39148a5117f4ad234761eea1381280" kindref="member">ChessGame::TimerThreadFunction</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(m_timerActive<sp/>&amp;&amp;<sp/>!<ref refid="classApp_1a93dfaeba98776eb3383c2cfd0f6ebeef" kindref="member">m_exitCall</ref>)</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>current<sp/>time<sp/>and<sp/>compute<sp/>elapsed<sp/>seconds<sp/>since<sp/>the<sp/>move<sp/>started.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>now<sp/>=<sp/>std::chrono::steady_clock::now();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>elapsedSeconds<sp/>=<sp/>std::chrono::duration_cast&lt;std::chrono::seconds&gt;(now<sp/>-<sp/>m_moveStartTime).count();</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Compute<sp/>remaining<sp/>time<sp/>for<sp/>each<sp/>player.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>For<sp/>the<sp/>active<sp/>player,<sp/>subtract<sp/>the<sp/>elapsed<sp/>time.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>whiteRemaining<sp/>=<sp/>m_timerOne;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>blackRemaining<sp/>=<sp/>m_timerTwo;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>-&gt;Color()<sp/>==<sp/><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" kindref="member">Color::WHITE</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>whiteRemaining<sp/>=<sp/>(m_timerOne<sp/>&gt;<sp/>elapsedSeconds)<sp/>?<sp/>m_timerOne<sp/>-<sp/>elapsedSeconds<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(whiteRemaining<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChessGame_1a435491b07e8ed046f58f6ab6aa6b642c" kindref="member">EndGame</ref>(<ref refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" kindref="member">m_playerTwo</ref>);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>-&gt;Color()<sp/>==<sp/><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965" kindref="member">Color::BLACK</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blackRemaining<sp/>=<sp/>(m_timerTwo<sp/>&gt;<sp/>elapsedSeconds)<sp/>?<sp/>m_timerTwo<sp/>-<sp/>elapsedSeconds<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(blackRemaining<sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChessGame_1a435491b07e8ed046f58f6ab6aa6b642c" kindref="member">EndGame</ref>(<ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref>);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Convert<sp/>seconds<sp/>to<sp/>minutes<sp/>and<sp/>seconds.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>whiteMinutes<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(whiteRemaining<sp/>/<sp/>60);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>whiteSeconds<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(whiteRemaining<sp/>%<sp/>60);</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blackMinutes<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(blackRemaining<sp/>/<sp/>60);</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>blackSeconds<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="keywordtype">int</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(blackRemaining<sp/>%<sp/>60);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Save<sp/>the<sp/>current<sp/>cursor<sp/>position.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\033[s&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>ANSI<sp/>escape<sp/>code<sp/>to<sp/>save<sp/>cursor<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>White&apos;s<sp/>timer<sp/>at<sp/>row<sp/>1,<sp/>column<sp/>54.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\033[2;44H&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Move<sp/>cursor<sp/>to<sp/>row<sp/>1,<sp/>column<sp/>54.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/><ref refid="classStyle_1a2d36d13fd41a5853a88c269494976e6d" kindref="member">BoldText</ref>(<ref refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" kindref="member">Cta</ref>(<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" kindref="member">Color::WHITE</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;White:<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="classStyle_1a38a11d09d6371559e5795c952d44f9d0" kindref="member">Cts</ref>(<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" kindref="member">Color::DEFAULT</ref>)</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>(whiteMinutes<sp/>&lt;<sp/>10<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>whiteMinutes<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>(whiteSeconds<sp/>&lt;<sp/>10<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>whiteSeconds;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Print<sp/>Black&apos;s<sp/>timer<sp/>at<sp/>row<sp/>2,<sp/>column<sp/>54.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\033[3;44H&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>Move<sp/>cursor<sp/>to<sp/>row<sp/>2,<sp/>column<sp/>54.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/><ref refid="classStyle_1a2d36d13fd41a5853a88c269494976e6d" kindref="member">BoldText</ref>(<ref refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" kindref="member">Cta</ref>(<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965" kindref="member">Color::BLACK</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;Black:<sp/>&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/><ref refid="classStyle_1a38a11d09d6371559e5795c952d44f9d0" kindref="member">Cts</ref>(<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" kindref="member">Color::DEFAULT</ref>)</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>(blackMinutes<sp/>&lt;<sp/>10<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>blackMinutes<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;:&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>(blackSeconds<sp/>&lt;<sp/>10<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>blackSeconds;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Restore<sp/>the<sp/>previous<sp/>cursor<sp/>position<sp/>so<sp/>user<sp/>input<sp/>stays<sp/>in<sp/>place.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\033[u&quot;</highlight><highlight class="normal">;<sp/><sp/></highlight><highlight class="comment">//<sp/>ANSI<sp/>escape<sp/>code<sp/>to<sp/>restore<sp/>cursor<sp/>position</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::cout.flush();</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"></highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Sleep<sp/>a<sp/>short<sp/>period<sp/>to<sp/>update<sp/>the<sp/>display<sp/>continuously.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::this_thread::sleep_for(std::chrono::milliseconds(500));</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187" refid="classChessGame_1af3b9c1ca3bdb26f1e808487b94e0ddde" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChessGame_1af3b9c1ca3bdb26f1e808487b94e0ddde" kindref="member">ChessGame::Init</ref>()</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChessGame_1a2640c47a2ac9aa47f4db38d5e521c123" kindref="member">SetupPlayers</ref>();</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classChessGame_1a8da52c5aea5b9eb826ee1f2ea4bccb47" kindref="member">SetupTimers</ref>();</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="classChessGame_1a435491b07e8ed046f58f6ab6aa6b642c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChessGame_1a435491b07e8ed046f58f6ab6aa6b642c" kindref="member">ChessGame::EndGame</ref>(<ref refid="classPlayer" kindref="compound">Player</ref>*<sp/>winner,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>resign,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>notime)</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStyle_1a5614a5f517f754485702cc7067efc823" kindref="member">PrintBox</ref>(</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>winner-&gt;<ref refid="classPlayer_1a313b6e73fb54e242e318579901ee93da" kindref="member">Name</ref>()<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;<sp/>has<sp/>won!&quot;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>Game<sp/>ended<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>exit(0);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204" refid="classChessGame_1a87facfa390c37a8fcaf36279c098fc1e" refkind="member"><highlight class="normal"><ref refid="classMove" kindref="compound">Move</ref><sp/><ref refid="classChessGame_1a87facfa390c37a8fcaf36279c098fc1e" kindref="member">ChessGame::GetPlayerMove</ref>()</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMove" kindref="compound">Move</ref><sp/>playerMove{};</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>checked<sp/>=<sp/>m_board-&gt;IsKingChecked(<ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>-&gt;Color());</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>noMoves<sp/>=<sp/>m_board-&gt;GetPossibleMoves(<ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>-&gt;Color()).empty();</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(checked<sp/>&amp;&amp;<sp/>noMoves)<sp/>{</highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChessGame_1a435491b07e8ed046f58f6ab6aa6b642c" kindref="member">EndGame</ref>(<ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref><sp/>==<sp/><ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref><sp/>?<sp/><ref refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" kindref="member">m_playerTwo</ref><sp/>:<sp/><ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref>);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classMove" kindref="compound">Move</ref>{};</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>moveStr<sp/>=<sp/><ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>-&gt;GetInput(m_board);</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(moveStr<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;resign&quot;</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classChessGame_1a435491b07e8ed046f58f6ab6aa6b642c" kindref="member">EndGame</ref>(<ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref><sp/>==<sp/><ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref><sp/>?<sp/><ref refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" kindref="member">m_playerTwo</ref><sp/>:<sp/><ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref>,<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classMove" kindref="compound">Move</ref>{};</highlight></codeline>
+<codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>playerMove<sp/>=<sp/><ref refid="classMove" kindref="compound">Move</ref>{moveStr};</highlight></codeline>
+<codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>playerMove;</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal">(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::exception&amp;<sp/>e)</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>We<sp/>must<sp/>make<sp/>sure<sp/>a<sp/>BotPlayer<sp/>returns<sp/>valid<sp/>input,<sp/>otherwise<sp/>this<sp/>will<sp/>be<sp/>executed.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStyle_1a0a7907c969753a314a4d49c0f94ba636" kindref="member">PrintError</ref>(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>input,<sp/>example<sp/>format:<sp/>&apos;e2e4&apos;<sp/>\n<sp/><sp/>|<sp/>&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::string{e.what()});</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">continue</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="235"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237" refid="classChessGame_1ab121238a7f75644fb772fec4491865a8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChessGame_1ab121238a7f75644fb772fec4491865a8" kindref="member">ChessGame::Update</ref>()</highlight></codeline>
+<codeline lineno="238"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>succeed<sp/>{</highlight><highlight class="keyword">false</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classMove" kindref="compound">Move</ref><sp/>playerMove;</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">do</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>playerMove<sp/>=<sp/><ref refid="classChessGame_1a87facfa390c37a8fcaf36279c098fc1e" kindref="member">GetPlayerMove</ref>();</highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(playerMove.<ref refid="classMove_1aee300c99f25c630acd8500fe2141b05e" kindref="member">empty</ref>())</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>-&gt;IsBot())</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classBotPlayer" kindref="compound">BotPlayer</ref>*<sp/>bot<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="classBotPlayer" kindref="compound">BotPlayer</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bot-&gt;<ref refid="classBotPlayer_1a36fb5ce4f6a78a751d7a95b7b8ebc1ea" kindref="member">AddCache</ref>(playerMove.<ref refid="classMove_1a1f1dd54e4ef974f1f24277ee14c61beb" kindref="member">toString</ref>());</highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>succeed<sp/>=<sp/>m_board-&gt;ExecuteMove(playerMove,<sp/><ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>);</highlight></codeline>
+<codeline lineno="255"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!succeed<sp/>&amp;&amp;<sp/>!<ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>-&gt;IsBot())</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStyle_1a0a7907c969753a314a4d49c0f94ba636" kindref="member">PrintError</ref>(</highlight><highlight class="stringliteral">&quot;Invalid<sp/>Move!&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!<sp/>succeed);</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>-&gt;IsBot())</highlight></codeline>
+<codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classStyle_1a5614a5f517f754485702cc7067efc823" kindref="member">PrintBox</ref>(<ref refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" kindref="member">Cta</ref>(<ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>-&gt;Color())<sp/>+<sp/>playerMove.<ref refid="classMove_1a1f1dd54e4ef974f1f24277ee14c61beb" kindref="member">toString</ref>(),<sp/></highlight><highlight class="stringliteral">&quot;Bot&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//std::this_thread::sleep_for(std::chrono::milliseconds(500));</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classBotPlayer" kindref="compound">BotPlayer</ref>*<sp/>bot<sp/>=<sp/></highlight><highlight class="keyword">dynamic_cast&lt;</highlight><highlight class="normal"><ref refid="classBotPlayer" kindref="compound">BotPlayer</ref>*</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(<ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>);</highlight></codeline>
+<codeline lineno="264"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bot-&gt;<ref refid="classBotPlayer_1ada837bf49ac76c75947bc77d4af07088" kindref="member">EmptyCache</ref>();</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="266"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="267"><highlight class="normal"></highlight></codeline>
+<codeline lineno="268" refid="classChessGame_1a84e2d266d40a56cc33e094087a205b8f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChessGame_1a84e2d266d40a56cc33e094087a205b8f" kindref="member">ChessGame::Draw</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="269"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classApp_1a93dfaeba98776eb3383c2cfd0f6ebeef" kindref="member">m_exitCall</ref>)</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStyle_1a86d28d05ce8974b1ff88317c5d294eb5" kindref="member">ClearConsole</ref>();</highlight></codeline>
+<codeline lineno="274"><highlight class="normal"></highlight></codeline>
+<codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ostringstream<sp/>oss;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/>std::cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\033[0;0H\033[0m&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="278"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPlayer" kindref="compound">Player</ref>*<sp/>player<sp/>=<sp/><ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>-&gt;Color()<sp/>==<sp/><ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref>-&gt;Color()<sp/>?<sp/><ref refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" kindref="member">m_playerTwo</ref><sp/>:<sp/><ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref>;</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="281"><highlight class="normal"><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Player<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>player-&gt;<ref refid="classPlayer_1a313b6e73fb54e242e318579901ee93da" kindref="member">Name</ref>()<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>may<sp/>make<sp/>a<sp/>move.\n&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/><ref refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" kindref="member">Cta</ref>(<ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref>-&gt;Color())<sp/>&lt;&lt;<sp/><ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref>-&gt;Name()<sp/>&lt;&lt;<sp/><ref refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" kindref="member">Cta</ref>(<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" kindref="member">Color::DEFAULT</ref>)<sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>has<sp/>captured:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" kindref="member">Cta</ref>(<ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref>-&gt;Color());</highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>capture<sp/>:<sp/><ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref>-&gt;GetCaptures())</highlight></codeline>
+<codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/>capture-&gt;Symbol()<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;\n&apos;</highlight><highlight class="normal">&lt;&lt;<sp/><ref refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" kindref="member">Cta</ref>(<ref refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" kindref="member">m_playerTwo</ref>-&gt;Color())<sp/>&lt;&lt;<sp/><ref refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" kindref="member">m_playerTwo</ref>-&gt;Name()<sp/>&lt;&lt;<sp/><ref refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" kindref="member">Cta</ref>(<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" kindref="member">Color::DEFAULT</ref>)<sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>has<sp/>captured:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" kindref="member">Cta</ref>(<ref refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" kindref="member">m_playerTwo</ref>-&gt;Color());</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>capture<sp/>:<sp/><ref refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" kindref="member">m_playerTwo</ref>-&gt;GetCaptures())</highlight></codeline>
+<codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/>capture-&gt;Symbol()<sp/>&lt;&lt;<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/>oss<sp/>&lt;&lt;<sp/><ref refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" kindref="member">Cta</ref>(<ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" kindref="member">Color::DEFAULT</ref>);</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classStyle_1a5614a5f517f754485702cc7067efc823" kindref="member">PrintBox</ref>(oss.str(),<sp/></highlight><highlight class="stringliteral">&quot;<sp/>Game<sp/>Stats<sp/>&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/>m_board-&gt;Draw();</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight></codeline>
+<codeline lineno="298"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="299"><highlight class="normal"></highlight></codeline>
+<codeline lineno="300" refid="classChessGame_1ab09da31d868fcfd772b7746670add659" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChessGame_1ab09da31d868fcfd772b7746670add659" kindref="member">ChessGame::StartTimer</ref>()</highlight></codeline>
+<codeline lineno="301"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Record<sp/>the<sp/>current<sp/>time<sp/>as<sp/>the<sp/>start<sp/>of<sp/>the<sp/>move.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>m_moveStartTime<sp/>=<sp/>std::chrono::steady_clock::now();</highlight></codeline>
+<codeline lineno="304"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306" refid="classChessGame_1a9d0066f004b8097e53bdc941d4d6c34d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classChessGame_1a9d0066f004b8097e53bdc941d4d6c34d" kindref="member">ChessGame::StopTimer</ref>()</highlight></codeline>
+<codeline lineno="307"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Get<sp/>the<sp/>current<sp/>time<sp/>and<sp/>calculate<sp/>the<sp/>elapsed<sp/>time<sp/>in<sp/>seconds.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>stopTime<sp/>=<sp/>std::chrono::steady_clock::now();</highlight></codeline>
+<codeline lineno="310"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>elapsedSeconds<sp/>=<sp/>std::chrono::duration_cast&lt;std::chrono::seconds&gt;(stopTime<sp/>-<sp/>m_moveStartTime).count();</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"></highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Depending<sp/>on<sp/>the<sp/>player&apos;s<sp/>color,<sp/>subtract<sp/>the<sp/>elapsed<sp/>time<sp/>from<sp/>the<sp/>base<sp/>timer<sp/>and<sp/>add<sp/>the<sp/>increment.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>-&gt;Color()<sp/>==<sp/><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" kindref="member">Color::WHITE</ref>)</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_timerOne<sp/>=<sp/>(m_timerOne<sp/>&gt;<sp/>elapsedSeconds)<sp/>?<sp/>(m_timerOne<sp/>-<sp/>elapsedSeconds)<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_timerOne<sp/>+=<sp/>m_increment;<sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>the<sp/>increment<sp/>after<sp/>the<sp/>move.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="317"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Assuming<sp/>Black.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_timerTwo<sp/>=<sp/>(m_timerTwo<sp/>&gt;<sp/>elapsedSeconds)<sp/>?<sp/>(m_timerTwo<sp/>-<sp/>elapsedSeconds)<sp/>:<sp/>0;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_timerTwo<sp/>+=<sp/>m_increment;<sp/><sp/></highlight><highlight class="comment">//<sp/>Add<sp/>the<sp/>increment<sp/>after<sp/>the<sp/>move.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="323"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="ChessGame.cpp"/>
+  </compounddef>
+</doxygen>

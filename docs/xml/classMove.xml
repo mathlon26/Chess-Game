@@ -1,0 +1,328 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classMove" kind="class" language="C++" prot="public">
+    <compoundname>Move</compoundname>
+    <includes refid="Move_8h" local="no">Move.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classMove_1adffa38920811f46a17dd07be4ce4e82f" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Move::startX</definition>
+        <argsstring></argsstring>
+        <name>startX</name>
+        <qualifiedname>Move::startX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="34" column="9" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMove_1aa217487271e2eb8fbd87d28af4b08c3c" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Move::startY</definition>
+        <argsstring></argsstring>
+        <name>startY</name>
+        <qualifiedname>Move::startY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="34" column="16" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMove_1a1c557dde425b7624f0ca7e6e7f33baa5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Move::endX</definition>
+        <argsstring></argsstring>
+        <name>endX</name>
+        <qualifiedname>Move::endX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="35" column="9" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classMove_1a1223cbd38258e9b08f977ea6670f1357" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Move::endY</definition>
+        <argsstring></argsstring>
+        <name>endY</name>
+        <qualifiedname>Move::endY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="35" column="14" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classMove_1a4b1acc3a67d30c385ad9a6000526393a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Move::Move</definition>
+        <argsstring>()</argsstring>
+        <name>Move</name>
+        <qualifiedname>Move::Move</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="12" column="5" bodyfile="Move.cpp" bodystart="5" bodyend="8"/>
+        <references refid="classMove_1a4b1acc3a67d30c385ad9a6000526393a" compoundref="Move_8cpp" startline="5" endline="8">Move</references>
+      </memberdef>
+      <memberdef kind="function" id="classMove_1ab9d9c5897fa433018d6834db27ef5713" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Move::Move</definition>
+        <argsstring>(int startX, int startY, int endX, int endY)</argsstring>
+        <name>Move</name>
+        <qualifiedname>Move::Move</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>startX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>startY</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>endX</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>endY</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="13" column="5" bodyfile="Move.cpp" bodystart="11" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classMove_1af1a99100f5604c805ab1feaa7d911513" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Move::Move</definition>
+        <argsstring>(const std::string &amp;moveStr)</argsstring>
+        <name>Move</name>
+        <qualifiedname>Move::Move</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>moveStr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="14" column="5" bodyfile="Move.cpp" bodystart="19" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classMove_1a84785acbf70f76c103df5b0aadbc58d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Move::~Move</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Move</name>
+        <qualifiedname>Move::~Move</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="17" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classMove_1ae5b75e6f1d977e5eacac7e85d991ed27" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Move::getStartX</definition>
+        <argsstring>() const</argsstring>
+        <name>getStartX</name>
+        <qualifiedname>Move::getStartX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="20" column="9" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classMove_1afb1961349a3fb940e4596ee12d28cf1f" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Move::getStartY</definition>
+        <argsstring>() const</argsstring>
+        <name>getStartY</name>
+        <qualifiedname>Move::getStartY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="21" column="9" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classMove_1a2d670ad83efcfd894e7877252fce69de" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Move::getEndX</definition>
+        <argsstring>() const</argsstring>
+        <name>getEndX</name>
+        <qualifiedname>Move::getEndX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="22" column="9" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classMove_1a3b5509b1d995526c851561f73d327ff3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int Move::getEndY</definition>
+        <argsstring>() const</argsstring>
+        <name>getEndY</name>
+        <qualifiedname>Move::getEndY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="23" column="9" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" bodystart="23" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classMove_1a6e80a6c039ba805bac3ff6402c56b76c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Move::isValid</definition>
+        <argsstring>() const</argsstring>
+        <name>isValid</name>
+        <qualifiedname>Move::isValid</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="26" column="10" bodyfile="Move.cpp" bodystart="63" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classMove_1a1f1dd54e4ef974f1f24277ee14c61beb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string Move::toString</definition>
+        <argsstring>() const</argsstring>
+        <name>toString</name>
+        <qualifiedname>Move::toString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="27" column="17" bodyfile="Move.cpp" bodystart="72" bodyend="79"/>
+      </memberdef>
+      <memberdef kind="function" id="classMove_1aee300c99f25c630acd8500fe2141b05e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Move::empty</definition>
+        <argsstring>() const</argsstring>
+        <name>empty</name>
+        <qualifiedname>Move::empty</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="28" column="10" bodyfile="Move.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classMove_1a93f3c3240fd5974d8b90ee7fbaefdf4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Move::operator==</definition>
+        <argsstring>(const Move &amp;other) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>Move::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classMove" kindref="compound">Move</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="31" column="10" bodyfile="Move.cpp" bodystart="82" bodyend="88"/>
+        <references refid="classMove_1a4b1acc3a67d30c385ad9a6000526393a" compoundref="Move_8cpp" startline="5" endline="8">Move</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classMove_1aae174b66ede3027a9cbd261a6a3f0301" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Move::validateCoordinates</definition>
+        <argsstring>(int x, int y) const</argsstring>
+        <name>validateCoordinates</name>
+        <qualifiedname>Move::validateCoordinates</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="38" column="10" bodyfile="Move.cpp" bodystart="30" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classMove_1a03ae04ea9e8071a878e3c3a11ae609c3" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Move::parseMoveString</definition>
+        <argsstring>(const std::string &amp;moveStr)</argsstring>
+        <name>parseMoveString</name>
+        <qualifiedname>Move::parseMoveString</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>moveStr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="39" column="10" bodyfile="Move.cpp" bodystart="39" bodyend="60"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" line="8" column="1" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Move.h" bodystart="9" bodyend="40"/>
+    <listofallmembers>
+      <member refid="classMove_1aee300c99f25c630acd8500fe2141b05e" prot="public" virt="non-virtual"><scope>Move</scope><name>empty</name></member>
+      <member refid="classMove_1a1c557dde425b7624f0ca7e6e7f33baa5" prot="private" virt="non-virtual"><scope>Move</scope><name>endX</name></member>
+      <member refid="classMove_1a1223cbd38258e9b08f977ea6670f1357" prot="private" virt="non-virtual"><scope>Move</scope><name>endY</name></member>
+      <member refid="classMove_1a2d670ad83efcfd894e7877252fce69de" prot="public" virt="non-virtual"><scope>Move</scope><name>getEndX</name></member>
+      <member refid="classMove_1a3b5509b1d995526c851561f73d327ff3" prot="public" virt="non-virtual"><scope>Move</scope><name>getEndY</name></member>
+      <member refid="classMove_1ae5b75e6f1d977e5eacac7e85d991ed27" prot="public" virt="non-virtual"><scope>Move</scope><name>getStartX</name></member>
+      <member refid="classMove_1afb1961349a3fb940e4596ee12d28cf1f" prot="public" virt="non-virtual"><scope>Move</scope><name>getStartY</name></member>
+      <member refid="classMove_1a6e80a6c039ba805bac3ff6402c56b76c" prot="public" virt="non-virtual"><scope>Move</scope><name>isValid</name></member>
+      <member refid="classMove_1a4b1acc3a67d30c385ad9a6000526393a" prot="public" virt="non-virtual"><scope>Move</scope><name>Move</name></member>
+      <member refid="classMove_1ab9d9c5897fa433018d6834db27ef5713" prot="public" virt="non-virtual"><scope>Move</scope><name>Move</name></member>
+      <member refid="classMove_1af1a99100f5604c805ab1feaa7d911513" prot="public" virt="non-virtual"><scope>Move</scope><name>Move</name></member>
+      <member refid="classMove_1a93f3c3240fd5974d8b90ee7fbaefdf4a" prot="public" virt="non-virtual"><scope>Move</scope><name>operator==</name></member>
+      <member refid="classMove_1a03ae04ea9e8071a878e3c3a11ae609c3" prot="private" virt="non-virtual"><scope>Move</scope><name>parseMoveString</name></member>
+      <member refid="classMove_1adffa38920811f46a17dd07be4ce4e82f" prot="private" virt="non-virtual"><scope>Move</scope><name>startX</name></member>
+      <member refid="classMove_1aa217487271e2eb8fbd87d28af4b08c3c" prot="private" virt="non-virtual"><scope>Move</scope><name>startY</name></member>
+      <member refid="classMove_1a1f1dd54e4ef974f1f24277ee14c61beb" prot="public" virt="non-virtual"><scope>Move</scope><name>toString</name></member>
+      <member refid="classMove_1aae174b66ede3027a9cbd261a6a3f0301" prot="private" virt="non-virtual"><scope>Move</scope><name>validateCoordinates</name></member>
+      <member refid="classMove_1a84785acbf70f76c103df5b0aadbc58d5" prot="public" virt="non-virtual"><scope>Move</scope><name>~Move</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

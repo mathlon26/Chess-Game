@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_App_8h_source" xml:lang="en-US">
+<title>App.h</title>
+<indexterm><primary>/home/huplo/Coding/Projects/C++/chess-game/include/App.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;APP__H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;APP__H</emphasis>
+3 
+4 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classApp_1acb8cbf3e285b91d0170ffe87df5989c5">App</link>
+5 {
+6 <emphasis role="keyword">public</emphasis>:
+7 &#32;&#32;&#32;&#32;<link linkend="_classApp_1acb8cbf3e285b91d0170ffe87df5989c5">App</link>()&#32;{};
+8 &#32;&#32;&#32;&#32;<link linkend="_classApp_1a871e34a8ba713040bfdebd47db0b86cf">~App</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+9 
+10 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classApp_1a7fe3a49eeb945cbd1b235e6ff47805a3">Exit</link>()&#32;{<link linkend="_classApp_1a93dfaeba98776eb3383c2cfd0f6ebeef">m_exitCall</link>&#32;=&#32;<emphasis role="keyword">true</emphasis>;}
+11 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classApp_1afb17a1d7013faefdbe00bf333399de50">ShouldRun</link>()&#32;{<emphasis role="keywordflow">return</emphasis>&#32;!<link linkend="_classApp_1a93dfaeba98776eb3383c2cfd0f6ebeef">m_exitCall</link>;}
+12 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classApp_1a406fc89b043fc613f5f0352d8919fa44">Init</link>()&#32;=&#32;0;
+13 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classApp_1a73531ddfa01620f063c673a5e7ab212c">Update</link>()&#32;=&#32;0;
+14 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classApp_1a7c901bf280261b153ca7aa39d5c3e357">Run</link>()&#32;=&#32;0;
+15 
+16 <emphasis role="keyword">protected</emphasis>:
+17 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classApp_1a93dfaeba98776eb3383c2cfd0f6ebeef">m_exitCall</link>&#32;{<emphasis role="keyword">false</emphasis>};
+18 };
+19 
+20 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;APP__H</emphasis>
+</programlisting></section>

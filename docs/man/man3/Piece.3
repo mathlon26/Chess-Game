@@ -1,0 +1,78 @@
+.TH "Piece" 3 "Version V4.2.0" "Chess Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Piece
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Piece\&.h>\fP
+.PP
+Inherited by \fBBishop\fP, \fBKing\fP, \fBKnight\fP, \fBPawn\fP, \fBQueen\fP, and \fBRook\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPiece\fP (\fBPieceColor\fP color)"
+.br
+.ti -1c
+.RI "virtual \fB~Piece\fP ()=default"
+.br
+.ti -1c
+.RI "\fBPieceColor\fP \fBColor\fP () const"
+.br
+.ti -1c
+.RI "virtual std::string \fBSymbol\fP () const =0"
+.br
+.ti -1c
+.RI "virtual std::vector< \fBMove\fP > \fBPossibleMoves\fP (\fBBoard\fP *board, int currentX, int currentY) const =0"
+.br
+.ti -1c
+.RI "virtual bool \fBIsValidMove\fP (\fBPiece\fP *target, \fBBoard\fP *board, \fBMove\fP &move, \fBPiece\fP *&setReplacement) const =0"
+.br
+.ti -1c
+.RI "virtual bool \fBIsKing\fP () const"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPieceColor\fP \fBm_color\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Piece::Piece (\fBPieceColor\fP color)\fR [inline]\fP"
+
+.SS "virtual Piece::~Piece ()\fR [virtual]\fP, \fR [default]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBPieceColor\fP Piece::Color () const\fR [inline]\fP"
+
+.SS "virtual bool Piece::IsKing () const\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Reimplemented in \fBKing\fP\&.
+.SS "virtual bool Piece::IsValidMove (\fBPiece\fP * target, \fBBoard\fP * board, \fBMove\fP & move, \fBPiece\fP *& setReplacement) const\fR [pure virtual]\fP"
+
+.PP
+Implemented in \fBBishop\fP, \fBKing\fP, \fBKnight\fP, \fBPawn\fP, \fBQueen\fP, and \fBRook\fP\&.
+.SS "virtual std::vector< \fBMove\fP > Piece::PossibleMoves (\fBBoard\fP * board, int currentX, int currentY) const\fR [pure virtual]\fP"
+
+.PP
+Implemented in \fBBishop\fP, \fBKing\fP, \fBKnight\fP, \fBPawn\fP, \fBQueen\fP, and \fBRook\fP\&.
+.SS "virtual std::string Piece::Symbol () const\fR [pure virtual]\fP"
+
+.PP
+Implemented in \fBBishop\fP, \fBKing\fP, \fBKnight\fP, \fBPawn\fP, \fBQueen\fP, and \fBRook\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBPieceColor\fP Piece::m_color\fR [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chess Game from the source code\&.

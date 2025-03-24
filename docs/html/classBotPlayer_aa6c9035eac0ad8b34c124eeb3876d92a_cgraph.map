@@ -1,0 +1,13 @@
+<map id="BotPlayer::GetInput" name="BotPlayer::GetInput">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,142,108"/>
+<area shape="rect" id="Node000002" href="$classBoard.html#a1ff64194b703edb37a5c9770de17e48a" title=" " alt="" coords="190,56,363,83"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,84,174,79,174,85,142,89"/>
+<area shape="rect" id="Node000006" href="$classMove.html#a1f1dd54e4ef974f1f24277ee14c61beb" title=" " alt="" coords="223,107,330,133"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="142,101,208,109,208,114,142,106"/>
+<area shape="rect" id="Node000003" href="$classBoard.html#a9ee491d4fea680cf69b033374a9fdfcb" title=" " alt="" coords="438,5,535,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="334,53,422,31,423,37,336,58"/>
+<area shape="rect" id="Node000004" href="$classPiece.html#ad31a695453335fbbc36a9c749395f7c1" title=" " alt="" coords="440,56,533,83"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="363,67,425,67,425,72,363,72"/>
+<area shape="rect" id="Node000005" href="$classPiece.html#a1c67fd5e66c3e7b6c1f4ebf3207e65e2" title=" " alt="" coords="411,107,562,133"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="336,81,414,100,413,105,334,86"/>
+</map>

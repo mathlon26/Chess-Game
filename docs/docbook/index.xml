@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
+    <info>
+    <title>Chess Game</title>
+    </info>
+<chapter>
+    <title>Class Documentation</title>
+    <xi:include href="classApp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classBishop.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classBoard.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classBotPlayer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classCanvas.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classCanvasApp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classChessGame.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classHumanPlayer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classKing.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classKnight.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classMove.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="structMoveRecord.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classPawn.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classPiece.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classPlayer.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classQueen.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classRook.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classStyle.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="classTwoPlayerGame.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
+    <title>File Documentation</title>
+    <xi:include href="Style_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Style_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="App_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="App_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Bishop_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Bishop_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Board_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Board_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="BotPlayer_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="BotPlayer_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Canvas_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Canvas_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="CanvasApp_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="CanvasApp_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="ChessGame_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="ChessGame_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="HumanPlayer_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="HumanPlayer_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="King_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="King_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Knight_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Knight_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Move_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Move_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Pawn_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Pawn_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Piece_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Piece_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Player_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Player_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Queen_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Queen_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Rook_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Rook_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="TwoPlayerGame_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="TwoPlayerGame_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="README_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Bishop_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Board_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="BotPlayer_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="ChessGame_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="HumanPlayer_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="King_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Knight_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Move_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Pawn_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Piece_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Player_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Queen_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="Rook_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="TwoPlayerGame_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<index/>
+</book>

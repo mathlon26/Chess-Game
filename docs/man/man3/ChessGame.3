@@ -1,0 +1,243 @@
+.TH "ChessGame" 3 "Version V4.2.0" "Chess Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+ChessGame
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <ChessGame\&.h>\fP
+.PP
+Inherits \fBCanvasApp\fP, and \fBTwoPlayerGame\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBChessGame\fP ()"
+.br
+.ti -1c
+.RI "\fB~ChessGame\fP ()"
+.br
+.ti -1c
+.RI "void \fBRun\fP () override"
+.br
+.ti -1c
+.RI "void \fBSetupPlayers\fP () override"
+.br
+.ti -1c
+.RI "void \fBInit\fP () override"
+.br
+.ti -1c
+.RI "void \fBUpdate\fP () override"
+.br
+.ti -1c
+.RI "void \fBDraw\fP () const override"
+.br
+.ti -1c
+.RI "void \fBEndGame\fP (\fBPlayer\fP *winner, bool resign=false, bool notime=false)"
+.br
+.ti -1c
+.RI "void \fBSetupTimers\fP ()"
+.br
+.ti -1c
+.RI "void \fBTimerThreadFunction\fP ()"
+.br
+.ti -1c
+.RI "void \fBStartTimer\fP ()"
+.br
+.ti -1c
+.RI "void \fBStopTimer\fP ()"
+.br
+.ti -1c
+.RI "\fBMove\fP \fBGetPlayerMove\fP ()"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBCanvasApp\fP
+.in +1c
+.ti -1c
+.RI "\fBCanvasApp\fP ()"
+.br
+.ti -1c
+.RI "\fB~CanvasApp\fP ()=default"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBCanvas\fP
+.in +1c
+.ti -1c
+.RI "\fBCanvas\fP ()"
+.br
+.ti -1c
+.RI "\fB~Canvas\fP ()=default"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBApp\fP
+.in +1c
+.ti -1c
+.RI "\fBApp\fP ()"
+.br
+.ti -1c
+.RI "\fB~App\fP ()=default"
+.br
+.ti -1c
+.RI "void \fBExit\fP ()"
+.br
+.ti -1c
+.RI "bool \fBShouldRun\fP ()"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBTwoPlayerGame\fP
+.in +1c
+.ti -1c
+.RI "\fBTwoPlayerGame\fP ()"
+.br
+.ti -1c
+.RI "\fB~TwoPlayerGame\fP ()"
+.br
+.ti -1c
+.RI "\fBPlayer\fP * \fBGetPlayerOnTurn\fP ()"
+.br
+.ti -1c
+.RI "\fBPlayer\fP * \fBSwitchTurn\fP ()"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Static Public Member Functions inherited from \fBStyle\fP
+.in +1c
+.ti -1c
+.RI "static std::string \fBCta\fP (\fBColor\fP color)"
+.br
+.ti -1c
+.RI "static std::string \fBCts\fP (\fBColor\fP color)"
+.br
+.ti -1c
+.RI "static std::string \fBBoldText\fP (const std::string &text)"
+.br
+.ti -1c
+.RI "static std::string \fBUnderlineText\fP (const std::string &text)"
+.br
+.ti -1c
+.RI "static std::string \fBLinkText\fP (const std::string &text, \fBColor\fP continueColor=\fBColor::DEFAULT\fP)"
+.br
+.ti -1c
+.RI "static std::string \fBResetColor\fP ()"
+.br
+.ti -1c
+.RI "static size_t \fBDisplayLength\fP (const std::string &text)"
+.br
+.ti -1c
+.RI "static void \fBPrintColored\fP (const std::string &text, \fBColor\fP color=\fBColor::DEFAULT\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintColoredLine\fP (const std::string &text, \fBColor\fP color=\fBColor::DEFAULT\fP, bool endl=true)"
+.br
+.ti -1c
+.RI "static void \fBPrintLine\fP (std::string ch='─', int length=50, \fBColor\fP color=\fBColor::DEFAULT\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintTitle\fP (const std::string &title, \fBColor\fP color=\fBColor::CYAN\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintBox\fP (const std::string &text, const std::string &title='', \fBColor\fP color=\fBColor::GREEN\fP, int fixOffset=0)"
+.br
+.ti -1c
+.RI "static void \fBPrintSuccess\fP (const std::string &message)"
+.br
+.ti -1c
+.RI "static void \fBPrintWarning\fP (const std::string &message)"
+.br
+.ti -1c
+.RI "static void \fBPrintError\fP (const std::string &message)"
+.br
+.ti -1c
+.RI "static void \fBPrintErrorExit\fP (const std::string &error, int code=\-1)"
+.br
+.ti -1c
+.RI "static void \fBPrintInfo\fP (const std::string &message)"
+.br
+.ti -1c
+.RI "static void \fBClearConsole\fP ()"
+.br
+.ti -1c
+.RI "static bool \fBGetBoolInput\fP (const std::string &prompt, const std::string &title='', \fBColor\fP color=\fBColor::YELLOW\fP, \fBColor\fP titleColor=\fBColor::CYAN\fP)"
+.br
+.ti -1c
+.RI "static std::string \fBGetStringInput\fP (const std::string &prompt, const std::string &title='', \fBColor\fP color=\fBColor::YELLOW\fP, \fBColor\fP titleColor=\fBColor::CYAN\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintDivider\fP (const std::string &message='', \fBColor\fP color=\fBColor::DEFAULT\fP)"
+.br
+.ti -1c
+.RI "static void \fBPrintTable\fP (const std::string &title, const std::vector< std::string > &header, const std::vector< std::vector< std::string > > &rows, \fBColor\fP color=\fBColor::DEFAULT\fP)"
+.br
+.in -1c
+
+Protected Attributes inherited from \fBApp\fP
+.in +1c
+.ti -1c
+.RI "bool \fBm_exitCall\fP {false}"
+.br
+.in -1c
+
+Protected Attributes inherited from \fBTwoPlayerGame\fP
+.in +1c
+.ti -1c
+.RI "\fBPlayer\fP * \fBm_playerOne\fP {nullptr}"
+.br
+.ti -1c
+.RI "\fBPlayer\fP * \fBm_playerTwo\fP {nullptr}"
+.br
+.ti -1c
+.RI "\fBPlayer\fP * \fBm_playerOnTurn\fP {nullptr}"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "ChessGame::ChessGame ()"
+
+.SS "ChessGame::~ChessGame ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void ChessGame::Draw () const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBCanvasApp\fP\&.
+.SS "void ChessGame::EndGame (\fBPlayer\fP * winner, bool resign = \fRfalse\fP, bool notime = \fRfalse\fP)"
+
+.SS "\fBMove\fP ChessGame::GetPlayerMove ()"
+
+.SS "void ChessGame::Init ()\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBCanvasApp\fP\&.
+.SS "void ChessGame::Run ()\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBCanvasApp\fP\&.
+.SS "void ChessGame::SetupPlayers ()\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBTwoPlayerGame\fP\&.
+.SS "void ChessGame::SetupTimers ()"
+
+.SS "void ChessGame::StartTimer ()"
+
+.SS "void ChessGame::StopTimer ()"
+
+.SS "void ChessGame::TimerThreadFunction ()"
+
+.SS "void ChessGame::Update ()\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBCanvasApp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chess Game from the source code\&.

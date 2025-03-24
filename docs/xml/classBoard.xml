@@ -1,0 +1,410 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classBoard" kind="class" language="C++" prot="public">
+    <compoundname>Board</compoundname>
+    <includes refid="Board_8h" local="no">Board.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classBoard_1ab07b33733f3642dd3a7d79fecb539b56" prot="private" static="no" mutable="no">
+        <type>std::array&lt; std::array&lt; <ref refid="classPiece" kindref="compound">Piece</ref> *, 8 &gt;, 8 &gt;</type>
+        <definition>std::array&lt;std::array&lt;Piece*, 8&gt;, 8&gt; Board::m_board</definition>
+        <argsstring></argsstring>
+        <name>m_board</name>
+        <qualifiedname>Board::m_board</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="48" column="16" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBoard_1afc0acfd6acdfdbb9b727d037a1dcbc61" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Board::m_enPassantAvailable</definition>
+        <argsstring></argsstring>
+        <name>m_enPassantAvailable</name>
+        <qualifiedname>Board::m_enPassantAvailable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="51" column="10" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="51" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBoard_1a20260f0f856c9d5fefa53cf2eb893482" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Board::m_enPassantX</definition>
+        <argsstring></argsstring>
+        <name>m_enPassantX</name>
+        <qualifiedname>Board::m_enPassantX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="52" column="9" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBoard_1ae7ef5afab53e5e0b350fcee51334e788" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Board::m_enPassantY</definition>
+        <argsstring></argsstring>
+        <name>m_enPassantY</name>
+        <qualifiedname>Board::m_enPassantY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="53" column="9" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBoard_1a1c7f6768ebc507fc7794264b08005898" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Board::m_whiteKingInCheck</definition>
+        <argsstring></argsstring>
+        <name>m_whiteKingInCheck</name>
+        <qualifiedname>Board::m_whiteKingInCheck</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="56" column="10" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classBoard_1a766125015e752a33b705f5ae695f65e8" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool Board::m_blackKingInCheck</definition>
+        <argsstring></argsstring>
+        <name>m_blackKingInCheck</name>
+        <qualifiedname>Board::m_blackKingInCheck</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="57" column="10" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classBoard_1a9ee491d4fea680cf69b033374a9fdfcb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Board::Board</definition>
+        <argsstring>()</argsstring>
+        <name>Board</name>
+        <qualifiedname>Board::Board</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="29" column="5" bodyfile="Board.cpp" bodystart="20" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classBoard_1af73f45730119a1fd8f6670f53f959e68" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Board::~Board</definition>
+        <argsstring>()</argsstring>
+        <name>~Board</name>
+        <qualifiedname>Board::~Board</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="30" column="5" bodyfile="Board.cpp" bodystart="32" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classBoard_1a54a0fe14d04fa09928d8d6fc26a85cc2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Board::Draw</definition>
+        <argsstring>() const</argsstring>
+        <name>Draw</name>
+        <qualifiedname>Board::Draw</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="32" column="10" bodyfile="Board.cpp" bodystart="70" bodyend="100"/>
+        <references refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" compoundref="Style_8hpp" startline="20" endline="37">Style::Cta</references>
+        <references refid="classStyle_1a5614a5f517f754485702cc7067efc823" compoundref="Style_8hpp" startline="143" endline="171">Style::PrintBox</references>
+      </memberdef>
+      <memberdef kind="function" id="classBoard_1af1f69a1b91ec7fa07d0a85ce04d103ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Board::ExecuteMove</definition>
+        <argsstring>(Move &amp;move, Player *executor)</argsstring>
+        <name>ExecuteMove</name>
+        <qualifiedname>Board::ExecuteMove</qualifiedname>
+        <param>
+          <type><ref refid="classMove" kindref="compound">Move</ref> &amp;</type>
+          <declname>move</declname>
+        </param>
+        <param>
+          <type><ref refid="classPlayer" kindref="compound">Player</ref> *</type>
+          <declname>executor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="33" column="10" bodyfile="Board.cpp" bodystart="133" bodyend="188"/>
+        <references refid="classPlayer_1a8600584d0d313d9c9183f8676e30b9c2" compoundref="Player_8cpp" startline="19" endline="22">Player::AddCapture</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965" compoundref="Style_8hpp" startline="14">BLACK</references>
+        <references refid="structMoveRecord_1a28419c377c24b254ab4070a60d782901" compoundref="Board_8h" startline="15">MoveRecord::capturedPiece</references>
+        <references refid="classBoard_1a4da590b5c737674de91dcea89780db69" compoundref="Board_8cpp" startline="201" endline="206">ClearEnPassantTarget</references>
+        <references refid="classPiece_1ad31a695453335fbbc36a9c749395f7c1" compoundref="Piece_8h" startline="19" endline="19">Piece::Color</references>
+        <references refid="classPlayer_1af97f460cbb2594def32e32d9046f73ec" compoundref="Player_8cpp" startline="24" endline="27">Player::Color</references>
+        <references refid="classBoard_1a23d1fdbb5e49d70b51c0cda70d003597" compoundref="Board_8cpp" startline="262" endline="305">CommitMoveRecord</references>
+        <references refid="classMove_1a2d670ad83efcfd894e7877252fce69de" compoundref="Move_8h" startline="22" endline="22">Move::getEndX</references>
+        <references refid="classMove_1a3b5509b1d995526c851561f73d327ff3" compoundref="Move_8h" startline="23" endline="23">Move::getEndY</references>
+        <references refid="classMove_1ae5b75e6f1d977e5eacac7e85d991ed27" compoundref="Move_8h" startline="20" endline="20">Move::getStartX</references>
+        <references refid="classMove_1afb1961349a3fb940e4596ee12d28cf1f" compoundref="Move_8h" startline="21" endline="21">Move::getStartY</references>
+        <references refid="classBoard_1a20bcaee5725f1fc0e57b0e59a004153a" compoundref="Board_8cpp" startline="209" endline="247">IsKingChecked</references>
+        <references refid="classPiece_1a363193ff97c3e10b77feb6aec81d1a35">Piece::IsValidMove</references>
+        <references refid="classBoard_1ab9670780329f8763c49881cfada761c2" compoundref="Board_8cpp" startline="309" endline="333">RevertMoveRecord</references>
+        <references refid="classBoard_1af39b4dc6727c480c32925388ed95ae04" compoundref="Board_8cpp" startline="250" endline="258">SetKingChecked</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" compoundref="Style_8hpp" startline="14">WHITE</references>
+      </memberdef>
+      <memberdef kind="function" id="classBoard_1a23d1fdbb5e49d70b51c0cda70d003597" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structMoveRecord" kindref="compound">MoveRecord</ref></type>
+        <definition>MoveRecord Board::CommitMoveRecord</definition>
+        <argsstring>(Move &amp;move, Piece *replacement)</argsstring>
+        <name>CommitMoveRecord</name>
+        <qualifiedname>Board::CommitMoveRecord</qualifiedname>
+        <param>
+          <type><ref refid="classMove" kindref="compound">Move</ref> &amp;</type>
+          <declname>move</declname>
+        </param>
+        <param>
+          <type><ref refid="classPiece" kindref="compound">Piece</ref> *</type>
+          <declname>replacement</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>CommitMoveRecord: Performs the move on the board and returns a <ref refid="structMoveRecord" kindref="compound">MoveRecord</ref> capturing the previous state. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="34" column="16" bodyfile="Board.cpp" bodystart="262" bodyend="305"/>
+        <references refid="structMoveRecord_1a28419c377c24b254ab4070a60d782901" compoundref="Board_8h" startline="15">MoveRecord::capturedPiece</references>
+        <references refid="classBoard_1a4da590b5c737674de91dcea89780db69" compoundref="Board_8cpp" startline="201" endline="206">ClearEnPassantTarget</references>
+        <references refid="structMoveRecord_1add054033b276ec4e0d25daab459255a9" compoundref="Board_8h" startline="17">MoveRecord::enPassantUsed</references>
+        <references refid="classMove_1a2d670ad83efcfd894e7877252fce69de" compoundref="Move_8h" startline="22" endline="22">Move::getEndX</references>
+        <references refid="classMove_1a3b5509b1d995526c851561f73d327ff3" compoundref="Move_8h" startline="23" endline="23">Move::getEndY</references>
+        <references refid="classMove_1ae5b75e6f1d977e5eacac7e85d991ed27" compoundref="Move_8h" startline="20" endline="20">Move::getStartX</references>
+        <references refid="classMove_1afb1961349a3fb940e4596ee12d28cf1f" compoundref="Move_8h" startline="21" endline="21">Move::getStartY</references>
+        <references refid="classBoard_1aa178becb7490422c52bf03c5956446e9" compoundref="Board_8cpp" startline="196" endline="199">IsEnPassantTarget</references>
+        <references refid="structMoveRecord_1a07bcb9f0bafd4ccc53cdccae68c20c0f" compoundref="Board_8h" startline="14">MoveRecord::movedPiece</references>
+        <references refid="structMoveRecord_1a3f089cda41c1adcebd9c9b1f0116de98" compoundref="Board_8h" startline="19">MoveRecord::prevEnPassantAvailable</references>
+        <references refid="structMoveRecord_1ae45c86ca85a0de5db14a7e8bbd59a40d" compoundref="Board_8h" startline="20">MoveRecord::prevEnPassantX</references>
+        <references refid="structMoveRecord_1a9c30403d5f210cdb51ae3060d94e7ac8" compoundref="Board_8h" startline="21">MoveRecord::prevEnPassantY</references>
+        <references refid="structMoveRecord_1ae26c28a77959d5f472206fdfdae0d493" compoundref="Board_8h" startline="16">MoveRecord::replacementPiece</references>
+        <references refid="structMoveRecord_1ad01bd3d9191228198472736d116fac7d" compoundref="Board_8h" startline="13">MoveRecord::x0</references>
+        <references refid="structMoveRecord_1a0ba5bf01546d407c234f3419dbf21d83" compoundref="Board_8h" startline="13">MoveRecord::x1</references>
+        <references refid="structMoveRecord_1ac38a2c9028ec26e1fc2362231dc44e5f" compoundref="Board_8h" startline="13">MoveRecord::y0</references>
+        <references refid="structMoveRecord_1ad12e234364e89f435991293fff175a72" compoundref="Board_8h" startline="13">MoveRecord::y1</references>
+      </memberdef>
+      <memberdef kind="function" id="classBoard_1ab9670780329f8763c49881cfada761c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Board::RevertMoveRecord</definition>
+        <argsstring>(const MoveRecord &amp;record)</argsstring>
+        <name>RevertMoveRecord</name>
+        <qualifiedname>Board::RevertMoveRecord</qualifiedname>
+        <param>
+          <type>const <ref refid="structMoveRecord" kindref="compound">MoveRecord</ref> &amp;</type>
+          <declname>record</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>RevertMoveRecord: Reverts a move using the information stored in the <ref refid="structMoveRecord" kindref="compound">MoveRecord</ref>. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="35" column="10" bodyfile="Board.cpp" bodystart="309" bodyend="333"/>
+        <references refid="structMoveRecord_1a28419c377c24b254ab4070a60d782901" compoundref="Board_8h" startline="15">MoveRecord::capturedPiece</references>
+        <references refid="structMoveRecord_1add054033b276ec4e0d25daab459255a9" compoundref="Board_8h" startline="17">MoveRecord::enPassantUsed</references>
+        <references refid="structMoveRecord_1a07bcb9f0bafd4ccc53cdccae68c20c0f" compoundref="Board_8h" startline="14">MoveRecord::movedPiece</references>
+        <references refid="structMoveRecord_1a3f089cda41c1adcebd9c9b1f0116de98" compoundref="Board_8h" startline="19">MoveRecord::prevEnPassantAvailable</references>
+        <references refid="structMoveRecord_1ae45c86ca85a0de5db14a7e8bbd59a40d" compoundref="Board_8h" startline="20">MoveRecord::prevEnPassantX</references>
+        <references refid="structMoveRecord_1a9c30403d5f210cdb51ae3060d94e7ac8" compoundref="Board_8h" startline="21">MoveRecord::prevEnPassantY</references>
+        <references refid="structMoveRecord_1ae26c28a77959d5f472206fdfdae0d493" compoundref="Board_8h" startline="16">MoveRecord::replacementPiece</references>
+        <references refid="structMoveRecord_1ad01bd3d9191228198472736d116fac7d" compoundref="Board_8h" startline="13">MoveRecord::x0</references>
+        <references refid="structMoveRecord_1a0ba5bf01546d407c234f3419dbf21d83" compoundref="Board_8h" startline="13">MoveRecord::x1</references>
+        <references refid="structMoveRecord_1ac38a2c9028ec26e1fc2362231dc44e5f" compoundref="Board_8h" startline="13">MoveRecord::y0</references>
+        <references refid="structMoveRecord_1ad12e234364e89f435991293fff175a72" compoundref="Board_8h" startline="13">MoveRecord::y1</references>
+      </memberdef>
+      <memberdef kind="function" id="classBoard_1ad23c997a2d137d40511dfd327248de3d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classPiece" kindref="compound">Piece</ref> *</type>
+        <definition>Piece * Board::GetPiece</definition>
+        <argsstring>(int x, int y) const</argsstring>
+        <name>GetPiece</name>
+        <qualifiedname>Board::GetPiece</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="37" column="11" bodyfile="Board.cpp" bodystart="191" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="function" id="classBoard_1a1ff64194b703edb37a5c9770de17e48a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classMove" kindref="compound">Move</ref> &gt;</type>
+        <definition>std::vector&lt; Move &gt; Board::GetPossibleMoves</definition>
+        <argsstring>(Color color) const</argsstring>
+        <name>GetPossibleMoves</name>
+        <qualifiedname>Board::GetPossibleMoves</qualifiedname>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="38" column="17" bodyfile="Board.cpp" bodystart="336" bodyend="351"/>
+        <references refid="classBoard_1a9ee491d4fea680cf69b033374a9fdfcb" compoundref="Board_8cpp" startline="20" endline="29">Board</references>
+        <references refid="classPiece_1ad31a695453335fbbc36a9c749395f7c1" compoundref="Piece_8h" startline="19" endline="19">Piece::Color</references>
+        <references refid="classPiece_1a1c67fd5e66c3e7b6c1f4ebf3207e65e2">Piece::PossibleMoves</references>
+      </memberdef>
+      <memberdef kind="function" id="classBoard_1aa178becb7490422c52bf03c5956446e9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Board::IsEnPassantTarget</definition>
+        <argsstring>(int x, int y) const</argsstring>
+        <name>IsEnPassantTarget</name>
+        <qualifiedname>Board::IsEnPassantTarget</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="41" column="10" bodyfile="Board.cpp" bodystart="196" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classBoard_1a4da590b5c737674de91dcea89780db69" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Board::ClearEnPassantTarget</definition>
+        <argsstring>()</argsstring>
+        <name>ClearEnPassantTarget</name>
+        <qualifiedname>Board::ClearEnPassantTarget</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="42" column="10" bodyfile="Board.cpp" bodystart="201" bodyend="206"/>
+      </memberdef>
+      <memberdef kind="function" id="classBoard_1a20bcaee5725f1fc0e57b0e59a004153a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Board::IsKingChecked</definition>
+        <argsstring>(Color color) const</argsstring>
+        <name>IsKingChecked</name>
+        <qualifiedname>Board::IsKingChecked</qualifiedname>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="45" column="10" bodyfile="Board.cpp" bodystart="209" bodyend="247"/>
+        <references refid="classBoard_1a9ee491d4fea680cf69b033374a9fdfcb" compoundref="Board_8cpp" startline="20" endline="29">Board</references>
+        <references refid="classPiece_1ad31a695453335fbbc36a9c749395f7c1" compoundref="Piece_8h" startline="19" endline="19">Piece::Color</references>
+        <references refid="classPiece_1a392fecd481d60993e7d6d73116b2e171" compoundref="Piece_8h" startline="27" endline="27">Piece::IsKing</references>
+        <references refid="classPiece_1a363193ff97c3e10b77feb6aec81d1a35">Piece::IsValidMove</references>
+      </memberdef>
+      <memberdef kind="function" id="classBoard_1af39b4dc6727c480c32925388ed95ae04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Board::SetKingChecked</definition>
+        <argsstring>(Color color)</argsstring>
+        <name>SetKingChecked</name>
+        <qualifiedname>Board::SetKingChecked</qualifiedname>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="46" column="10" bodyfile="Board.cpp" bodystart="250" bodyend="258"/>
+        <references refid="classBoard_1a20bcaee5725f1fc0e57b0e59a004153a" compoundref="Board_8cpp" startline="209" endline="247">IsKingChecked</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" compoundref="Style_8hpp" startline="14">WHITE</references>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classBoard_1a06c43f3ee4262259aa3535990ccd59f2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Board::initializeBoard</definition>
+        <argsstring>()</argsstring>
+        <name>initializeBoard</name>
+        <qualifiedname>Board::initializeBoard</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="60" column="10" bodyfile="Board.cpp" bodystart="39" bodyend="68"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="26" column="1" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="27" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classBoard_1a9ee491d4fea680cf69b033374a9fdfcb" prot="public" virt="non-virtual"><scope>Board</scope><name>Board</name></member>
+      <member refid="classBoard_1a4da590b5c737674de91dcea89780db69" prot="public" virt="non-virtual"><scope>Board</scope><name>ClearEnPassantTarget</name></member>
+      <member refid="classBoard_1a23d1fdbb5e49d70b51c0cda70d003597" prot="public" virt="non-virtual"><scope>Board</scope><name>CommitMoveRecord</name></member>
+      <member refid="classBoard_1a54a0fe14d04fa09928d8d6fc26a85cc2" prot="public" virt="non-virtual"><scope>Board</scope><name>Draw</name></member>
+      <member refid="classBoard_1af1f69a1b91ec7fa07d0a85ce04d103ec" prot="public" virt="non-virtual"><scope>Board</scope><name>ExecuteMove</name></member>
+      <member refid="classBoard_1ad23c997a2d137d40511dfd327248de3d" prot="public" virt="non-virtual"><scope>Board</scope><name>GetPiece</name></member>
+      <member refid="classBoard_1a1ff64194b703edb37a5c9770de17e48a" prot="public" virt="non-virtual"><scope>Board</scope><name>GetPossibleMoves</name></member>
+      <member refid="classBoard_1a06c43f3ee4262259aa3535990ccd59f2" prot="private" virt="non-virtual"><scope>Board</scope><name>initializeBoard</name></member>
+      <member refid="classBoard_1aa178becb7490422c52bf03c5956446e9" prot="public" virt="non-virtual"><scope>Board</scope><name>IsEnPassantTarget</name></member>
+      <member refid="classBoard_1a20bcaee5725f1fc0e57b0e59a004153a" prot="public" virt="non-virtual"><scope>Board</scope><name>IsKingChecked</name></member>
+      <member refid="classBoard_1a766125015e752a33b705f5ae695f65e8" prot="private" virt="non-virtual"><scope>Board</scope><name>m_blackKingInCheck</name></member>
+      <member refid="classBoard_1ab07b33733f3642dd3a7d79fecb539b56" prot="private" virt="non-virtual"><scope>Board</scope><name>m_board</name></member>
+      <member refid="classBoard_1afc0acfd6acdfdbb9b727d037a1dcbc61" prot="private" virt="non-virtual"><scope>Board</scope><name>m_enPassantAvailable</name></member>
+      <member refid="classBoard_1a20260f0f856c9d5fefa53cf2eb893482" prot="private" virt="non-virtual"><scope>Board</scope><name>m_enPassantX</name></member>
+      <member refid="classBoard_1ae7ef5afab53e5e0b350fcee51334e788" prot="private" virt="non-virtual"><scope>Board</scope><name>m_enPassantY</name></member>
+      <member refid="classBoard_1a1c7f6768ebc507fc7794264b08005898" prot="private" virt="non-virtual"><scope>Board</scope><name>m_whiteKingInCheck</name></member>
+      <member refid="classBoard_1ab9670780329f8763c49881cfada761c2" prot="public" virt="non-virtual"><scope>Board</scope><name>RevertMoveRecord</name></member>
+      <member refid="classBoard_1af39b4dc6727c480c32925388ed95ae04" prot="public" virt="non-virtual"><scope>Board</scope><name>SetKingChecked</name></member>
+      <member refid="classBoard_1af73f45730119a1fd8f6670f53f959e68" prot="public" virt="non-virtual"><scope>Board</scope><name>~Board</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

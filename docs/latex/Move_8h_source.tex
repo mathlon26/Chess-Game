@@ -1,0 +1,48 @@
+\doxysection{Move.\+h}
+\hypertarget{Move_8h_source}{}\label{Move_8h_source}\index{/home/huplo/Coding/Projects/C++/chess-\/game/include/Move.h@{/home/huplo/Coding/Projects/C++/chess-\/game/include/Move.h}}
+\mbox{\hyperlink{Move_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ MOVE\_\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ MOVE\_\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMove_a4b1acc3a67d30c385ad9a6000526393a}{Move}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \textcolor{comment}{//\ Constructors}}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classMove_a4b1acc3a67d30c385ad9a6000526393a}{Move}}();}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classMove_a4b1acc3a67d30c385ad9a6000526393a}{Move}}(\textcolor{keywordtype}{int}\ startX,\ \textcolor{keywordtype}{int}\ startY,\ \textcolor{keywordtype}{int}\ endX,\ \textcolor{keywordtype}{int}\ endY);}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classMove_a4b1acc3a67d30c385ad9a6000526393a}{Move}}(\textcolor{keyword}{const}\ std::string\&\ moveStr);\ \textcolor{comment}{//\ e.g.,\ "{}e2e4"{}}}
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{comment}{//\ Destructor}}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classMove_a84785acbf70f76c103df5b0aadbc58d5}{\string~Move}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{comment}{//\ Accessors}}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMove_ae5b75e6f1d977e5eacac7e85d991ed27}{getStartX}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ startX;\ \}}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMove_afb1961349a3fb940e4596ee12d28cf1f}{getStartY}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ startY;\ \}}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMove_a2d670ad83efcfd894e7877252fce69de}{getEndX}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ endX;\ \}}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classMove_a3b5509b1d995526c851561f73d327ff3}{getEndY}}()\textcolor{keyword}{\ const\ }\{\ \textcolor{keywordflow}{return}\ endY;\ \}}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{comment}{//\ Utility\ Functions}}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMove_a6e80a6c039ba805bac3ff6402c56b76c}{isValid}}()\ \textcolor{keyword}{const};\ \ \textcolor{comment}{//\ Validates\ if\ the\ move\ is\ within\ chessboard\ bounds}}
+\DoxyCodeLine{00027\ \ \ \ \ std::string\ \mbox{\hyperlink{classMove_a1f1dd54e4ef974f1f24277ee14c61beb}{toString}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ Converts\ back\ to\ chess\ notation}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMove_aee300c99f25c630acd8500fe2141b05e}{empty}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{comment}{//\ Comparison\ Operator}}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classMove_a93f3c3240fd5974d8b90ee7fbaefdf4a}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classMove}{Move}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{int}\ startX,\ startY;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{int}\ endX,\ endY;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ Helper\ functions}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ validateCoordinates(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ parseMoveString(\textcolor{keyword}{const}\ std::string\&\ moveStr);}
+\DoxyCodeLine{00040\ \};}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ MOVE\_H}}
+
+\end{DoxyCode}

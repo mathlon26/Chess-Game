@@ -1,0 +1,82 @@
+.TH "Move" 3 "Version V4.2.0" "Chess Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Move
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Move\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMove\fP ()"
+.br
+.ti -1c
+.RI "\fBMove\fP (int startX, int startY, int endX, int endY)"
+.br
+.ti -1c
+.RI "\fBMove\fP (const std::string &moveStr)"
+.br
+.ti -1c
+.RI "\fB~Move\fP ()=default"
+.br
+.ti -1c
+.RI "int \fBgetStartX\fP () const"
+.br
+.ti -1c
+.RI "int \fBgetStartY\fP () const"
+.br
+.ti -1c
+.RI "int \fBgetEndX\fP () const"
+.br
+.ti -1c
+.RI "int \fBgetEndY\fP () const"
+.br
+.ti -1c
+.RI "bool \fBisValid\fP () const"
+.br
+.ti -1c
+.RI "std::string \fBtoString\fP () const"
+.br
+.ti -1c
+.RI "bool \fBempty\fP () const"
+.br
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBMove\fP &other) const"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Move::Move ()"
+
+.SS "Move::Move (int startX, int startY, int endX, int endY)"
+
+.SS "Move::Move (const std::string & moveStr)"
+
+.SS "Move::~Move ()\fR [default]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Move::empty () const"
+
+.SS "int Move::getEndX () const\fR [inline]\fP"
+
+.SS "int Move::getEndY () const\fR [inline]\fP"
+
+.SS "int Move::getStartX () const\fR [inline]\fP"
+
+.SS "int Move::getStartY () const\fR [inline]\fP"
+
+.SS "bool Move::isValid () const"
+
+.SS "bool Move::operator== (const \fBMove\fP & other) const"
+
+.SS "std::string Move::toString () const"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chess Game from the source code\&.

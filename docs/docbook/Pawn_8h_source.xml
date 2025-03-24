@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Pawn_8h_source" xml:lang="en-US">
+<title>Pawn.h</title>
+<indexterm><primary>/home/huplo/Coding/Projects/C++/chess-game/include/Pawn.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;PAWN__H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;PAWN__H</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Piece_8h">Piece.h</link>&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Move_8h">Move.h</link>&quot;</emphasis>
+6 
+7 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classPawn_1a7bdce6cc89b699f6deb9f176256d2bbd">Pawn</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f">Piece</link>
+8 {
+9 <emphasis role="keyword">public</emphasis>:
+10 &#32;&#32;&#32;&#32;<link linkend="_classPawn_1a7bdce6cc89b699f6deb9f176256d2bbd">Pawn</link>(<link linkend="_Piece_8h_1a3287fa298adf5d748c8fe84b0b2742ec">PieceColor</link>&#32;color);
+11 &#32;&#32;&#32;&#32;<link linkend="_classPawn_1a3095938fb8326469c3bd05da0b8f50af">~Pawn</link>()&#32;{};
+12 
+13 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classPawn_1a04ed6a9744fe13c85fee3331df8c8aca">Symbol</link>()&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+14 &#32;&#32;&#32;&#32;std::vector&lt;Move&gt;&#32;<link linkend="_classPawn_1a8e427faba3cb063c2564f8ee7f2cb7f3">PossibleMoves</link>(<link linkend="_classBoard">Board</link>*&#32;board,&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentX,&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentY)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+15 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classPawn_1af11d10b5d5f2456eb97d835bf0d8b4f8">IsValidMove</link>(<link linkend="_classPiece">Piece</link>*&#32;target,&#32;<link linkend="_classBoard">Board</link>*&#32;board,&#32;<link linkend="_classMove">Move</link>&amp;&#32;move,&#32;<link linkend="_classPiece">Piece</link>*&amp;&#32;setReplacement)&#32;<emphasis role="keyword">const&#32;override</emphasis>&#32;;
+16 
+17 <emphasis role="keyword">private</emphasis>:
+18 };
+19 
+20 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;PAWN__H</emphasis>
+</programlisting></section>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_King_8h_source" xml:lang="en-US">
+<title>King.h</title>
+<indexterm><primary>/home/huplo/Coding/Projects/C++/chess-game/include/King.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;KING__H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;KING__H</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Piece_8h">Piece.h</link>&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Move_8h">Move.h</link>&quot;</emphasis>
+6 
+7 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classKing_1ac7a820e20220f49bec5e38a95d5cc307">King</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f">Piece</link>
+8 {
+9 <emphasis role="keyword">public</emphasis>:
+10 &#32;&#32;&#32;&#32;<link linkend="_classKing_1ac7a820e20220f49bec5e38a95d5cc307">King</link>(<link linkend="_Piece_8h_1a3287fa298adf5d748c8fe84b0b2742ec">PieceColor</link>&#32;color);
+11 &#32;&#32;&#32;&#32;<link linkend="_classKing_1aac368ce96e2b12f62e3608d27262e941">~King</link>()&#32;{};
+12 
+13 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classKing_1a665e0aa25a08ca43bfa3fbaa7f68d24b">Symbol</link>()&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+14 &#32;&#32;&#32;&#32;std::vector&lt;Move&gt;&#32;<link linkend="_classKing_1adceeb19b6efe066f1d6882aa859925fd">PossibleMoves</link>(<link linkend="_classBoard">Board</link>*&#32;board,&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentX,&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentY)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+15 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classKing_1ad69ed8cd25086881cabde8d3ad9bb503">IsValidMove</link>(<link linkend="_classPiece">Piece</link>*&#32;target,&#32;<link linkend="_classBoard">Board</link>*&#32;board,&#32;<link linkend="_classMove">Move</link>&amp;&#32;move,&#32;<link linkend="_classPiece">Piece</link>*&amp;&#32;setReplacement)&#32;<emphasis role="keyword">const&#32;override</emphasis>&#32;;
+16 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classKing_1ae5f6eaa800f8ef88416ab92953451265">IsKing</link>()<emphasis role="keyword">&#32;const&#32;override&#32;</emphasis>{<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;}
+17 <emphasis role="keyword">private</emphasis>:
+18 };
+19 
+20 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;KING__H</emphasis>
+</programlisting></section>

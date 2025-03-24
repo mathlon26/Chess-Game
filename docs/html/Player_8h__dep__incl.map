@@ -1,0 +1,52 @@
+<map id="/home/huplo/Coding/Projects/C++/chess&#45;game/include/Player.h" name="/home/huplo/Coding/Projects/C++/chess&#45;game/include/Player.h">
+<area shape="rect" id="Node000001" title=" " alt="" coords="590,5,744,64"/>
+<area shape="rect" id="Node000002" href="$Bishop_8h.html" title=" " alt="" coords="5,112,163,171"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="574,49,389,74,282,93,175,115,164,117,162,112,174,109,281,87,388,69,574,44"/>
+<area shape="rect" id="Node000004" href="$Board_8cpp.html" title=" " alt="" coords="400,235,480,261"/>
+<area shape="poly" id="edge28_Node000001_Node000004" title=" " alt="" coords="621,76,579,114,529,173,457,236,454,232,525,169,575,110,618,72"/>
+<area shape="rect" id="Node000006" href="$BotPlayer_8h.html" title=" " alt="" coords="768,112,942,171"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="732,69,805,109,802,114,730,74"/>
+<area shape="rect" id="Node000009" href="$HumanPlayer_8h.html" title=" " alt="" coords="966,112,1162,171"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="759,58,966,112,965,117,758,63"/>
+<area shape="rect" id="Node000011" href="$Knight_8h.html" title=" " alt="" coords="590,112,744,171"/>
+<area shape="poly" id="edge11_Node000001_Node000011" title=" " alt="" coords="669,80,669,112,664,112,664,80"/>
+<area shape="rect" id="Node000013" href="$Queen_8h.html" title=" " alt="" coords="186,112,342,171"/>
+<area shape="poly" id="edge15_Node000001_Node000013" title=" " alt="" coords="575,59,354,115,343,118,341,113,353,109,574,54"/>
+<area shape="rect" id="Node000015" href="$Rook_8h.html" title=" " alt="" coords="366,112,514,171"/>
+<area shape="poly" id="edge19_Node000001_Node000015" title=" " alt="" coords="592,73,503,114,501,109,590,68"/>
+<area shape="rect" id="Node000017" href="$TwoPlayerGame_8h.html" title=" " alt="" coords="1187,112,1400,171"/>
+<area shape="poly" id="edge23_Node000001_Node000017" title=" " alt="" coords="760,45,952,72,1175,109,1187,112,1186,117,1174,115,951,77,759,50"/>
+<area shape="rect" id="Node000021" href="$Player_8cpp.html" title=" " alt="" coords="1424,128,1507,155"/>
+<area shape="poly" id="edge29_Node000001_Node000021" title=" " alt="" coords="760,38,1105,64,1284,84,1357,96,1413,109,1447,125,1445,130,1411,115,1356,102,1283,90,1105,69,759,44"/>
+<area shape="rect" id="Node000003" href="$Bishop_8cpp.html" title=" " alt="" coords="41,235,127,261"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="87,186,87,234,81,234,81,186"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="178,169,238,181,286,189,332,198,389,216,421,232,419,237,387,221,331,203,285,194,237,187,177,174"/>
+<area shape="rect" id="Node000005" href="$Pawn_8cpp.html" title=" " alt="" coords="296,235,376,261"/>
+<area shape="poly" id="edge4_Node000002_Node000005" title=" " alt="" coords="178,172,286,216,316,232,314,237,284,221,176,177"/>
+<area shape="rect" id="Node000007" href="$BotPlayer_8cpp.html" title=" " alt="" coords="787,235,890,261"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="851,186,843,235,838,234,845,186"/>
+<area shape="rect" id="Node000008" href="$ChessGame_8cpp.html" title=" " alt="" coords="919,325,1038,352"/>
+<area shape="poly" id="edge7_Node000006_Node000008" title=" " alt="" coords="883,182,973,323,968,326,878,185"/>
+<area shape="poly" id="edge9_Node000009_Node000008" title=" " alt="" coords="1029,184,1006,220,996,248,989,278,982,325,977,325,983,277,991,247,1002,217,1024,182"/>
+<area shape="rect" id="Node000010" href="$HumanPlayer_8cpp.html" title=" " alt="" coords="1016,235,1141,261"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="1073,186,1080,234,1074,235,1067,186"/>
+<area shape="poly" id="edge12_Node000011_Node000004" title=" " alt="" coords="584,180,493,221,463,237,461,232,491,216,582,175"/>
+<area shape="poly" id="edge14_Node000011_Node000005" title=" " alt="" coords="575,165,484,189,389,221,358,236,356,232,387,216,482,184,573,160"/>
+<area shape="rect" id="Node000012" href="$Knight_8cpp.html" title=" " alt="" coords="625,235,708,261"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="669,186,669,234,664,234,664,186"/>
+<area shape="poly" id="edge16_Node000013_Node000004" title=" " alt="" coords="327,177,420,232,417,236,324,181"/>
+<area shape="poly" id="edge17_Node000013_Node000005" title=" " alt="" coords="294,182,330,233,325,236,290,185"/>
+<area shape="rect" id="Node000014" href="$Queen_8cpp.html" title=" " alt="" coords="188,235,273,261"/>
+<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="253,186,237,235,232,233,248,185"/>
+<area shape="poly" id="edge20_Node000015_Node000004" title=" " alt="" coords="443,186,443,234,437,234,437,186"/>
+<area shape="poly" id="edge21_Node000015_Node000005" title=" " alt="" coords="403,184,350,236,347,232,399,180"/>
+<area shape="rect" id="Node000016" href="$Rook_8cpp.html" title=" " alt="" coords="504,235,581,261"/>
+<area shape="poly" id="edge22_Node000015_Node000016" title=" " alt="" coords="480,180,532,232,529,236,477,184"/>
+<area shape="rect" id="Node000018" href="$ChessGame_8h.html" title=" " alt="" coords="1165,219,1355,277"/>
+<area shape="poly" id="edge24_Node000017_Node000018" title=" " alt="" coords="1282,186,1272,219,1267,217,1277,185"/>
+<area shape="rect" id="Node000020" href="$TwoPlayerGame_8cpp.html" title=" " alt="" coords="1380,235,1522,261"/>
+<area shape="poly" id="edge27_Node000017_Node000020" title=" " alt="" coords="1350,177,1433,232,1430,236,1347,182"/>
+<area shape="poly" id="edge25_Node000018_Node000008" title=" " alt="" coords="1155,285,1020,327,1018,322,1153,280"/>
+<area shape="rect" id="Node000019" href="$main_8cpp.html" title=" " alt="" coords="1223,325,1297,352"/>
+<area shape="poly" id="edge26_Node000018_Node000019" title=" " alt="" coords="1263,293,1263,325,1257,325,1257,293"/>
+</map>

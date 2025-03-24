@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Pawn_8cpp_source" xml:lang="en-US">
+<title>Pawn.cpp</title>
+<indexterm><primary>source/Pawn.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_Pawn_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;../include/Pawn.h&quot;</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&quot;../include/Rook.h&quot;</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;../include/Bishop.h&quot;</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&quot;../include/Knight.h&quot;</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&quot;../include/Queen.h&quot;</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;../include/Board.h&quot;</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;../include/Move.h&quot;</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00008"/>00008 <emphasis role="preprocessor">#include&#32;&lt;cmath&gt;</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00009"/>00009 
+<anchor xml:id="_Pawn_8cpp_source_1l00010"/>00010 <emphasis role="comment">//&#32;Constructor.</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00011"/>00011 Pawn::Pawn(PieceColor&#32;color)&#32;:&#32;Piece{color}&#32;
+<anchor xml:id="_Pawn_8cpp_source_1l00012"/>00012 {
+<anchor xml:id="_Pawn_8cpp_source_1l00013"/>00013 }
+<anchor xml:id="_Pawn_8cpp_source_1l00014"/>00014 
+<anchor xml:id="_Pawn_8cpp_source_1l00015"/>00015 <emphasis role="comment">//&#32;Helper&#32;function&#32;to&#32;promote&#32;a&#32;pawn.</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00016"/><link linkend="_Pawn_8cpp_1a3c12b4f5901ce1e94c819c559c0e199a">00016</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_Pawn_8cpp_1a3c12b4f5901ce1e94c819c559c0e199a">promote</link>(Piece**&#32;setReplacement,&#32;PieceColor&#32;color)
+<anchor xml:id="_Pawn_8cpp_source_1l00017"/>00017 {
+<anchor xml:id="_Pawn_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;*setReplacement&#32;=&#32;<emphasis role="keyword">new</emphasis>&#32;Queen{color};
+<anchor xml:id="_Pawn_8cpp_source_1l00019"/>00019 
+<anchor xml:id="_Pawn_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="comment">/*</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00021"/>00021 <emphasis role="comment">&#32;&#32;&#32;&#32;std::string&#32;promotion&#32;=&#32;Style::GetStringInput(</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00022"/>00022 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&quot;Choose&#32;from:\n&#32;Queen\nRook\nBishop\nKnight\n&#32;&gt;&gt;&#32;&quot;,</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00023"/>00023 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Style::Cta(color)&#32;+&#32;Style::Cts(color)&#32;+&#32;Style::Cta(Color::GREEN)&#32;+&#32;&quot;&#32;may&#32;promote&#32;their&#32;pawn.&quot;</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00024"/>00024 <emphasis role="comment">&#32;&#32;&#32;&#32;);</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00025"/>00025 <emphasis role="comment">&#32;&#32;&#32;&#32;if&#32;(promotion&#32;==&#32;&quot;Rook&quot;)&#32;{</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00026"/>00026 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*setReplacement&#32;=&#32;new&#32;Rook{color};</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00027"/>00027 <emphasis role="comment">&#32;&#32;&#32;&#32;}&#32;else&#32;if&#32;(promotion&#32;==&#32;&quot;Bishop&quot;)&#32;{</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00028"/>00028 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*setReplacement&#32;=&#32;new&#32;Bishop{color};</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00029"/>00029 <emphasis role="comment">&#32;&#32;&#32;&#32;}&#32;else&#32;if&#32;(promotion&#32;==&#32;&quot;Knight&quot;)&#32;{</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00030"/>00030 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*setReplacement&#32;=&#32;new&#32;Knight{color};</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00031"/>00031 <emphasis role="comment">&#32;&#32;&#32;&#32;}&#32;else&#32;{</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00032"/>00032 <emphasis role="comment">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*setReplacement&#32;=&#32;new&#32;Queen{color};</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00033"/>00033 <emphasis role="comment">&#32;&#32;&#32;&#32;}</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00034"/>00034 <emphasis role="comment">&#32;&#32;&#32;&#32;*/</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00035"/>00035 }
+<anchor xml:id="_Pawn_8cpp_source_1l00036"/>00036 
+<anchor xml:id="_Pawn_8cpp_source_1l00037"/>00037 <emphasis role="comment">//&#32;Generates&#32;all&#32;possible&#32;moves&#32;for&#32;a&#32;pawn&#32;from&#32;its&#32;current&#32;position.</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00038"/>00038 std::vector&lt;Move&gt;&#32;Pawn::PossibleMoves(Board*&#32;board,&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentX,&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentY)<emphasis role="keyword">&#32;const&#32;</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00039"/>00039 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_Pawn_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;std::vector&lt;Move&gt;&#32;moves;
+<anchor xml:id="_Pawn_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;direction&#32;&#32;&#32;&#32;=&#32;(m_color&#32;==&#32;PieceColor::WHITE)&#32;?&#32;-1&#32;:&#32;1;
+<anchor xml:id="_Pawn_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;startRow&#32;&#32;&#32;&#32;&#32;=&#32;(m_color&#32;==&#32;PieceColor::WHITE)&#32;?&#32;6&#32;:&#32;1;
+<anchor xml:id="_Pawn_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;promotionRow&#32;=&#32;(m_color&#32;==&#32;PieceColor::WHITE)&#32;?&#32;0&#32;:&#32;7;
+<anchor xml:id="_Pawn_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;
+<anchor xml:id="_Pawn_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;forwardY&#32;=&#32;currentY&#32;+&#32;direction;
+<anchor xml:id="_Pawn_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Make&#32;sure&#32;the&#32;forward&#32;square&#32;is&#32;within&#32;bounds.</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(forwardY&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;forwardY&#32;&lt;&#32;8)&#32;{
+<anchor xml:id="_Pawn_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Single-step&#32;forward&#32;move.</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(board-&gt;GetPiece(currentX,&#32;forwardY)&#32;==&#32;<emphasis role="keyword">nullptr</emphasis>)&#32;{
+<anchor xml:id="_Pawn_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Move&#32;move{currentX,&#32;currentY,&#32;currentX,&#32;forwardY};
+<anchor xml:id="_Pawn_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;moves.push_back(move);
+<anchor xml:id="_Pawn_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+<anchor xml:id="_Pawn_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Two-step&#32;forward&#32;move&#32;(only&#32;from&#32;the&#32;starting&#32;row).</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(currentY&#32;==&#32;startRow)&#32;{
+<anchor xml:id="_Pawn_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;twoStepY&#32;=&#32;currentY&#32;+&#32;2&#32;*&#32;direction;
+<anchor xml:id="_Pawn_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(twoStepY&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;twoStepY&#32;&lt;&#32;8&#32;&amp;&amp;&#32;board-&gt;GetPiece(currentX,&#32;twoStepY)&#32;==&#32;<emphasis role="keyword">nullptr</emphasis>)
+<anchor xml:id="_Pawn_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_Pawn_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;move&#32;=&#32;Move{currentX,&#32;currentY,&#32;currentX,&#32;twoStepY};
+<anchor xml:id="_Pawn_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;moves.push_back(move);
+<anchor xml:id="_Pawn_8cpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Pawn_8cpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Pawn_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Pawn_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_Pawn_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;
+<anchor xml:id="_Pawn_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Diagonal&#32;moves:&#32;captures&#32;and&#32;en&#32;passant.</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;dx&#32;=&#32;-1;&#32;dx&#32;&lt;=&#32;1;&#32;dx&#32;+=&#32;2)&#32;{
+<anchor xml:id="_Pawn_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;newX&#32;=&#32;currentX&#32;+&#32;dx;
+<anchor xml:id="_Pawn_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;newY&#32;=&#32;currentY&#32;+&#32;direction;
+<anchor xml:id="_Pawn_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(newX&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;newX&#32;&lt;&#32;8&#32;&amp;&amp;&#32;newY&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;newY&#32;&lt;&#32;8)&#32;{
+<anchor xml:id="_Pawn_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Piece*&#32;diagPiece&#32;=&#32;board-&gt;GetPiece(newX,&#32;newY);
+<anchor xml:id="_Pawn_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Standard&#32;capture:&#32;enemy&#32;piece&#32;present.</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(diagPiece&#32;!=&#32;<emphasis role="keyword">nullptr</emphasis>&#32;&amp;&amp;&#32;diagPiece-&gt;Color()&#32;!=&#32;m_color)&#32;{
+<anchor xml:id="_Pawn_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Move&#32;move{currentX,&#32;currentY,&#32;newX,&#32;newY};
+<anchor xml:id="_Pawn_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;moves.push_back(move);
+<anchor xml:id="_Pawn_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Pawn_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;En&#32;passant&#32;capture:&#32;target&#32;square&#32;is&#32;empty&#32;but&#32;is&#32;flagged.</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(diagPiece&#32;==&#32;<emphasis role="keyword">nullptr</emphasis>&#32;&amp;&amp;&#32;board-&gt;IsEnPassantTarget(newX,&#32;newY))&#32;{
+<anchor xml:id="_Pawn_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Move&#32;move{currentX,&#32;currentY,&#32;newX,&#32;newY};
+<anchor xml:id="_Pawn_8cpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;moves.push_back(move);
+<anchor xml:id="_Pawn_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Pawn_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Pawn_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_Pawn_8cpp_source_1l00083"/>00083 
+<anchor xml:id="_Pawn_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;moves;
+<anchor xml:id="_Pawn_8cpp_source_1l00085"/>00085 }
+<anchor xml:id="_Pawn_8cpp_source_1l00086"/>00086 
+<anchor xml:id="_Pawn_8cpp_source_1l00087"/>00087 <emphasis role="comment">//&#32;Uses&#32;the&#32;list&#32;of&#32;possible&#32;moves&#32;to&#32;determine&#32;if&#32;the&#32;move&#32;is&#32;valid.</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00088"/>00088 <emphasis role="comment">//&#32;Also&#32;handles&#32;promotion&#32;if&#32;the&#32;move&#32;ends&#32;on&#32;the&#32;promotion&#32;row.</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00089"/>00089 <emphasis role="keywordtype">bool</emphasis>&#32;Pawn::IsValidMove(Piece*&#32;target,&#32;Board*&#32;board,&#32;Move&amp;&#32;move,&#32;Piece*&amp;&#32;setReplacement)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00090"/>00090 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_Pawn_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;startX&#32;=&#32;move.getStartX();
+<anchor xml:id="_Pawn_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;startY&#32;=&#32;move.getStartY();
+<anchor xml:id="_Pawn_8cpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;endX&#32;&#32;&#32;=&#32;move.getEndX();
+<anchor xml:id="_Pawn_8cpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;endY&#32;&#32;&#32;=&#32;move.getEndY();
+<anchor xml:id="_Pawn_8cpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;
+<anchor xml:id="_Pawn_8cpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Retrieve&#32;candidate&#32;moves&#32;for&#32;this&#32;pawn&#32;from&#32;its&#32;current&#32;position.</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;std::vector&lt;Move&gt;&#32;candidates&#32;=&#32;PossibleMoves(board,&#32;startX,&#32;startY);
+<anchor xml:id="_Pawn_8cpp_source_1l00098"/>00098 
+<anchor xml:id="_Pawn_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;found&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_Pawn_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;Move&amp;&#32;candidate&#32;:&#32;candidates)&#32;{
+<anchor xml:id="_Pawn_8cpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(candidate.getStartX()&#32;==&#32;move.getStartX()&#32;&amp;&amp;
+<anchor xml:id="_Pawn_8cpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;candidate.getStartY()&#32;==&#32;move.getStartY()&#32;&amp;&amp;
+<anchor xml:id="_Pawn_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;candidate.getEndX()&#32;&#32;&#32;==&#32;move.getEndX()&#32;&amp;&amp;
+<anchor xml:id="_Pawn_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;candidate.getEndY()&#32;&#32;&#32;==&#32;move.getEndY())
+<anchor xml:id="_Pawn_8cpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_Pawn_8cpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;found&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_Pawn_8cpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_Pawn_8cpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Pawn_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_Pawn_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;
+<anchor xml:id="_Pawn_8cpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!found)
+<anchor xml:id="_Pawn_8cpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_Pawn_8cpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;
+<anchor xml:id="_Pawn_8cpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;for&#32;promotion:&#32;if&#32;the&#32;move&#32;ends&#32;on&#32;the&#32;promotion&#32;row,&#32;prompt&#32;for&#32;promotion.</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;promotionRow&#32;=&#32;(m_color&#32;==&#32;PieceColor::WHITE)&#32;?&#32;0&#32;:&#32;7;
+<anchor xml:id="_Pawn_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(endY&#32;==&#32;promotionRow)
+<anchor xml:id="_Pawn_8cpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_Pawn_8cpp_1a3c12b4f5901ce1e94c819c559c0e199a">promote</link>(&amp;setReplacement,&#32;m_color);
+<anchor xml:id="_Pawn_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;
+<anchor xml:id="_Pawn_8cpp_source_1l00119"/>00119 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_Pawn_8cpp_source_1l00120"/>00120 }
+<anchor xml:id="_Pawn_8cpp_source_1l00121"/>00121 
+<anchor xml:id="_Pawn_8cpp_source_1l00122"/>00122 std::string&#32;Pawn::Symbol()<emphasis role="keyword">&#32;const&#32;</emphasis>
+<anchor xml:id="_Pawn_8cpp_source_1l00123"/>00123 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_Pawn_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;P&quot;</emphasis>;
+<anchor xml:id="_Pawn_8cpp_source_1l00125"/>00125 }
+</programlisting></section>

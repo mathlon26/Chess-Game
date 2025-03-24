@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classTwoPlayerGame" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>TwoPlayerGame</compoundname>
+    <derivedcompoundref refid="classChessGame" prot="public" virt="non-virtual">ChessGame</derivedcompoundref>
+    <includes refid="TwoPlayerGame_8h" local="no">TwoPlayerGame.h</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" prot="protected" static="no" mutable="no">
+        <type><ref refid="classPlayer" kindref="compound">Player</ref> *</type>
+        <definition>Player* TwoPlayerGame::m_playerOne</definition>
+        <argsstring></argsstring>
+        <name>m_playerOne</name>
+        <qualifiedname>TwoPlayerGame::m_playerOne</qualifiedname>
+        <initializer>{nullptr}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h" line="17" column="12" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h" bodystart="17" bodyend="17"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" prot="protected" static="no" mutable="no">
+        <type><ref refid="classPlayer" kindref="compound">Player</ref> *</type>
+        <definition>Player* TwoPlayerGame::m_playerTwo</definition>
+        <argsstring></argsstring>
+        <name>m_playerTwo</name>
+        <qualifiedname>TwoPlayerGame::m_playerTwo</qualifiedname>
+        <initializer>{nullptr}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h" line="18" column="12" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="variable" id="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" prot="protected" static="no" mutable="no">
+        <type><ref refid="classPlayer" kindref="compound">Player</ref> *</type>
+        <definition>Player* TwoPlayerGame::m_playerOnTurn</definition>
+        <argsstring></argsstring>
+        <name>m_playerOnTurn</name>
+        <qualifiedname>TwoPlayerGame::m_playerOnTurn</qualifiedname>
+        <initializer>{nullptr}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h" line="19" column="12" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h" bodystart="19" bodyend="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classTwoPlayerGame_1ab72050bd05184152737eac9567c63aa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TwoPlayerGame::TwoPlayerGame</definition>
+        <argsstring>()</argsstring>
+        <name>TwoPlayerGame</name>
+        <qualifiedname>TwoPlayerGame::TwoPlayerGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h" line="9" column="5" bodyfile="TwoPlayerGame.cpp" bodystart="3" bodyend="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classTwoPlayerGame_1ad7fa6281a4685c1df35238afda1e3008" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TwoPlayerGame::~TwoPlayerGame</definition>
+        <argsstring>()</argsstring>
+        <name>~TwoPlayerGame</name>
+        <qualifiedname>TwoPlayerGame::~TwoPlayerGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h" line="10" column="5" bodyfile="TwoPlayerGame.cpp" bodystart="7" bodyend="11"/>
+        <references refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" compoundref="TwoPlayerGame_8h" startline="17" endline="17">m_playerOne</references>
+        <references refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" compoundref="TwoPlayerGame_8h" startline="18" endline="18">m_playerTwo</references>
+      </memberdef>
+      <memberdef kind="function" id="classTwoPlayerGame_1ada483d74a31419d9cceba7001badc8a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classPlayer" kindref="compound">Player</ref> *</type>
+        <definition>Player * TwoPlayerGame::GetPlayerOnTurn</definition>
+        <argsstring>()</argsstring>
+        <name>GetPlayerOnTurn</name>
+        <qualifiedname>TwoPlayerGame::GetPlayerOnTurn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h" line="12" column="12" bodyfile="TwoPlayerGame.cpp" bodystart="13" bodyend="16"/>
+        <references refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" compoundref="TwoPlayerGame_8h" startline="19" endline="19">m_playerOnTurn</references>
+      </memberdef>
+      <memberdef kind="function" id="classTwoPlayerGame_1aae0d82cc749714dbbc29282391ae22de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classPlayer" kindref="compound">Player</ref> *</type>
+        <definition>Player * TwoPlayerGame::SwitchTurn</definition>
+        <argsstring>()</argsstring>
+        <name>SwitchTurn</name>
+        <qualifiedname>TwoPlayerGame::SwitchTurn</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h" line="13" column="12" bodyfile="TwoPlayerGame.cpp" bodystart="18" bodyend="22"/>
+        <references refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" compoundref="TwoPlayerGame_8h" startline="17" endline="17">m_playerOne</references>
+        <references refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" compoundref="TwoPlayerGame_8h" startline="19" endline="19">m_playerOnTurn</references>
+        <references refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" compoundref="TwoPlayerGame_8h" startline="18" endline="18">m_playerTwo</references>
+      </memberdef>
+      <memberdef kind="function" id="classTwoPlayerGame_1ac9ad5060f04c7c3b7851c4466fb3571a" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void TwoPlayerGame::SetupPlayers</definition>
+        <argsstring>()=0</argsstring>
+        <name>SetupPlayers</name>
+        <qualifiedname>TwoPlayerGame::SetupPlayers</qualifiedname>
+        <reimplementedby refid="classChessGame_1a2640c47a2ac9aa47f4db38d5e521c123">SetupPlayers</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h" line="15" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ChessGame</label>
+        <link refid="classChessGame"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>TwoPlayerGame</label>
+        <link refid="classTwoPlayerGame"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>Player</label>
+        <link refid="classPlayer"/>
+      </node>
+      <node id="1">
+        <label>TwoPlayerGame</label>
+        <link refid="classTwoPlayerGame"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>m_playerOnTurn</edgelabel>
+          <edgelabel>m_playerOne</edgelabel>
+          <edgelabel>m_playerTwo</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h" line="6" column="1" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h" bodystart="7" bodyend="20"/>
+    <listofallmembers>
+      <member refid="classTwoPlayerGame_1ada483d74a31419d9cceba7001badc8a4" prot="public" virt="non-virtual"><scope>TwoPlayerGame</scope><name>GetPlayerOnTurn</name></member>
+      <member refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" prot="protected" virt="non-virtual"><scope>TwoPlayerGame</scope><name>m_playerOne</name></member>
+      <member refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" prot="protected" virt="non-virtual"><scope>TwoPlayerGame</scope><name>m_playerOnTurn</name></member>
+      <member refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" prot="protected" virt="non-virtual"><scope>TwoPlayerGame</scope><name>m_playerTwo</name></member>
+      <member refid="classTwoPlayerGame_1ac9ad5060f04c7c3b7851c4466fb3571a" prot="public" virt="pure-virtual"><scope>TwoPlayerGame</scope><name>SetupPlayers</name></member>
+      <member refid="classTwoPlayerGame_1aae0d82cc749714dbbc29282391ae22de" prot="public" virt="non-virtual"><scope>TwoPlayerGame</scope><name>SwitchTurn</name></member>
+      <member refid="classTwoPlayerGame_1ab72050bd05184152737eac9567c63aa9" prot="public" virt="non-virtual"><scope>TwoPlayerGame</scope><name>TwoPlayerGame</name></member>
+      <member refid="classTwoPlayerGame_1ad7fa6281a4685c1df35238afda1e3008" prot="public" virt="non-virtual"><scope>TwoPlayerGame</scope><name>~TwoPlayerGame</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

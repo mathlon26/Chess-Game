@@ -1,0 +1,40 @@
+\doxysection{Piece.\+h}
+\hypertarget{Piece_8h_source}{}\label{Piece_8h_source}\index{/home/huplo/Coding/Projects/C++/chess-\/game/include/Piece.h@{/home/huplo/Coding/Projects/C++/chess-\/game/include/Piece.h}}
+\mbox{\hyperlink{Piece_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PIECE\_\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PIECE\_\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Style_8hpp}{../dependencies/Style.hpp}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Board_8h}{Board.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Move_8h}{Move.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{comment}{//\ for\ Color()\ function}}
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ \mbox{\hyperlink{Piece_8h_a3287fa298adf5d748c8fe84b0b2742ec}{PieceColor}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classMove}{Move}};}
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBoard}{Board}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f}{Piece}}}
+\DoxyCodeLine{00015\ \{}
+\DoxyCodeLine{00016\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00017\ \ \ \ \ \mbox{\hyperlink{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f}{Piece}}(\mbox{\hyperlink{Piece_8h_a3287fa298adf5d748c8fe84b0b2742ec}{PieceColor}}\ color)\ :\ \mbox{\hyperlink{classPiece_a757a577b6dfb06c6558021b828ca7c1d}{m\_color}}\{color\}\ \{\}}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPiece_ab63f5b3faabe6ce60c9eb1806511ff9d}{\string~Piece}}()\ =\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{Piece_8h_a3287fa298adf5d748c8fe84b0b2742ec}{PieceColor}}\ \mbox{\hyperlink{classPiece_ad31a695453335fbbc36a9c749395f7c1}{Color}}()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ \mbox{\hyperlink{classPiece_a757a577b6dfb06c6558021b828ca7c1d}{m\_color}};\}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \ \ \ \ }
+\DoxyCodeLine{00022\ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classPiece_abc54f78cfc3e6c4ed3d103ddaeb1d96f}{Symbol}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keyword}{virtual}\ std::vector<Move>\ \mbox{\hyperlink{classPiece_a1c67fd5e66c3e7b6c1f4ebf3207e65e2}{PossibleMoves}}(\mbox{\hyperlink{classBoard}{Board}}*\ board,\ \textcolor{keywordtype}{int}\ currentX,\ \textcolor{keywordtype}{int}\ currentY)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPiece_a363193ff97c3e10b77feb6aec81d1a35}{IsValidMove}}(\mbox{\hyperlink{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f}{Piece}}*\ target,\ \mbox{\hyperlink{classBoard}{Board}}*\ board,\ \mbox{\hyperlink{classMove}{Move}}\&\ move,\ \mbox{\hyperlink{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f}{Piece}}*\&\ setReplacement)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPiece_a392fecd481d60993e7d6d73116b2e171}{IsKing}}()\textcolor{keyword}{\ const\ }\{\textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00030\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{Piece_8h_a3287fa298adf5d748c8fe84b0b2742ec}{PieceColor}}\ \mbox{\hyperlink{classPiece_a757a577b6dfb06c6558021b828ca7c1d}{m\_color}};}
+\DoxyCodeLine{00032\ \};}
+\DoxyCodeLine{00033\ }
+\DoxyCodeLine{00034\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PIECE\_\_H}}
+
+\end{DoxyCode}

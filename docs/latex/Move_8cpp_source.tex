@@ -1,0 +1,94 @@
+\doxysection{Move.\+cpp}
+\hypertarget{Move_8cpp_source}{}\label{Move_8cpp_source}\index{source/Move.cpp@{source/Move.cpp}}
+\mbox{\hyperlink{Move_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}../include/Move.h"{}}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ <stdexcept>}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00004}00004\ \textcolor{comment}{//\ Default\ controller}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00005}00005\ Move::Move()}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00006}00006\ \ \ \ \ :\ Move\{0,0,0,0\}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00007}00007\ \{}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00008}00008\ \}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00010}00010\ \textcolor{comment}{//\ Constructor\ with\ numeric\ coordinates}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00011}00011\ Move::Move(\textcolor{keywordtype}{int}\ startX,\ \textcolor{keywordtype}{int}\ startY,\ \textcolor{keywordtype}{int}\ endX,\ \textcolor{keywordtype}{int}\ endY)}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00012}00012\ \ \ \ \ :\ startX(startX),\ startY(startY),\ endX(endX),\ endY(endY)}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00014}00014\ \ \ \ \ validateCoordinates(startX,\ startY);}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00015}00015\ \ \ \ \ validateCoordinates(endX,\ endY);}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00016}00016\ \}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00018}00018\ \textcolor{comment}{//\ Constructor\ that\ accepts\ a\ move\ string,\ e.g.,\ "{}e2e4"{}}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00019}00019\ Move::Move(\textcolor{keyword}{const}\ std::string\&\ moveStr)}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00020}00020\ \{}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00021}00021\ \ \ \ \ parseMoveString(moveStr);}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00022}00022\ \}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00024}00024\ \textcolor{keywordtype}{bool}\ Move::empty()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00025}00025\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{return}\ startX\ ==\ 0\ \&\&\ startY\ ==\ 0\ \&\&\ endX\ ==\ 0\ \&\&\ endY\ ==\ 0;}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00029}00029\ \textcolor{comment}{//\ Helper\ function\ to\ check\ if\ a\ given\ coordinate\ pair\ is\ within\ the\ chessboard\ bounds\ (0-\/7)}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00030}00030\ \textcolor{keywordtype}{void}\ Move::validateCoordinates(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00031}00031\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{if}\ (x\ <\ 0\ ||\ x\ >=\ 8\ ||\ y\ <\ 0\ ||\ y\ >=\ 8)}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00033}00033\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::out\_of\_range(\textcolor{stringliteral}{"{}Coordinates\ out\ of\ bounds.\ Valid\ range\ is\ a\ to\ h\ for\ x\ and\ 1\ to\ 8\ for\ y."{}});}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00035}00035\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00036}00036\ \}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00038}00038\ \textcolor{comment}{//\ Parses\ a\ move\ string\ of\ the\ format\ \(\backslash\)"{}[a-\/h][1-\/8][a-\/h][1-\/8]\(\backslash\)"{}\ and\ sets\ the\ coordinates\ accordingly}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00039}00039\ \textcolor{keywordtype}{void}\ Move::parseMoveString(\textcolor{keyword}{const}\ std::string\&\ moveStr)}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00040}00040\ \{\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{if}\ (moveStr.length()\ !=\ 4)}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{throw}\ std::invalid\_argument(\textcolor{stringliteral}{"{}Move\ string\ must\ be\ exactly\ 4\ characters\ long."{}});}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00044}00044\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{char}\ startFile\ =\ moveStr[0];}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00047}00047\ \ \ \ \ \textcolor{keywordtype}{char}\ startRank\ =\ moveStr[1];}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordtype}{char}\ endFile\ =\ moveStr[2];}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{char}\ endRank\ =\ moveStr[3];}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ Convert\ the\ algebraic\ notation\ into\ 0-\/indexed\ board\ coordinates}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00052}00052\ \ \ \ \ startX\ =\ startFile\ -\/\ \textcolor{charliteral}{'a'};}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00053}00053\ \ \ \ \ startY\ =\ \textcolor{charliteral}{'8'}\ -\/\ startRank;}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00054}00054\ \ \ \ \ endX\ \ \ =\ endFile\ \ \ -\/\ \textcolor{charliteral}{'a'};}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00055}00055\ \ \ \ \ endY\ \ \ =\ \textcolor{charliteral}{'8'}\ -\/\ endRank;}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{comment}{//\ Validate\ the\ computed\ coordinates}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00058}00058\ \ \ \ \ validateCoordinates(startX,\ startY);}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00059}00059\ \ \ \ \ validateCoordinates(endX,\ endY);}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00060}00060\ \}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00061}00061\ }
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00062}00062\ \textcolor{comment}{//\ Checks\ whether\ the\ stored\ move\ coordinates\ are\ valid\ within\ an\ 8x8\ chessboard}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00063}00063\ \textcolor{keywordtype}{bool}\ Move::isValid()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00064}00064\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00065}00065\ \ \ \ \ \textcolor{keywordflow}{return}\ (startX\ >=\ 0\ \&\&\ startX\ <\ 8\ \&\&}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ startY\ >=\ 0\ \&\&\ startY\ <\ 8\ \&\&}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ endX\ \ \ >=\ 0\ \&\&\ endX\ \ \ <\ 8\ \&\&}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ endY\ \ \ >=\ 0\ \&\&\ endY\ \ \ <\ 8);}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00069}00069\ \}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00070}00070\ }
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00071}00071\ \textcolor{comment}{//\ Converts\ the\ move\ back\ into\ algebraic\ chess\ notation\ (e.g.,\ \(\backslash\)"{}e2e4\(\backslash\)"{})}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00072}00072\ std::string\ Move::toString()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00073}00073\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00074}00074\ \ \ \ \ \textcolor{keywordtype}{char}\ startFile\ =\ \textcolor{charliteral}{'a'}\ +\ startX;}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordtype}{char}\ startRank\ =\ \textcolor{charliteral}{'8'}\ -\/\ startY;}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordtype}{char}\ endFile\ \ \ =\ \textcolor{charliteral}{'a'}\ +\ endX;}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{keywordtype}{char}\ endRank\ \ \ =\ \textcolor{charliteral}{'8'}\ -\/\ endY;}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00078}00078\ \ \ \ \ \textcolor{keywordflow}{return}\ std::string()\ +\ startFile\ +\ startRank\ +\ endFile\ +\ endRank;}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00080}00080\ }
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00081}00081\ \textcolor{comment}{//\ Comparison\ operator\ to\ check\ if\ two\ moves\ are\ identical}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00082}00082\ \textcolor{keywordtype}{bool}\ Move::operator==(\textcolor{keyword}{const}\ Move\&\ other)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00083}00083\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{return}\ (startX\ ==\ other.startX\ \&\&}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ startY\ ==\ other.startY\ \&\&}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ endX\ \ \ ==\ other.endX\ \&\&}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ endY\ \ \ ==\ other.endY);}
+\DoxyCodeLine{\Hypertarget{Move_8cpp_source_l00088}00088\ \}}
+
+\end{DoxyCode}

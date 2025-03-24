@@ -1,0 +1,165 @@
+\doxysection{Board Class Reference}
+\hypertarget{classBoard}{}\label{classBoard}\index{Board@{Board}}
+
+
+{\ttfamily \#include $<$Board.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBoard_a9ee491d4fea680cf69b033374a9fdfcb}{Board}} ()
+\item 
+\mbox{\hyperlink{classBoard_af73f45730119a1fd8f6670f53f959e68}{\texorpdfstring{$\sim$}{\string~}\+Board}} ()
+\item 
+void \mbox{\hyperlink{classBoard_a54a0fe14d04fa09928d8d6fc26a85cc2}{Draw}} () const
+\item 
+bool \mbox{\hyperlink{classBoard_af1f69a1b91ec7fa07d0a85ce04d103ec}{Execute\+Move}} (\mbox{\hyperlink{classMove}{Move}} \&move, \mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}executor)
+\item 
+\mbox{\hyperlink{structMoveRecord}{Move\+Record}} \mbox{\hyperlink{classBoard_a23d1fdbb5e49d70b51c0cda70d003597}{Commit\+Move\+Record}} (\mbox{\hyperlink{classMove}{Move}} \&move, \mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}replacement)
+\item 
+void \mbox{\hyperlink{classBoard_ab9670780329f8763c49881cfada761c2}{Revert\+Move\+Record}} (const \mbox{\hyperlink{structMoveRecord}{Move\+Record}} \&record)
+\item 
+\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classBoard_ad23c997a2d137d40511dfd327248de3d}{Get\+Piece}} (int x, int y) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classMove}{Move}} $>$ \mbox{\hyperlink{classBoard_a1ff64194b703edb37a5c9770de17e48a}{Get\+Possible\+Moves}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color) const
+\item 
+bool \mbox{\hyperlink{classBoard_aa178becb7490422c52bf03c5956446e9}{Is\+En\+Passant\+Target}} (int x, int y) const
+\item 
+void \mbox{\hyperlink{classBoard_a4da590b5c737674de91dcea89780db69}{Clear\+En\+Passant\+Target}} ()
+\item 
+bool \mbox{\hyperlink{classBoard_a20bcaee5725f1fc0e57b0e59a004153a}{Is\+King\+Checked}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color) const
+\item 
+bool \mbox{\hyperlink{classBoard_af39b4dc6727c480c32925388ed95ae04}{Set\+King\+Checked}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBoard_a9ee491d4fea680cf69b033374a9fdfcb}\index{Board@{Board}!Board@{Board}}
+\index{Board@{Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Board()}{Board()}}
+{\footnotesize\ttfamily \label{classBoard_a9ee491d4fea680cf69b033374a9fdfcb} 
+Board\+::\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classBoard_af73f45730119a1fd8f6670f53f959e68}\index{Board@{Board}!````~Board@{\texorpdfstring{$\sim$}{\string~}Board}}
+\index{````~Board@{\texorpdfstring{$\sim$}{\string~}Board}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Board()}{\string~Board()}}
+{\footnotesize\ttfamily \label{classBoard_af73f45730119a1fd8f6670f53f959e68} 
+Board\+::\texorpdfstring{$\sim$}{\string~}\+Board (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBoard_a4da590b5c737674de91dcea89780db69}\index{Board@{Board}!ClearEnPassantTarget@{ClearEnPassantTarget}}
+\index{ClearEnPassantTarget@{ClearEnPassantTarget}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{ClearEnPassantTarget()}{ClearEnPassantTarget()}}
+{\footnotesize\ttfamily \label{classBoard_a4da590b5c737674de91dcea89780db69} 
+void Board\+::\+Clear\+En\+Passant\+Target (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classBoard_a23d1fdbb5e49d70b51c0cda70d003597}\index{Board@{Board}!CommitMoveRecord@{CommitMoveRecord}}
+\index{CommitMoveRecord@{CommitMoveRecord}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{CommitMoveRecord()}{CommitMoveRecord()}}
+{\footnotesize\ttfamily \label{classBoard_a23d1fdbb5e49d70b51c0cda70d003597} 
+\mbox{\hyperlink{structMoveRecord}{Move\+Record}} Board\+::\+Commit\+Move\+Record (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMove}{Move}} \&}]{move}{, }\item[{\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}}]{replacement}{}\end{DoxyParamCaption})}
+
+Commit\+Move\+Record\+: Performs the move on the board and returns a \doxylink{structMoveRecord}{Move\+Record} capturing the previous state. Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBoard_a23d1fdbb5e49d70b51c0cda70d003597_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBoard_a54a0fe14d04fa09928d8d6fc26a85cc2}\index{Board@{Board}!Draw@{Draw}}
+\index{Draw@{Draw}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{classBoard_a54a0fe14d04fa09928d8d6fc26a85cc2} 
+void Board\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBoard_a54a0fe14d04fa09928d8d6fc26a85cc2_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBoard_af1f69a1b91ec7fa07d0a85ce04d103ec}\index{Board@{Board}!ExecuteMove@{ExecuteMove}}
+\index{ExecuteMove@{ExecuteMove}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{ExecuteMove()}{ExecuteMove()}}
+{\footnotesize\ttfamily \label{classBoard_af1f69a1b91ec7fa07d0a85ce04d103ec} 
+bool Board\+::\+Execute\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classMove}{Move}} \&}]{move}{, }\item[{\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*}}]{executor}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBoard_af1f69a1b91ec7fa07d0a85ce04d103ec_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBoard_ad23c997a2d137d40511dfd327248de3d}\index{Board@{Board}!GetPiece@{GetPiece}}
+\index{GetPiece@{GetPiece}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{GetPiece()}{GetPiece()}}
+{\footnotesize\ttfamily \label{classBoard_ad23c997a2d137d40511dfd327248de3d} 
+\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*} Board\+::\+Get\+Piece (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classBoard_a1ff64194b703edb37a5c9770de17e48a}\index{Board@{Board}!GetPossibleMoves@{GetPossibleMoves}}
+\index{GetPossibleMoves@{GetPossibleMoves}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{GetPossibleMoves()}{GetPossibleMoves()}}
+{\footnotesize\ttfamily \label{classBoard_a1ff64194b703edb37a5c9770de17e48a} 
+std\+::vector$<$ \mbox{\hyperlink{classMove}{Move}} $>$ Board\+::\+Get\+Possible\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{}\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBoard_a1ff64194b703edb37a5c9770de17e48a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBoard_aa178becb7490422c52bf03c5956446e9}\index{Board@{Board}!IsEnPassantTarget@{IsEnPassantTarget}}
+\index{IsEnPassantTarget@{IsEnPassantTarget}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{IsEnPassantTarget()}{IsEnPassantTarget()}}
+{\footnotesize\ttfamily \label{classBoard_aa178becb7490422c52bf03c5956446e9} 
+bool Board\+::\+Is\+En\+Passant\+Target (\begin{DoxyParamCaption}\item[{int}]{x}{, }\item[{int}]{y}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{classBoard_a20bcaee5725f1fc0e57b0e59a004153a}\index{Board@{Board}!IsKingChecked@{IsKingChecked}}
+\index{IsKingChecked@{IsKingChecked}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{IsKingChecked()}{IsKingChecked()}}
+{\footnotesize\ttfamily \label{classBoard_a20bcaee5725f1fc0e57b0e59a004153a} 
+bool Board\+::\+Is\+King\+Checked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{}\end{DoxyParamCaption}) const}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBoard_a20bcaee5725f1fc0e57b0e59a004153a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBoard_ab9670780329f8763c49881cfada761c2}\index{Board@{Board}!RevertMoveRecord@{RevertMoveRecord}}
+\index{RevertMoveRecord@{RevertMoveRecord}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{RevertMoveRecord()}{RevertMoveRecord()}}
+{\footnotesize\ttfamily \label{classBoard_ab9670780329f8763c49881cfada761c2} 
+void Board\+::\+Revert\+Move\+Record (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structMoveRecord}{Move\+Record}} \&}]{record}{}\end{DoxyParamCaption})}
+
+Revert\+Move\+Record\+: Reverts a move using the information stored in the \doxylink{structMoveRecord}{Move\+Record}. \Hypertarget{classBoard_af39b4dc6727c480c32925388ed95ae04}\index{Board@{Board}!SetKingChecked@{SetKingChecked}}
+\index{SetKingChecked@{SetKingChecked}!Board@{Board}}
+\doxysubsubsection{\texorpdfstring{SetKingChecked()}{SetKingChecked()}}
+{\footnotesize\ttfamily \label{classBoard_af39b4dc6727c480c32925388ed95ae04} 
+bool Board\+::\+Set\+King\+Checked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBoard_af39b4dc6727c480c32925388ed95ae04_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/huplo/\+Coding/\+Projects/\+C++/chess-\/game/include/\mbox{\hyperlink{Board_8h}{Board.\+h}}\item 
+\mbox{\hyperlink{Board_8cpp}{Board.\+cpp}}\end{DoxyCompactItemize}

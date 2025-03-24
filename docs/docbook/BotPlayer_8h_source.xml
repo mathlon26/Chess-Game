@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_BotPlayer_8h_source" xml:lang="en-US">
+<title>BotPlayer.h</title>
+<indexterm><primary>/home/huplo/Coding/Projects/C++/chess-game/include/BotPlayer.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;BOT_PLAYER__H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;BOT_PLAYER__H</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Player_8h">Player.h</link>&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;random&gt;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&lt;unordered_set&gt;</emphasis>
+8 
+9 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classBotPlayer_1ad520b04b07027663107b8ad003753fff">BotPlayer</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classPlayer_1ad061cf938c523c0e7d529d5591224250">Player</link>
+10 {
+11 <emphasis role="keyword">public</emphasis>:
+12 &#32;&#32;&#32;&#32;<link linkend="_classBotPlayer_1ad520b04b07027663107b8ad003753fff">BotPlayer</link>(<link linkend="_Player_8h_1a301cfd5fe9a22cb30292f6e1523247d7">PlayerColor</link>&#32;color);
+13 &#32;&#32;&#32;&#32;<link linkend="_classBotPlayer_1a526b7fc1214d8e2e2c009679f18e177d">~BotPlayer</link>();
+14 
+15 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classBotPlayer_1a5e79536cccb4c8d9452a79950a598351">IsBot</link>()&#32;<emphasis role="keyword">override</emphasis>;
+16 
+17 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classBotPlayer_1aa6c9035eac0ad8b34c124eeb3876d92a">GetInput</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classBoard">Board</link>*&#32;<emphasis role="keyword">const</emphasis>&#32;board)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+18 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classBotPlayer_1aaf2580fa12448259b5142bff4062f0ab">Name</link>()&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+19 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classBotPlayer_1a36fb5ce4f6a78a751d7a95b7b8ebc1ea">AddCache</link>(std::string&#32;moveStr);
+20 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classBotPlayer_1ada837bf49ac76c75947bc77d4af07088">EmptyCache</link>();
+21 <emphasis role="keyword">private</emphasis>:
+22 &#32;&#32;&#32;&#32;std::unordered_set&lt;std::string&gt;&#32;m_cache{};
+23 };
+24 
+25 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;BOT_PLAYER__H</emphasis>
+</programlisting></section>

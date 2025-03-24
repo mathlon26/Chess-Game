@@ -1,0 +1,96 @@
+.TH "BotPlayer" 3 "Version V4.2.0" "Chess Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BotPlayer
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <BotPlayer\&.h>\fP
+.PP
+Inherits \fBPlayer\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBotPlayer\fP (\fBPlayerColor\fP color)"
+.br
+.ti -1c
+.RI "\fB~BotPlayer\fP ()"
+.br
+.ti -1c
+.RI "bool \fBIsBot\fP () override"
+.br
+.ti -1c
+.RI "std::string \fBGetInput\fP (const \fBBoard\fP *const board) const override"
+.br
+.ti -1c
+.RI "std::string \fBName\fP () const override"
+.br
+.ti -1c
+.RI "void \fBAddCache\fP (std::string moveStr)"
+.br
+.ti -1c
+.RI "void \fBEmptyCache\fP ()"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBPlayer\fP
+.in +1c
+.ti -1c
+.RI "\fBPlayer\fP (\fBPlayerColor\fP color)"
+.br
+.ti -1c
+.RI "virtual \fB~Player\fP ()=0"
+.br
+.ti -1c
+.RI "\fBPlayerColor\fP \fBColor\fP () const"
+.br
+.ti -1c
+.RI "std::vector< \fBPiece\fP * > \fBGetCaptures\fP () const"
+.br
+.ti -1c
+.RI "void \fBAddCapture\fP (\fBPiece\fP *captured)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Protected Attributes inherited from \fBPlayer\fP
+.in +1c
+.ti -1c
+.RI "\fBPlayerColor\fP \fBm_color\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBPiece\fP * > \fBm_captures\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BotPlayer::BotPlayer (\fBPlayerColor\fP color)"
+
+.SS "BotPlayer::~BotPlayer ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void BotPlayer::AddCache (std::string moveStr)"
+
+.SS "void BotPlayer::EmptyCache ()"
+
+.SS "std::string BotPlayer::GetInput (const \fBBoard\fP *const board) const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBPlayer\fP\&.
+.SS "bool BotPlayer::IsBot ()\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Reimplemented from \fBPlayer\fP\&.
+.SS "std::string BotPlayer::Name () const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBPlayer\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chess Game from the source code\&.

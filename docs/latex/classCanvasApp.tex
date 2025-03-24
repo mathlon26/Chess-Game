@@ -1,0 +1,199 @@
+\doxysection{Canvas\+App Class Reference}
+\hypertarget{classCanvasApp}{}\label{classCanvasApp}\index{CanvasApp@{CanvasApp}}
+
+
+{\ttfamily \#include $<$Canvas\+App.\+h$>$}
+
+
+
+Inheritance diagram for Canvas\+App\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classCanvasApp__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Canvas\+App\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=182pt]{classCanvasApp__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCanvasApp_af9ee675c88f6e09bc052de53d5afd4b5}{Canvas\+App}} ()
+\item 
+\mbox{\hyperlink{classCanvasApp_a40ee66de67fa04811c27cb883bbca3ba}{\texorpdfstring{$\sim$}{\string~}\+Canvas\+App}} ()=default
+\item 
+virtual void \mbox{\hyperlink{classCanvasApp_a676b5e32d8b2d3073d2bcaa908ca4e6c}{Init}} () override=0
+\item 
+virtual void \mbox{\hyperlink{classCanvasApp_aaa5e049733d0a342e6826f3a609d614f}{Update}} () override=0
+\item 
+virtual void \mbox{\hyperlink{classCanvasApp_a7ce1991bf3631e05017d04781f0d49e3}{Draw}} () const override=0
+\item 
+virtual void \mbox{\hyperlink{classCanvasApp_a25ea309d5cd14e5ee4683c10d6336d63}{Run}} () override=0
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCanvas}{Canvas}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCanvas_a5fce53f080ad6540094901f9768805a8}{Canvas}} ()
+\item 
+\mbox{\hyperlink{classCanvas_ac64895ae1cdfc39c58e95097873e861e}{\texorpdfstring{$\sim$}{\string~}\+Canvas}} ()=default
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classApp}{App}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classApp_acb8cbf3e285b91d0170ffe87df5989c5}{App}} ()
+\item 
+\mbox{\hyperlink{classApp_a871e34a8ba713040bfdebd47db0b86cf}{\texorpdfstring{$\sim$}{\string~}\+App}} ()=default
+\item 
+void \mbox{\hyperlink{classApp_a7fe3a49eeb945cbd1b235e6ff47805a3}{Exit}} ()
+\item 
+bool \mbox{\hyperlink{classApp_afb17a1d7013faefdbe00bf333399de50}{Should\+Run}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Static Public Member Functions inherited from \mbox{\hyperlink{classStyle}{Style}}}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classStyle_a2dc09d093782de7527aa3b8fec1a79c5}{Cta}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color)
+\item 
+static std\+::string \mbox{\hyperlink{classStyle_a38a11d09d6371559e5795c952d44f9d0}{Cts}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color)
+\item 
+static std\+::string \mbox{\hyperlink{classStyle_a2d36d13fd41a5853a88c269494976e6d}{Bold\+Text}} (const std\+::string \&text)
+\item 
+static std\+::string \mbox{\hyperlink{classStyle_ae8e0c4a440744134528e61f912cb5fde}{Underline\+Text}} (const std\+::string \&text)
+\item 
+static std\+::string \mbox{\hyperlink{classStyle_aa4a805980672163f52cedd6e54082bfe}{Link\+Text}} (const std\+::string \&text, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} continue\+Color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}})
+\item 
+static std\+::string \mbox{\hyperlink{classStyle_ac28a3cd98cd6983e617e7d455bd4098e}{Reset\+Color}} ()
+\item 
+static size\+\_\+t \mbox{\hyperlink{classStyle_a05aca5e3ba0656e599a9355d5bfa3793}{Display\+Length}} (const std\+::string \&text)
+\item 
+static void \mbox{\hyperlink{classStyle_a3b124c68a49d02984eda201c45582731}{Print\+Colored}} (const std\+::string \&text, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}})
+\item 
+static void \mbox{\hyperlink{classStyle_a44cd112d7cf5f3ff9f7a54835cb177d6}{Print\+Colored\+Line}} (const std\+::string \&text, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}}, bool endl=true)
+\item 
+static void \mbox{\hyperlink{classStyle_afbf27e0a1814fcdb41a52431451a5752}{Print\+Line}} (std\+::string ch="{}─"{}, int length=50, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}})
+\item 
+static void \mbox{\hyperlink{classStyle_a350f6310e8e2c5ed0a3781d56a9617a3}{Print\+Title}} (const std\+::string \&title, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749}{Color\+::\+CYAN}})
+\item 
+static void \mbox{\hyperlink{classStyle_a5614a5f517f754485702cc7067efc823}{Print\+Box}} (const std\+::string \&text, const std\+::string \&title="{}"{}, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0}{Color\+::\+GREEN}}, int fix\+Offset=0)
+\item 
+static void \mbox{\hyperlink{classStyle_aa8360afc84f1305765126889fc2fdca1}{Print\+Success}} (const std\+::string \&message)
+\item 
+static void \mbox{\hyperlink{classStyle_ae625221bb6eca80773f7f9d2ccada911}{Print\+Warning}} (const std\+::string \&message)
+\item 
+static void \mbox{\hyperlink{classStyle_a0a7907c969753a314a4d49c0f94ba636}{Print\+Error}} (const std\+::string \&message)
+\item 
+static void \mbox{\hyperlink{classStyle_a32fd215387199b8a96cf7bac5a7fada8}{Print\+Error\+Exit}} (const std\+::string \&error, int code=-\/1)
+\item 
+static void \mbox{\hyperlink{classStyle_afa7af12144de17dbf2e3c5bb35547ca0}{Print\+Info}} (const std\+::string \&message)
+\item 
+static void \mbox{\hyperlink{classStyle_a86d28d05ce8974b1ff88317c5d294eb5}{Clear\+Console}} ()
+\item 
+static bool \mbox{\hyperlink{classStyle_a75154acfcb8de2f37fb8d340cef4e83e}{Get\+Bool\+Input}} (const std\+::string \&prompt, const std\+::string \&title="{}"{}, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e}{Color\+::\+YELLOW}}, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} title\+Color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749}{Color\+::\+CYAN}})
+\item 
+static std\+::string \mbox{\hyperlink{classStyle_ae6c4e5b5dce135d7d912be726271fb3f}{Get\+String\+Input}} (const std\+::string \&prompt, const std\+::string \&title="{}"{}, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e}{Color\+::\+YELLOW}}, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} title\+Color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749}{Color\+::\+CYAN}})
+\item 
+static void \mbox{\hyperlink{classStyle_a40fea464a1020972692160df497f3efb}{Print\+Divider}} (const std\+::string \&message="{}"{}, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}})
+\item 
+static void \mbox{\hyperlink{classStyle_afe6790c9756b548e74177f1aac11efbd}{Print\+Table}} (const std\+::string \&title, const std\+::vector$<$ std\+::string $>$ \&header, const std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \&rows, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classApp}{App}}}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classApp_a93dfaeba98776eb3383c2cfd0f6ebeef}{m\+\_\+exit\+Call}} \{false\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classCanvasApp_af9ee675c88f6e09bc052de53d5afd4b5}\index{CanvasApp@{CanvasApp}!CanvasApp@{CanvasApp}}
+\index{CanvasApp@{CanvasApp}!CanvasApp@{CanvasApp}}
+\doxysubsubsection{\texorpdfstring{CanvasApp()}{CanvasApp()}}
+{\footnotesize\ttfamily \label{classCanvasApp_af9ee675c88f6e09bc052de53d5afd4b5} 
+Canvas\+App\+::\+Canvas\+App (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=330pt]{classCanvasApp_af9ee675c88f6e09bc052de53d5afd4b5_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classCanvasApp_a40ee66de67fa04811c27cb883bbca3ba}\index{CanvasApp@{CanvasApp}!````~CanvasApp@{\texorpdfstring{$\sim$}{\string~}CanvasApp}}
+\index{````~CanvasApp@{\texorpdfstring{$\sim$}{\string~}CanvasApp}!CanvasApp@{CanvasApp}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}CanvasApp()}{\string~CanvasApp()}}
+{\footnotesize\ttfamily \label{classCanvasApp_a40ee66de67fa04811c27cb883bbca3ba} 
+Canvas\+App\+::\texorpdfstring{$\sim$}{\string~}\+Canvas\+App (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classCanvasApp_a7ce1991bf3631e05017d04781f0d49e3}\index{CanvasApp@{CanvasApp}!Draw@{Draw}}
+\index{Draw@{Draw}!CanvasApp@{CanvasApp}}
+\doxysubsubsection{\texorpdfstring{Draw()}{Draw()}}
+{\footnotesize\ttfamily \label{classCanvasApp_a7ce1991bf3631e05017d04781f0d49e3} 
+virtual void Canvas\+App\+::\+Draw (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classCanvas_a2b7be68cbe6f527b77c35416ae066f7f}{Canvas}}.
+
+
+
+Implemented in \mbox{\hyperlink{classChessGame_a84e2d266d40a56cc33e094087a205b8f}{Chess\+Game}}.
+
+\Hypertarget{classCanvasApp_a676b5e32d8b2d3073d2bcaa908ca4e6c}\index{CanvasApp@{CanvasApp}!Init@{Init}}
+\index{Init@{Init}!CanvasApp@{CanvasApp}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{classCanvasApp_a676b5e32d8b2d3073d2bcaa908ca4e6c} 
+virtual void Canvas\+App\+::\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classApp_a406fc89b043fc613f5f0352d8919fa44}{App}}.
+
+
+
+Implemented in \mbox{\hyperlink{classChessGame_af3b9c1ca3bdb26f1e808487b94e0ddde}{Chess\+Game}}.
+
+\Hypertarget{classCanvasApp_a25ea309d5cd14e5ee4683c10d6336d63}\index{CanvasApp@{CanvasApp}!Run@{Run}}
+\index{Run@{Run}!CanvasApp@{CanvasApp}}
+\doxysubsubsection{\texorpdfstring{Run()}{Run()}}
+{\footnotesize\ttfamily \label{classCanvasApp_a25ea309d5cd14e5ee4683c10d6336d63} 
+virtual void Canvas\+App\+::\+Run (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classApp_a7c901bf280261b153ca7aa39d5c3e357}{App}}.
+
+
+
+Implemented in \mbox{\hyperlink{classChessGame_a5db0ea5be23412676881812bd9056e56}{Chess\+Game}}.
+
+\Hypertarget{classCanvasApp_aaa5e049733d0a342e6826f3a609d614f}\index{CanvasApp@{CanvasApp}!Update@{Update}}
+\index{Update@{Update}!CanvasApp@{CanvasApp}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{classCanvasApp_aaa5e049733d0a342e6826f3a609d614f} 
+virtual void Canvas\+App\+::\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [pure virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classApp_a73531ddfa01620f063c673a5e7ab212c}{App}}.
+
+
+
+Implemented in \mbox{\hyperlink{classChessGame_ab121238a7f75644fb772fec4491865a8}{Chess\+Game}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/huplo/\+Coding/\+Projects/\+C++/chess-\/game/include/\mbox{\hyperlink{CanvasApp_8h}{Canvas\+App.\+h}}\end{DoxyCompactItemize}

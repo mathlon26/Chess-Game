@@ -1,0 +1,323 @@
+\doxysection{Style Class Reference}
+\hypertarget{classStyle}{}\label{classStyle}\index{Style@{Style}}
+
+
+{\ttfamily \#include $<$Style.\+hpp$>$}
+
+
+
+Inheritance diagram for Style\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=151pt]{classStyle__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \mbox{\hyperlink{classStyle_a2dc09d093782de7527aa3b8fec1a79c5}{Cta}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color)
+\item 
+static std\+::string \mbox{\hyperlink{classStyle_a38a11d09d6371559e5795c952d44f9d0}{Cts}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color)
+\item 
+static std\+::string \mbox{\hyperlink{classStyle_a2d36d13fd41a5853a88c269494976e6d}{Bold\+Text}} (const std\+::string \&text)
+\item 
+static std\+::string \mbox{\hyperlink{classStyle_ae8e0c4a440744134528e61f912cb5fde}{Underline\+Text}} (const std\+::string \&text)
+\item 
+static std\+::string \mbox{\hyperlink{classStyle_aa4a805980672163f52cedd6e54082bfe}{Link\+Text}} (const std\+::string \&text, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} continue\+Color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}})
+\item 
+static std\+::string \mbox{\hyperlink{classStyle_ac28a3cd98cd6983e617e7d455bd4098e}{Reset\+Color}} ()
+\item 
+static size\+\_\+t \mbox{\hyperlink{classStyle_a05aca5e3ba0656e599a9355d5bfa3793}{Display\+Length}} (const std\+::string \&text)
+\item 
+static void \mbox{\hyperlink{classStyle_a3b124c68a49d02984eda201c45582731}{Print\+Colored}} (const std\+::string \&text, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}})
+\item 
+static void \mbox{\hyperlink{classStyle_a44cd112d7cf5f3ff9f7a54835cb177d6}{Print\+Colored\+Line}} (const std\+::string \&text, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}}, bool endl=true)
+\item 
+static void \mbox{\hyperlink{classStyle_afbf27e0a1814fcdb41a52431451a5752}{Print\+Line}} (std\+::string ch="{}─"{}, int length=50, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}})
+\item 
+static void \mbox{\hyperlink{classStyle_a350f6310e8e2c5ed0a3781d56a9617a3}{Print\+Title}} (const std\+::string \&title, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749}{Color\+::\+CYAN}})
+\item 
+static void \mbox{\hyperlink{classStyle_a5614a5f517f754485702cc7067efc823}{Print\+Box}} (const std\+::string \&text, const std\+::string \&title="{}"{}, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0}{Color\+::\+GREEN}}, int fix\+Offset=0)
+\item 
+static void \mbox{\hyperlink{classStyle_aa8360afc84f1305765126889fc2fdca1}{Print\+Success}} (const std\+::string \&message)
+\item 
+static void \mbox{\hyperlink{classStyle_ae625221bb6eca80773f7f9d2ccada911}{Print\+Warning}} (const std\+::string \&message)
+\item 
+static void \mbox{\hyperlink{classStyle_a0a7907c969753a314a4d49c0f94ba636}{Print\+Error}} (const std\+::string \&message)
+\item 
+static void \mbox{\hyperlink{classStyle_a32fd215387199b8a96cf7bac5a7fada8}{Print\+Error\+Exit}} (const std\+::string \&error, int code=-\/1)
+\item 
+static void \mbox{\hyperlink{classStyle_afa7af12144de17dbf2e3c5bb35547ca0}{Print\+Info}} (const std\+::string \&message)
+\item 
+static void \mbox{\hyperlink{classStyle_a86d28d05ce8974b1ff88317c5d294eb5}{Clear\+Console}} ()
+\item 
+static bool \mbox{\hyperlink{classStyle_a75154acfcb8de2f37fb8d340cef4e83e}{Get\+Bool\+Input}} (const std\+::string \&prompt, const std\+::string \&title="{}"{}, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e}{Color\+::\+YELLOW}}, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} title\+Color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749}{Color\+::\+CYAN}})
+\item 
+static std\+::string \mbox{\hyperlink{classStyle_ae6c4e5b5dce135d7d912be726271fb3f}{Get\+String\+Input}} (const std\+::string \&prompt, const std\+::string \&title="{}"{}, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e}{Color\+::\+YELLOW}}, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} title\+Color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749}{Color\+::\+CYAN}})
+\item 
+static void \mbox{\hyperlink{classStyle_a40fea464a1020972692160df497f3efb}{Print\+Divider}} (const std\+::string \&message="{}"{}, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}})
+\item 
+static void \mbox{\hyperlink{classStyle_afe6790c9756b548e74177f1aac11efbd}{Print\+Table}} (const std\+::string \&title, const std\+::vector$<$ std\+::string $>$ \&header, const std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \&rows, \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}} color=\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStyle_a2d36d13fd41a5853a88c269494976e6d}\index{Style@{Style}!BoldText@{BoldText}}
+\index{BoldText@{BoldText}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{BoldText()}{BoldText()}}
+{\footnotesize\ttfamily \label{classStyle_a2d36d13fd41a5853a88c269494976e6d} 
+static std\+::string Style\+::\+Bold\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classStyle_a86d28d05ce8974b1ff88317c5d294eb5}\index{Style@{Style}!ClearConsole@{ClearConsole}}
+\index{ClearConsole@{ClearConsole}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{ClearConsole()}{ClearConsole()}}
+{\footnotesize\ttfamily \label{classStyle_a86d28d05ce8974b1ff88317c5d294eb5} 
+static void Style\+::\+Clear\+Console (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classStyle_a2dc09d093782de7527aa3b8fec1a79c5}\index{Style@{Style}!Cta@{Cta}}
+\index{Cta@{Cta}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{Cta()}{Cta()}}
+{\footnotesize\ttfamily \label{classStyle_a2dc09d093782de7527aa3b8fec1a79c5} 
+static std\+::string Style\+::\+Cta (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classStyle_a38a11d09d6371559e5795c952d44f9d0}\index{Style@{Style}!Cts@{Cts}}
+\index{Cts@{Cts}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{Cts()}{Cts()}}
+{\footnotesize\ttfamily \label{classStyle_a38a11d09d6371559e5795c952d44f9d0} 
+static std\+::string Style\+::\+Cts (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classStyle_a05aca5e3ba0656e599a9355d5bfa3793}\index{Style@{Style}!DisplayLength@{DisplayLength}}
+\index{DisplayLength@{DisplayLength}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{DisplayLength()}{DisplayLength()}}
+{\footnotesize\ttfamily \label{classStyle_a05aca5e3ba0656e599a9355d5bfa3793} 
+static size\+\_\+t Style\+::\+Display\+Length (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classStyle_a75154acfcb8de2f37fb8d340cef4e83e}\index{Style@{Style}!GetBoolInput@{GetBoolInput}}
+\index{GetBoolInput@{GetBoolInput}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{GetBoolInput()}{GetBoolInput()}}
+{\footnotesize\ttfamily \label{classStyle_a75154acfcb8de2f37fb8d340cef4e83e} 
+static bool Style\+::\+Get\+Bool\+Input (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{prompt}{, }\item[{const std\+::string \&}]{title}{ = {\ttfamily "{}"{}}, }\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{ = {\ttfamily \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e}{Color\+::\+YELLOW}}}, }\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{title\+Color}{ = {\ttfamily \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749}{Color\+::\+CYAN}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStyle_a75154acfcb8de2f37fb8d340cef4e83e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_ae6c4e5b5dce135d7d912be726271fb3f}\index{Style@{Style}!GetStringInput@{GetStringInput}}
+\index{GetStringInput@{GetStringInput}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{GetStringInput()}{GetStringInput()}}
+{\footnotesize\ttfamily \label{classStyle_ae6c4e5b5dce135d7d912be726271fb3f} 
+static std\+::string Style\+::\+Get\+String\+Input (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{prompt}{, }\item[{const std\+::string \&}]{title}{ = {\ttfamily "{}"{}}, }\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{ = {\ttfamily \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e}{Color\+::\+YELLOW}}}, }\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{title\+Color}{ = {\ttfamily \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749}{Color\+::\+CYAN}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStyle_ae6c4e5b5dce135d7d912be726271fb3f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_aa4a805980672163f52cedd6e54082bfe}\index{Style@{Style}!LinkText@{LinkText}}
+\index{LinkText@{LinkText}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{LinkText()}{LinkText()}}
+{\footnotesize\ttfamily \label{classStyle_aa4a805980672163f52cedd6e54082bfe} 
+static std\+::string Style\+::\+Link\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text}{, }\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{continue\+Color}{ = {\ttfamily \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{classStyle_aa4a805980672163f52cedd6e54082bfe_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_a5614a5f517f754485702cc7067efc823}\index{Style@{Style}!PrintBox@{PrintBox}}
+\index{PrintBox@{PrintBox}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{PrintBox()}{PrintBox()}}
+{\footnotesize\ttfamily \label{classStyle_a5614a5f517f754485702cc7067efc823} 
+static void Style\+::\+Print\+Box (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text}{, }\item[{const std\+::string \&}]{title}{ = {\ttfamily "{}"{}}, }\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{ = {\ttfamily \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0}{Color\+::\+GREEN}}}, }\item[{int}]{fix\+Offset}{ = {\ttfamily 0}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStyle_a5614a5f517f754485702cc7067efc823_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_a3b124c68a49d02984eda201c45582731}\index{Style@{Style}!PrintColored@{PrintColored}}
+\index{PrintColored@{PrintColored}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{PrintColored()}{PrintColored()}}
+{\footnotesize\ttfamily \label{classStyle_a3b124c68a49d02984eda201c45582731} 
+static void Style\+::\+Print\+Colored (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text}{, }\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{ = {\ttfamily \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classStyle_a3b124c68a49d02984eda201c45582731_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_a44cd112d7cf5f3ff9f7a54835cb177d6}\index{Style@{Style}!PrintColoredLine@{PrintColoredLine}}
+\index{PrintColoredLine@{PrintColoredLine}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{PrintColoredLine()}{PrintColoredLine()}}
+{\footnotesize\ttfamily \label{classStyle_a44cd112d7cf5f3ff9f7a54835cb177d6} 
+static void Style\+::\+Print\+Colored\+Line (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text}{, }\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{ = {\ttfamily \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}}}, }\item[{bool}]{endl}{ = {\ttfamily true}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStyle_a44cd112d7cf5f3ff9f7a54835cb177d6_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_a40fea464a1020972692160df497f3efb}\index{Style@{Style}!PrintDivider@{PrintDivider}}
+\index{PrintDivider@{PrintDivider}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{PrintDivider()}{PrintDivider()}}
+{\footnotesize\ttfamily \label{classStyle_a40fea464a1020972692160df497f3efb} 
+static void Style\+::\+Print\+Divider (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{ = {\ttfamily "{}"{}}, }\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{ = {\ttfamily \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStyle_a40fea464a1020972692160df497f3efb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_a0a7907c969753a314a4d49c0f94ba636}\index{Style@{Style}!PrintError@{PrintError}}
+\index{PrintError@{PrintError}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{PrintError()}{PrintError()}}
+{\footnotesize\ttfamily \label{classStyle_a0a7907c969753a314a4d49c0f94ba636} 
+static void Style\+::\+Print\+Error (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStyle_a0a7907c969753a314a4d49c0f94ba636_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_a32fd215387199b8a96cf7bac5a7fada8}\index{Style@{Style}!PrintErrorExit@{PrintErrorExit}}
+\index{PrintErrorExit@{PrintErrorExit}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{PrintErrorExit()}{PrintErrorExit()}}
+{\footnotesize\ttfamily \label{classStyle_a32fd215387199b8a96cf7bac5a7fada8} 
+static void Style\+::\+Print\+Error\+Exit (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{error}{, }\item[{int}]{code}{ = {\ttfamily -\/1}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStyle_a32fd215387199b8a96cf7bac5a7fada8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_afa7af12144de17dbf2e3c5bb35547ca0}\index{Style@{Style}!PrintInfo@{PrintInfo}}
+\index{PrintInfo@{PrintInfo}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{PrintInfo()}{PrintInfo()}}
+{\footnotesize\ttfamily \label{classStyle_afa7af12144de17dbf2e3c5bb35547ca0} 
+static void Style\+::\+Print\+Info (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStyle_afa7af12144de17dbf2e3c5bb35547ca0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_afbf27e0a1814fcdb41a52431451a5752}\index{Style@{Style}!PrintLine@{PrintLine}}
+\index{PrintLine@{PrintLine}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{PrintLine()}{PrintLine()}}
+{\footnotesize\ttfamily \label{classStyle_afbf27e0a1814fcdb41a52431451a5752} 
+static void Style\+::\+Print\+Line (\begin{DoxyParamCaption}\item[{std\+::string}]{ch}{ = {\ttfamily "{}─"{}}, }\item[{int}]{length}{ = {\ttfamily 50}, }\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{ = {\ttfamily \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStyle_afbf27e0a1814fcdb41a52431451a5752_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_aa8360afc84f1305765126889fc2fdca1}\index{Style@{Style}!PrintSuccess@{PrintSuccess}}
+\index{PrintSuccess@{PrintSuccess}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{PrintSuccess()}{PrintSuccess()}}
+{\footnotesize\ttfamily \label{classStyle_aa8360afc84f1305765126889fc2fdca1} 
+static void Style\+::\+Print\+Success (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStyle_aa8360afc84f1305765126889fc2fdca1_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_afe6790c9756b548e74177f1aac11efbd}\index{Style@{Style}!PrintTable@{PrintTable}}
+\index{PrintTable@{PrintTable}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{PrintTable()}{PrintTable()}}
+{\footnotesize\ttfamily \label{classStyle_afe6790c9756b548e74177f1aac11efbd} 
+static void Style\+::\+Print\+Table (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title}{, }\item[{const std\+::vector$<$ std\+::string $>$ \&}]{header}{, }\item[{const std\+::vector$<$ std\+::vector$<$ std\+::string $>$ $>$ \&}]{rows}{, }\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{ = {\ttfamily \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee}{Color\+::\+DEFAULT}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=311pt]{classStyle_afe6790c9756b548e74177f1aac11efbd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_a350f6310e8e2c5ed0a3781d56a9617a3}\index{Style@{Style}!PrintTitle@{PrintTitle}}
+\index{PrintTitle@{PrintTitle}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{PrintTitle()}{PrintTitle()}}
+{\footnotesize\ttfamily \label{classStyle_a350f6310e8e2c5ed0a3781d56a9617a3} 
+static void Style\+::\+Print\+Title (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{title}{, }\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}}]{color}{ = {\ttfamily \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749}{Color\+::\+CYAN}}}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classStyle_a350f6310e8e2c5ed0a3781d56a9617a3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_ae625221bb6eca80773f7f9d2ccada911}\index{Style@{Style}!PrintWarning@{PrintWarning}}
+\index{PrintWarning@{PrintWarning}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{PrintWarning()}{PrintWarning()}}
+{\footnotesize\ttfamily \label{classStyle_ae625221bb6eca80773f7f9d2ccada911} 
+static void Style\+::\+Print\+Warning (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{message}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStyle_ae625221bb6eca80773f7f9d2ccada911_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStyle_ac28a3cd98cd6983e617e7d455bd4098e}\index{Style@{Style}!ResetColor@{ResetColor}}
+\index{ResetColor@{ResetColor}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{ResetColor()}{ResetColor()}}
+{\footnotesize\ttfamily \label{classStyle_ac28a3cd98cd6983e617e7d455bd4098e} 
+static std\+::string Style\+::\+Reset\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+\Hypertarget{classStyle_ae8e0c4a440744134528e61f912cb5fde}\index{Style@{Style}!UnderlineText@{UnderlineText}}
+\index{UnderlineText@{UnderlineText}!Style@{Style}}
+\doxysubsubsection{\texorpdfstring{UnderlineText()}{UnderlineText()}}
+{\footnotesize\ttfamily \label{classStyle_ae8e0c4a440744134528e61f912cb5fde} 
+static std\+::string Style\+::\+Underline\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/huplo/\+Coding/\+Projects/\+C++/chess-\/game/dependencies/\mbox{\hyperlink{Style_8hpp}{Style.\+hpp}}\end{DoxyCompactItemize}

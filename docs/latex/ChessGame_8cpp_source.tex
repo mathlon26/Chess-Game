@@ -1,0 +1,329 @@
+\doxysection{Chess\+Game.\+cpp}
+\hypertarget{ChessGame_8cpp_source}{}\label{ChessGame_8cpp_source}\index{source/ChessGame.cpp@{source/ChessGame.cpp}}
+\mbox{\hyperlink{ChessGame_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}../include/ChessGame.h"{}}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}../include/HumanPlayer.h"{}}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}../include/BotPlayer.h"{}}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00007}00007\ ChessGame::ChessGame()}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00008}00008\ \ \ \ \ :}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00009}00009\ \ \ \ \ m\_board\{new\ Board\{\}\},}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00010}00010\ \ \ \ \ m\_timerOne\{0\},}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00011}00011\ \ \ \ \ m\_timerTwo\{0\},}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00012}00012\ \ \ \ \ m\_increment\{0\}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00013}00013\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00016}00016\ ChessGame::\string~ChessGame()}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00017}00017\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00018}00018\ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00020}00020\ \textcolor{keywordtype}{void}\ ChessGame::Run()}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00021}00021\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordtype}{bool}\ first\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00023}00023\ \ \ \ \ Init();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00024}00024\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00025}00025\ \ \ \ \ \textcolor{keywordflow}{while}\ (ShouldRun())}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00026}00026\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ StartTimer();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ Update();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ Draw();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ StopTimer();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ SwitchTurn();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00034}00034\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00037}00037\ \textcolor{keywordtype}{void}\ ChessGame::SetupPlayers()}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00038}00038\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00039}00039\ \ \ \ \ \textcolor{keywordtype}{int}\ optP;\ \textcolor{comment}{//\ player\ versus\ X\ option}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00040}00040\ \ \ \ \ \textcolor{keywordtype}{int}\ optC\{1\};\ \textcolor{comment}{//\ player\ color\ option}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00042}00042\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ ClearConsole();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ PrintBox(}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}1.\ Player\ versus\ Player\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}2.\ Player\ versus\ Bot"{}},}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ Game\ Mode\ "{}}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ optP\ =\ std::stoi(GetStringInput(\textcolor{stringliteral}{"{}\ >>\ "{}},\ \textcolor{stringliteral}{"{}Enter\ a\ number\ (1,2)"{}}).c\_str());}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00050}00050\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (optP\ !=\ 1\ \&\&\ optP\ !=\ 2\ \&\&\ optP\ !=\ 3);\ \textcolor{comment}{//\ optP\ 3\ is\ hidden\ to\ play\ Bot\ V\ Bot}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{if}\ (optP\ ==\ 2)}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00053}00053\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ ClearConsole();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ PrintBox(}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}1.\ Player\ plays\ white\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}2.\ Bot\ plays\ white"{}},}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ Player\ Color\ "{}}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ optC\ =\ std::stoi(GetStringInput(\textcolor{stringliteral}{"{}\ >>\ "{}},\ \textcolor{stringliteral}{"{}Enter\ a\ number\ (1,2)"{}}).c\_str());}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (optC\ !=\ 1\ \&\&\ optC\ !=\ 2);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00065}00065\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (optC\ ==\ 1)}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00066}00066\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ m\_playerOne\ =\ \textcolor{keyword}{new}\ HumanPlayer\{Color::WHITE\};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ m\_playerTwo\ =\ \textcolor{keyword}{new}\ BotPlayer\{Color::BLACK\};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00071}00071\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ m\_playerOne\ =\ \textcolor{keyword}{new}\ BotPlayer\{Color::WHITE\};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ m\_playerTwo\ =\ \textcolor{keyword}{new}\ HumanPlayer\{Color::BLACK\};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00075}00075\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (optP\ ==\ 3)}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00077}00077\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ m\_playerOne\ =\ \textcolor{keyword}{new}\ BotPlayer\{PlayerColor::WHITE\};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00079}00079\ \ \ \ \ \ \ \ \ m\_playerTwo\ =\ \textcolor{keyword}{new}\ BotPlayer\{PlayerColor::BLACK\};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00082}00082\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ m\_playerOne\ =\ \textcolor{keyword}{new}\ HumanPlayer\{Color::WHITE\};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ m\_playerTwo\ =\ \textcolor{keyword}{new}\ HumanPlayer\{Color::BLACK\};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00085}00085\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00086}00086\ \ \ \ \ m\_playerOnTurn\ =\ m\_playerOne;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00087}00087\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00088}00088\ \ \ \ \ ClearConsole();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00089}00089\ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00090}00090\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00091}00091\ \textcolor{keywordtype}{void}\ ChessGame::SetupTimers()}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00092}00092\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00093}00093\ \ \ \ \ \textcolor{keywordtype}{bool}\ optT\{\textcolor{keyword}{false}\};\ \textcolor{comment}{//\ timer\ bool}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00094}00094\ \ \ \ \ \textcolor{keywordtype}{int}\ optD\{0\};\ \textcolor{comment}{//\ timer\ duration\ (minutes)}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00095}00095\ \ \ \ \ \textcolor{keywordtype}{int}\ optI\{0\};\ \textcolor{comment}{//\ timer\ increment\ (seconds)}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00097}00097\ \ \ \ \ ClearConsole();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00098}00098\ \ \ \ \ optT\ =\ GetBoolInput(\textcolor{stringliteral}{"{}\ >>\ "{}},\ \textcolor{stringliteral}{"{}Do\ you\ want\ to\ play\ with\ a\ timer?"{}},\ Color::GREEN);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00100}00100\ \ \ \ \ \textcolor{keywordflow}{if}\ (optT)}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00101}00101\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00103}00103\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ optD\ =\ std::stoi(GetStringInput(\textcolor{stringliteral}{"{}\ >>\ "{}},\ \textcolor{stringliteral}{"{}Set\ the\ duration\ of\ the\ timer\ in\ minutes\ (>=1)."{}}).c\_str());}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (optD\ <\ 1);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00107}00107\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ optI\ =\ std::stoi(GetStringInput(\textcolor{stringliteral}{"{}\ >>\ "{}},\ \textcolor{stringliteral}{"{}Set\ the\ increment\ of\ the\ timer\ in\ seconds\ (>=0)."{}}).c\_str());}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00110}00110\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (optI\ <\ 0);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00111}00111\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00112}00112\ \ \ \ \ \ \ \ \ m\_increment\ =\ optI;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Initialize\ both\ timers\ to\ the\ user-\/set\ duration\ in\ seconds.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00115}00115\ \ \ \ \ \ \ \ \ m\_timerOne\ =\ optD\ *\ 60;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00116}00116\ \ \ \ \ \ \ \ \ m\_timerTwo\ =\ optD\ *\ 60;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00117}00117\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00118}00118\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Enable\ timer\ thread.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00119}00119\ \ \ \ \ \ \ \ \ m\_timerActive\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00120}00120\ \ \ \ \ \ \ \ \ m\_timerThread\ =\ std::thread(\&ChessGame::TimerThreadFunction,\ \textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00121}00121\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00122}00122\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00123}00123\ \ \ \ \ ClearConsole();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00124}00124\ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00125}00125\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00126}00126\ \textcolor{keywordtype}{void}\ ChessGame::TimerThreadFunction()\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00127}00127\ \ \ \ \ \textcolor{keywordflow}{while}\ (m\_timerActive\ \&\&\ !m\_exitCall)}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00128}00128\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Get\ the\ current\ time\ and\ compute\ elapsed\ seconds\ since\ the\ move\ started.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ now\ =\ std::chrono::steady\_clock::now();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{keyword}{auto}\ elapsedSeconds\ =\ std::chrono::duration\_cast<std::chrono::seconds>(now\ -\/\ m\_moveStartTime).count();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00133}00133\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Compute\ remaining\ time\ for\ each\ player.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00134}00134\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ For\ the\ active\ player,\ subtract\ the\ elapsed\ time.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00135}00135\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ whiteRemaining\ =\ m\_timerOne;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00136}00136\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{long}\ blackRemaining\ =\ m\_timerTwo;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00137}00137\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_playerOnTurn-\/>Color()\ ==\ Color::WHITE)\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ whiteRemaining\ =\ (m\_timerOne\ >\ elapsedSeconds)\ ?\ m\_timerOne\ -\/\ elapsedSeconds\ :\ 0;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (whiteRemaining\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EndGame(m\_playerTwo);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00144}00144\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (m\_playerOnTurn-\/>Color()\ ==\ Color::BLACK)\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ blackRemaining\ =\ (m\_timerTwo\ >\ elapsedSeconds)\ ?\ m\_timerTwo\ -\/\ elapsedSeconds\ :\ 0;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (blackRemaining\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EndGame(m\_playerOne);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00151}00151\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00153}00153\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Convert\ seconds\ to\ minutes\ and\ seconds.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00154}00154\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ whiteMinutes\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(whiteRemaining\ /\ 60);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00155}00155\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ whiteSeconds\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(whiteRemaining\ \%\ 60);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00156}00156\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ blackMinutes\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(blackRemaining\ /\ 60);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00157}00157\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ blackSeconds\ =\ \textcolor{keyword}{static\_cast<}\textcolor{keywordtype}{int}\textcolor{keyword}{>}(blackRemaining\ \%\ 60);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00158}00158\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00159}00159\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Save\ the\ current\ cursor\ position.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)033[s"{}};\ \ \textcolor{comment}{//\ ANSI\ escape\ code\ to\ save\ cursor\ position}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00161}00161\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00162}00162\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Print\ White's\ timer\ at\ row\ 1,\ column\ 54.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00163}00163\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)033[2;44H"{}};\ \ \textcolor{comment}{//\ Move\ cursor\ to\ row\ 1,\ column\ 54.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00164}00164\ \ \ \ \ \ \ \ \ std::cout\ <<\ BoldText(Cta(Color::WHITE)\ +\ \textcolor{stringliteral}{"{}White:\ "{}})\ <<\ Cts(Color::DEFAULT)}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (whiteMinutes\ <\ 10\ ?\ \textcolor{stringliteral}{"{}0"{}}\ :\ \textcolor{stringliteral}{"{}"{}})\ <<\ whiteMinutes\ <<\ \textcolor{stringliteral}{"{}:"{}}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (whiteSeconds\ <\ 10\ ?\ \textcolor{stringliteral}{"{}0"{}}\ :\ \textcolor{stringliteral}{"{}"{}})\ <<\ whiteSeconds;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00167}00167\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00168}00168\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Print\ Black's\ timer\ at\ row\ 2,\ column\ 54.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00169}00169\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)033[3;44H"{}};\ \ \textcolor{comment}{//\ Move\ cursor\ to\ row\ 2,\ column\ 54.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00170}00170\ \ \ \ \ \ \ \ \ std::cout\ <<\ BoldText(Cta(Color::BLACK)\ +\ \textcolor{stringliteral}{"{}Black:\ "{}})\ <<\ Cts(Color::DEFAULT)}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (blackMinutes\ <\ 10\ ?\ \textcolor{stringliteral}{"{}0"{}}\ :\ \textcolor{stringliteral}{"{}"{}})\ <<\ blackMinutes\ <<\ \textcolor{stringliteral}{"{}:"{}}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (blackSeconds\ <\ 10\ ?\ \textcolor{stringliteral}{"{}0"{}}\ :\ \textcolor{stringliteral}{"{}"{}})\ <<\ blackSeconds;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00174}00174\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Restore\ the\ previous\ cursor\ position\ so\ user\ input\ stays\ in\ place.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00175}00175\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)033[u"{}};\ \ \textcolor{comment}{//\ ANSI\ escape\ code\ to\ restore\ cursor\ position}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00177}00177\ \ \ \ \ \ \ \ \ std::cout.flush();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00178}00178\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Sleep\ a\ short\ period\ to\ update\ the\ display\ continuously.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ std::this\_thread::sleep\_for(std::chrono::milliseconds(500));}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00182}00182\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00183}00183\ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00185}00185\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00187}00187\ \textcolor{keywordtype}{void}\ ChessGame::Init()}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00188}00188\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00189}00189\ \ \ \ \ SetupPlayers();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00190}00190\ \ \ \ \ SetupTimers();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00191}00191\ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00192}00192\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00193}00193\ \textcolor{keywordtype}{void}\ ChessGame::EndGame(Player*\ winner,\ \textcolor{keywordtype}{bool}\ resign,\ \textcolor{keywordtype}{bool}\ notime)}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00194}00194\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00195}00195\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00196}00196\ \ \ \ \ PrintBox(}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00197}00197\ \ \ \ \ \ \ \ \ winner-\/>Name()\ +\ \textcolor{stringliteral}{"{}\ has\ won!"{}},}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00198}00198\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}\ Game\ ended\ "{}}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00199}00199\ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00201}00201\ \ \ \ \ exit(0);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00202}00202\ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00204}00204\ Move\ ChessGame::GetPlayerMove()}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00205}00205\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00206}00206\ \ \ \ \ Move\ playerMove\{\};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00207}00207\ \ \ \ \ \textcolor{keywordflow}{while}\ (\textcolor{keyword}{true})}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00208}00208\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00209}00209\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00210}00210\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00211}00211\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ checked\ =\ m\_board-\/>IsKingChecked(m\_playerOnTurn-\/>Color());}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{bool}\ noMoves\ =\ m\_board-\/>GetPossibleMoves(m\_playerOnTurn-\/>Color()).empty();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00213}00213\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (checked\ \&\&\ noMoves)\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00214}00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EndGame(m\_playerOnTurn\ ==\ m\_playerOne\ ?\ m\_playerTwo\ :\ m\_playerOne);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Move\{\};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00218}00218\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ std::string\ moveStr\ =\ m\_playerOnTurn-\/>GetInput(m\_board);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (moveStr\ ==\ \textcolor{stringliteral}{"{}resign"{}})\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EndGame(m\_playerOnTurn\ ==\ m\_playerOne\ ?\ m\_playerTwo\ :\ m\_playerOne,\ \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Move\{\};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00225}00225\ \ \ \ \ \ \ \ \ \ \ \ \ playerMove\ =\ Move\{moveStr\};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00226}00226\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ playerMove;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00227}00227\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00228}00228\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{catch}(\textcolor{keyword}{const}\ std::exception\&\ e)}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00229}00229\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00230}00230\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ We\ must\ make\ sure\ a\ BotPlayer\ returns\ valid\ input,\ otherwise\ this\ will\ be\ executed.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00231}00231\ \ \ \ \ \ \ \ \ \ \ \ \ PrintError(\textcolor{stringliteral}{"{}Invalid\ input,\ example\ format:\ 'e2e4'\ \(\backslash\)n\ \ |\ "{}}\ +\ std::string\{e.what()\});}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00232}00232\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00233}00233\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00234}00234\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00235}00235\ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00236}00236\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00237}00237\ \textcolor{keywordtype}{void}\ ChessGame::Update()}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00238}00238\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00239}00239\ \ \ \ \ \textcolor{keywordtype}{bool}\ succeed\ \{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00240}00240\ \ \ \ \ Move\ playerMove;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00241}00241\ \ \ \ \ \textcolor{keywordflow}{do}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00242}00242\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00243}00243\ \ \ \ \ \ \ \ \ playerMove\ =\ GetPlayerMove();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00244}00244\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (playerMove.empty())}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00245}00245\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00246}00246\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00247}00247\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_playerOnTurn-\/>IsBot())}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00248}00248\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00249}00249\ \ \ \ \ \ \ \ \ \ \ \ \ BotPlayer*\ bot\ =\ \textcolor{keyword}{dynamic\_cast<}BotPlayer*\textcolor{keyword}{>}(m\_playerOnTurn);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00250}00250\ \ \ \ \ \ \ \ \ \ \ \ \ bot-\/>AddCache(playerMove.toString());}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00251}00251\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00252}00252\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00253}00253\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00254}00254\ \ \ \ \ \ \ \ \ succeed\ =\ m\_board-\/>ExecuteMove(playerMove,\ m\_playerOnTurn);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00255}00255\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!succeed\ \&\&\ !m\_playerOnTurn-\/>IsBot())}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00256}00256\ \ \ \ \ \ \ \ \ \ \ \ \ PrintError(\textcolor{stringliteral}{"{}Invalid\ Move!"{}});}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00257}00257\ \ \ \ \ \}\ \textcolor{keywordflow}{while}\ (!\ succeed);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00258}00258\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00259}00259\ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_playerOnTurn-\/>IsBot())}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00260}00260\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00261}00261\ \ \ \ \ \ \ \ \ PrintBox(Cta(m\_playerOnTurn-\/>Color())\ +\ playerMove.toString(),\ \textcolor{stringliteral}{"{}Bot"{}});}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00262}00262\ \ \ \ \ \ \ \ \ \textcolor{comment}{//std::this\_thread::sleep\_for(std::chrono::milliseconds(500));}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00263}00263\ \ \ \ \ \ \ \ \ BotPlayer*\ bot\ =\ \textcolor{keyword}{dynamic\_cast<}BotPlayer*\textcolor{keyword}{>}(m\_playerOnTurn);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00264}00264\ \ \ \ \ \ \ \ \ bot-\/>EmptyCache();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00265}00265\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00266}00266\ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00267}00267\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00268}00268\ \textcolor{keywordtype}{void}\ ChessGame::Draw()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00269}00269\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00270}00270\ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_exitCall)}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00271}00271\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00272}00272\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00273}00273\ \ \ \ \ ClearConsole();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00274}00274\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00275}00275\ \ \ \ \ std::ostringstream\ oss;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00276}00276\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00277}00277\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)033[0;0H\(\backslash\)033[0m"{}};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00278}00278\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00279}00279\ \ \ \ \ Player*\ player\ =\ m\_playerOnTurn-\/>Color()\ ==\ m\_playerOne-\/>Color()\ ?\ m\_playerTwo\ :\ m\_playerOne;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00280}00280\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00281}00281\ \ \ \ \ oss\ <<\ \textcolor{stringliteral}{"{}Player\ "{}}\ <<\ player-\/>Name()\ <<\ \textcolor{stringliteral}{"{}\ may\ make\ a\ move.\(\backslash\)n"{}}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00282}00282\ \ \ \ \ \ \ \ \ <<\ Cta(m\_playerOne-\/>Color())\ <<\ m\_playerOne-\/>Name()\ <<\ Cta(Color::DEFAULT)\ \ <<\ \textcolor{stringliteral}{"{}\ has\ captured:\ "{}}\ <<\ Cta(m\_playerOne-\/>Color());}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00283}00283\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00284}00284\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ capture\ :\ m\_playerOne-\/>GetCaptures())}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00285}00285\ \ \ \ \ \ \ \ \ oss\ <<\ capture-\/>Symbol()\ <<\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00286}00286\ \ \ \ \ oss\ <<\ \textcolor{charliteral}{'\(\backslash\)n'}<<\ Cta(m\_playerTwo-\/>Color())\ <<\ m\_playerTwo-\/>Name()\ <<\ Cta(Color::DEFAULT)\ \ <<\ \textcolor{stringliteral}{"{}\ has\ captured:\ "{}}\ <<\ Cta(m\_playerTwo-\/>Color());}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00287}00287\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00288}00288\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00289}00289\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\ capture\ :\ m\_playerTwo-\/>GetCaptures())}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00290}00290\ \ \ \ \ \ \ \ \ oss\ <<\ capture-\/>Symbol()\ <<\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00291}00291\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00292}00292\ \ \ \ \ oss\ <<\ Cta(Color::DEFAULT);}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00293}00293\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00294}00294\ \ \ \ \ PrintBox(oss.str(),\ \textcolor{stringliteral}{"{}\ Game\ Stats\ "{}});}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00295}00295\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00296}00296\ \ \ \ \ m\_board-\/>Draw();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00297}00297\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00298}00298\ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00299}00299\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00300}00300\ \textcolor{keywordtype}{void}\ ChessGame::StartTimer()}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00301}00301\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00302}00302\ \ \ \ \ \textcolor{comment}{//\ Record\ the\ current\ time\ as\ the\ start\ of\ the\ move.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00303}00303\ \ \ \ \ m\_moveStartTime\ =\ std::chrono::steady\_clock::now();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00304}00304\ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00305}00305\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00306}00306\ \textcolor{keywordtype}{void}\ ChessGame::StopTimer()}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00307}00307\ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00308}00308\ \ \ \ \ \textcolor{comment}{//\ Get\ the\ current\ time\ and\ calculate\ the\ elapsed\ time\ in\ seconds.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00309}00309\ \ \ \ \ \textcolor{keyword}{auto}\ stopTime\ =\ std::chrono::steady\_clock::now();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00310}00310\ \ \ \ \ \textcolor{keyword}{auto}\ elapsedSeconds\ =\ std::chrono::duration\_cast<std::chrono::seconds>(stopTime\ -\/\ m\_moveStartTime).count();}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00311}00311\ }
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00312}00312\ \ \ \ \ \textcolor{comment}{//\ Depending\ on\ the\ player's\ color,\ subtract\ the\ elapsed\ time\ from\ the\ base\ timer\ and\ add\ the\ increment.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00313}00313\ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_playerOnTurn-\/>Color()\ ==\ Color::WHITE)}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00314}00314\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00315}00315\ \ \ \ \ \ \ \ \ m\_timerOne\ =\ (m\_timerOne\ >\ elapsedSeconds)\ ?\ (m\_timerOne\ -\/\ elapsedSeconds)\ :\ 0;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00316}00316\ \ \ \ \ \ \ \ \ m\_timerOne\ +=\ m\_increment;\ \ \textcolor{comment}{//\ Add\ the\ increment\ after\ the\ move.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00317}00317\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00318}00318\ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{comment}{//\ Assuming\ Black.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00319}00319\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00320}00320\ \ \ \ \ \ \ \ \ m\_timerTwo\ =\ (m\_timerTwo\ >\ elapsedSeconds)\ ?\ (m\_timerTwo\ -\/\ elapsedSeconds)\ :\ 0;}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00321}00321\ \ \ \ \ \ \ \ \ m\_timerTwo\ +=\ m\_increment;\ \ \textcolor{comment}{//\ Add\ the\ increment\ after\ the\ move.}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00322}00322\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{ChessGame_8cpp_source_l00323}00323\ \}}
+
+\end{DoxyCode}

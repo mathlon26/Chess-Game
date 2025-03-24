@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_HumanPlayer_8h_source" xml:lang="en-US">
+<title>HumanPlayer.h</title>
+<indexterm><primary>/home/huplo/Coding/Projects/C++/chess-game/include/HumanPlayer.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;HUMANE_PLAYER__H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;HUMANE_PLAYER__H</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Player_8h">Player.h</link>&quot;</emphasis>
+5 
+6 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classHumanPlayer_1a0d9e4734d10e497c6b7c7944bfda4a76">HumanPlayer</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classPlayer_1ad061cf938c523c0e7d529d5591224250">Player</link>
+7 {
+8 <emphasis role="keyword">public</emphasis>:
+9 &#32;&#32;&#32;&#32;<link linkend="_classHumanPlayer_1a0d9e4734d10e497c6b7c7944bfda4a76">HumanPlayer</link>(<link linkend="_Player_8h_1a301cfd5fe9a22cb30292f6e1523247d7">PlayerColor</link>&#32;color);
+10 &#32;&#32;&#32;&#32;<link linkend="_classHumanPlayer_1abdeb9d120fc74c8d82ec0c688883f16f">~HumanPlayer</link>();
+11 
+12 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classHumanPlayer_1a445fac75f6cac55fd6879ed277f010ac">GetInput</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classBoard">Board</link>*&#32;<emphasis role="keyword">const</emphasis>&#32;board)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+13 &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_classHumanPlayer_1a4999d6c988fcc037600e3e8db6f9bbf4">Name</link>()&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+14 <emphasis role="keyword">private</emphasis>:
+15 };
+16 
+17 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;HUMANE_PLAYER__H</emphasis>
+</programlisting></section>

@@ -1,0 +1,519 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classChessGame" kind="class" language="C++" prot="public">
+    <compoundname>ChessGame</compoundname>
+    <basecompoundref refid="classCanvasApp" prot="public" virt="non-virtual">CanvasApp</basecompoundref>
+    <basecompoundref refid="classTwoPlayerGame" prot="public" virt="non-virtual">TwoPlayerGame</basecompoundref>
+    <includes refid="ChessGame_8h" local="no">ChessGame.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classChessGame_1ab808fc8bc94aa65a846f9a25a8473a6e" prot="private" static="no" mutable="no">
+        <type><ref refid="classBoard" kindref="compound">Board</ref> *</type>
+        <definition>Board* ChessGame::m_board</definition>
+        <argsstring></argsstring>
+        <name>m_board</name>
+        <qualifiedname>ChessGame::m_board</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="34" column="11" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChessGame_1a7e2085b7f6a5cd82a20480e829275088" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ChessGame::m_increment</definition>
+        <argsstring></argsstring>
+        <name>m_increment</name>
+        <qualifiedname>ChessGame::m_increment</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="35" column="12" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChessGame_1a75a90032e234efe603b3d89018e5e2e2" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ChessGame::m_timerOne</definition>
+        <argsstring></argsstring>
+        <name>m_timerOne</name>
+        <qualifiedname>ChessGame::m_timerOne</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="36" column="12" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChessGame_1a840ec1fd2cb40308c353ce9e04562c63" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t ChessGame::m_timerTwo</definition>
+        <argsstring></argsstring>
+        <name>m_timerTwo</name>
+        <qualifiedname>ChessGame::m_timerTwo</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="37" column="12" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChessGame_1a5d401c8f79d7193e58982238346ed303" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; ChessGame::m_timerActive</definition>
+        <argsstring></argsstring>
+        <name>m_timerActive</name>
+        <qualifiedname>ChessGame::m_timerActive</qualifiedname>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="39" column="17" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChessGame_1a41f52fcab7d6826866396a856b22ab65" prot="private" static="no" mutable="no">
+        <type>std::chrono::steady_clock::time_point</type>
+        <definition>std::chrono::steady_clock::time_point ChessGame::m_moveStartTime</definition>
+        <argsstring></argsstring>
+        <name>m_moveStartTime</name>
+        <qualifiedname>ChessGame::m_moveStartTime</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="40" column="43" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classChessGame_1a51ce25426f69f98bbf87d01272f5a865" prot="private" static="no" mutable="no">
+        <type>std::thread</type>
+        <definition>std::thread ChessGame::m_timerThread</definition>
+        <argsstring></argsstring>
+        <name>m_timerThread</name>
+        <qualifiedname>ChessGame::m_timerThread</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="41" column="17" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classChessGame_1a7c9d1caa97c7ca5737f187a6066662b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ChessGame::ChessGame</definition>
+        <argsstring>()</argsstring>
+        <name>ChessGame</name>
+        <qualifiedname>ChessGame::ChessGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="15" column="5" bodyfile="ChessGame.cpp" bodystart="7" bodyend="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classChessGame_1a9c7f4475dcd31ab4e1f98f033fb0c60f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ChessGame::~ChessGame</definition>
+        <argsstring>()</argsstring>
+        <name>~ChessGame</name>
+        <qualifiedname>ChessGame::~ChessGame</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="16" column="5" bodyfile="ChessGame.cpp" bodystart="16" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classChessGame_1a5db0ea5be23412676881812bd9056e56" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ChessGame::Run</definition>
+        <argsstring>() override</argsstring>
+        <name>Run</name>
+        <qualifiedname>ChessGame::Run</qualifiedname>
+        <reimplements refid="classCanvasApp_1a25ea309d5cd14e5ee4683c10d6336d63">Run</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="18" column="10" bodyfile="ChessGame.cpp" bodystart="20" bodyend="35"/>
+        <references refid="classChessGame_1a84e2d266d40a56cc33e094087a205b8f" compoundref="ChessGame_8cpp" startline="268" endline="298">Draw</references>
+        <references refid="classChessGame_1af3b9c1ca3bdb26f1e808487b94e0ddde" compoundref="ChessGame_8cpp" startline="187" endline="191">Init</references>
+        <references refid="classApp_1afb17a1d7013faefdbe00bf333399de50" compoundref="App_8h" startline="11" endline="11">App::ShouldRun</references>
+        <references refid="classChessGame_1ab09da31d868fcfd772b7746670add659" compoundref="ChessGame_8cpp" startline="300" endline="304">StartTimer</references>
+        <references refid="classChessGame_1a9d0066f004b8097e53bdc941d4d6c34d" compoundref="ChessGame_8cpp" startline="306" endline="323">StopTimer</references>
+        <references refid="classTwoPlayerGame_1aae0d82cc749714dbbc29282391ae22de" compoundref="TwoPlayerGame_8cpp" startline="18" endline="22">TwoPlayerGame::SwitchTurn</references>
+        <references refid="classChessGame_1ab121238a7f75644fb772fec4491865a8" compoundref="ChessGame_8cpp" startline="237" endline="266">Update</references>
+      </memberdef>
+      <memberdef kind="function" id="classChessGame_1a2640c47a2ac9aa47f4db38d5e521c123" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ChessGame::SetupPlayers</definition>
+        <argsstring>() override</argsstring>
+        <name>SetupPlayers</name>
+        <qualifiedname>ChessGame::SetupPlayers</qualifiedname>
+        <reimplements refid="classTwoPlayerGame_1ac9ad5060f04c7c3b7851c4466fb3571a">SetupPlayers</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="19" column="10" bodyfile="ChessGame.cpp" bodystart="37" bodyend="89"/>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965" compoundref="Style_8hpp" startline="14">BLACK</references>
+        <references refid="classStyle_1a86d28d05ce8974b1ff88317c5d294eb5" compoundref="Style_8hpp" startline="205" endline="212">Style::ClearConsole</references>
+        <references refid="classStyle_1ae6c4e5b5dce135d7d912be726271fb3f" compoundref="Style_8hpp" startline="228" endline="237">Style::GetStringInput</references>
+        <references refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" compoundref="TwoPlayerGame_8h" startline="17" endline="17">TwoPlayerGame::m_playerOne</references>
+        <references refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" compoundref="TwoPlayerGame_8h" startline="19" endline="19">TwoPlayerGame::m_playerOnTurn</references>
+        <references refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" compoundref="TwoPlayerGame_8h" startline="18" endline="18">TwoPlayerGame::m_playerTwo</references>
+        <references refid="classStyle_1a5614a5f517f754485702cc7067efc823" compoundref="Style_8hpp" startline="143" endline="171">Style::PrintBox</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" compoundref="Style_8hpp" startline="14">WHITE</references>
+      </memberdef>
+      <memberdef kind="function" id="classChessGame_1af3b9c1ca3bdb26f1e808487b94e0ddde" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ChessGame::Init</definition>
+        <argsstring>() override</argsstring>
+        <name>Init</name>
+        <qualifiedname>ChessGame::Init</qualifiedname>
+        <reimplements refid="classCanvasApp_1a676b5e32d8b2d3073d2bcaa908ca4e6c">Init</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="20" column="10" bodyfile="ChessGame.cpp" bodystart="187" bodyend="191"/>
+        <references refid="classChessGame_1a2640c47a2ac9aa47f4db38d5e521c123" compoundref="ChessGame_8cpp" startline="37" endline="89">SetupPlayers</references>
+        <references refid="classChessGame_1a8da52c5aea5b9eb826ee1f2ea4bccb47" compoundref="ChessGame_8cpp" startline="91" endline="124">SetupTimers</references>
+      </memberdef>
+      <memberdef kind="function" id="classChessGame_1ab121238a7f75644fb772fec4491865a8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ChessGame::Update</definition>
+        <argsstring>() override</argsstring>
+        <name>Update</name>
+        <qualifiedname>ChessGame::Update</qualifiedname>
+        <reimplements refid="classCanvasApp_1aaa5e049733d0a342e6826f3a609d614f">Update</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="21" column="10" bodyfile="ChessGame.cpp" bodystart="237" bodyend="266"/>
+        <references refid="classBotPlayer_1a36fb5ce4f6a78a751d7a95b7b8ebc1ea" compoundref="BotPlayer_8cpp" startline="59" endline="62">BotPlayer::AddCache</references>
+        <references refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" compoundref="Style_8hpp" startline="20" endline="37">Style::Cta</references>
+        <references refid="classMove_1aee300c99f25c630acd8500fe2141b05e" compoundref="Move_8cpp" startline="24" endline="27">Move::empty</references>
+        <references refid="classBotPlayer_1ada837bf49ac76c75947bc77d4af07088" compoundref="BotPlayer_8cpp" startline="64" endline="67">BotPlayer::EmptyCache</references>
+        <references refid="classChessGame_1a87facfa390c37a8fcaf36279c098fc1e" compoundref="ChessGame_8cpp" startline="204" endline="235">GetPlayerMove</references>
+        <references refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" compoundref="TwoPlayerGame_8h" startline="19" endline="19">TwoPlayerGame::m_playerOnTurn</references>
+        <references refid="classStyle_1a5614a5f517f754485702cc7067efc823" compoundref="Style_8hpp" startline="143" endline="171">Style::PrintBox</references>
+        <references refid="classStyle_1a0a7907c969753a314a4d49c0f94ba636" compoundref="Style_8hpp" startline="186" endline="189">Style::PrintError</references>
+        <references refid="classMove_1a1f1dd54e4ef974f1f24277ee14c61beb" compoundref="Move_8cpp" startline="72" endline="79">Move::toString</references>
+      </memberdef>
+      <memberdef kind="function" id="classChessGame_1a84e2d266d40a56cc33e094087a205b8f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void ChessGame::Draw</definition>
+        <argsstring>() const override</argsstring>
+        <name>Draw</name>
+        <qualifiedname>ChessGame::Draw</qualifiedname>
+        <reimplements refid="classCanvasApp_1a7ce1991bf3631e05017d04781f0d49e3">Draw</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="22" column="10" bodyfile="ChessGame.cpp" bodystart="268" bodyend="298"/>
+        <references refid="classStyle_1a86d28d05ce8974b1ff88317c5d294eb5" compoundref="Style_8hpp" startline="205" endline="212">Style::ClearConsole</references>
+        <references refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" compoundref="Style_8hpp" startline="20" endline="37">Style::Cta</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" compoundref="Style_8hpp" startline="14">DEFAULT</references>
+        <references refid="classApp_1a93dfaeba98776eb3383c2cfd0f6ebeef" compoundref="App_8h" startline="17" endline="17">App::m_exitCall</references>
+        <references refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" compoundref="TwoPlayerGame_8h" startline="17" endline="17">TwoPlayerGame::m_playerOne</references>
+        <references refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" compoundref="TwoPlayerGame_8h" startline="19" endline="19">TwoPlayerGame::m_playerOnTurn</references>
+        <references refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" compoundref="TwoPlayerGame_8h" startline="18" endline="18">TwoPlayerGame::m_playerTwo</references>
+        <references refid="classPlayer_1a313b6e73fb54e242e318579901ee93da">Player::Name</references>
+        <references refid="classStyle_1a5614a5f517f754485702cc7067efc823" compoundref="Style_8hpp" startline="143" endline="171">Style::PrintBox</references>
+      </memberdef>
+      <memberdef kind="function" id="classChessGame_1a435491b07e8ed046f58f6ab6aa6b642c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChessGame::EndGame</definition>
+        <argsstring>(Player *winner, bool resign=false, bool notime=false)</argsstring>
+        <name>EndGame</name>
+        <qualifiedname>ChessGame::EndGame</qualifiedname>
+        <param>
+          <type><ref refid="classPlayer" kindref="compound">Player</ref> *</type>
+          <declname>winner</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>resign</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>notime</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="24" column="10" bodyfile="ChessGame.cpp" bodystart="193" bodyend="202"/>
+        <references refid="classPlayer_1a313b6e73fb54e242e318579901ee93da">Player::Name</references>
+        <references refid="classStyle_1a5614a5f517f754485702cc7067efc823" compoundref="Style_8hpp" startline="143" endline="171">Style::PrintBox</references>
+      </memberdef>
+      <memberdef kind="function" id="classChessGame_1a8da52c5aea5b9eb826ee1f2ea4bccb47" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChessGame::SetupTimers</definition>
+        <argsstring>()</argsstring>
+        <name>SetupTimers</name>
+        <qualifiedname>ChessGame::SetupTimers</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="26" column="10" bodyfile="ChessGame.cpp" bodystart="91" bodyend="124"/>
+        <references refid="classStyle_1a86d28d05ce8974b1ff88317c5d294eb5" compoundref="Style_8hpp" startline="205" endline="212">Style::ClearConsole</references>
+        <references refid="classStyle_1a75154acfcb8de2f37fb8d340cef4e83e" compoundref="Style_8hpp" startline="215" endline="226">Style::GetBoolInput</references>
+        <references refid="classStyle_1ae6c4e5b5dce135d7d912be726271fb3f" compoundref="Style_8hpp" startline="228" endline="237">Style::GetStringInput</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0" compoundref="Style_8hpp" startline="14">GREEN</references>
+        <references refid="classChessGame_1ada39148a5117f4ad234761eea1381280" compoundref="ChessGame_8cpp" startline="126" endline="183">TimerThreadFunction</references>
+      </memberdef>
+      <memberdef kind="function" id="classChessGame_1ada39148a5117f4ad234761eea1381280" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChessGame::TimerThreadFunction</definition>
+        <argsstring>()</argsstring>
+        <name>TimerThreadFunction</name>
+        <qualifiedname>ChessGame::TimerThreadFunction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="27" column="10" bodyfile="ChessGame.cpp" bodystart="126" bodyend="183"/>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965" compoundref="Style_8hpp" startline="14">BLACK</references>
+        <references refid="classStyle_1a2d36d13fd41a5853a88c269494976e6d" compoundref="Style_8hpp" startline="59" endline="62">Style::BoldText</references>
+        <references refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" compoundref="Style_8hpp" startline="20" endline="37">Style::Cta</references>
+        <references refid="classStyle_1a38a11d09d6371559e5795c952d44f9d0" compoundref="Style_8hpp" startline="40" endline="57">Style::Cts</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" compoundref="Style_8hpp" startline="14">DEFAULT</references>
+        <references refid="classChessGame_1a435491b07e8ed046f58f6ab6aa6b642c" compoundref="ChessGame_8cpp" startline="193" endline="202">EndGame</references>
+        <references refid="classApp_1a93dfaeba98776eb3383c2cfd0f6ebeef" compoundref="App_8h" startline="17" endline="17">App::m_exitCall</references>
+        <references refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" compoundref="TwoPlayerGame_8h" startline="17" endline="17">TwoPlayerGame::m_playerOne</references>
+        <references refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" compoundref="TwoPlayerGame_8h" startline="19" endline="19">TwoPlayerGame::m_playerOnTurn</references>
+        <references refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" compoundref="TwoPlayerGame_8h" startline="18" endline="18">TwoPlayerGame::m_playerTwo</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" compoundref="Style_8hpp" startline="14">WHITE</references>
+      </memberdef>
+      <memberdef kind="function" id="classChessGame_1ab09da31d868fcfd772b7746670add659" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChessGame::StartTimer</definition>
+        <argsstring>()</argsstring>
+        <name>StartTimer</name>
+        <qualifiedname>ChessGame::StartTimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="28" column="10" bodyfile="ChessGame.cpp" bodystart="300" bodyend="304"/>
+      </memberdef>
+      <memberdef kind="function" id="classChessGame_1a9d0066f004b8097e53bdc941d4d6c34d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ChessGame::StopTimer</definition>
+        <argsstring>()</argsstring>
+        <name>StopTimer</name>
+        <qualifiedname>ChessGame::StopTimer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="29" column="10" bodyfile="ChessGame.cpp" bodystart="306" bodyend="323"/>
+        <references refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" compoundref="TwoPlayerGame_8h" startline="19" endline="19">TwoPlayerGame::m_playerOnTurn</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" compoundref="Style_8hpp" startline="14">WHITE</references>
+      </memberdef>
+      <memberdef kind="function" id="classChessGame_1a87facfa390c37a8fcaf36279c098fc1e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classMove" kindref="compound">Move</ref></type>
+        <definition>Move ChessGame::GetPlayerMove</definition>
+        <argsstring>()</argsstring>
+        <name>GetPlayerMove</name>
+        <qualifiedname>ChessGame::GetPlayerMove</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="32" column="10" bodyfile="ChessGame.cpp" bodystart="204" bodyend="235"/>
+        <references refid="classChessGame_1a435491b07e8ed046f58f6ab6aa6b642c" compoundref="ChessGame_8cpp" startline="193" endline="202">EndGame</references>
+        <references refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" compoundref="TwoPlayerGame_8h" startline="17" endline="17">TwoPlayerGame::m_playerOne</references>
+        <references refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" compoundref="TwoPlayerGame_8h" startline="19" endline="19">TwoPlayerGame::m_playerOnTurn</references>
+        <references refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" compoundref="TwoPlayerGame_8h" startline="18" endline="18">TwoPlayerGame::m_playerTwo</references>
+        <references refid="classStyle_1a0a7907c969753a314a4d49c0f94ba636" compoundref="Style_8hpp" startline="186" endline="189">Style::PrintError</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="5">
+        <label>App</label>
+        <link refid="classApp"/>
+      </node>
+      <node id="3">
+        <label>Canvas</label>
+        <link refid="classCanvas"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CanvasApp</label>
+        <link refid="classCanvasApp"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ChessGame</label>
+        <link refid="classChessGame"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>Style</label>
+        <link refid="classStyle"/>
+      </node>
+      <node id="6">
+        <label>TwoPlayerGame</label>
+        <link refid="classTwoPlayerGame"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>App</label>
+        <link refid="classApp"/>
+      </node>
+      <node id="3">
+        <label>Canvas</label>
+        <link refid="classCanvas"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>CanvasApp</label>
+        <link refid="classCanvasApp"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ChessGame</label>
+        <link refid="classChessGame"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="6" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Player</label>
+        <link refid="classPlayer"/>
+      </node>
+      <node id="4">
+        <label>Style</label>
+        <link refid="classStyle"/>
+      </node>
+      <node id="6">
+        <label>TwoPlayerGame</label>
+        <link refid="classTwoPlayerGame"/>
+        <childnode refid="7" relation="usage">
+          <edgelabel>m_playerOnTurn</edgelabel>
+          <edgelabel>m_playerOne</edgelabel>
+          <edgelabel>m_playerTwo</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" line="12" column="1" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h" bodystart="13" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classApp_1acb8cbf3e285b91d0170ffe87df5989c5" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>App</name></member>
+      <member refid="classStyle_1a2d36d13fd41a5853a88c269494976e6d" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>BoldText</name></member>
+      <member refid="classCanvas_1a5fce53f080ad6540094901f9768805a8" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>Canvas</name></member>
+      <member refid="classCanvasApp_1af9ee675c88f6e09bc052de53d5afd4b5" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>CanvasApp</name></member>
+      <member refid="classChessGame_1a7c9d1caa97c7ca5737f187a6066662b2" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>ChessGame</name></member>
+      <member refid="classStyle_1a86d28d05ce8974b1ff88317c5d294eb5" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>ClearConsole</name></member>
+      <member refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>Cta</name></member>
+      <member refid="classStyle_1a38a11d09d6371559e5795c952d44f9d0" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>Cts</name></member>
+      <member refid="classStyle_1a05aca5e3ba0656e599a9355d5bfa3793" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>DisplayLength</name></member>
+      <member refid="classChessGame_1a84e2d266d40a56cc33e094087a205b8f" prot="public" virt="virtual"><scope>ChessGame</scope><name>Draw</name></member>
+      <member refid="classChessGame_1a435491b07e8ed046f58f6ab6aa6b642c" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>EndGame</name></member>
+      <member refid="classApp_1a7fe3a49eeb945cbd1b235e6ff47805a3" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>Exit</name></member>
+      <member refid="classStyle_1a75154acfcb8de2f37fb8d340cef4e83e" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>GetBoolInput</name></member>
+      <member refid="classChessGame_1a87facfa390c37a8fcaf36279c098fc1e" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>GetPlayerMove</name></member>
+      <member refid="classTwoPlayerGame_1ada483d74a31419d9cceba7001badc8a4" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>GetPlayerOnTurn</name></member>
+      <member refid="classStyle_1ae6c4e5b5dce135d7d912be726271fb3f" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>GetStringInput</name></member>
+      <member refid="classChessGame_1af3b9c1ca3bdb26f1e808487b94e0ddde" prot="public" virt="virtual"><scope>ChessGame</scope><name>Init</name></member>
+      <member refid="classStyle_1aa4a805980672163f52cedd6e54082bfe" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>LinkText</name></member>
+      <member refid="classChessGame_1ab808fc8bc94aa65a846f9a25a8473a6e" prot="private" virt="non-virtual"><scope>ChessGame</scope><name>m_board</name></member>
+      <member refid="classApp_1a93dfaeba98776eb3383c2cfd0f6ebeef" prot="protected" virt="non-virtual"><scope>ChessGame</scope><name>m_exitCall</name></member>
+      <member refid="classChessGame_1a7e2085b7f6a5cd82a20480e829275088" prot="private" virt="non-virtual"><scope>ChessGame</scope><name>m_increment</name></member>
+      <member refid="classChessGame_1a41f52fcab7d6826866396a856b22ab65" prot="private" virt="non-virtual"><scope>ChessGame</scope><name>m_moveStartTime</name></member>
+      <member refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" prot="protected" virt="non-virtual"><scope>ChessGame</scope><name>m_playerOne</name></member>
+      <member refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" prot="protected" virt="non-virtual"><scope>ChessGame</scope><name>m_playerOnTurn</name></member>
+      <member refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" prot="protected" virt="non-virtual"><scope>ChessGame</scope><name>m_playerTwo</name></member>
+      <member refid="classChessGame_1a5d401c8f79d7193e58982238346ed303" prot="private" virt="non-virtual"><scope>ChessGame</scope><name>m_timerActive</name></member>
+      <member refid="classChessGame_1a75a90032e234efe603b3d89018e5e2e2" prot="private" virt="non-virtual"><scope>ChessGame</scope><name>m_timerOne</name></member>
+      <member refid="classChessGame_1a51ce25426f69f98bbf87d01272f5a865" prot="private" virt="non-virtual"><scope>ChessGame</scope><name>m_timerThread</name></member>
+      <member refid="classChessGame_1a840ec1fd2cb40308c353ce9e04562c63" prot="private" virt="non-virtual"><scope>ChessGame</scope><name>m_timerTwo</name></member>
+      <member refid="classStyle_1a5614a5f517f754485702cc7067efc823" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>PrintBox</name></member>
+      <member refid="classStyle_1a3b124c68a49d02984eda201c45582731" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>PrintColored</name></member>
+      <member refid="classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>PrintColoredLine</name></member>
+      <member refid="classStyle_1a40fea464a1020972692160df497f3efb" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>PrintDivider</name></member>
+      <member refid="classStyle_1a0a7907c969753a314a4d49c0f94ba636" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>PrintError</name></member>
+      <member refid="classStyle_1a32fd215387199b8a96cf7bac5a7fada8" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>PrintErrorExit</name></member>
+      <member refid="classStyle_1afa7af12144de17dbf2e3c5bb35547ca0" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>PrintInfo</name></member>
+      <member refid="classStyle_1afbf27e0a1814fcdb41a52431451a5752" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>PrintLine</name></member>
+      <member refid="classStyle_1aa8360afc84f1305765126889fc2fdca1" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>PrintSuccess</name></member>
+      <member refid="classStyle_1afe6790c9756b548e74177f1aac11efbd" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>PrintTable</name></member>
+      <member refid="classStyle_1a350f6310e8e2c5ed0a3781d56a9617a3" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>PrintTitle</name></member>
+      <member refid="classStyle_1ae625221bb6eca80773f7f9d2ccada911" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>PrintWarning</name></member>
+      <member refid="classStyle_1ac28a3cd98cd6983e617e7d455bd4098e" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>ResetColor</name></member>
+      <member refid="classChessGame_1a5db0ea5be23412676881812bd9056e56" prot="public" virt="virtual"><scope>ChessGame</scope><name>Run</name></member>
+      <member refid="classChessGame_1a2640c47a2ac9aa47f4db38d5e521c123" prot="public" virt="virtual"><scope>ChessGame</scope><name>SetupPlayers</name></member>
+      <member refid="classChessGame_1a8da52c5aea5b9eb826ee1f2ea4bccb47" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>SetupTimers</name></member>
+      <member refid="classApp_1afb17a1d7013faefdbe00bf333399de50" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>ShouldRun</name></member>
+      <member refid="classChessGame_1ab09da31d868fcfd772b7746670add659" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>StartTimer</name></member>
+      <member refid="classChessGame_1a9d0066f004b8097e53bdc941d4d6c34d" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>StopTimer</name></member>
+      <member refid="classTwoPlayerGame_1aae0d82cc749714dbbc29282391ae22de" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>SwitchTurn</name></member>
+      <member refid="classChessGame_1ada39148a5117f4ad234761eea1381280" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>TimerThreadFunction</name></member>
+      <member refid="classTwoPlayerGame_1ab72050bd05184152737eac9567c63aa9" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>TwoPlayerGame</name></member>
+      <member refid="classStyle_1ae8e0c4a440744134528e61f912cb5fde" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>UnderlineText</name></member>
+      <member refid="classChessGame_1ab121238a7f75644fb772fec4491865a8" prot="public" virt="virtual"><scope>ChessGame</scope><name>Update</name></member>
+      <member refid="classApp_1a871e34a8ba713040bfdebd47db0b86cf" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>~App</name></member>
+      <member refid="classCanvas_1ac64895ae1cdfc39c58e95097873e861e" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>~Canvas</name></member>
+      <member refid="classCanvasApp_1a40ee66de67fa04811c27cb883bbca3ba" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>~CanvasApp</name></member>
+      <member refid="classChessGame_1a9c7f4475dcd31ab4e1f98f033fb0c60f" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>~ChessGame</name></member>
+      <member refid="classTwoPlayerGame_1ad7fa6281a4685c1df35238afda1e3008" prot="public" virt="non-virtual"><scope>ChessGame</scope><name>~TwoPlayerGame</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

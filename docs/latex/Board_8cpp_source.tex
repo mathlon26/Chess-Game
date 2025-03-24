@@ -1,0 +1,353 @@
+\doxysection{Board.\+cpp}
+\hypertarget{Board_8cpp_source}{}\label{Board_8cpp_source}\index{source/Board.cpp@{source/Board.cpp}}
+\mbox{\hyperlink{Board_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00001}00001\ \textcolor{preprocessor}{\#include\ "{}../include/Board.h"{}}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00002}00002\ \textcolor{preprocessor}{\#include\ "{}../include/Piece.h"{}}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00003}00003\ \textcolor{preprocessor}{\#include\ "{}../include/Player.h"{}}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00004}00004\ \textcolor{preprocessor}{\#include\ "{}../include/Pawn.h"{}}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00005}00005\ \textcolor{preprocessor}{\#include\ "{}../include/Rook.h"{}}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00006}00006\ \textcolor{preprocessor}{\#include\ "{}../include/Knight.h"{}}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00007}00007\ \textcolor{preprocessor}{\#include\ "{}../include/Bishop.h"{}}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}../include/Queen.h"{}}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00009}00009\ \textcolor{preprocessor}{\#include\ "{}../include/King.h"{}}\ \ \textcolor{comment}{//\ Assumes\ you\ have\ a\ King\ class\ implemented.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00010}00010\ \textcolor{preprocessor}{\#include\ "{}../include/Move.h"{}}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00011}00011\ \textcolor{preprocessor}{\#include\ "{}../dependencies/Style.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00012}00012\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <cstdlib>}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00017}00017\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00019}00019\ \textcolor{comment}{//\ Constructor.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00020}00020\ Board::Board()}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00021}00021\ \ \ \ \ :\ m\_enPassantAvailable(false),\ m\_enPassantX(-\/1),\ m\_enPassantY(-\/1)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00022}00022\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{comment}{//\ Initialize\ board\ squares\ to\ nullptr.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keyword}{auto}\&\ row\ :\ m\_board)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ row.fill(\textcolor{keyword}{nullptr});}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00026}00026\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{comment}{//\ Set\ up\ pieces\ in\ their\ starting\ positions.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00028}00028\ \ \ \ \ initializeBoard();}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00031}00031\ \textcolor{comment}{//\ Destructor.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00032}00032\ Board::\string~Board()}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00033}00033\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 8;\ i++)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 8;\ j++)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ m\_board[i][j];}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00037}00037\ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00039}00039\ \textcolor{keywordtype}{void}\ Board::initializeBoard()}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00040}00040\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ White\ Pieces\ -\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{comment}{//\ Major\ pieces\ on\ row\ 0.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00043}00043\ \ \ \ \ m\_board[0][0]\ =\ \textcolor{keyword}{new}\ Rook(PieceColor::BLACK);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00044}00044\ \ \ \ \ m\_board[0][1]\ =\ \textcolor{keyword}{new}\ Knight(PieceColor::BLACK);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00045}00045\ \ \ \ \ m\_board[0][2]\ =\ \textcolor{keyword}{new}\ Bishop(PieceColor::BLACK);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00046}00046\ \ \ \ \ m\_board[0][3]\ =\ \textcolor{keyword}{new}\ Queen(PieceColor::BLACK);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00047}00047\ \ \ \ \ m\_board[0][4]\ =\ \textcolor{keyword}{new}\ King(PieceColor::BLACK);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00048}00048\ \ \ \ \ m\_board[0][5]\ =\ \textcolor{keyword}{new}\ Bishop(PieceColor::BLACK);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00049}00049\ \ \ \ \ m\_board[0][6]\ =\ \textcolor{keyword}{new}\ Knight(PieceColor::BLACK);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00050}00050\ \ \ \ \ m\_board[0][7]\ =\ \textcolor{keyword}{new}\ Rook(PieceColor::BLACK);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{comment}{//\ Pawns\ on\ row\ 1.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ x\ =\ 0;\ x\ <\ 8;\ ++x)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ m\_board[1][x]\ =\ \textcolor{keyword}{new}\ Pawn(PieceColor::BLACK);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00054}00054\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{comment}{//\ -\/-\/-\/\ Black\ Pieces\ -\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00056}00056\ \ \ \ \ \textcolor{comment}{//\ Pawns\ on\ row\ 6.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00057}00057\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ x\ =\ 0;\ x\ <\ 8;\ ++x)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ m\_board[6][x]\ =\ \textcolor{keyword}{new}\ Pawn(PieceColor::WHITE);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{comment}{//\ Major\ pieces\ on\ row\ 7.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00060}00060\ \ \ \ \ m\_board[7][0]\ =\ \textcolor{keyword}{new}\ Rook(PieceColor::WHITE);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00061}00061\ \ \ \ \ m\_board[7][1]\ =\ \textcolor{keyword}{new}\ Knight(PieceColor::WHITE);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00062}00062\ \ \ \ \ m\_board[7][2]\ =\ \textcolor{keyword}{new}\ Bishop(PieceColor::WHITE);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00063}00063\ \ \ \ \ m\_board[7][3]\ =\ \textcolor{keyword}{new}\ Queen(PieceColor::WHITE);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00064}00064\ \ \ \ \ m\_board[7][4]\ =\ \textcolor{keyword}{new}\ King(PieceColor::WHITE);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00065}00065\ \ \ \ \ m\_board[7][5]\ =\ \textcolor{keyword}{new}\ Bishop(PieceColor::WHITE);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00066}00066\ \ \ \ \ m\_board[7][6]\ =\ \textcolor{keyword}{new}\ Knight(PieceColor::WHITE);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00067}00067\ \ \ \ \ m\_board[7][7]\ =\ \textcolor{keyword}{new}\ Rook(PieceColor::WHITE);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00068}00068\ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00070}00070\ \textcolor{keywordtype}{void}\ Board::Draw()\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00071}00071\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00072}00072\ \ \ \ \ std::ostringstream\ oss;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00073}00073\ \ \ \ \ oss\ <<\ \textcolor{stringliteral}{"{}\ \ \ a\ \ b\ \ c\ \ d\ \ e\ \ f\ \ g\ \ h\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00075}00075\ \ \ \ \ \textcolor{keywordtype}{int}\ count\{0\};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00076}00076\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00077}00077\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 8;\ ++i)\ \ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00078}00078\ \ \ \ \ \ \ \ \ oss\ <<\ 8\ -\/\ i\ <<\ \textcolor{stringliteral}{"{}\ "{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00079}00079\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 8;\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (count++\ \%\ 2\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ oss\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)033[44m"{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00084}00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ oss\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)033[42m"{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (m\_board[i][j]\ ==\ \textcolor{keyword}{nullptr})}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ oss\ <<\ \textcolor{stringliteral}{"{}\ \ \ "{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ oss\ <<\ Style::Cta(m\_board[i][j]-\/>Color());}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ oss\ <<\ \textcolor{charliteral}{'\ '}\ <<\ m\_board[i][j]-\/>Symbol()\ <<\ \textcolor{charliteral}{'\ '};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00092}00092\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ oss\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)033[0m"{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00094}00094\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00095}00095\ \ \ \ \ \ \ \ \ oss\ <<\ \textcolor{charliteral}{'\ '}\ <<\ 8\ -\/\ i\ <<\ \textcolor{charliteral}{'\(\backslash\)n'};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00096}00096\ \ \ \ \ \ \ \ \ count++;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00098}00098\ \ \ \ \ oss\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)033[0m\ \ \ a\ \ b\ \ c\ \ d\ \ e\ \ f\ \ g\ \ h"{}}\ <<\ std::endl;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00099}00099\ \ \ \ \ Style::PrintBox(oss.str(),\ \textcolor{stringliteral}{"{}\ Board\ "{}});}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00100}00100\ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00102}\mbox{\hyperlink{Board_8cpp_aac919280662b1a7e6284a0cacbeba5d1}{00102}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{Board_8cpp_aac919280662b1a7e6284a0cacbeba5d1}{LogMoveRecord}}(\textcolor{keyword}{const}\ MoveRecord\&\ record)\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00103}00103\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}Move\ Record:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00104}00104\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ From:\ "{}}\ <<\ char(\textcolor{charliteral}{'a'}\ +\ record.x0)\ <<\ 8\ -\/\ record.y0\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ \textcolor{stringliteral}{"{}\ \ To:\ "{}}\ <<\ char(\textcolor{charliteral}{'a'}\ +\ record.x1)\ <<\ 8\ -\/\ record.y1\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00107}00107\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ Moved\ Piece:\ "{}}\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (record.movedPiece\ ?\ record.movedPiece-\/>Symbol()\ :\ \textcolor{stringliteral}{"{}None"{}})\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00110}00110\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ Captured\ Piece:\ "{}}\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (record.capturedPiece\ ?\ record.capturedPiece-\/>Symbol()\ :\ \textcolor{stringliteral}{"{}None"{}})\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00113}00113\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ Replacement\ Piece\ (Promotion):\ "{}}\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (record.replacementPiece\ ?\ record.replacementPiece-\/>Symbol()\ :\ \textcolor{stringliteral}{"{}None"{}})\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00115}00115\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00116}00116\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ En\ Passant\ Used:\ "{}}\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (record.enPassantUsed\ ?\ \textcolor{stringliteral}{"{}Yes"{}}\ :\ \textcolor{stringliteral}{"{}No"{}})\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00119}00119\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ Previous\ En\ Passant\ State:\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00120}00120\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Available:\ "{}}\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ (record.prevEnPassantAvailable\ ?\ \textcolor{stringliteral}{"{}Yes"{}}\ :\ \textcolor{stringliteral}{"{}No"{}})\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00123}00123\ \ \ \ \ \textcolor{keywordflow}{if}\ (record.prevEnPassantAvailable)\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00124}00124\ \ \ \ \ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}\ \ \ \ Position:\ "{}}\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ char(\textcolor{charliteral}{'a'}\ +\ record.prevEnPassantX)\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ <<\ 8\ -\/\ record.prevEnPassantY\ <<\ \textcolor{stringliteral}{"{}\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00127}00127\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00129}00129\ \ \ \ \ std::cout\ <<\ \textcolor{stringliteral}{"{}-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/\(\backslash\)n"{}};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00130}00130\ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00131}00131\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00132}00132\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00133}00133\ \textcolor{keywordtype}{bool}\ Board::ExecuteMove(Move\ \&move,\ Player*\ executor)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00134}00134\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00135}00135\ \ \ \ \ \textcolor{keywordtype}{int}\ x0\ =\ move.getStartX(),\ y0\ =\ move.getStartY();}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00136}00136\ \ \ \ \ \textcolor{keywordtype}{int}\ x1\ =\ move.getEndX(),\ y1\ =\ move.getEndY();}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00137}00137\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00138}00138\ \ \ \ \ Piece*\ moving\ =\ m\_board[y0][x0];}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00139}00139\ \ \ \ \ Piece*\ target\ =\ m\_board[y1][x1];\ \ \textcolor{comment}{//\ Target\ piece\ (if\ any)}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00140}00140\ \ \ \ \ Piece*\ replacement\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00142}00142\ \ \ \ \ \textcolor{keywordflow}{if}\ (!moving\ ||\ moving-\/>Color()\ !=\ executor-\/>Color())\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00143}00143\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00144}00144\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00146}00146\ \ \ \ \ \textcolor{comment}{//\ Ensure\ the\ move\ is\ valid\ for\ the\ selected\ piece.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00147}00147\ \ \ \ \ \textcolor{keywordflow}{if}\ (!moving-\/>IsValidMove(target,\ \textcolor{keyword}{this},\ move,\ replacement))\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00149}00149\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00150}00150\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00151}00151\ \ \ \ \ \textcolor{keywordtype}{bool}\ wasInCheck\ =\ IsKingChecked(executor-\/>Color());}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00152}00152\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00153}00153\ \ \ \ \ \textcolor{comment}{//\ Execute\ the\ move\ and\ capture\ the\ move\ state.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00154}00154\ \ \ \ \ MoveRecord\ record\ =\ CommitMoveRecord(move,\ replacement);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00156}00156\ \ \ \ \ \textcolor{comment}{//\ If\ the\ king\ was\ in\ check\ and\ the\ move\ doesn't\ resolve\ it,\ revert.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00157}00157\ \ \ \ \ \textcolor{keywordflow}{if}\ (wasInCheck\ \&\&\ IsKingChecked(executor-\/>Color()))\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00158}00158\ \ \ \ \ \ \ \ \ RevertMoveRecord(record);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00159}00159\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00160}00160\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00161}00161\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00162}00162\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00163}00163\ \ \ \ \ \textcolor{comment}{//\ Check\ if\ the\ move\ puts\ the\ player's\ own\ king\ in\ check.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00164}00164\ \ \ \ \ \textcolor{keywordflow}{if}\ (IsKingChecked(executor-\/>Color()))\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00165}00165\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Revert\ the\ move\ using\ the\ saved\ state.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00166}00166\ \ \ \ \ \ \ \ \ RevertMoveRecord(record);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00167}00167\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00168}00168\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00170}00170\ \ \ \ \ \textcolor{comment}{//\ If\ a\ capture\ was\ made,\ record\ it.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00171}00171\ \ \ \ \ \textcolor{keywordflow}{if}\ (record.capturedPiece)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00172}00172\ \ \ \ \ \ \ \ \ executor-\/>AddCapture(record.capturedPiece);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00174}00174\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00175}00175\ \ \ \ \ \textcolor{comment}{//\ Update\ check\ state\ for\ opponent.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00176}00176\ \ \ \ \ SetKingChecked(moving-\/>Color()\ ==\ PieceColor::WHITE\ ?\ PieceColor::BLACK\ :\ PieceColor::WHITE);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00177}00177\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00178}00178\ \ \ \ \ \textcolor{comment}{//\ Handle\ en\ passant\ state\ if\ applicable.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00179}00179\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}Pawn*\textcolor{keyword}{>}(moving)\ \&\&\ std::abs(y1\ -\/\ y0)\ ==\ 2)\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00180}00180\ \ \ \ \ \ \ \ \ m\_enPassantAvailable\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00181}00181\ \ \ \ \ \ \ \ \ m\_enPassantX\ =\ x0;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00182}00182\ \ \ \ \ \ \ \ \ m\_enPassantY\ =\ y0\ +\ (y1\ -\/\ y0)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00183}00183\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00184}00184\ \ \ \ \ \ \ \ \ ClearEnPassantTarget();}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00185}00185\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00187}00187\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00188}00188\ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00189}00189\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00191}00191\ Piece*\ Board::GetPiece(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\textcolor{keyword}{\ const\ }}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00192}00192\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00193}00193\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_board[y][x];}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00194}00194\ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00196}00196\ \textcolor{keywordtype}{bool}\ Board::IsEnPassantTarget(\textcolor{keywordtype}{int}\ x,\ \textcolor{keywordtype}{int}\ y)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00197}00197\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00198}00198\ \ \ \ \ \textcolor{keywordflow}{return}\ m\_enPassantAvailable\ \&\&\ (x\ ==\ m\_enPassantX)\ \&\&\ (y\ ==\ m\_enPassantY);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00199}00199\ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00200}00200\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00201}00201\ \textcolor{keywordtype}{void}\ Board::ClearEnPassantTarget()}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00202}00202\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00203}00203\ \ \ \ \ m\_enPassantAvailable\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00204}00204\ \ \ \ \ m\_enPassantX\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00205}00205\ \ \ \ \ m\_enPassantY\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00206}00206\ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00207}00207\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00208}00208\ \textcolor{comment}{//\ Returns\ true\ if\ the\ king\ of\ the\ specified\ color\ is\ in\ check.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00209}00209\ \textcolor{keywordtype}{bool}\ Board::IsKingChecked(Color\ color)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00210}00210\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00211}00211\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00212}00212\ \ \ \ \ \textcolor{comment}{//\ Find\ the\ king\ of\ the\ specified\ color.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00213}00213\ \ \ \ \ \textcolor{keywordtype}{int}\ kingX\ =\ -\/1,\ kingY\ =\ -\/1;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00214}00214\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 8;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00215}00215\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 8;\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00216}00216\ \ \ \ \ \ \ \ \ \ \ \ \ Piece*\ piece\ =\ m\_board[i][j];}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00217}00217\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (piece\ !=\ \textcolor{keyword}{nullptr}\ \&\&\ piece-\/>Color()\ ==\ color\ \&\&\ piece-\/>IsKing())\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00218}00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ kingX\ =\ j;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00219}00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ kingY\ =\ i;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00220}00220\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00221}00221\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00222}00222\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00223}00223\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (kingX\ !=\ -\/1)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00224}00224\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00225}00225\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00226}00226\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00227}00227\ \ \ \ \ \textcolor{comment}{//\ If\ king\ was\ not\ found\ (should\ not\ happen\ in\ a\ standard\ game),\ return\ false.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00228}00228\ \ \ \ \ \textcolor{keywordflow}{if}\ (kingX\ ==\ -\/1)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00229}00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00230}00230\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00231}00231\ \ \ \ \ \textcolor{comment}{//\ Check\ every\ enemy\ piece\ to\ see\ if\ it\ has\ a\ valid\ move\ to\ the\ king's\ position.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00232}00232\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 8;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00233}00233\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 8;\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00234}00234\ \ \ \ \ \ \ \ \ \ \ \ \ Piece*\ piece\ =\ m\_board[i][j];}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00235}00235\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (piece\ !=\ \textcolor{keyword}{nullptr}\ \&\&\ piece-\/>Color()\ !=\ color)\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00236}00236\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Create\ a\ temporary\ move\ from\ the\ enemy\ piece's\ position\ to\ the\ king's\ position.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00237}00237\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Move\ testMove(j,\ i,\ kingX,\ kingY);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00238}00238\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Piece*\ replacement\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00239}00239\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (piece-\/>IsValidMove(m\_board[kingY][kingX],\ \textcolor{keyword}{const\_cast<}Board*\textcolor{keyword}{>}(\textcolor{keyword}{this}),\ testMove,\ replacement))}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00240}00240\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00241}00241\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ King\ is\ under\ attack.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00242}00242\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00243}00243\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00244}00244\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00245}00245\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00246}00246\ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ No\ enemy\ piece\ can\ legally\ move\ to\ the\ king's\ square.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00247}00247\ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00248}00248\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00249}00249\ \textcolor{comment}{//\ Updates\ the\ check\ state\ for\ the\ king\ of\ the\ given\ color\ and\ returns\ the\ result.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00250}00250\ \textcolor{keywordtype}{bool}\ Board::SetKingChecked(Color\ color)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00251}00251\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00252}00252\ \ \ \ \ \textcolor{keywordtype}{bool}\ inCheck\ =\ IsKingChecked(color);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00253}00253\ \ \ \ \ \textcolor{keywordflow}{if}\ (color\ ==\ PieceColor::WHITE)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00254}00254\ \ \ \ \ \ \ \ \ m\_whiteKingInCheck\ =\ inCheck;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00255}00255\ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00256}00256\ \ \ \ \ \ \ \ \ m\_blackKingInCheck\ =\ inCheck;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00257}00257\ \ \ \ \ \textcolor{keywordflow}{return}\ inCheck;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00258}00258\ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00259}00259\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00262}00262\ MoveRecord\ Board::CommitMoveRecord(Move\ \&move,\ Piece*\ replacement)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00263}00263\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00264}00264\ \ \ \ \ \textcolor{keywordtype}{int}\ x0\ =\ move.getStartX();}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00265}00265\ \ \ \ \ \textcolor{keywordtype}{int}\ y0\ =\ move.getStartY();}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00266}00266\ \ \ \ \ \textcolor{keywordtype}{int}\ x1\ =\ move.getEndX();}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00267}00267\ \ \ \ \ \textcolor{keywordtype}{int}\ y1\ =\ move.getEndY();}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00268}00268\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00269}00269\ \ \ \ \ MoveRecord\ record;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00270}00270\ \ \ \ \ record.x0\ =\ x0;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00271}00271\ \ \ \ \ record.y0\ =\ y0;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00272}00272\ \ \ \ \ record.x1\ =\ x1;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00273}00273\ \ \ \ \ record.y1\ =\ y1;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00274}00274\ \ \ \ \ record.prevEnPassantAvailable\ =\ m\_enPassantAvailable;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00275}00275\ \ \ \ \ record.prevEnPassantX\ =\ m\_enPassantX;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00276}00276\ \ \ \ \ record.prevEnPassantY\ =\ m\_enPassantY;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00277}00277\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00278}00278\ \ \ \ \ record.movedPiece\ =\ m\_board[y0][x0];}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00279}00279\ \ \ \ \ record.replacementPiece\ =\ replacement;\ \ \textcolor{comment}{//\ Will\ be\ non-\/null\ for\ a\ promotion.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00280}00280\ \ \ \ \ record.enPassantUsed\ =\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00281}00281\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00282}00282\ \ \ \ \ \textcolor{comment}{//\ By\ default,\ assume\ the\ captured\ piece\ is\ on\ the\ target\ square.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00283}00283\ \ \ \ \ record.capturedPiece\ =\ m\_board[y1][x1];}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00284}00284\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00285}00285\ \ \ \ \ \textcolor{comment}{//\ Check\ for\ en\ passant\ capture:\ if\ a\ pawn\ moves\ diagonally\ into\ an\ empty\ square}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00286}00286\ \ \ \ \ \textcolor{comment}{//\ that\ is\ flagged\ as\ an\ en\ passant\ target,\ then\ the\ captured\ pawn\ is\ adjacent.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00287}00287\ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{dynamic\_cast<}Pawn*\textcolor{keyword}{>}(record.movedPiece)\ \&\&}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00288}00288\ \ \ \ \ \ \ \ \ std::abs(x1\ -\/\ x0)\ ==\ 1\ \&\&\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00289}00289\ \ \ \ \ \ \ \ \ record.capturedPiece\ ==\ \textcolor{keyword}{nullptr}\ \&\&}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00290}00290\ \ \ \ \ \ \ \ \ IsEnPassantTarget(x1,\ y1))}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00291}00291\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00292}00292\ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ For\ en\ passant,\ the\ captured\ pawn\ is\ at\ (x1,\ y0).}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00293}00293\ \ \ \ \ \ \ \ \ \ record.capturedPiece\ =\ m\_board[y0][x1];}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00294}00294\ \ \ \ \ \ \ \ \ \ m\_board[y0][x1]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00295}00295\ \ \ \ \ \ \ \ \ \ record.enPassantUsed\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00296}00296\ \ \ \ \ \ \ \ \ \ ClearEnPassantTarget();}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00297}00297\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00298}00298\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00299}00299\ \ \ \ \ \textcolor{comment}{//\ Perform\ the\ move.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00300}00300\ \ \ \ \ \textcolor{comment}{//\ If\ a\ promotion\ occurred\ (replacement\ non-\/null),\ place\ the\ replacement\ piece.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00301}00301\ \ \ \ \ m\_board[y1][x1]\ =\ (replacement\ !=\ \textcolor{keyword}{nullptr})\ ?\ replacement\ :\ record.movedPiece;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00302}00302\ \ \ \ \ m\_board[y0][x0]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00303}00303\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00304}00304\ \ \ \ \ \textcolor{keywordflow}{return}\ record;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00305}00305\ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00306}00306\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00309}00309\ \textcolor{keywordtype}{void}\ Board::RevertMoveRecord(\textcolor{keyword}{const}\ MoveRecord\ \&record)}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00310}00310\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00311}00311\ \ \ \ \ \textcolor{comment}{//\ If\ a\ promotion\ occurred,\ the\ piece\ on\ the\ destination\ is\ the\ replacement.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00312}00312\ \ \ \ \ \textcolor{comment}{//\ We\ delete\ it\ and\ restore\ the\ original\ pawn.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00313}00313\ \ \ \ \ \textcolor{keywordflow}{if}\ (record.replacementPiece\ !=\ \textcolor{keyword}{nullptr})\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00314}00314\ \ \ \ \ \ \ \ \ \textcolor{keyword}{delete}\ m\_board[record.y1][record.x1];}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00315}00315\ \ \ \ \ \ \ \ \ m\_board[record.y1][record.x1]\ =\ record.movedPiece;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00316}00316\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00317}00317\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ For\ an\ en\ passant\ capture,\ the\ destination\ square\ should\ be\ empty,}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00318}00318\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ the\ captured\ pawn\ must\ be\ restored\ to\ its\ original\ square.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00319}00319\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (record.enPassantUsed)\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00320}00320\ \ \ \ \ \ \ \ \ \ \ \ \ m\_board[record.y0][record.x0]\ =\ record.movedPiece;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00321}00321\ \ \ \ \ \ \ \ \ \ \ \ \ m\_board[record.y1][record.x1]\ =\ \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00322}00322\ \ \ \ \ \ \ \ \ \ \ \ \ m\_board[record.y0][record.x1]\ =\ record.capturedPiece;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00323}00323\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00324}00324\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Standard\ move:\ restore\ the\ moved\ piece\ and\ captured\ piece.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00325}00325\ \ \ \ \ \ \ \ \ \ \ \ \ m\_board[record.y0][record.x0]\ =\ record.movedPiece;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00326}00326\ \ \ \ \ \ \ \ \ \ \ \ \ m\_board[record.y1][record.x1]\ =\ record.capturedPiece;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00327}00327\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00328}00328\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00329}00329\ \ \ \ \ \textcolor{comment}{//\ Restore\ the\ en\ passant\ state.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00330}00330\ \ \ \ \ m\_enPassantAvailable\ =\ record.prevEnPassantAvailable;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00331}00331\ \ \ \ \ m\_enPassantX\ =\ record.prevEnPassantX;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00332}00332\ \ \ \ \ m\_enPassantY\ =\ record.prevEnPassantY;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00333}00333\ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00334}00334\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00335}00335\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00336}00336\ std::vector<Move>\ Board::GetPossibleMoves(Color\ color)\textcolor{keyword}{\ const}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00337}00337\ \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00338}00338\ \ \ \ \ std::vector<Move>\ moves;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00339}00339\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 8;\ ++i)\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00340}00340\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ 0;\ j\ <\ 8;\ ++j)\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00341}00341\ \ \ \ \ \ \ \ \ \ \ \ \ Piece*\ piece\ =\ m\_board[i][j];}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00342}00342\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (piece\ !=\ \textcolor{keyword}{nullptr}\ \&\&\ piece-\/>Color()\ ==\ color)\ \{}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00343}00343\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ std::vector<Move>\ pieceMoves\ =\ piece-\/>PossibleMoves(\textcolor{keyword}{const\_cast<}Board*\textcolor{keyword}{>}(\textcolor{keyword}{this}),\ j,\ i);}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00344}00344\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Insert\ the\ candidate\ moves\ into\ our\ vector.}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00345}00345\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ moves.insert(moves.end(),\ pieceMoves.begin(),\ pieceMoves.end());}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00346}00346\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00347}00347\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00348}00348\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00349}00349\ }
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00350}00350\ \ \ \ \ \textcolor{keywordflow}{return}\ moves;}
+\DoxyCodeLine{\Hypertarget{Board_8cpp_source_l00351}00351\ \}}
+
+\end{DoxyCode}

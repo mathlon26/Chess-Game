@@ -1,0 +1,134 @@
+\doxysection{Pawn Class Reference}
+\hypertarget{classPawn}{}\label{classPawn}\index{Pawn@{Pawn}}
+
+
+{\ttfamily \#include $<$Pawn.\+h$>$}
+
+
+
+Inheritance diagram for Pawn\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=121pt]{classPawn__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Pawn\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=121pt]{classPawn__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPawn_a7bdce6cc89b699f6deb9f176256d2bbd}{Pawn}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} color)
+\item 
+\mbox{\hyperlink{classPawn_a3095938fb8326469c3bd05da0b8f50af}{\texorpdfstring{$\sim$}{\string~}\+Pawn}} ()
+\item 
+std\+::string \mbox{\hyperlink{classPawn_a04ed6a9744fe13c85fee3331df8c8aca}{Symbol}} () const override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classMove}{Move}} $>$ \mbox{\hyperlink{classPawn_a8e427faba3cb063c2564f8ee7f2cb7f3}{Possible\+Moves}} (\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}board, int currentX, int currentY) const override
+\item 
+bool \mbox{\hyperlink{classPawn_af11d10b5d5f2456eb97d835bf0d8b4f8}{Is\+Valid\+Move}} (\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}target, \mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}board, \mbox{\hyperlink{classMove}{Move}} \&move, \mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}\&set\+Replacement) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPiece}{Piece}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f}{Piece}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} color)
+\item 
+virtual \mbox{\hyperlink{classPiece_ab63f5b3faabe6ce60c9eb1806511ff9d}{\texorpdfstring{$\sim$}{\string~}\+Piece}} ()=default
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} \mbox{\hyperlink{classPiece_ad31a695453335fbbc36a9c749395f7c1}{Color}} () const
+\item 
+virtual bool \mbox{\hyperlink{classPiece_a392fecd481d60993e7d6d73116b2e171}{Is\+King}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classPiece}{Piece}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} \mbox{\hyperlink{classPiece_a757a577b6dfb06c6558021b828ca7c1d}{m\+\_\+color}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPawn_a7bdce6cc89b699f6deb9f176256d2bbd}\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\index{Pawn@{Pawn}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{Pawn()}{Pawn()}}
+{\footnotesize\ttfamily \label{classPawn_a7bdce6cc89b699f6deb9f176256d2bbd} 
+Pawn\+::\+Pawn (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}}}]{color}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=259pt]{classPawn_a7bdce6cc89b699f6deb9f176256d2bbd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classPawn_a3095938fb8326469c3bd05da0b8f50af}\index{Pawn@{Pawn}!````~Pawn@{\texorpdfstring{$\sim$}{\string~}Pawn}}
+\index{````~Pawn@{\texorpdfstring{$\sim$}{\string~}Pawn}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Pawn()}{\string~Pawn()}}
+{\footnotesize\ttfamily \label{classPawn_a3095938fb8326469c3bd05da0b8f50af} 
+Pawn\+::\texorpdfstring{$\sim$}{\string~}\+Pawn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPawn_af11d10b5d5f2456eb97d835bf0d8b4f8}\index{Pawn@{Pawn}!IsValidMove@{IsValidMove}}
+\index{IsValidMove@{IsValidMove}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{IsValidMove()}{IsValidMove()}}
+{\footnotesize\ttfamily \label{classPawn_af11d10b5d5f2456eb97d835bf0d8b4f8} 
+bool Pawn\+::\+Is\+Valid\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}}]{target}{, }\item[{\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{\mbox{\hyperlink{classMove}{Move}} \&}]{move}{, }\item[{\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}\&}]{set\+Replacement}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_a363193ff97c3e10b77feb6aec81d1a35}{Piece}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPawn_af11d10b5d5f2456eb97d835bf0d8b4f8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classPawn_a8e427faba3cb063c2564f8ee7f2cb7f3}\index{Pawn@{Pawn}!PossibleMoves@{PossibleMoves}}
+\index{PossibleMoves@{PossibleMoves}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{PossibleMoves()}{PossibleMoves()}}
+{\footnotesize\ttfamily \label{classPawn_a8e427faba3cb063c2564f8ee7f2cb7f3} 
+std\+::vector$<$ \mbox{\hyperlink{classMove}{Move}} $>$ Pawn\+::\+Possible\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{int}]{currentX}{, }\item[{int}]{currentY}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_a1c67fd5e66c3e7b6c1f4ebf3207e65e2}{Piece}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPawn_a8e427faba3cb063c2564f8ee7f2cb7f3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classPawn_a04ed6a9744fe13c85fee3331df8c8aca}\index{Pawn@{Pawn}!Symbol@{Symbol}}
+\index{Symbol@{Symbol}!Pawn@{Pawn}}
+\doxysubsubsection{\texorpdfstring{Symbol()}{Symbol()}}
+{\footnotesize\ttfamily \label{classPawn_a04ed6a9744fe13c85fee3331df8c8aca} 
+std\+::string Pawn\+::\+Symbol (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_abc54f78cfc3e6c4ed3d103ddaeb1d96f}{Piece}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/huplo/\+Coding/\+Projects/\+C++/chess-\/game/include/\mbox{\hyperlink{Pawn_8h}{Pawn.\+h}}\item 
+\mbox{\hyperlink{Pawn_8cpp}{Pawn.\+cpp}}\end{DoxyCompactItemize}

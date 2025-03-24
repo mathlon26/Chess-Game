@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="CanvasApp_8h" kind="file" language="C++">
+    <compoundname>CanvasApp.h</compoundname>
+    <includes refid="Canvas_8h" local="yes">Canvas.h</includes>
+    <includes refid="App_8h" local="yes">App.h</includes>
+    <includedby refid="ChessGame_8h" local="yes">/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>../dependencies/Style.hpp</label>
+        <link refid="Style_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>App.h</label>
+        <link refid="App_8h"/>
+      </node>
+      <node id="2">
+        <label>Canvas.h</label>
+        <link refid="Canvas_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/CanvasApp.h</label>
+        <link refid="CanvasApp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>cstdio</label>
+      </node>
+      <node id="6">
+        <label>cstdlib</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="10">
+        <label>limits</label>
+      </node>
+      <node id="9">
+        <label>regex</label>
+      </node>
+      <node id="7">
+        <label>sstream</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/CanvasApp.h</label>
+        <link refid="CanvasApp_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h</label>
+        <link refid="ChessGame_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ChessGame.cpp</label>
+        <link refid="ChessGame_8cpp"/>
+      </node>
+      <node id="4">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classCanvasApp" prot="public">CanvasApp</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>CANVAS_APP__H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CANVAS_APP__H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Canvas_8h" kindref="compound">Canvas.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="App_8h" kindref="compound">App.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="classCanvasApp" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classCanvasApp_1af9ee675c88f6e09bc052de53d5afd4b5" kindref="member">CanvasApp</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classCanvas_1a5fce53f080ad6540094901f9768805a8" kindref="member">Canvas</ref>,<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classApp_1acb8cbf3e285b91d0170ffe87df5989c5" kindref="member">App</ref></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="10" refid="classCanvasApp_1af9ee675c88f6e09bc052de53d5afd4b5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCanvasApp_1af9ee675c88f6e09bc052de53d5afd4b5" kindref="member">CanvasApp</ref>()<sp/>:<sp/><ref refid="classCanvas_1a5fce53f080ad6540094901f9768805a8" kindref="member">Canvas</ref>{},<sp/><ref refid="classApp_1acb8cbf3e285b91d0170ffe87df5989c5" kindref="member">App</ref>{}<sp/>{};</highlight></codeline>
+<codeline lineno="11" refid="classCanvasApp_1a40ee66de67fa04811c27cb883bbca3ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classCanvasApp_1a40ee66de67fa04811c27cb883bbca3ba" kindref="member">~CanvasApp</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classCanvasApp_1a676b5e32d8b2d3073d2bcaa908ca4e6c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCanvasApp_1a676b5e32d8b2d3073d2bcaa908ca4e6c" kindref="member">Init</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="14" refid="classCanvasApp_1aaa5e049733d0a342e6826f3a609d614f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCanvasApp_1aaa5e049733d0a342e6826f3a609d614f" kindref="member">Update</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="15" refid="classCanvasApp_1a7ce1991bf3631e05017d04781f0d49e3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCanvasApp_1a7ce1991bf3631e05017d04781f0d49e3" kindref="member">Draw</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="16" refid="classCanvasApp_1a25ea309d5cd14e5ee4683c10d6336d63" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classCanvasApp_1a25ea309d5cd14e5ee4683c10d6336d63" kindref="member">Run</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CANVAS_APP__H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/include/CanvasApp.h"/>
+  </compounddef>
+</doxygen>

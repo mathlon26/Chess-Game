@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="Player_8cpp" kind="file" language="C++">
+    <compoundname>Player.cpp</compoundname>
+    <includes refid="Player_8h" local="yes">../include/Player.h</includes>
+    <incdepgraph>
+      <node id="8">
+        <label>../dependencies/Style.hpp</label>
+        <link refid="Style_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Board.h</label>
+        <link refid="Board_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Move.h</label>
+        <link refid="Move_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Piece.h</label>
+        <link refid="Piece_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/Player.h</label>
+        <link refid="Player_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Player.cpp</label>
+        <link refid="Player_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>array</label>
+      </node>
+      <node id="14">
+        <label>cstdio</label>
+      </node>
+      <node id="9">
+        <label>cstdlib</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="13">
+        <label>limits</label>
+      </node>
+      <node id="12">
+        <label>regex</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="6">
+        <label>stdexcept</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Player_8h" kindref="compound">../include/Player.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3" refid="classPlayer_1ad061cf938c523c0e7d529d5591224250" refkind="member"><highlight class="normal"><ref refid="classPlayer_1ad061cf938c523c0e7d529d5591224250" kindref="member">Player::Player</ref>(<ref refid="Player_8h_1a301cfd5fe9a22cb30292f6e1523247d7" kindref="member">PlayerColor</ref><sp/>color)</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>:</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42" kindref="member">m_color</ref>{color},</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPlayer_1aaef4079e864580e1b197620491d74130" kindref="member">m_captures</ref>{}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="classPlayer_1a278aa7f854813b3d53589d51e74c6cf1" refkind="member"><highlight class="normal"><ref refid="classPlayer_1a278aa7f854813b3d53589d51e74c6cf1" kindref="member">Player::~Player</ref>()</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="classPlayer_1a8248c589e9edeb32a290f48d82bad7ac" refkind="member"><highlight class="normal">std::vector&lt;Piece*&gt;<sp/><ref refid="classPlayer_1a8248c589e9edeb32a290f48d82bad7ac" kindref="member">Player::GetCaptures</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="15"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPlayer_1aaef4079e864580e1b197620491d74130" kindref="member">m_captures</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="classPlayer_1a8600584d0d313d9c9183f8676e30b9c2" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classPlayer_1a8600584d0d313d9c9183f8676e30b9c2" kindref="member">Player::AddCapture</ref>(<ref refid="classPiece" kindref="compound">Piece</ref>*<sp/>captured)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPlayer_1aaef4079e864580e1b197620491d74130" kindref="member">m_captures</ref>.push_back(captured);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classPlayer_1af97f460cbb2594def32e32d9046f73ec" refkind="member"><highlight class="normal"><ref refid="Player_8h_1a301cfd5fe9a22cb30292f6e1523247d7" kindref="member">PlayerColor</ref><sp/><ref refid="classPlayer_1af97f460cbb2594def32e32d9046f73ec" kindref="member">Player::Color</ref>()</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="25"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42" kindref="member">m_color</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Player.cpp"/>
+  </compounddef>
+</doxygen>

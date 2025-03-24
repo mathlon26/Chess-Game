@@ -1,0 +1,80 @@
+.TH "Queen" 3 "Version V4.2.0" "Chess Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Queen
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Queen\&.h>\fP
+.PP
+Inherits \fBPiece\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBQueen\fP (\fBPieceColor\fP color)"
+.br
+.ti -1c
+.RI "\fB~Queen\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBSymbol\fP () const override"
+.br
+.ti -1c
+.RI "std::vector< \fBMove\fP > \fBPossibleMoves\fP (\fBBoard\fP *board, int currentX, int currentY) const override"
+.br
+.ti -1c
+.RI "bool \fBIsValidMove\fP (\fBPiece\fP *target, \fBBoard\fP *board, \fBMove\fP &move, \fBPiece\fP *&setReplacement) const override"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBPiece\fP
+.in +1c
+.ti -1c
+.RI "\fBPiece\fP (\fBPieceColor\fP color)"
+.br
+.ti -1c
+.RI "virtual \fB~Piece\fP ()=default"
+.br
+.ti -1c
+.RI "\fBPieceColor\fP \fBColor\fP () const"
+.br
+.ti -1c
+.RI "virtual bool \fBIsKing\fP () const"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Protected Attributes inherited from \fBPiece\fP
+.in +1c
+.ti -1c
+.RI "\fBPieceColor\fP \fBm_color\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Queen::Queen (\fBPieceColor\fP color)"
+
+.SS "Queen::~Queen ()\fR [inline]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "bool Queen::IsValidMove (\fBPiece\fP * target, \fBBoard\fP * board, \fBMove\fP & move, \fBPiece\fP *& setReplacement) const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBPiece\fP\&.
+.SS "std::vector< \fBMove\fP > Queen::PossibleMoves (\fBBoard\fP * board, int currentX, int currentY) const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBPiece\fP\&.
+.SS "std::string Queen::Symbol () const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBPiece\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chess Game from the source code\&.

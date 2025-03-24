@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Style_8hpp_source" xml:lang="en-US">
+<title>Style.hpp</title>
+<indexterm><primary>/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;STYLE__HPP</emphasis>
+2 <emphasis role="preprocessor">#define&#32;STYLE__HPP</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&lt;cstdlib&gt;</emphasis>
+7 <emphasis role="preprocessor">#include&#32;&lt;sstream&gt;</emphasis>
+8 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+9 <emphasis role="preprocessor">#include&#32;&lt;regex&gt;</emphasis>
+10 <emphasis role="preprocessor">#include&#32;&lt;limits&gt;</emphasis>
+11 <emphasis role="preprocessor">#include&#32;&lt;cstdio&gt;</emphasis>
+12 
+13 <emphasis role="comment">//&#32;Extended&#32;color&#32;enumeration,&#32;including&#32;a&#32;DEFAULT&#32;for&#32;resetting&#32;styles.</emphasis>
+14 <emphasis role="keyword">enum&#32;class</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;{&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d">WHITE</link>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965">BLACK</link>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">RED</link>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">GREEN</link>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f">BLUE</link>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">CYAN</link>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cac634ffea7195608364671ac52ee59a61">MAGENTA</link>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">YELLOW</link>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca555a47662547aa7870851b2ef9ade925">LIGHT_GREEN</link>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca2536bd3910cf3069e2cd184e614ea97d">PINK</link>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">DEFAULT</link>&#32;};
+15 
+16 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classStyle">Style</link>
+17 {&#32;&#32;&#32;&#32;
+18 <emphasis role="keyword">public</emphasis>:
+19 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Convert&#32;a&#32;Color&#32;to&#32;its&#32;corresponding&#32;ANSI&#32;escape&#32;code.</emphasis>
+20 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;std::string&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;color)
+21 &#32;&#32;&#32;&#32;{
+22 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>(color)
+23 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+24 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d">Color::WHITE</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[37m&quot;</emphasis>;
+25 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965">Color::BLACK</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[30m&quot;</emphasis>;
+26 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">Color::RED</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[31m&quot;</emphasis>;
+27 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[32m&quot;</emphasis>;
+28 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</link>:&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[33m&quot;</emphasis>;
+29 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f">Color::BLUE</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[34m&quot;</emphasis>;
+30 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cac634ffea7195608364671ac52ee59a61">Color::MAGENTA</link>:&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[35m&quot;</emphasis>;
+31 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[36m&quot;</emphasis>;
+32 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca555a47662547aa7870851b2ef9ade925">Color::LIGHT_GREEN</link>:&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[92m&quot;</emphasis>;&#32;<emphasis role="comment">//&#32;Bright&#32;green.</emphasis>
+33 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca2536bd3910cf3069e2cd184e614ea97d">Color::PINK</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[95m&quot;</emphasis>;&#32;<emphasis role="comment">//&#32;Bright&#32;magenta.</emphasis>
+34 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>:
+35 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[0m&quot;</emphasis>;
+36 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+37 &#32;&#32;&#32;&#32;}
+38 
+39 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Convert&#32;a&#32;Color&#32;to&#32;its&#32;corresponding&#32;string.</emphasis>
+40 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;std::string&#32;<link linkend="_classStyle_1a38a11d09d6371559e5795c952d44f9d0">Cts</link>(<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;color)
+41 &#32;&#32;&#32;&#32;{
+42 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>(color)
+43 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+44 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d">Color::WHITE</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;white&quot;</emphasis>;
+45 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965">Color::BLACK</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;black&quot;</emphasis>;
+46 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">Color::RED</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;red&quot;</emphasis>;
+47 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;green&quot;</emphasis>;
+48 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</link>:&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;yellow&quot;</emphasis>;
+49 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f">Color::BLUE</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;blue&quot;</emphasis>;
+50 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cac634ffea7195608364671ac52ee59a61">Color::MAGENTA</link>:&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;magenta&quot;</emphasis>;
+51 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;cyan&quot;</emphasis>;
+52 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca555a47662547aa7870851b2ef9ade925">Color::LIGHT_GREEN</link>:&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;light&#32;green&quot;</emphasis>;
+53 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca2536bd3910cf3069e2cd184e614ea97d">Color::PINK</link>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;pink&quot;</emphasis>;
+54 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>:
+55 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+56 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+57 &#32;&#32;&#32;&#32;}
+58 
+59 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;std::string&#32;<link linkend="_classStyle_1a2d36d13fd41a5853a88c269494976e6d">BoldText</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;text)
+60 &#32;&#32;&#32;&#32;{
+61 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[1m&quot;</emphasis>&#32;+&#32;text&#32;+&#32;<emphasis role="stringliteral">&quot;\033[0m&quot;</emphasis>;
+62 &#32;&#32;&#32;&#32;}
+63 
+64 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;std::string&#32;<link linkend="_classStyle_1ae8e0c4a440744134528e61f912cb5fde">UnderlineText</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;text)
+65 &#32;&#32;&#32;&#32;{
+66 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[4m&quot;</emphasis>&#32;+&#32;text&#32;+&#32;<emphasis role="stringliteral">&quot;\033[0m&quot;</emphasis>;
+67 &#32;&#32;&#32;&#32;}
+68 
+69 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;std::string&#32;<link linkend="_classStyle_1aa4a805980672163f52cedd6e54082bfe">LinkText</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;text,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;continueColor&#32;=&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)
+70 &#32;&#32;&#32;&#32;{
+71 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[4m&quot;</emphasis>&#32;+&#32;text&#32;+&#32;<emphasis role="stringliteral">&quot;\033[0m&quot;</emphasis>&#32;+&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(continueColor);
+72 &#32;&#32;&#32;&#32;}
+73 
+74 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Reset&#32;the&#32;console&#32;color.</emphasis>
+75 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;std::string&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>()
+76 &#32;&#32;&#32;&#32;{
+77 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;\033[0m&quot;</emphasis>;
+78 &#32;&#32;&#32;&#32;}
+79 
+80 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Helper&#32;function&#32;to&#32;calculate&#32;the&#32;visual&#32;length&#32;of&#32;a&#32;string,</emphasis>
+81 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;ignoring&#32;ANSI&#32;escape&#32;sequences.</emphasis>
+82 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;text)
+83 &#32;&#32;&#32;&#32;{
+84 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;length&#32;=&#32;0;
+85 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;in_escape&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+86 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;text.size();&#32;++i)
+87 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+88 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!in_escape)
+89 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+90 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(text[i]&#32;==&#32;<emphasis role="charliteral">&apos;\033&apos;</emphasis>)
+91 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;in_escape&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+92 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+93 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;++length;
+94 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+95 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+96 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+97 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Typically&#32;ANSI&#32;codes&#32;end&#32;with&#32;&apos;m&apos;</emphasis>
+98 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(text[i]&#32;==&#32;<emphasis role="charliteral">&apos;m&apos;</emphasis>)
+99 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;in_escape&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;length;
+103 &#32;&#32;&#32;&#32;}
+104 
+105 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Print&#32;text&#32;in&#32;a&#32;given&#32;color.</emphasis>
+106 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classStyle_1a3b124c68a49d02984eda201c45582731">PrintColored</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;text,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;color&#32;=&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)
+107 &#32;&#32;&#32;&#32;{
+108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;text&#32;&lt;&lt;&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>();
+109 &#32;&#32;&#32;&#32;}
+110 
+111 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Print&#32;text&#32;in&#32;a&#32;given&#32;color&#32;followed&#32;by&#32;a&#32;newline.</emphasis>
+112 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6">PrintColoredLine</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;text,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;color&#32;=&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;endl&#32;=&#32;<emphasis role="keyword">true</emphasis>)
+113 &#32;&#32;&#32;&#32;{
+114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classStyle_1a3b124c68a49d02984eda201c45582731">PrintColored</link>(text,&#32;color);
+115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(endl)
+116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;std::endl;
+117 &#32;&#32;&#32;&#32;}
+118 
+119 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Print&#32;a&#32;horizontal&#32;line&#32;using&#32;a&#32;specified&#32;Unicode&#32;character.</emphasis>
+120 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classStyle_1afbf27e0a1814fcdb41a52431451a5752">PrintLine</link>(std::string&#32;ch&#32;=&#32;<emphasis role="stringliteral">&quot;─&quot;</emphasis>,&#32;<emphasis role="keywordtype">int</emphasis>&#32;length&#32;=&#32;50,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;color&#32;=&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)
+121 &#32;&#32;&#32;&#32;{
+122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;line{};
+123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;length;&#32;i++)
+124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;line&#32;+=&#32;ch;
+125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6">PrintColoredLine</link>(line,&#32;color,&#32;<emphasis role="keyword">false</emphasis>);
+127 &#32;&#32;&#32;&#32;}
+128 
+129 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Print&#32;a&#32;styled&#32;title&#32;with&#32;a&#32;border&#32;made&#32;of&#32;Unicode&#32;box-drawing&#32;characters.</emphasis>
+130 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classStyle_1a350f6310e8e2c5ed0a3781d56a9617a3">PrintTitle</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;title,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;color&#32;=&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link>)
+131 &#32;&#32;&#32;&#32;{
+132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;padding&#32;=&#32;12;
+133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;titleLength&#32;=&#32;<link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link>(title);
+134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;totalWidth&#32;=&#32;titleLength&#32;+&#32;padding;
+135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Title&#32;line.</emphasis>
+136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\033[1m&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)
+137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;*&apos;</emphasis>&#32;&lt;&lt;&#32;std::string(totalWidth,&#32;<emphasis role="charliteral">&apos;=&apos;</emphasis>)&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>&#32;
+138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;title&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>&#32;&lt;&lt;&#32;std::string(totalWidth,&#32;<emphasis role="charliteral">&apos;=&apos;</emphasis>)
+139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;*&apos;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>()&#32;&lt;&lt;&#32;std::endl;
+140 &#32;&#32;&#32;&#32;}
+141 
+142 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Print&#32;a&#32;box&#32;around&#32;a&#32;given&#32;(possibly&#32;multi-line)&#32;text.</emphasis>
+143 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classStyle_1a5614a5f517f754485702cc7067efc823">PrintBox</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;text,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;title&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;color&#32;=&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</link>,&#32;<emphasis role="keywordtype">int</emphasis>&#32;fixOffset&#32;=&#32;0)
+144 &#32;&#32;&#32;&#32;{
+145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::istringstream&#32;iss(text);
+146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;line;
+147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;maxLength&#32;=&#32;0;
+148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;std::string&gt;&#32;lines;
+149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(std::getline(iss,&#32;line))
+150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lines.push_back(line);
+152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;dlen&#32;=&#32;<link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link>(line);
+153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(dlen&#32;&gt;&#32;maxLength)
+154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;maxLength&#32;=&#32;dlen;
+155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Top&#32;border.</emphasis>
+157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;┌─&quot;</emphasis>&#32;&lt;&lt;&#32;title;
+158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classStyle_1afbf27e0a1814fcdb41a52431451a5752">PrintLine</link>(<emphasis role="stringliteral">&quot;─&quot;</emphasis>,&#32;maxLength&#32;+&#32;1&#32;-&#32;<emphasis role="keyword">static_cast&lt;</emphasis><emphasis role="keywordtype">int</emphasis><emphasis role="keyword">&gt;</emphasis>(<link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link>(title))&#32;+&#32;fixOffset,&#32;color);
+159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;┐&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>()&#32;&lt;&lt;&#32;std::endl;
+160 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Content&#32;lines&#32;with&#32;side&#32;borders.</emphasis>
+161 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;l&#32;:&#32;lines)
+162 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+163 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;│&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>();
+164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;l&#32;&lt;&lt;&#32;std::string(maxLength&#32;-&#32;<link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link>(l),&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>)&#32;
+165 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;│&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>()&#32;&lt;&lt;&#32;std::endl;
+166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Bottom&#32;border.</emphasis>
+168 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;└&quot;</emphasis>;
+169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classStyle_1afbf27e0a1814fcdb41a52431451a5752">PrintLine</link>(<emphasis role="stringliteral">&quot;─&quot;</emphasis>,&#32;maxLength&#32;+&#32;2,&#32;color);
+170 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;┘&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>()&#32;&lt;&lt;&#32;std::endl;
+171 &#32;&#32;&#32;&#32;}
+172 
+173 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Print&#32;a&#32;success&#32;message&#32;with&#32;a&#32;check&#32;mark.</emphasis>
+174 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classStyle_1aa8360afc84f1305765126889fc2fdca1">PrintSuccess</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;message)
+175 &#32;&#32;&#32;&#32;{
+176 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6">PrintColoredLine</link>(u8<emphasis role="stringliteral">&quot;✔&#32;|&#32;&quot;</emphasis>&#32;+&#32;message,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</link>);
+177 &#32;&#32;&#32;&#32;}
+178 
+179 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Print&#32;a&#32;warning&#32;message&#32;with&#32;a&#32;warning&#32;sign.</emphasis>
+180 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classStyle_1ae625221bb6eca80773f7f9d2ccada911">PrintWarning</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;message)
+181 &#32;&#32;&#32;&#32;{
+182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6">PrintColoredLine</link>(u8<emphasis role="stringliteral">&quot;⚠&#32;|&#32;&quot;</emphasis>&#32;+&#32;message,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</link>);
+183 &#32;&#32;&#32;&#32;}
+184 
+185 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Print&#32;an&#32;error&#32;message&#32;with&#32;a&#32;cross&#32;mark.</emphasis>
+186 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classStyle_1a0a7907c969753a314a4d49c0f94ba636">PrintError</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;message)
+187 &#32;&#32;&#32;&#32;{
+188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6">PrintColoredLine</link>(u8<emphasis role="stringliteral">&quot;✖&#32;|&#32;&quot;</emphasis>&#32;+&#32;message,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0">Color::RED</link>);
+189 &#32;&#32;&#32;&#32;}
+190 
+191 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Exit&#32;the&#32;program&#32;with&#32;an&#32;error&#32;message.</emphasis>
+192 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classStyle_1a32fd215387199b8a96cf7bac5a7fada8">PrintErrorExit</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;error,&#32;<emphasis role="keywordtype">int</emphasis>&#32;code&#32;=&#32;-1)
+193 &#32;&#32;&#32;&#32;{
+194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classStyle_1a0a7907c969753a314a4d49c0f94ba636">PrintError</link>(error);
+195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exit(code);
+196 &#32;&#32;&#32;&#32;}
+197 
+198 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Print&#32;an&#32;informational&#32;message&#32;with&#32;an&#32;info&#32;symbol.</emphasis>
+199 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classStyle_1afa7af12144de17dbf2e3c5bb35547ca0">PrintInfo</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;message)
+200 &#32;&#32;&#32;&#32;{
+201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6">PrintColoredLine</link>(u8<emphasis role="stringliteral">&quot;🛈&#32;|&#32;&quot;</emphasis>&#32;+&#32;message,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link>);
+202 &#32;&#32;&#32;&#32;}
+203 
+204 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Clear&#32;the&#32;console&#32;screen&#32;(works&#32;on&#32;Unix-like&#32;systems&#32;with&#32;ANSI&#32;support).</emphasis>
+205 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classStyle_1a86d28d05ce8974b1ff88317c5d294eb5">ClearConsole</link>()
+206 &#32;&#32;&#32;&#32;{
+207 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#ifdef&#32;DEBUG</emphasis>
+208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;std::endl;
+209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+210 <emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;#endif</emphasis>
+211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\033[2J\033[H&quot;</emphasis>;
+212 &#32;&#32;&#32;&#32;}
+213 
+214 
+215 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classStyle_1a75154acfcb8de2f37fb8d340cef4e83e">GetBoolInput</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;prompt,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;title&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;color&#32;=&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</link>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;titleColor&#32;=&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link>)
+216 &#32;&#32;&#32;&#32;{
+217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!title.empty())
+218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6">PrintColoredLine</link>(<link linkend="_classStyle_1a2d36d13fd41a5853a88c269494976e6d">BoldText</link>(title),&#32;titleColor);
+219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+220 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classStyle_1a3b124c68a49d02984eda201c45582731">PrintColored</link>(prompt&#32;+&#32;<emphasis role="stringliteral">&quot;&#32;[Y/n]&#32;&quot;</emphasis>,&#32;color);
+221 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;in&#32;=&#32;std::cin.get();
+222 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Flush&#32;any&#32;leftover&#32;characters&#32;(including&#32;newline)</emphasis>
+223 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cin.ignore(std::numeric_limits&lt;std::streamsize&gt;::max(),&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>);
+224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;std::endl;
+225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;in&#32;==&#32;<emphasis role="charliteral">&apos;Y&apos;</emphasis>&#32;||&#32;in&#32;==&#32;<emphasis role="charliteral">&apos;y&apos;</emphasis>;
+226 &#32;&#32;&#32;&#32;}
+227 
+228 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;std::string&#32;<link linkend="_classStyle_1ae6c4e5b5dce135d7d912be726271fb3f">GetStringInput</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;prompt,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;title&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;color&#32;=&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</link>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;titleColor&#32;=&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link>)
+229 &#32;&#32;&#32;&#32;{
+230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!title.empty())
+231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6">PrintColoredLine</link>(<link linkend="_classStyle_1a2d36d13fd41a5853a88c269494976e6d">BoldText</link>(title),&#32;titleColor);
+232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;
+233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classStyle_1a3b124c68a49d02984eda201c45582731">PrintColored</link>(prompt,&#32;color);
+234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;input;
+235 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::getline(std::cin,&#32;input);
+236 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;input;
+237 &#32;&#32;&#32;&#32;}
+238 
+239 
+240 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Print&#32;a&#32;divider&#32;line&#32;with&#32;an&#32;optional&#32;centered&#32;message.</emphasis>
+241 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classStyle_1a40fea464a1020972692160df497f3efb">PrintDivider</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;message&#32;=&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;color&#32;=&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)
+242 &#32;&#32;&#32;&#32;{
+243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;width&#32;=&#32;50;
+244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(message.empty())
+245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classStyle_1afbf27e0a1814fcdb41a52431451a5752">PrintLine</link>(<emphasis role="stringliteral">&quot;─&quot;</emphasis>,&#32;width,&#32;color);
+247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;std::endl;
+248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;pad&#32;=&#32;(width&#32;-&#32;<emphasis role="keyword">static_cast&lt;</emphasis><emphasis role="keywordtype">int</emphasis><emphasis role="keyword">&gt;</emphasis>(<link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link>(message))&#32;-&#32;2)&#32;/&#32;2;
+252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;std::string(pad,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>)&#32;
+253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;message&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;
+254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;std::string(pad,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>)&#32;&lt;&lt;&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>()&#32;&lt;&lt;&#32;std::endl;
+255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+256 &#32;&#32;&#32;&#32;}
+257 
+258 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Print&#32;a&#32;table&#32;with&#32;headers&#32;and&#32;rows.</emphasis>
+259 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Each&#32;column&apos;s&#32;width&#32;is&#32;determined&#32;by&#32;the&#32;widest&#32;element&#32;(header&#32;or&#32;cell)&#32;in&#32;that&#32;column.</emphasis>
+260 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classStyle_1afe6790c9756b548e74177f1aac11efbd">PrintTable</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;title,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;std::string&gt;&amp;&#32;header,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;std::vector&lt;std::string&gt;&gt;&amp;&#32;rows,&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;color&#32;=&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)
+261 &#32;&#32;&#32;&#32;{
+262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;cols&#32;=&#32;header.size();
+263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::vector&lt;size_t&gt;&#32;colWidths(cols,&#32;0);
+264 
+265 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Determine&#32;max&#32;width&#32;for&#32;each&#32;column&#32;from&#32;the&#32;header.</emphasis>
+266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;cols;&#32;i++)
+267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;colWidths[i]&#32;=&#32;<link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link>(header[i]);
+269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+270 
+271 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;max&#32;width&#32;from&#32;the&#32;rows.</emphasis>
+272 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;row&#32;:&#32;rows)
+273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+274 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;row.size()&#32;&amp;&amp;&#32;i&#32;&lt;&#32;cols;&#32;i++)
+275 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;cellLength&#32;=&#32;<link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link>(row[i]);
+277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(cellLength&#32;&gt;&#32;colWidths[i])
+278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;colWidths[i]&#32;=&#32;cellLength;
+279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+281 
+282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Helper&#32;lambda&#32;to&#32;repeat&#32;a&#32;string.</emphasis>
+283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;repeat&#32;=&#32;[](<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;s,&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;count)&#32;{
+284 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;result;
+285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;count;&#32;++i)
+286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;result&#32;+=&#32;s;
+287 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;result;
+288 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+289 
+290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::ostringstream&#32;oss;
+291 
+292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Top&#32;border.</emphasis>
+293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;┌&quot;</emphasis>;
+294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;cols;&#32;i++)
+295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(i&#32;==&#32;0)
+297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;title&#32;&lt;&lt;&#32;repeat(<emphasis role="stringliteral">&quot;─&quot;</emphasis>,&#32;colWidths[i]&#32;+&#32;2&#32;-&#32;<link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link>(title));
+298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;repeat(<emphasis role="stringliteral">&quot;─&quot;</emphasis>,&#32;colWidths[i]&#32;+&#32;2);
+300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;(i&#32;&lt;&#32;cols&#32;-&#32;1&#32;?&#32;<emphasis role="stringliteral">&quot;┬&quot;</emphasis>&#32;:&#32;<emphasis role="stringliteral">&quot;┐&quot;</emphasis>);
+301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>()&#32;&lt;&lt;&#32;std::endl;
+303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;oss.str();
+304 
+305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Header&#32;row.</emphasis>
+306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss.str(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss.clear();
+308 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;│&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>();
+309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;cols;&#32;i++)
+310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</link>)&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2d36d13fd41a5853a88c269494976e6d">BoldText</link>(header[i]);
+312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;pad&#32;=&#32;colWidths[i]&#32;&gt;&#32;<link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link>(header[i])&#32;?&#32;colWidths[i]&#32;-&#32;<link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link>(header[i])&#32;:&#32;0;
+313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;std::string(pad,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;│&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>();
+314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;std::endl;
+316 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;oss.str();
+317 
+318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Header&#32;separator.</emphasis>
+319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss.str(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss.clear();
+321 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;├&quot;</emphasis>;
+322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;cols;&#32;i++)
+323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;repeat(<emphasis role="stringliteral">&quot;─&quot;</emphasis>,&#32;colWidths[i]&#32;+&#32;2);
+325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;(i&#32;&lt;&#32;cols&#32;-&#32;1&#32;?&#32;<emphasis role="stringliteral">&quot;┼&quot;</emphasis>&#32;:&#32;<emphasis role="stringliteral">&quot;┤&quot;</emphasis>);
+326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+327 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>()&#32;&lt;&lt;&#32;std::endl;
+328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;oss.str();
+329 
+330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Data&#32;rows.</emphasis>
+331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keyword">auto</emphasis>&#32;&amp;row&#32;:&#32;rows)
+332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss.str(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss.clear();
+335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;│&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>();
+336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;cols;&#32;i++)
+337 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Use&#32;an&#32;empty&#32;string&#32;if&#32;this&#32;row&#32;doesn&apos;t&#32;have&#32;enough&#32;columns.</emphasis>
+339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::string&#32;cell&#32;=&#32;(i&#32;&lt;&#32;row.size())&#32;?&#32;row[i]&#32;:&#32;<emphasis role="stringliteral">&quot;&quot;</emphasis>;
+340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;cell;
+341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;pad&#32;=&#32;colWidths[i]&#32;&gt;&#32;<link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link>(cell)&#32;?&#32;colWidths[i]&#32;-&#32;<link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link>(cell)&#32;:&#32;0;
+342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;std::string(pad,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;│&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>();
+343 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;std::endl;
+345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;oss.str();
+346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+347 
+348 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Bottom&#32;border.</emphasis>
+349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss.str(<emphasis role="stringliteral">&quot;&quot;</emphasis>);
+350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss.clear();
+351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;<link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link>(color)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;└&quot;</emphasis>;
+352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;cols;&#32;i++)
+353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;repeat(<emphasis role="stringliteral">&quot;─&quot;</emphasis>,&#32;colWidths[i]&#32;+&#32;2);
+355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;(i&#32;&lt;&#32;cols&#32;-&#32;1&#32;?&#32;<emphasis role="stringliteral">&quot;┴&quot;</emphasis>&#32;:&#32;<emphasis role="stringliteral">&quot;┘&quot;</emphasis>);
+356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;oss&#32;&lt;&lt;&#32;<link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link>()&#32;&lt;&lt;&#32;std::endl;
+358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::cout&#32;&lt;&lt;&#32;oss.str();
+359 &#32;&#32;&#32;&#32;}
+360 };
+361 
+362 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;STYLE__HPP</emphasis>
+</programlisting></section>

@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="TwoPlayerGame_8h" kind="file" language="C++">
+    <compoundname>TwoPlayerGame.h</compoundname>
+    <includes refid="Player_8h" local="yes">Player.h</includes>
+    <includedby refid="ChessGame_8h" local="yes">/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h</includedby>
+    <includedby refid="TwoPlayerGame_8cpp" local="yes">TwoPlayerGame.cpp</includedby>
+    <incdepgraph>
+      <node id="8">
+        <label>../dependencies/Style.hpp</label>
+        <link refid="Style_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>Board.h</label>
+        <link refid="Board_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Move.h</label>
+        <link refid="Move_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>Piece.h</label>
+        <link refid="Piece_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Player.h</label>
+        <link refid="Player_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h</label>
+        <link refid="TwoPlayerGame_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>array</label>
+      </node>
+      <node id="14">
+        <label>cstdio</label>
+      </node>
+      <node id="9">
+        <label>cstdlib</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="13">
+        <label>limits</label>
+      </node>
+      <node id="12">
+        <label>regex</label>
+      </node>
+      <node id="10">
+        <label>sstream</label>
+      </node>
+      <node id="6">
+        <label>stdexcept</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/ChessGame.h</label>
+        <link refid="ChessGame_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h</label>
+        <link refid="TwoPlayerGame_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ChessGame.cpp</label>
+        <link refid="ChessGame_8cpp"/>
+      </node>
+      <node id="5">
+        <label>TwoPlayerGame.cpp</label>
+        <link refid="TwoPlayerGame_8cpp"/>
+      </node>
+      <node id="4">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classTwoPlayerGame" prot="public">TwoPlayerGame</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>TWO_PLAYER_GAME__H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TWO_PLAYER_GAME__H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Player_8h" kindref="compound">Player.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="classTwoPlayerGame" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classTwoPlayerGame_1ab72050bd05184152737eac9567c63aa9" kindref="member">TwoPlayerGame</ref></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTwoPlayerGame_1ab72050bd05184152737eac9567c63aa9" kindref="member">TwoPlayerGame</ref>();</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classTwoPlayerGame_1ad7fa6281a4685c1df35238afda1e3008" kindref="member">~TwoPlayerGame</ref>();</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPlayer" kindref="compound">Player</ref>*<sp/><ref refid="classTwoPlayerGame_1ada483d74a31419d9cceba7001badc8a4" kindref="member">GetPlayerOnTurn</ref>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPlayer" kindref="compound">Player</ref>*<sp/><ref refid="classTwoPlayerGame_1aae0d82cc749714dbbc29282391ae22de" kindref="member">SwitchTurn</ref>();</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="classTwoPlayerGame_1ac9ad5060f04c7c3b7851c4466fb3571a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classTwoPlayerGame_1ac9ad5060f04c7c3b7851c4466fb3571a" kindref="member">SetupPlayers</ref>()<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="17" refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPlayer" kindref="compound">Player</ref>*<sp/><ref refid="classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf" kindref="member">m_playerOne</ref>{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="18" refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPlayer" kindref="compound">Player</ref>*<sp/><ref refid="classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758" kindref="member">m_playerTwo</ref>{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="19" refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classPlayer" kindref="compound">Player</ref>*<sp/><ref refid="classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02" kindref="member">m_playerOnTurn</ref>{</highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>TWO_PLAYER_GAME__H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h"/>
+  </compounddef>
+</doxygen>

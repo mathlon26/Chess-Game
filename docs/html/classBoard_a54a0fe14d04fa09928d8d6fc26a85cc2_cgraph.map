@@ -1,0 +1,20 @@
+<map id="Board::Draw" name="Board::Draw">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,43,100,69"/>
+<area shape="rect" id="Node000002" href="$classStyle.html#a2dc09d093782de7527aa3b8fec1a79c5" title=" " alt="" coords="900,43,981,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,41,223,16,299,7,375,3,574,3,660,7,746,16,886,41,885,46,745,22,660,12,574,8,375,8,299,12,224,22,101,47"/>
+<area shape="rect" id="Node000003" href="$classStyle.html#a5614a5f517f754485702cc7067efc823" title=" " alt="" coords="148,93,257,120"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="95,67,147,85,146,90,94,73"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="250,90,305,79,470,61,633,53,778,51,885,52,885,57,778,56,634,58,470,67,305,84,251,95"/>
+<area shape="rect" id="Node000004" href="$classStyle.html#a05aca5e3ba0656e599a9355d5bfa3793" title=" " alt="" coords="305,93,447,120"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="257,104,289,104,289,109,257,109"/>
+<area shape="rect" id="Node000005" href="$classStyle.html#afbf27e0a1814fcdb41a52431451a5752" title=" " alt="" coords="321,144,431,171"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="252,118,314,137,312,142,250,123"/>
+<area shape="rect" id="Node000008" href="$classStyle.html#ac28a3cd98cd6983e617e7d455bd4098e" title=" " alt="" coords="878,169,1003,196"/>
+<area shape="poly" id="edge10_Node000003_Node000008" title=" " alt="" coords="218,118,255,151,279,168,306,180,380,200,456,212,534,218,610,219,751,211,862,195,863,201,751,216,610,225,534,224,456,218,379,205,304,185,277,173,251,156,214,122"/>
+<area shape="rect" id="Node000006" href="$classStyle.html#a44cd112d7cf5f3ff9f7a54835cb177d6" title=" " alt="" coords="495,144,651,171"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="432,155,480,155,480,160,432,160"/>
+<area shape="rect" id="Node000007" href="$classStyle.html#a3b124c68a49d02984eda201c45582731" title=" " alt="" coords="699,144,830,171"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="651,155,683,155,683,160,651,160"/>
+<area shape="poly" id="edge8_Node000007_Node000002" title=" " alt="" coords="788,141,901,75,904,80,791,146"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="831,164,863,169,862,174,830,169"/>
+</map>

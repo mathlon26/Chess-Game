@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_TwoPlayerGame_8h_source" xml:lang="en-US">
+<title>TwoPlayerGame.h</title>
+<indexterm><primary>/home/huplo/Coding/Projects/C++/chess-game/include/TwoPlayerGame.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;TWO_PLAYER_GAME__H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;TWO_PLAYER_GAME__H</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Player_8h">Player.h</link>&quot;</emphasis>
+5 
+6 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classTwoPlayerGame_1ab72050bd05184152737eac9567c63aa9">TwoPlayerGame</link>
+7 {
+8 <emphasis role="keyword">public</emphasis>:
+9 &#32;&#32;&#32;&#32;<link linkend="_classTwoPlayerGame_1ab72050bd05184152737eac9567c63aa9">TwoPlayerGame</link>();
+10 &#32;&#32;&#32;&#32;<link linkend="_classTwoPlayerGame_1ad7fa6281a4685c1df35238afda1e3008">~TwoPlayerGame</link>();
+11 
+12 &#32;&#32;&#32;&#32;<link linkend="_classPlayer">Player</link>*&#32;<link linkend="_classTwoPlayerGame_1ada483d74a31419d9cceba7001badc8a4">GetPlayerOnTurn</link>();
+13 &#32;&#32;&#32;&#32;<link linkend="_classPlayer">Player</link>*&#32;<link linkend="_classTwoPlayerGame_1aae0d82cc749714dbbc29282391ae22de">SwitchTurn</link>();
+14 
+15 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classTwoPlayerGame_1ac9ad5060f04c7c3b7851c4466fb3571a">SetupPlayers</link>()&#32;=&#32;0;
+16 <emphasis role="keyword">protected</emphasis>:
+17 &#32;&#32;&#32;&#32;<link linkend="_classPlayer">Player</link>*&#32;<link linkend="_classTwoPlayerGame_1a9435e6deb94ff0b98ccccf64b61df3cf">m_playerOne</link>{<emphasis role="keyword">nullptr</emphasis>};
+18 &#32;&#32;&#32;&#32;<link linkend="_classPlayer">Player</link>*&#32;<link linkend="_classTwoPlayerGame_1a441ac2fa9fec5787600182cbf7dd4758">m_playerTwo</link>{<emphasis role="keyword">nullptr</emphasis>};
+19 &#32;&#32;&#32;&#32;<link linkend="_classPlayer">Player</link>*&#32;<link linkend="_classTwoPlayerGame_1ab42d05663bf7ce1e01df81bd546e6f02">m_playerOnTurn</link>{<emphasis role="keyword">nullptr</emphasis>};
+20 };
+21 
+22 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;TWO_PLAYER_GAME__H</emphasis>
+</programlisting></section>

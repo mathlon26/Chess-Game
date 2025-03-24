@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classRook" xml:lang="en-US">
+<title>Rook Class Reference</title>
+<indexterm><primary>Rook</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Rook.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Rook:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classRook__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Rook:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classRook__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classRook_1ab931760f937ec2cc6934c38c5b92aa86">Rook</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PieceColor</link> color)</para>
+</listitem>
+            <listitem><para><link linkend="_classRook_1a70d445b94848b22ded850b6f58bc2972">~Rook</link> ()</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classRook_1ae7a3c121c8b653efeae7e1b248dffd0a">Symbol</link> () const override</para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_classMove">Move</link> &gt; <link linkend="_classRook_1a0fe3c6cddea8fefe9972c663400bce27">PossibleMoves</link> (<link linkend="_classBoard">Board</link> *board, int currentX, int currentY) const override</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classRook_1a7ede965f60fe8acd7d673475b04430a7">IsValidMove</link> (<link linkend="_classPiece">Piece</link> *target, <link linkend="_classBoard">Board</link> *board, <link linkend="_classMove">Move</link> &amp;move, <link linkend="_classPiece">Piece</link> *&amp;setReplacement) const override</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_classPiece">Piece</link>        <itemizedlist>
+            <listitem><para><link linkend="_classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f">Piece</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PieceColor</link> color)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_classPiece_1ab63f5b3faabe6ce60c9eb1806511ff9d">~Piece</link> ()=default</para>
+</listitem>
+            <listitem><para><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PieceColor</link> <link linkend="_classPiece_1ad31a695453335fbbc36a9c749395f7c1">Color</link> () const</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_classPiece_1a392fecd481d60993e7d6d73116b2e171">IsKing</link> () const</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Attributes inherited from <link linkend="_classPiece">Piece</link>        <itemizedlist>
+            <listitem><para><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PieceColor</link> <link linkend="_classPiece_1a757a577b6dfb06c6558021b828ca7c1d">m_color</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classRook_1ab931760f937ec2cc6934c38c5b92aa86"/><section>
+    <title>Rook()</title>
+<indexterm><primary>Rook</primary><secondary>Rook</secondary></indexterm>
+<indexterm><primary>Rook</primary><secondary>Rook</secondary></indexterm>
+<para><computeroutput>Rook::Rook (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PieceColor</link> color)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classRook_ab931760f937ec2cc6934c38c5b92aa86_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classRook_1a70d445b94848b22ded850b6f58bc2972"/><section>
+    <title>~Rook()</title>
+<indexterm><primary>~Rook</primary><secondary>Rook</secondary></indexterm>
+<indexterm><primary>Rook</primary><secondary>~Rook</secondary></indexterm>
+<para><computeroutput>Rook::~Rook ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classRook_1a7ede965f60fe8acd7d673475b04430a7"/><section>
+    <title>IsValidMove()</title>
+<indexterm><primary>IsValidMove</primary><secondary>Rook</secondary></indexterm>
+<indexterm><primary>Rook</primary><secondary>IsValidMove</secondary></indexterm>
+<para><computeroutput>bool Rook::IsValidMove (<link linkend="_classPiece">Piece</link> * target, <link linkend="_classBoard">Board</link> * board, <link linkend="_classMove">Move</link> &amp; move, <link linkend="_classPiece">Piece</link> *&amp; setReplacement) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classPiece_1a363193ff97c3e10b77feb6aec81d1a35">Piece</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classRook_a7ede965f60fe8acd7d673475b04430a7_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classRook_1a0fe3c6cddea8fefe9972c663400bce27"/><section>
+    <title>PossibleMoves()</title>
+<indexterm><primary>PossibleMoves</primary><secondary>Rook</secondary></indexterm>
+<indexterm><primary>Rook</primary><secondary>PossibleMoves</secondary></indexterm>
+<para><computeroutput>std::vector&lt; <link linkend="_classMove">Move</link> &gt; Rook::PossibleMoves (<link linkend="_classBoard">Board</link> * board, int currentX, int currentY) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classPiece_1a1c67fd5e66c3e7b6c1f4ebf3207e65e2">Piece</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classRook_a0fe3c6cddea8fefe9972c663400bce27_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classRook_1ae7a3c121c8b653efeae7e1b248dffd0a"/><section>
+    <title>Symbol()</title>
+<indexterm><primary>Symbol</primary><secondary>Rook</secondary></indexterm>
+<indexterm><primary>Rook</primary><secondary>Symbol</secondary></indexterm>
+<para><computeroutput>std::string Rook::Symbol ( ) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classPiece_1abc54f78cfc3e6c4ed3d103ddaeb1d96f">Piece</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/huplo/Coding/Projects/C++/chess-game/include/<link linkend="_Rook_8h">Rook.h</link><link linkend="_Rook_8cpp">Rook.cpp</link></section>
+</section>

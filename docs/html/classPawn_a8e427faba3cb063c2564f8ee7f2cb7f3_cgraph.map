@@ -1,0 +1,11 @@
+<map id="Pawn::PossibleMoves" name="Pawn::PossibleMoves">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,81,157,108"/>
+<area shape="rect" id="Node000002" href="$classPiece.html#ad31a695453335fbbc36a9c749395f7c1" title=" " alt="" coords="245,5,338,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,78,204,41,230,33,231,38,206,47,114,83"/>
+<area shape="rect" id="Node000003" href="$classBoard.html#ad23c997a2d137d40511dfd327248de3d" title=" " alt="" coords="233,56,350,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="157,83,218,76,218,81,157,88"/>
+<area shape="rect" id="Node000004" href="$classBoard.html#aa178becb7490422c52bf03c5956446e9" title=" " alt="" coords="205,107,379,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="157,101,189,105,189,110,157,106"/>
+<area shape="rect" id="Node000005" href="$classPiece.html#a4f0ea7928c9d57ec8f8b14c88358d01f" title=" " alt="" coords="244,157,340,184"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="114,106,206,143,231,151,229,156,204,148,112,111"/>
+</map>

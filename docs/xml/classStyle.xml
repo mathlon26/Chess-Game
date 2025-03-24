@@ -1,0 +1,626 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classStyle" kind="class" language="C++" prot="public">
+    <compoundname>Style</compoundname>
+    <derivedcompoundref refid="classCanvas" prot="public" virt="non-virtual">Canvas</derivedcompoundref>
+    <includes refid="Style_8hpp" local="no">Style.hpp</includes>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string Style::Cta</definition>
+        <argsstring>(Color color)</argsstring>
+        <name>Cta</name>
+        <qualifiedname>Style::Cta</qualifiedname>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="20" column="31" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="20" bodyend="37"/>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965" compoundref="Style_8hpp" startline="14">BLACK</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f" compoundref="Style_8hpp" startline="14">BLUE</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749" compoundref="Style_8hpp" startline="14">CYAN</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" compoundref="Style_8hpp" startline="14">DEFAULT</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0" compoundref="Style_8hpp" startline="14">GREEN</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca555a47662547aa7870851b2ef9ade925" compoundref="Style_8hpp" startline="14">LIGHT_GREEN</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cac634ffea7195608364671ac52ee59a61" compoundref="Style_8hpp" startline="14">MAGENTA</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca2536bd3910cf3069e2cd184e614ea97d" compoundref="Style_8hpp" startline="14">PINK</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0" compoundref="Style_8hpp" startline="14">RED</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" compoundref="Style_8hpp" startline="14">WHITE</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e" compoundref="Style_8hpp" startline="14">YELLOW</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1a38a11d09d6371559e5795c952d44f9d0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string Style::Cts</definition>
+        <argsstring>(Color color)</argsstring>
+        <name>Cts</name>
+        <qualifiedname>Style::Cts</qualifiedname>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="40" column="31" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="40" bodyend="57"/>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca08d0012388564e95c3b4a7407cf04965" compoundref="Style_8hpp" startline="14">BLACK</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca1b3e1ee9bff86431dea6b181365ba65f" compoundref="Style_8hpp" startline="14">BLUE</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749" compoundref="Style_8hpp" startline="14">CYAN</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" compoundref="Style_8hpp" startline="14">DEFAULT</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0" compoundref="Style_8hpp" startline="14">GREEN</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca555a47662547aa7870851b2ef9ade925" compoundref="Style_8hpp" startline="14">LIGHT_GREEN</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cac634ffea7195608364671ac52ee59a61" compoundref="Style_8hpp" startline="14">MAGENTA</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca2536bd3910cf3069e2cd184e614ea97d" compoundref="Style_8hpp" startline="14">PINK</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0" compoundref="Style_8hpp" startline="14">RED</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" compoundref="Style_8hpp" startline="14">WHITE</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e" compoundref="Style_8hpp" startline="14">YELLOW</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1a2d36d13fd41a5853a88c269494976e6d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string Style::BoldText</definition>
+        <argsstring>(const std::string &amp;text)</argsstring>
+        <name>BoldText</name>
+        <qualifiedname>Style::BoldText</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="59" column="31" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1ae8e0c4a440744134528e61f912cb5fde" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string Style::UnderlineText</definition>
+        <argsstring>(const std::string &amp;text)</argsstring>
+        <name>UnderlineText</name>
+        <qualifiedname>Style::UnderlineText</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="64" column="31" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1aa4a805980672163f52cedd6e54082bfe" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string Style::LinkText</definition>
+        <argsstring>(const std::string &amp;text, Color continueColor=Color::DEFAULT)</argsstring>
+        <name>LinkText</name>
+        <qualifiedname>Style::LinkText</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>continueColor</declname>
+          <defval><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" kindref="member">Color::DEFAULT</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="69" column="31" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="69" bodyend="72"/>
+        <references refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" compoundref="Style_8hpp" startline="20" endline="37">Cta</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" compoundref="Style_8hpp" startline="14">DEFAULT</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1ac28a3cd98cd6983e617e7d455bd4098e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string Style::ResetColor</definition>
+        <argsstring>()</argsstring>
+        <name>ResetColor</name>
+        <qualifiedname>Style::ResetColor</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="75" column="31" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="75" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1a05aca5e3ba0656e599a9355d5bfa3793" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>static size_t Style::DisplayLength</definition>
+        <argsstring>(const std::string &amp;text)</argsstring>
+        <name>DisplayLength</name>
+        <qualifiedname>Style::DisplayLength</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="82" column="26" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="82" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1a3b124c68a49d02984eda201c45582731" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Style::PrintColored</definition>
+        <argsstring>(const std::string &amp;text, Color color=Color::DEFAULT)</argsstring>
+        <name>PrintColored</name>
+        <qualifiedname>Style::PrintColored</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+          <defval><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" kindref="member">Color::DEFAULT</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="106" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="106" bodyend="109"/>
+        <references refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" compoundref="Style_8hpp" startline="20" endline="37">Cta</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" compoundref="Style_8hpp" startline="14">DEFAULT</references>
+        <references refid="classStyle_1ac28a3cd98cd6983e617e7d455bd4098e" compoundref="Style_8hpp" startline="75" endline="78">ResetColor</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Style::PrintColoredLine</definition>
+        <argsstring>(const std::string &amp;text, Color color=Color::DEFAULT, bool endl=true)</argsstring>
+        <name>PrintColoredLine</name>
+        <qualifiedname>Style::PrintColoredLine</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+          <defval><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" kindref="member">Color::DEFAULT</ref></defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>endl</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="112" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="112" bodyend="117"/>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" compoundref="Style_8hpp" startline="14">DEFAULT</references>
+        <references refid="classStyle_1a3b124c68a49d02984eda201c45582731" compoundref="Style_8hpp" startline="106" endline="109">PrintColored</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1afbf27e0a1814fcdb41a52431451a5752" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Style::PrintLine</definition>
+        <argsstring>(std::string ch=&quot;─&quot;, int length=50, Color color=Color::DEFAULT)</argsstring>
+        <name>PrintLine</name>
+        <qualifiedname>Style::PrintLine</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>ch</declname>
+          <defval>&quot;─&quot;</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>length</declname>
+          <defval>50</defval>
+        </param>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+          <defval><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" kindref="member">Color::DEFAULT</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="120" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="120" bodyend="127"/>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" compoundref="Style_8hpp" startline="14">DEFAULT</references>
+        <references refid="classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6" compoundref="Style_8hpp" startline="112" endline="117">PrintColoredLine</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1a350f6310e8e2c5ed0a3781d56a9617a3" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Style::PrintTitle</definition>
+        <argsstring>(const std::string &amp;title, Color color=Color::CYAN)</argsstring>
+        <name>PrintTitle</name>
+        <qualifiedname>Style::PrintTitle</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+          <defval><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749" kindref="member">Color::CYAN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="130" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="130" bodyend="140"/>
+        <references refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" compoundref="Style_8hpp" startline="20" endline="37">Cta</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749" compoundref="Style_8hpp" startline="14">CYAN</references>
+        <references refid="classStyle_1a05aca5e3ba0656e599a9355d5bfa3793" compoundref="Style_8hpp" startline="82" endline="103">DisplayLength</references>
+        <references refid="classStyle_1ac28a3cd98cd6983e617e7d455bd4098e" compoundref="Style_8hpp" startline="75" endline="78">ResetColor</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1a5614a5f517f754485702cc7067efc823" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Style::PrintBox</definition>
+        <argsstring>(const std::string &amp;text, const std::string &amp;title=&quot;&quot;, Color color=Color::GREEN, int fixOffset=0)</argsstring>
+        <name>PrintBox</name>
+        <qualifiedname>Style::PrintBox</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>title</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+          <defval><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0" kindref="member">Color::GREEN</ref></defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>fixOffset</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="143" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="143" bodyend="171"/>
+        <references refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" compoundref="Style_8hpp" startline="20" endline="37">Cta</references>
+        <references refid="classStyle_1a05aca5e3ba0656e599a9355d5bfa3793" compoundref="Style_8hpp" startline="82" endline="103">DisplayLength</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0" compoundref="Style_8hpp" startline="14">GREEN</references>
+        <references refid="classStyle_1afbf27e0a1814fcdb41a52431451a5752" compoundref="Style_8hpp" startline="120" endline="127">PrintLine</references>
+        <references refid="classStyle_1ac28a3cd98cd6983e617e7d455bd4098e" compoundref="Style_8hpp" startline="75" endline="78">ResetColor</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1aa8360afc84f1305765126889fc2fdca1" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Style::PrintSuccess</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>PrintSuccess</name>
+        <qualifiedname>Style::PrintSuccess</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="174" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="174" bodyend="177"/>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0" compoundref="Style_8hpp" startline="14">GREEN</references>
+        <references refid="classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6" compoundref="Style_8hpp" startline="112" endline="117">PrintColoredLine</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1ae625221bb6eca80773f7f9d2ccada911" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Style::PrintWarning</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>PrintWarning</name>
+        <qualifiedname>Style::PrintWarning</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="180" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="180" bodyend="183"/>
+        <references refid="classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6" compoundref="Style_8hpp" startline="112" endline="117">PrintColoredLine</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e" compoundref="Style_8hpp" startline="14">YELLOW</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1a0a7907c969753a314a4d49c0f94ba636" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Style::PrintError</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>PrintError</name>
+        <qualifiedname>Style::PrintError</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="186" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="186" bodyend="189"/>
+        <references refid="classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6" compoundref="Style_8hpp" startline="112" endline="117">PrintColoredLine</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1caa2d9547b5d3dd9f05984475f7c926da0" compoundref="Style_8hpp" startline="14">RED</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1a32fd215387199b8a96cf7bac5a7fada8" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Style::PrintErrorExit</definition>
+        <argsstring>(const std::string &amp;error, int code=-1)</argsstring>
+        <name>PrintErrorExit</name>
+        <qualifiedname>Style::PrintErrorExit</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>error</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>code</declname>
+          <defval>-1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="192" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="192" bodyend="196"/>
+        <references refid="classStyle_1a0a7907c969753a314a4d49c0f94ba636" compoundref="Style_8hpp" startline="186" endline="189">PrintError</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1afa7af12144de17dbf2e3c5bb35547ca0" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Style::PrintInfo</definition>
+        <argsstring>(const std::string &amp;message)</argsstring>
+        <name>PrintInfo</name>
+        <qualifiedname>Style::PrintInfo</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="199" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="199" bodyend="202"/>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749" compoundref="Style_8hpp" startline="14">CYAN</references>
+        <references refid="classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6" compoundref="Style_8hpp" startline="112" endline="117">PrintColoredLine</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1a86d28d05ce8974b1ff88317c5d294eb5" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Style::ClearConsole</definition>
+        <argsstring>()</argsstring>
+        <name>ClearConsole</name>
+        <qualifiedname>Style::ClearConsole</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="205" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="205" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1a75154acfcb8de2f37fb8d340cef4e83e" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool Style::GetBoolInput</definition>
+        <argsstring>(const std::string &amp;prompt, const std::string &amp;title=&quot;&quot;, Color color=Color::YELLOW, Color titleColor=Color::CYAN)</argsstring>
+        <name>GetBoolInput</name>
+        <qualifiedname>Style::GetBoolInput</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>prompt</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>title</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+          <defval><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e" kindref="member">Color::YELLOW</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>titleColor</declname>
+          <defval><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749" kindref="member">Color::CYAN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="215" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="215" bodyend="226"/>
+        <references refid="classStyle_1a2d36d13fd41a5853a88c269494976e6d" compoundref="Style_8hpp" startline="59" endline="62">BoldText</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749" compoundref="Style_8hpp" startline="14">CYAN</references>
+        <references refid="classStyle_1a3b124c68a49d02984eda201c45582731" compoundref="Style_8hpp" startline="106" endline="109">PrintColored</references>
+        <references refid="classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6" compoundref="Style_8hpp" startline="112" endline="117">PrintColoredLine</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e" compoundref="Style_8hpp" startline="14">YELLOW</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1ae6c4e5b5dce135d7d912be726271fb3f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string Style::GetStringInput</definition>
+        <argsstring>(const std::string &amp;prompt, const std::string &amp;title=&quot;&quot;, Color color=Color::YELLOW, Color titleColor=Color::CYAN)</argsstring>
+        <name>GetStringInput</name>
+        <qualifiedname>Style::GetStringInput</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>prompt</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>title</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+          <defval><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e" kindref="member">Color::YELLOW</ref></defval>
+        </param>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>titleColor</declname>
+          <defval><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749" kindref="member">Color::CYAN</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="228" column="31" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="228" bodyend="237"/>
+        <references refid="classStyle_1a2d36d13fd41a5853a88c269494976e6d" compoundref="Style_8hpp" startline="59" endline="62">BoldText</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749" compoundref="Style_8hpp" startline="14">CYAN</references>
+        <references refid="classStyle_1a3b124c68a49d02984eda201c45582731" compoundref="Style_8hpp" startline="106" endline="109">PrintColored</references>
+        <references refid="classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6" compoundref="Style_8hpp" startline="112" endline="117">PrintColoredLine</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e" compoundref="Style_8hpp" startline="14">YELLOW</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1a40fea464a1020972692160df497f3efb" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Style::PrintDivider</definition>
+        <argsstring>(const std::string &amp;message=&quot;&quot;, Color color=Color::DEFAULT)</argsstring>
+        <name>PrintDivider</name>
+        <qualifiedname>Style::PrintDivider</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>message</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+          <defval><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" kindref="member">Color::DEFAULT</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="241" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="241" bodyend="256"/>
+        <references refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" compoundref="Style_8hpp" startline="20" endline="37">Cta</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" compoundref="Style_8hpp" startline="14">DEFAULT</references>
+        <references refid="classStyle_1a05aca5e3ba0656e599a9355d5bfa3793" compoundref="Style_8hpp" startline="82" endline="103">DisplayLength</references>
+        <references refid="classStyle_1afbf27e0a1814fcdb41a52431451a5752" compoundref="Style_8hpp" startline="120" endline="127">PrintLine</references>
+        <references refid="classStyle_1ac28a3cd98cd6983e617e7d455bd4098e" compoundref="Style_8hpp" startline="75" endline="78">ResetColor</references>
+      </memberdef>
+      <memberdef kind="function" id="classStyle_1afe6790c9756b548e74177f1aac11efbd" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void Style::PrintTable</definition>
+        <argsstring>(const std::string &amp;title, const std::vector&lt; std::string &gt; &amp;header, const std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;rows, Color color=Color::DEFAULT)</argsstring>
+        <name>PrintTable</name>
+        <qualifiedname>Style::PrintTable</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>title</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>header</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">Color</ref></type>
+          <declname>color</declname>
+          <defval><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" kindref="member">Color::DEFAULT</ref></defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="260" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="260" bodyend="359"/>
+        <references refid="classStyle_1a2d36d13fd41a5853a88c269494976e6d" compoundref="Style_8hpp" startline="59" endline="62">BoldText</references>
+        <references refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" compoundref="Style_8hpp" startline="20" endline="37">Cta</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee" compoundref="Style_8hpp" startline="14">DEFAULT</references>
+        <references refid="classStyle_1a05aca5e3ba0656e599a9355d5bfa3793" compoundref="Style_8hpp" startline="82" endline="103">DisplayLength</references>
+        <references refid="classStyle_1ac28a3cd98cd6983e617e7d455bd4098e" compoundref="Style_8hpp" startline="75" endline="78">ResetColor</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e" compoundref="Style_8hpp" startline="14">YELLOW</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>Canvas</label>
+        <link refid="classCanvas"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>CanvasApp</label>
+        <link refid="classCanvasApp"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>ChessGame</label>
+        <link refid="classChessGame"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Style</label>
+        <link refid="classStyle"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" line="16" column="1" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/dependencies/Style.hpp" bodystart="17" bodyend="360"/>
+    <listofallmembers>
+      <member refid="classStyle_1a2d36d13fd41a5853a88c269494976e6d" prot="public" virt="non-virtual"><scope>Style</scope><name>BoldText</name></member>
+      <member refid="classStyle_1a86d28d05ce8974b1ff88317c5d294eb5" prot="public" virt="non-virtual"><scope>Style</scope><name>ClearConsole</name></member>
+      <member refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" prot="public" virt="non-virtual"><scope>Style</scope><name>Cta</name></member>
+      <member refid="classStyle_1a38a11d09d6371559e5795c952d44f9d0" prot="public" virt="non-virtual"><scope>Style</scope><name>Cts</name></member>
+      <member refid="classStyle_1a05aca5e3ba0656e599a9355d5bfa3793" prot="public" virt="non-virtual"><scope>Style</scope><name>DisplayLength</name></member>
+      <member refid="classStyle_1a75154acfcb8de2f37fb8d340cef4e83e" prot="public" virt="non-virtual"><scope>Style</scope><name>GetBoolInput</name></member>
+      <member refid="classStyle_1ae6c4e5b5dce135d7d912be726271fb3f" prot="public" virt="non-virtual"><scope>Style</scope><name>GetStringInput</name></member>
+      <member refid="classStyle_1aa4a805980672163f52cedd6e54082bfe" prot="public" virt="non-virtual"><scope>Style</scope><name>LinkText</name></member>
+      <member refid="classStyle_1a5614a5f517f754485702cc7067efc823" prot="public" virt="non-virtual"><scope>Style</scope><name>PrintBox</name></member>
+      <member refid="classStyle_1a3b124c68a49d02984eda201c45582731" prot="public" virt="non-virtual"><scope>Style</scope><name>PrintColored</name></member>
+      <member refid="classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6" prot="public" virt="non-virtual"><scope>Style</scope><name>PrintColoredLine</name></member>
+      <member refid="classStyle_1a40fea464a1020972692160df497f3efb" prot="public" virt="non-virtual"><scope>Style</scope><name>PrintDivider</name></member>
+      <member refid="classStyle_1a0a7907c969753a314a4d49c0f94ba636" prot="public" virt="non-virtual"><scope>Style</scope><name>PrintError</name></member>
+      <member refid="classStyle_1a32fd215387199b8a96cf7bac5a7fada8" prot="public" virt="non-virtual"><scope>Style</scope><name>PrintErrorExit</name></member>
+      <member refid="classStyle_1afa7af12144de17dbf2e3c5bb35547ca0" prot="public" virt="non-virtual"><scope>Style</scope><name>PrintInfo</name></member>
+      <member refid="classStyle_1afbf27e0a1814fcdb41a52431451a5752" prot="public" virt="non-virtual"><scope>Style</scope><name>PrintLine</name></member>
+      <member refid="classStyle_1aa8360afc84f1305765126889fc2fdca1" prot="public" virt="non-virtual"><scope>Style</scope><name>PrintSuccess</name></member>
+      <member refid="classStyle_1afe6790c9756b548e74177f1aac11efbd" prot="public" virt="non-virtual"><scope>Style</scope><name>PrintTable</name></member>
+      <member refid="classStyle_1a350f6310e8e2c5ed0a3781d56a9617a3" prot="public" virt="non-virtual"><scope>Style</scope><name>PrintTitle</name></member>
+      <member refid="classStyle_1ae625221bb6eca80773f7f9d2ccada911" prot="public" virt="non-virtual"><scope>Style</scope><name>PrintWarning</name></member>
+      <member refid="classStyle_1ac28a3cd98cd6983e617e7d455bd4098e" prot="public" virt="non-virtual"><scope>Style</scope><name>ResetColor</name></member>
+      <member refid="classStyle_1ae8e0c4a440744134528e61f912cb5fde" prot="public" virt="non-virtual"><scope>Style</scope><name>UnderlineText</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

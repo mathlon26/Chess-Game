@@ -1,0 +1,19 @@
+<map id="HumanPlayer::GetInput" name="HumanPlayer::GetInput">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,31,164,57"/>
+<area shape="rect" id="Node000002" href="$classStyle.html#a2dc09d093782de7527aa3b8fec1a79c5" title=" " alt="" coords="808,5,888,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,27,211,16,377,6,541,4,793,12,793,18,541,9,377,11,212,21,143,33"/>
+<area shape="rect" id="Node000003" href="$classStyle.html#a38a11d09d6371559e5795c952d44f9d0" title=" " alt="" coords="243,31,324,57"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,41,228,41,228,47,164,47"/>
+<area shape="rect" id="Node000004" href="$classStyle.html#ae6c4e5b5dce135d7d912be726271fb3f" title=" " alt="" coords="212,81,355,108"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="141,55,214,74,213,80,139,61"/>
+<area shape="rect" id="Node000005" href="$classStyle.html#a2d36d13fd41a5853a88c269494976e6d" title=" " alt="" coords="426,31,536,57"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="338,78,410,59,412,64,339,83"/>
+<area shape="rect" id="Node000006" href="$classStyle.html#a3b124c68a49d02984eda201c45582731" title=" " alt="" coords="606,81,738,108"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="355,92,591,92,591,97,355,97"/>
+<area shape="rect" id="Node000008" href="$classStyle.html#a44cd112d7cf5f3ff9f7a54835cb177d6" title=" " alt="" coords="403,132,558,159"/>
+<area shape="poly" id="edge8_Node000004_Node000008" title=" " alt="" coords="339,106,412,125,410,130,338,111"/>
+<area shape="poly" id="edge6_Node000006_Node000002" title=" " alt="" coords="704,78,801,36,803,41,706,83"/>
+<area shape="rect" id="Node000007" href="$classStyle.html#ac28a3cd98cd6983e617e7d455bd4098e" title=" " alt="" coords="786,81,911,108"/>
+<area shape="poly" id="edge7_Node000006_Node000007" title=" " alt="" coords="738,92,770,92,770,97,738,97"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="533,129,603,110,605,115,535,134"/>
+</map>

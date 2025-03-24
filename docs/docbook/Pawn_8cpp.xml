@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Pawn_8cpp" xml:lang="en-US">
+<title>Pawn.cpp File Reference</title>
+<indexterm><primary>Pawn.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../include/Pawn.h&quot;<?linebreak?>#include &quot;../include/Rook.h&quot;<?linebreak?>#include &quot;../include/Bishop.h&quot;<?linebreak?>#include &quot;../include/Knight.h&quot;<?linebreak?>#include &quot;../include/Queen.h&quot;<?linebreak?>#include &quot;../include/Board.h&quot;<?linebreak?>#include &quot;../include/Move.h&quot;<?linebreak?>#include &lt;cmath&gt;<?linebreak?></programlisting>Include dependency graph for Pawn.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="Pawn_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_Pawn_8cpp_1a3c12b4f5901ce1e94c819c559c0e199a">promote</link> (<link linkend="_classPiece">Piece</link> **setReplacement, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PieceColor</link> color)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_Pawn_8cpp_1a3c12b4f5901ce1e94c819c559c0e199a"/><section>
+    <title>promote()</title>
+<indexterm><primary>promote</primary><secondary>Pawn.cpp</secondary></indexterm>
+<indexterm><primary>Pawn.cpp</primary><secondary>promote</secondary></indexterm>
+<para><computeroutput>void promote (<link linkend="_classPiece">Piece</link> ** setReplacement, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PieceColor</link> color)</computeroutput></para></section>
+</section>
+</section>

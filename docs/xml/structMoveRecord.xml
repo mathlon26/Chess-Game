@@ -1,0 +1,196 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="structMoveRecord" kind="struct" language="C++" prot="public">
+    <compoundname>MoveRecord</compoundname>
+    <includes refid="Board_8h" local="no">Board.h</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structMoveRecord_1ad01bd3d9191228198472736d116fac7d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MoveRecord::x0</definition>
+        <argsstring></argsstring>
+        <name>x0</name>
+        <qualifiedname>MoveRecord::x0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="13" column="9" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMoveRecord_1ac38a2c9028ec26e1fc2362231dc44e5f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MoveRecord::y0</definition>
+        <argsstring></argsstring>
+        <name>y0</name>
+        <qualifiedname>MoveRecord::y0</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="13" column="12" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMoveRecord_1a0ba5bf01546d407c234f3419dbf21d83" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MoveRecord::x1</definition>
+        <argsstring></argsstring>
+        <name>x1</name>
+        <qualifiedname>MoveRecord::x1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="13" column="15" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMoveRecord_1ad12e234364e89f435991293fff175a72" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MoveRecord::y1</definition>
+        <argsstring></argsstring>
+        <name>y1</name>
+        <qualifiedname>MoveRecord::y1</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="13" column="18" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMoveRecord_1a07bcb9f0bafd4ccc53cdccae68c20c0f" prot="public" static="no" mutable="no">
+        <type><ref refid="classPiece" kindref="compound">Piece</ref> *</type>
+        <definition>Piece* MoveRecord::movedPiece</definition>
+        <argsstring></argsstring>
+        <name>movedPiece</name>
+        <qualifiedname>MoveRecord::movedPiece</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="14" column="11" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMoveRecord_1a28419c377c24b254ab4070a60d782901" prot="public" static="no" mutable="no">
+        <type><ref refid="classPiece" kindref="compound">Piece</ref> *</type>
+        <definition>Piece* MoveRecord::capturedPiece</definition>
+        <argsstring></argsstring>
+        <name>capturedPiece</name>
+        <qualifiedname>MoveRecord::capturedPiece</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="15" column="11" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMoveRecord_1ae26c28a77959d5f472206fdfdae0d493" prot="public" static="no" mutable="no">
+        <type><ref refid="classPiece" kindref="compound">Piece</ref> *</type>
+        <definition>Piece* MoveRecord::replacementPiece</definition>
+        <argsstring></argsstring>
+        <name>replacementPiece</name>
+        <qualifiedname>MoveRecord::replacementPiece</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="16" column="11" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMoveRecord_1add054033b276ec4e0d25daab459255a9" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MoveRecord::enPassantUsed</definition>
+        <argsstring></argsstring>
+        <name>enPassantUsed</name>
+        <qualifiedname>MoveRecord::enPassantUsed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="17" column="10" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMoveRecord_1a3f089cda41c1adcebd9c9b1f0116de98" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool MoveRecord::prevEnPassantAvailable</definition>
+        <argsstring></argsstring>
+        <name>prevEnPassantAvailable</name>
+        <qualifiedname>MoveRecord::prevEnPassantAvailable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="19" column="10" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMoveRecord_1ae45c86ca85a0de5db14a7e8bbd59a40d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MoveRecord::prevEnPassantX</definition>
+        <argsstring></argsstring>
+        <name>prevEnPassantX</name>
+        <qualifiedname>MoveRecord::prevEnPassantX</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="20" column="9" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="20" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structMoveRecord_1a9c30403d5f210cdb51ae3060d94e7ac8" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int MoveRecord::prevEnPassantY</definition>
+        <argsstring></argsstring>
+        <name>prevEnPassantY</name>
+        <qualifiedname>MoveRecord::prevEnPassantY</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="21" column="9" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>MoveRecord</label>
+        <link refid="structMoveRecord"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>capturedPiece</edgelabel>
+          <edgelabel>movedPiece</edgelabel>
+          <edgelabel>replacementPiece</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Piece</label>
+        <link refid="classPiece"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" line="12" column="1" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/Board.h" bodystart="12" bodyend="22"/>
+    <listofallmembers>
+      <member refid="structMoveRecord_1a28419c377c24b254ab4070a60d782901" prot="public" virt="non-virtual"><scope>MoveRecord</scope><name>capturedPiece</name></member>
+      <member refid="structMoveRecord_1add054033b276ec4e0d25daab459255a9" prot="public" virt="non-virtual"><scope>MoveRecord</scope><name>enPassantUsed</name></member>
+      <member refid="structMoveRecord_1a07bcb9f0bafd4ccc53cdccae68c20c0f" prot="public" virt="non-virtual"><scope>MoveRecord</scope><name>movedPiece</name></member>
+      <member refid="structMoveRecord_1a3f089cda41c1adcebd9c9b1f0116de98" prot="public" virt="non-virtual"><scope>MoveRecord</scope><name>prevEnPassantAvailable</name></member>
+      <member refid="structMoveRecord_1ae45c86ca85a0de5db14a7e8bbd59a40d" prot="public" virt="non-virtual"><scope>MoveRecord</scope><name>prevEnPassantX</name></member>
+      <member refid="structMoveRecord_1a9c30403d5f210cdb51ae3060d94e7ac8" prot="public" virt="non-virtual"><scope>MoveRecord</scope><name>prevEnPassantY</name></member>
+      <member refid="structMoveRecord_1ae26c28a77959d5f472206fdfdae0d493" prot="public" virt="non-virtual"><scope>MoveRecord</scope><name>replacementPiece</name></member>
+      <member refid="structMoveRecord_1ad01bd3d9191228198472736d116fac7d" prot="public" virt="non-virtual"><scope>MoveRecord</scope><name>x0</name></member>
+      <member refid="structMoveRecord_1a0ba5bf01546d407c234f3419dbf21d83" prot="public" virt="non-virtual"><scope>MoveRecord</scope><name>x1</name></member>
+      <member refid="structMoveRecord_1ac38a2c9028ec26e1fc2362231dc44e5f" prot="public" virt="non-virtual"><scope>MoveRecord</scope><name>y0</name></member>
+      <member refid="structMoveRecord_1ad12e234364e89f435991293fff175a72" prot="public" virt="non-virtual"><scope>MoveRecord</scope><name>y1</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

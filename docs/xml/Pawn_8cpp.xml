@@ -1,0 +1,334 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="Pawn_8cpp" kind="file" language="C++">
+    <compoundname>Pawn.cpp</compoundname>
+    <includes refid="Pawn_8h" local="yes">../include/Pawn.h</includes>
+    <includes refid="Rook_8h" local="yes">../include/Rook.h</includes>
+    <includes refid="Bishop_8h" local="yes">../include/Bishop.h</includes>
+    <includes refid="Knight_8h" local="yes">../include/Knight.h</includes>
+    <includes refid="Queen_8h" local="yes">../include/Queen.h</includes>
+    <includes refid="Board_8h" local="yes">../include/Board.h</includes>
+    <includes refid="Move_8h" local="yes">../include/Move.h</includes>
+    <includes local="no">cmath</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>../dependencies/Style.hpp</label>
+        <link refid="Style_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>../include/Bishop.h</label>
+        <link refid="Bishop_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>Board.h</label>
+        <link refid="Board_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>../include/Knight.h</label>
+        <link refid="Knight_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Move.h</label>
+        <link refid="Move_8h"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../include/Pawn.h</label>
+        <link refid="Pawn_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>Piece.h</label>
+        <link refid="Piece_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>Player.h</label>
+        <link refid="Player_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>../include/Queen.h</label>
+        <link refid="Queen_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>../include/Rook.h</label>
+        <link refid="Rook_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>Pawn.cpp</label>
+        <link refid="Pawn_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>array</label>
+      </node>
+      <node id="22">
+        <label>cmath</label>
+      </node>
+      <node id="12">
+        <label>cstdio</label>
+      </node>
+      <node id="7">
+        <label>cstdlib</label>
+      </node>
+      <node id="5">
+        <label>iostream</label>
+      </node>
+      <node id="11">
+        <label>limits</label>
+      </node>
+      <node id="10">
+        <label>regex</label>
+      </node>
+      <node id="8">
+        <label>sstream</label>
+      </node>
+      <node id="15">
+        <label>stdexcept</label>
+      </node>
+      <node id="6">
+        <label>string</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="Pawn_8cpp_1a3c12b4f5901ce1e94c819c559c0e199a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void promote</definition>
+        <argsstring>(Piece **setReplacement, PieceColor color)</argsstring>
+        <name>promote</name>
+        <param>
+          <type><ref refid="classPiece" kindref="compound">Piece</ref> **</type>
+          <declname>setReplacement</declname>
+        </param>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">PieceColor</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Pawn.cpp" line="16" column="6" bodyfile="Pawn.cpp" bodystart="16" bodyend="35"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Pawn_8h" kindref="compound">../include/Pawn.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Rook_8h" kindref="compound">../include/Rook.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Bishop_8h" kindref="compound">../include/Bishop.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Knight_8h" kindref="compound">../include/Knight.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Queen_8h" kindref="compound">../include/Queen.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Board_8h" kindref="compound">../include/Board.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="Move_8h" kindref="compound">../include/Move.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Constructor.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="classPawn_1a7bdce6cc89b699f6deb9f176256d2bbd" refkind="member"><highlight class="normal"><ref refid="classPawn_1a7bdce6cc89b699f6deb9f176256d2bbd" kindref="member">Pawn::Pawn</ref>(<ref refid="Piece_8h_1a3287fa298adf5d748c8fe84b0b2742ec" kindref="member">PieceColor</ref><sp/>color)<sp/>:<sp/><ref refid="classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f" kindref="member">Piece</ref>{color}<sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Helper<sp/>function<sp/>to<sp/>promote<sp/>a<sp/>pawn.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="Pawn_8cpp_1a3c12b4f5901ce1e94c819c559c0e199a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="Pawn_8cpp_1a3c12b4f5901ce1e94c819c559c0e199a" kindref="member">promote</ref>(<ref refid="classPiece" kindref="compound">Piece</ref>**<sp/>setReplacement,<sp/><ref refid="Piece_8h_1a3287fa298adf5d748c8fe84b0b2742ec" kindref="member">PieceColor</ref><sp/>color)</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>*setReplacement<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classQueen" kindref="compound">Queen</ref>{color};</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"><sp/><sp/><sp/><sp/>std::string<sp/>promotion<sp/>=<sp/>Style::GetStringInput(</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;Choose<sp/>from:\n<sp/>Queen\nRook\nBishop\nKnight\n<sp/>&gt;&gt;<sp/>&quot;,</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Style::Cta(color)<sp/>+<sp/>Style::Cts(color)<sp/>+<sp/>Style::Cta(Color::GREEN)<sp/>+<sp/>&quot;<sp/>may<sp/>promote<sp/>their<sp/>pawn.&quot;</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/>if<sp/>(promotion<sp/>==<sp/>&quot;Rook&quot;)<sp/>{</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*setReplacement<sp/>=<sp/>new<sp/>Rook{color};</highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/><sp/><sp/>}<sp/>else<sp/>if<sp/>(promotion<sp/>==<sp/>&quot;Bishop&quot;)<sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*setReplacement<sp/>=<sp/>new<sp/>Bishop{color};</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/>}<sp/>else<sp/>if<sp/>(promotion<sp/>==<sp/>&quot;Knight&quot;)<sp/>{</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*setReplacement<sp/>=<sp/>new<sp/>Knight{color};</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/>}<sp/>else<sp/>{</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*setReplacement<sp/>=<sp/>new<sp/>Queen{color};</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Generates<sp/>all<sp/>possible<sp/>moves<sp/>for<sp/>a<sp/>pawn<sp/>from<sp/>its<sp/>current<sp/>position.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38" refid="classPawn_1a8e427faba3cb063c2564f8ee7f2cb7f3" refkind="member"><highlight class="normal">std::vector&lt;Move&gt;<sp/><ref refid="classPawn_1a8e427faba3cb063c2564f8ee7f2cb7f3" kindref="member">Pawn::PossibleMoves</ref>(<ref refid="classBoard" kindref="compound">Board</ref>*<sp/>board,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentX,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>currentY)</highlight><highlight class="keyword"><sp/>const<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Move&gt;<sp/>moves;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>direction<sp/><sp/><sp/><sp/>=<sp/>(<ref refid="classPiece_1a757a577b6dfb06c6558021b828ca7c1d" kindref="member">m_color</ref><sp/>==<sp/><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" kindref="member">PieceColor::WHITE</ref>)<sp/>?<sp/>-1<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startRow<sp/><sp/><sp/><sp/><sp/>=<sp/>(<ref refid="classPiece_1a757a577b6dfb06c6558021b828ca7c1d" kindref="member">m_color</ref><sp/>==<sp/><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" kindref="member">PieceColor::WHITE</ref>)<sp/>?<sp/>6<sp/>:<sp/>1;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>promotionRow<sp/>=<sp/>(<ref refid="classPiece_1a757a577b6dfb06c6558021b828ca7c1d" kindref="member">m_color</ref><sp/>==<sp/><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" kindref="member">PieceColor::WHITE</ref>)<sp/>?<sp/>0<sp/>:<sp/>7;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>forwardY<sp/>=<sp/>currentY<sp/>+<sp/>direction;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Make<sp/>sure<sp/>the<sp/>forward<sp/>square<sp/>is<sp/>within<sp/>bounds.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(forwardY<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>forwardY<sp/>&lt;<sp/>8)<sp/>{</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Single-step<sp/>forward<sp/>move.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(board-&gt;<ref refid="classBoard_1ad23c997a2d137d40511dfd327248de3d" kindref="member">GetPiece</ref>(currentX,<sp/>forwardY)<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)<sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMove" kindref="compound">Move</ref><sp/>move{currentX,<sp/>currentY,<sp/>currentX,<sp/>forwardY};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>moves.push_back(move);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Two-step<sp/>forward<sp/>move<sp/>(only<sp/>from<sp/>the<sp/>starting<sp/>row).</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(currentY<sp/>==<sp/>startRow)<sp/>{</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>twoStepY<sp/>=<sp/>currentY<sp/>+<sp/>2<sp/>*<sp/>direction;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(twoStepY<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>twoStepY<sp/>&lt;<sp/>8<sp/>&amp;&amp;<sp/>board-&gt;GetPiece(currentX,<sp/>twoStepY)<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>move<sp/>=<sp/><ref refid="classMove" kindref="compound">Move</ref>{currentX,<sp/>currentY,<sp/>currentX,<sp/>twoStepY};</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>moves.push_back(move);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Diagonal<sp/>moves:<sp/>captures<sp/>and<sp/>en<sp/>passant.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dx<sp/>=<sp/>-1;<sp/>dx<sp/>&lt;=<sp/>1;<sp/>dx<sp/>+=<sp/>2)<sp/>{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>newX<sp/>=<sp/>currentX<sp/>+<sp/>dx;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>newY<sp/>=<sp/>currentY<sp/>+<sp/>direction;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(newX<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>newX<sp/>&lt;<sp/>8<sp/>&amp;&amp;<sp/>newY<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>newY<sp/>&lt;<sp/>8)<sp/>{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f" kindref="member">Piece</ref>*<sp/>diagPiece<sp/>=<sp/>board-&gt;<ref refid="classBoard_1ad23c997a2d137d40511dfd327248de3d" kindref="member">GetPiece</ref>(newX,<sp/>newY);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Standard<sp/>capture:<sp/>enemy<sp/>piece<sp/>present.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(diagPiece<sp/>!=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>diagPiece-&gt;<ref refid="classPiece_1ad31a695453335fbbc36a9c749395f7c1" kindref="member">Color</ref>()<sp/>!=<sp/><ref refid="classPiece_1a757a577b6dfb06c6558021b828ca7c1d" kindref="member">m_color</ref>)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMove" kindref="compound">Move</ref><sp/>move{currentX,<sp/>currentY,<sp/>newX,<sp/>newY};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>moves.push_back(move);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>En<sp/>passant<sp/>capture:<sp/>target<sp/>square<sp/>is<sp/>empty<sp/>but<sp/>is<sp/>flagged.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(diagPiece<sp/>==<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>board-&gt;<ref refid="classBoard_1aa178becb7490422c52bf03c5956446e9" kindref="member">IsEnPassantTarget</ref>(newX,<sp/>newY))<sp/>{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classMove" kindref="compound">Move</ref><sp/>move{currentX,<sp/>currentY,<sp/>newX,<sp/>newY};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>moves.push_back(move);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>moves;</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Uses<sp/>the<sp/>list<sp/>of<sp/>possible<sp/>moves<sp/>to<sp/>determine<sp/>if<sp/>the<sp/>move<sp/>is<sp/>valid.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Also<sp/>handles<sp/>promotion<sp/>if<sp/>the<sp/>move<sp/>ends<sp/>on<sp/>the<sp/>promotion<sp/>row.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89" refid="classPawn_1af11d10b5d5f2456eb97d835bf0d8b4f8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classPawn_1af11d10b5d5f2456eb97d835bf0d8b4f8" kindref="member">Pawn::IsValidMove</ref>(<ref refid="classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f" kindref="member">Piece</ref>*<sp/>target,<sp/><ref refid="classBoard" kindref="compound">Board</ref>*<sp/>board,<sp/><ref refid="classMove" kindref="compound">Move</ref>&amp;<sp/>move,<sp/><ref refid="classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f" kindref="member">Piece</ref>*&amp;<sp/>setReplacement)</highlight><highlight class="keyword"><sp/>const</highlight></codeline>
+<codeline lineno="90"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startX<sp/>=<sp/>move.<ref refid="classMove_1ae5b75e6f1d977e5eacac7e85d991ed27" kindref="member">getStartX</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>startY<sp/>=<sp/>move.<ref refid="classMove_1afb1961349a3fb940e4596ee12d28cf1f" kindref="member">getStartY</ref>();</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>endX<sp/><sp/><sp/>=<sp/>move.<ref refid="classMove_1a2d670ad83efcfd894e7877252fce69de" kindref="member">getEndX</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>endY<sp/><sp/><sp/>=<sp/>move.<ref refid="classMove_1a3b5509b1d995526c851561f73d327ff3" kindref="member">getEndY</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Retrieve<sp/>candidate<sp/>moves<sp/>for<sp/>this<sp/>pawn<sp/>from<sp/>its<sp/>current<sp/>position.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;Move&gt;<sp/>candidates<sp/>=<sp/><ref refid="classPawn_1a8e427faba3cb063c2564f8ee7f2cb7f3" kindref="member">PossibleMoves</ref>(board,<sp/>startX,<sp/>startY);</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>found<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classMove" kindref="compound">Move</ref>&amp;<sp/>candidate<sp/>:<sp/>candidates)<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(candidate.getStartX()<sp/>==<sp/>move.<ref refid="classMove_1ae5b75e6f1d977e5eacac7e85d991ed27" kindref="member">getStartX</ref>()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>candidate.getStartY()<sp/>==<sp/>move.<ref refid="classMove_1afb1961349a3fb940e4596ee12d28cf1f" kindref="member">getStartY</ref>()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>candidate.getEndX()<sp/><sp/><sp/>==<sp/>move.<ref refid="classMove_1a2d670ad83efcfd894e7877252fce69de" kindref="member">getEndX</ref>()<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>candidate.getEndY()<sp/><sp/><sp/>==<sp/>move.<ref refid="classMove_1a3b5509b1d995526c851561f73d327ff3" kindref="member">getEndY</ref>())</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>found<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!found)</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Check<sp/>for<sp/>promotion:<sp/>if<sp/>the<sp/>move<sp/>ends<sp/>on<sp/>the<sp/>promotion<sp/>row,<sp/>prompt<sp/>for<sp/>promotion.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>promotionRow<sp/>=<sp/>(<ref refid="classPiece_1a757a577b6dfb06c6558021b828ca7c1d" kindref="member">m_color</ref><sp/>==<sp/><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1cab5bf627e448384cf3a4c35121ca6008d" kindref="member">PieceColor::WHITE</ref>)<sp/>?<sp/>0<sp/>:<sp/>7;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(endY<sp/>==<sp/>promotionRow)</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="Pawn_8cpp_1a3c12b4f5901ce1e94c819c559c0e199a" kindref="member">promote</ref>(&amp;setReplacement,<sp/><ref refid="classPiece_1a757a577b6dfb06c6558021b828ca7c1d" kindref="member">m_color</ref>);</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="classPawn_1a04ed6a9744fe13c85fee3331df8c8aca" refkind="member"><highlight class="normal">std::string<sp/><ref refid="classPawn_1a04ed6a9744fe13c85fee3331df8c8aca" kindref="member">Pawn::Symbol</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight></codeline>
+<codeline lineno="123"><highlight class="keyword"></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;P&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="Pawn.cpp"/>
+  </compounddef>
+</doxygen>

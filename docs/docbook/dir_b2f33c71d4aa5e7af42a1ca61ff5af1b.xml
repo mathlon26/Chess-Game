@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_b2f33c71d4aa5e7af42a1ca61ff5af1b" xml:lang="en-US">
+<title>source Directory Reference</title>
+<indexterm><primary>source Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_Bishop_8cpp">Bishop.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_Board_8cpp">Board.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_BotPlayer_8cpp">BotPlayer.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_ChessGame_8cpp">ChessGame.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_HumanPlayer_8cpp">HumanPlayer.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_King_8cpp">King.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_Knight_8cpp">Knight.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_main_8cpp">main.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_Move_8cpp">Move.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_Pawn_8cpp">Pawn.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_Piece_8cpp">Piece.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_Player_8cpp">Player.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_Queen_8cpp">Queen.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_Rook_8cpp">Rook.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_TwoPlayerGame_8cpp">TwoPlayerGame.cpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

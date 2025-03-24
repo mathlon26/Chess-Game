@@ -1,0 +1,115 @@
+\doxysection{Two\+Player\+Game Class Reference}
+\hypertarget{classTwoPlayerGame}{}\label{classTwoPlayerGame}\index{TwoPlayerGame@{TwoPlayerGame}}
+
+
+{\ttfamily \#include $<$Two\+Player\+Game.\+h$>$}
+
+
+
+Inheritance diagram for Two\+Player\+Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=168pt]{classTwoPlayerGame__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Two\+Player\+Game\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=199pt]{classTwoPlayerGame__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classTwoPlayerGame_ab72050bd05184152737eac9567c63aa9}{Two\+Player\+Game}} ()
+\item 
+\mbox{\hyperlink{classTwoPlayerGame_ad7fa6281a4685c1df35238afda1e3008}{\texorpdfstring{$\sim$}{\string~}\+Two\+Player\+Game}} ()
+\item 
+\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classTwoPlayerGame_ada483d74a31419d9cceba7001badc8a4}{Get\+Player\+On\+Turn}} ()
+\item 
+\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classTwoPlayerGame_aae0d82cc749714dbbc29282391ae22de}{Switch\+Turn}} ()
+\item 
+virtual void \mbox{\hyperlink{classTwoPlayerGame_ac9ad5060f04c7c3b7851c4466fb3571a}{Setup\+Players}} ()=0
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classTwoPlayerGame_a9435e6deb94ff0b98ccccf64b61df3cf}{m\+\_\+player\+One}} \{nullptr\}
+\item 
+\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classTwoPlayerGame_a441ac2fa9fec5787600182cbf7dd4758}{m\+\_\+player\+Two}} \{nullptr\}
+\item 
+\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classTwoPlayerGame_ab42d05663bf7ce1e01df81bd546e6f02}{m\+\_\+player\+On\+Turn}} \{nullptr\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classTwoPlayerGame_ab72050bd05184152737eac9567c63aa9}\index{TwoPlayerGame@{TwoPlayerGame}!TwoPlayerGame@{TwoPlayerGame}}
+\index{TwoPlayerGame@{TwoPlayerGame}!TwoPlayerGame@{TwoPlayerGame}}
+\doxysubsubsection{\texorpdfstring{TwoPlayerGame()}{TwoPlayerGame()}}
+{\footnotesize\ttfamily \label{classTwoPlayerGame_ab72050bd05184152737eac9567c63aa9} 
+Two\+Player\+Game\+::\+Two\+Player\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classTwoPlayerGame_ad7fa6281a4685c1df35238afda1e3008}\index{TwoPlayerGame@{TwoPlayerGame}!````~TwoPlayerGame@{\texorpdfstring{$\sim$}{\string~}TwoPlayerGame}}
+\index{````~TwoPlayerGame@{\texorpdfstring{$\sim$}{\string~}TwoPlayerGame}!TwoPlayerGame@{TwoPlayerGame}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}TwoPlayerGame()}{\string~TwoPlayerGame()}}
+{\footnotesize\ttfamily \label{classTwoPlayerGame_ad7fa6281a4685c1df35238afda1e3008} 
+Two\+Player\+Game\+::\texorpdfstring{$\sim$}{\string~}\+Two\+Player\+Game (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classTwoPlayerGame_ada483d74a31419d9cceba7001badc8a4}\index{TwoPlayerGame@{TwoPlayerGame}!GetPlayerOnTurn@{GetPlayerOnTurn}}
+\index{GetPlayerOnTurn@{GetPlayerOnTurn}!TwoPlayerGame@{TwoPlayerGame}}
+\doxysubsubsection{\texorpdfstring{GetPlayerOnTurn()}{GetPlayerOnTurn()}}
+{\footnotesize\ttfamily \label{classTwoPlayerGame_ada483d74a31419d9cceba7001badc8a4} 
+\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*} Two\+Player\+Game\+::\+Get\+Player\+On\+Turn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classTwoPlayerGame_ac9ad5060f04c7c3b7851c4466fb3571a}\index{TwoPlayerGame@{TwoPlayerGame}!SetupPlayers@{SetupPlayers}}
+\index{SetupPlayers@{SetupPlayers}!TwoPlayerGame@{TwoPlayerGame}}
+\doxysubsubsection{\texorpdfstring{SetupPlayers()}{SetupPlayers()}}
+{\footnotesize\ttfamily \label{classTwoPlayerGame_ac9ad5060f04c7c3b7851c4466fb3571a} 
+virtual void Two\+Player\+Game\+::\+Setup\+Players (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classChessGame_a2640c47a2ac9aa47f4db38d5e521c123}{Chess\+Game}}.
+
+\Hypertarget{classTwoPlayerGame_aae0d82cc749714dbbc29282391ae22de}\index{TwoPlayerGame@{TwoPlayerGame}!SwitchTurn@{SwitchTurn}}
+\index{SwitchTurn@{SwitchTurn}!TwoPlayerGame@{TwoPlayerGame}}
+\doxysubsubsection{\texorpdfstring{SwitchTurn()}{SwitchTurn()}}
+{\footnotesize\ttfamily \label{classTwoPlayerGame_aae0d82cc749714dbbc29282391ae22de} 
+\mbox{\hyperlink{classPlayer}{Player}} \texorpdfstring{$\ast$}{*} Two\+Player\+Game\+::\+Switch\+Turn (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classTwoPlayerGame_a9435e6deb94ff0b98ccccf64b61df3cf}\index{TwoPlayerGame@{TwoPlayerGame}!m\_playerOne@{m\_playerOne}}
+\index{m\_playerOne@{m\_playerOne}!TwoPlayerGame@{TwoPlayerGame}}
+\doxysubsubsection{\texorpdfstring{m\_playerOne}{m\_playerOne}}
+{\footnotesize\ttfamily \label{classTwoPlayerGame_a9435e6deb94ff0b98ccccf64b61df3cf} 
+\mbox{\hyperlink{classPlayer}{Player}}\texorpdfstring{$\ast$}{*} Two\+Player\+Game\+::m\+\_\+player\+One \{nullptr\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classTwoPlayerGame_ab42d05663bf7ce1e01df81bd546e6f02}\index{TwoPlayerGame@{TwoPlayerGame}!m\_playerOnTurn@{m\_playerOnTurn}}
+\index{m\_playerOnTurn@{m\_playerOnTurn}!TwoPlayerGame@{TwoPlayerGame}}
+\doxysubsubsection{\texorpdfstring{m\_playerOnTurn}{m\_playerOnTurn}}
+{\footnotesize\ttfamily \label{classTwoPlayerGame_ab42d05663bf7ce1e01df81bd546e6f02} 
+\mbox{\hyperlink{classPlayer}{Player}}\texorpdfstring{$\ast$}{*} Two\+Player\+Game\+::m\+\_\+player\+On\+Turn \{nullptr\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+\Hypertarget{classTwoPlayerGame_a441ac2fa9fec5787600182cbf7dd4758}\index{TwoPlayerGame@{TwoPlayerGame}!m\_playerTwo@{m\_playerTwo}}
+\index{m\_playerTwo@{m\_playerTwo}!TwoPlayerGame@{TwoPlayerGame}}
+\doxysubsubsection{\texorpdfstring{m\_playerTwo}{m\_playerTwo}}
+{\footnotesize\ttfamily \label{classTwoPlayerGame_a441ac2fa9fec5787600182cbf7dd4758} 
+\mbox{\hyperlink{classPlayer}{Player}}\texorpdfstring{$\ast$}{*} Two\+Player\+Game\+::m\+\_\+player\+Two \{nullptr\}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/huplo/\+Coding/\+Projects/\+C++/chess-\/game/include/\mbox{\hyperlink{TwoPlayerGame_8h}{Two\+Player\+Game.\+h}}\item 
+\mbox{\hyperlink{TwoPlayerGame_8cpp}{Two\+Player\+Game.\+cpp}}\end{DoxyCompactItemize}

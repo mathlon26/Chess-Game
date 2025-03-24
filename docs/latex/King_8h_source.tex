@@ -1,0 +1,26 @@
+\doxysection{King.\+h}
+\hypertarget{King_8h_source}{}\label{King_8h_source}\index{/home/huplo/Coding/Projects/C++/chess-\/game/include/King.h@{/home/huplo/Coding/Projects/C++/chess-\/game/include/King.h}}
+\mbox{\hyperlink{King_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ KING\_\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ KING\_\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Piece_8h}{Piece.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Move_8h}{Move.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classKing_ac7a820e20220f49bec5e38a95d5cc307}{King}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f}{Piece}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{classKing_ac7a820e20220f49bec5e38a95d5cc307}{King}}(\mbox{\hyperlink{Piece_8h_a3287fa298adf5d748c8fe84b0b2742ec}{PieceColor}}\ color);}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{classKing_aac368ce96e2b12f62e3608d27262e941}{\string~King}}()\ \{\};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ \mbox{\hyperlink{classKing_a665e0aa25a08ca43bfa3fbaa7f68d24b}{Symbol}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00014\ \ \ \ \ std::vector<Move>\ \mbox{\hyperlink{classKing_adceeb19b6efe066f1d6882aa859925fd}{PossibleMoves}}(\mbox{\hyperlink{classBoard}{Board}}*\ board,\ \textcolor{keywordtype}{int}\ currentX,\ \textcolor{keywordtype}{int}\ currentY)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classKing_ad69ed8cd25086881cabde8d3ad9bb503}{IsValidMove}}(\mbox{\hyperlink{classPiece}{Piece}}*\ target,\ \mbox{\hyperlink{classBoard}{Board}}*\ board,\ \mbox{\hyperlink{classMove}{Move}}\&\ move,\ \mbox{\hyperlink{classPiece}{Piece}}*\&\ setReplacement)\ \textcolor{keyword}{const\ override}\ ;}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classKing_ae5f6eaa800f8ef88416ab92953451265}{IsKing}}()\textcolor{keyword}{\ const\ override\ }\{\textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\}}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ KING\_\_H}}
+
+\end{DoxyCode}

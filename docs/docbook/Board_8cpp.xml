@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Board_8cpp" xml:lang="en-US">
+<title>Board.cpp File Reference</title>
+<indexterm><primary>Board.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../include/Board.h&quot;<?linebreak?>#include &quot;../include/Piece.h&quot;<?linebreak?>#include &quot;../include/Player.h&quot;<?linebreak?>#include &quot;../include/Pawn.h&quot;<?linebreak?>#include &quot;../include/Rook.h&quot;<?linebreak?>#include &quot;../include/Knight.h&quot;<?linebreak?>#include &quot;../include/Bishop.h&quot;<?linebreak?>#include &quot;../include/Queen.h&quot;<?linebreak?>#include &quot;../include/King.h&quot;<?linebreak?>#include &quot;../include/Move.h&quot;<?linebreak?>#include &quot;../dependencies/Style.hpp&quot;<?linebreak?>#include &lt;iostream&gt;<?linebreak?>#include &lt;sstream&gt;<?linebreak?>#include &lt;string&gt;<?linebreak?>#include &lt;cstdlib&gt;<?linebreak?></programlisting>Include dependency graph for Board.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="Board_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_Board_8cpp_1aac919280662b1a7e6284a0cacbeba5d1">LogMoveRecord</link> (const <link linkend="_structMoveRecord">MoveRecord</link> &amp;record)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_Board_8cpp_1aac919280662b1a7e6284a0cacbeba5d1"/><section>
+    <title>LogMoveRecord()</title>
+<indexterm><primary>LogMoveRecord</primary><secondary>Board.cpp</secondary></indexterm>
+<indexterm><primary>Board.cpp</primary><secondary>LogMoveRecord</secondary></indexterm>
+<para><computeroutput>void LogMoveRecord (const <link linkend="_structMoveRecord">MoveRecord</link> &amp; record)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="Board_8cpp_aac919280662b1a7e6284a0cacbeba5d1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

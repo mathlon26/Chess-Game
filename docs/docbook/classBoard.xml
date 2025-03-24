@@ -1,0 +1,163 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classBoard" xml:lang="en-US">
+<title>Board Class Reference</title>
+<indexterm><primary>Board</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Board.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classBoard_1a9ee491d4fea680cf69b033374a9fdfcb">Board</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classBoard_1af73f45730119a1fd8f6670f53f959e68">~Board</link> ()</para>
+</listitem>
+            <listitem><para>void <link linkend="_classBoard_1a54a0fe14d04fa09928d8d6fc26a85cc2">Draw</link> () const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classBoard_1af1f69a1b91ec7fa07d0a85ce04d103ec">ExecuteMove</link> (<link linkend="_classMove">Move</link> &amp;move, <link linkend="_classPlayer">Player</link> *executor)</para>
+</listitem>
+            <listitem><para><link linkend="_structMoveRecord">MoveRecord</link> <link linkend="_classBoard_1a23d1fdbb5e49d70b51c0cda70d003597">CommitMoveRecord</link> (<link linkend="_classMove">Move</link> &amp;move, <link linkend="_classPiece">Piece</link> *replacement)</para>
+</listitem>
+            <listitem><para>void <link linkend="_classBoard_1ab9670780329f8763c49881cfada761c2">RevertMoveRecord</link> (const <link linkend="_structMoveRecord">MoveRecord</link> &amp;record)</para>
+</listitem>
+            <listitem><para><link linkend="_classPiece">Piece</link> * <link linkend="_classBoard_1ad23c997a2d137d40511dfd327248de3d">GetPiece</link> (int x, int y) const</para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_classMove">Move</link> &gt; <link linkend="_classBoard_1a1ff64194b703edb37a5c9770de17e48a">GetPossibleMoves</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classBoard_1aa178becb7490422c52bf03c5956446e9">IsEnPassantTarget</link> (int x, int y) const</para>
+</listitem>
+            <listitem><para>void <link linkend="_classBoard_1a4da590b5c737674de91dcea89780db69">ClearEnPassantTarget</link> ()</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classBoard_1a20bcaee5725f1fc0e57b0e59a004153a">IsKingChecked</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color) const</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classBoard_1af39b4dc6727c480c32925388ed95ae04">SetKingChecked</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classBoard_1a9ee491d4fea680cf69b033374a9fdfcb"/><section>
+    <title>Board()</title>
+<indexterm><primary>Board</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>Board</secondary></indexterm>
+<para><computeroutput>Board::Board ( )</computeroutput></para></section>
+<anchor xml:id="_classBoard_1af73f45730119a1fd8f6670f53f959e68"/><section>
+    <title>~Board()</title>
+<indexterm><primary>~Board</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>~Board</secondary></indexterm>
+<para><computeroutput>Board::~Board ( )</computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classBoard_1a4da590b5c737674de91dcea89780db69"/><section>
+    <title>ClearEnPassantTarget()</title>
+<indexterm><primary>ClearEnPassantTarget</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>ClearEnPassantTarget</secondary></indexterm>
+<para><computeroutput>void Board::ClearEnPassantTarget ( )</computeroutput></para></section>
+<anchor xml:id="_classBoard_1a23d1fdbb5e49d70b51c0cda70d003597"/><section>
+    <title>CommitMoveRecord()</title>
+<indexterm><primary>CommitMoveRecord</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>CommitMoveRecord</secondary></indexterm>
+<para><computeroutput><link linkend="_structMoveRecord">MoveRecord</link> Board::CommitMoveRecord (<link linkend="_classMove">Move</link> &amp; move, <link linkend="_classPiece">Piece</link> * replacement)</computeroutput></para>
+<para>CommitMoveRecord: Performs the move on the board and returns a <link linkend="_structMoveRecord">MoveRecord</link> capturing the previous state. </para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classBoard_a23d1fdbb5e49d70b51c0cda70d003597_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classBoard_1a54a0fe14d04fa09928d8d6fc26a85cc2"/><section>
+    <title>Draw()</title>
+<indexterm><primary>Draw</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>Draw</secondary></indexterm>
+<para><computeroutput>void Board::Draw ( ) const</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classBoard_a54a0fe14d04fa09928d8d6fc26a85cc2_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classBoard_1af1f69a1b91ec7fa07d0a85ce04d103ec"/><section>
+    <title>ExecuteMove()</title>
+<indexterm><primary>ExecuteMove</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>ExecuteMove</secondary></indexterm>
+<para><computeroutput>bool Board::ExecuteMove (<link linkend="_classMove">Move</link> &amp; move, <link linkend="_classPlayer">Player</link> * executor)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classBoard_af1f69a1b91ec7fa07d0a85ce04d103ec_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classBoard_1ad23c997a2d137d40511dfd327248de3d"/><section>
+    <title>GetPiece()</title>
+<indexterm><primary>GetPiece</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>GetPiece</secondary></indexterm>
+<para><computeroutput><link linkend="_classPiece">Piece</link> * Board::GetPiece (int x, int y) const</computeroutput></para></section>
+<anchor xml:id="_classBoard_1a1ff64194b703edb37a5c9770de17e48a"/><section>
+    <title>GetPossibleMoves()</title>
+<indexterm><primary>GetPossibleMoves</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>GetPossibleMoves</secondary></indexterm>
+<para><computeroutput>std::vector&lt; <link linkend="_classMove">Move</link> &gt; Board::GetPossibleMoves (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color) const</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classBoard_a1ff64194b703edb37a5c9770de17e48a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classBoard_1aa178becb7490422c52bf03c5956446e9"/><section>
+    <title>IsEnPassantTarget()</title>
+<indexterm><primary>IsEnPassantTarget</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>IsEnPassantTarget</secondary></indexterm>
+<para><computeroutput>bool Board::IsEnPassantTarget (int x, int y) const</computeroutput></para></section>
+<anchor xml:id="_classBoard_1a20bcaee5725f1fc0e57b0e59a004153a"/><section>
+    <title>IsKingChecked()</title>
+<indexterm><primary>IsKingChecked</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>IsKingChecked</secondary></indexterm>
+<para><computeroutput>bool Board::IsKingChecked (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color) const</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classBoard_a20bcaee5725f1fc0e57b0e59a004153a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classBoard_1ab9670780329f8763c49881cfada761c2"/><section>
+    <title>RevertMoveRecord()</title>
+<indexterm><primary>RevertMoveRecord</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>RevertMoveRecord</secondary></indexterm>
+<para><computeroutput>void Board::RevertMoveRecord (const <link linkend="_structMoveRecord">MoveRecord</link> &amp; record)</computeroutput></para>
+<para>RevertMoveRecord: Reverts a move using the information stored in the <link linkend="_structMoveRecord">MoveRecord</link>. </para>
+</section>
+<anchor xml:id="_classBoard_1af39b4dc6727c480c32925388ed95ae04"/><section>
+    <title>SetKingChecked()</title>
+<indexterm><primary>SetKingChecked</primary><secondary>Board</secondary></indexterm>
+<indexterm><primary>Board</primary><secondary>SetKingChecked</secondary></indexterm>
+<para><computeroutput>bool Board::SetKingChecked (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classBoard_af39b4dc6727c480c32925388ed95ae04_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/huplo/Coding/Projects/C++/chess-game/include/<link linkend="_Board_8h">Board.h</link><link linkend="_Board_8cpp">Board.cpp</link></section>
+</section>

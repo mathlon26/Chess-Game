@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Piece_8h" xml:lang="en-US">
+<title>/home/huplo/Coding/Projects/C++/chess-game/include/Piece.h File Reference</title>
+<indexterm><primary>/home/huplo/Coding/Projects/C++/chess-game/include/Piece.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;../dependencies/Style.hpp&quot;<?linebreak?>#include &quot;Board.h&quot;<?linebreak?>#include &quot;Move.h&quot;<?linebreak?></programlisting>Include dependency graph for Piece.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="Piece_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="Piece_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classPiece">Piece</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> <link linkend="_Piece_8h_1a3287fa298adf5d748c8fe84b0b2742ec">PieceColor</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_Piece_8h_1a3287fa298adf5d748c8fe84b0b2742ec"/><section>
+    <title>PieceColor</title>
+<indexterm><primary>PieceColor</primary><secondary>Piece.h</secondary></indexterm>
+<indexterm><primary>Piece.h</primary><secondary>PieceColor</secondary></indexterm>
+<para><computeroutput>typedef <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PieceColor</link></computeroutput></para></section>
+</section>
+</section>

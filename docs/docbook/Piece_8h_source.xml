@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Piece_8h_source" xml:lang="en-US">
+<title>Piece.h</title>
+<indexterm><primary>/home/huplo/Coding/Projects/C++/chess-game/include/Piece.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="preprocessor">#ifndef&#32;PIECE__H</emphasis>
+2 <emphasis role="preprocessor">#define&#32;PIECE__H</emphasis>
+3 
+4 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Style_8hpp">../dependencies/Style.hpp</link>&quot;</emphasis>
+5 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Board_8h">Board.h</link>&quot;</emphasis>
+6 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_Move_8h">Move.h</link>&quot;</emphasis>
+7 
+8 <emphasis role="comment">//&#32;for&#32;Color()&#32;function</emphasis>
+9 <emphasis role="keyword">typedef</emphasis>&#32;<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link>&#32;<link linkend="_Piece_8h_1a3287fa298adf5d748c8fe84b0b2742ec">PieceColor</link>;
+10 
+11 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classMove">Move</link>;
+12 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classBoard">Board</link>;
+13 
+14 <emphasis role="keyword">class&#32;</emphasis><link linkend="_classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f">Piece</link>
+15 {
+16 <emphasis role="keyword">public</emphasis>:
+17 &#32;&#32;&#32;&#32;<link linkend="_classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f">Piece</link>(<link linkend="_Piece_8h_1a3287fa298adf5d748c8fe84b0b2742ec">PieceColor</link>&#32;color)&#32;:&#32;<link linkend="_classPiece_1a757a577b6dfb06c6558021b828ca7c1d">m_color</link>{color}&#32;{}
+18 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classPiece_1ab63f5b3faabe6ce60c9eb1806511ff9d">~Piece</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+19 &#32;&#32;&#32;&#32;<link linkend="_Piece_8h_1a3287fa298adf5d748c8fe84b0b2742ec">PieceColor</link>&#32;<link linkend="_classPiece_1ad31a695453335fbbc36a9c749395f7c1">Color</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classPiece_1a757a577b6dfb06c6558021b828ca7c1d">m_color</link>;}
+20 
+21 &#32;&#32;&#32;&#32;
+22 
+23 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;std::string&#32;<link linkend="_classPiece_1abc54f78cfc3e6c4ed3d103ddaeb1d96f">Symbol</link>()&#32;<emphasis role="keyword">const</emphasis>&#32;=&#32;0;
+24 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;std::vector&lt;Move&gt;&#32;<link linkend="_classPiece_1a1c67fd5e66c3e7b6c1f4ebf3207e65e2">PossibleMoves</link>(<link linkend="_classBoard">Board</link>*&#32;board,&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentX,&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentY)&#32;<emphasis role="keyword">const</emphasis>&#32;=&#32;0;
+25 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classPiece_1a363193ff97c3e10b77feb6aec81d1a35">IsValidMove</link>(<link linkend="_classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f">Piece</link>*&#32;target,&#32;<link linkend="_classBoard">Board</link>*&#32;board,&#32;<link linkend="_classMove">Move</link>&amp;&#32;move,&#32;<link linkend="_classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f">Piece</link>*&amp;&#32;setReplacement)&#32;<emphasis role="keyword">const</emphasis>&#32;=&#32;0;
+26 
+27 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classPiece_1a392fecd481d60993e7d6d73116b2e171">IsKing</link>()<emphasis role="keyword">&#32;const&#32;</emphasis>{<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;}
+28 
+29 <emphasis role="keyword">protected</emphasis>:
+30 &#32;&#32;&#32;&#32;
+31 &#32;&#32;&#32;&#32;<link linkend="_Piece_8h_1a3287fa298adf5d748c8fe84b0b2742ec">PieceColor</link>&#32;<link linkend="_classPiece_1a757a577b6dfb06c6558021b828ca7c1d">m_color</link>;
+32 };
+33 
+34 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;PIECE__H</emphasis>
+</programlisting></section>

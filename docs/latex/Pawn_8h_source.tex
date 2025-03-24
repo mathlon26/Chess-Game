@@ -1,0 +1,26 @@
+\doxysection{Pawn.\+h}
+\hypertarget{Pawn_8h_source}{}\label{Pawn_8h_source}\index{/home/huplo/Coding/Projects/C++/chess-\/game/include/Pawn.h@{/home/huplo/Coding/Projects/C++/chess-\/game/include/Pawn.h}}
+\mbox{\hyperlink{Pawn_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PAWN\_\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PAWN\_\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Piece_8h}{Piece.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Move_8h}{Move.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPawn_a7bdce6cc89b699f6deb9f176256d2bbd}{Pawn}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f}{Piece}}}
+\DoxyCodeLine{00008\ \{}
+\DoxyCodeLine{00009\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{classPawn_a7bdce6cc89b699f6deb9f176256d2bbd}{Pawn}}(\mbox{\hyperlink{Piece_8h_a3287fa298adf5d748c8fe84b0b2742ec}{PieceColor}}\ color);}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{classPawn_a3095938fb8326469c3bd05da0b8f50af}{\string~Pawn}}()\ \{\};}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ \mbox{\hyperlink{classPawn_a04ed6a9744fe13c85fee3331df8c8aca}{Symbol}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00014\ \ \ \ \ std::vector<Move>\ \mbox{\hyperlink{classPawn_a8e427faba3cb063c2564f8ee7f2cb7f3}{PossibleMoves}}(\mbox{\hyperlink{classBoard}{Board}}*\ board,\ \textcolor{keywordtype}{int}\ currentX,\ \textcolor{keywordtype}{int}\ currentY)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPawn_af11d10b5d5f2456eb97d835bf0d8b4f8}{IsValidMove}}(\mbox{\hyperlink{classPiece}{Piece}}*\ target,\ \mbox{\hyperlink{classBoard}{Board}}*\ board,\ \mbox{\hyperlink{classMove}{Move}}\&\ move,\ \mbox{\hyperlink{classPiece}{Piece}}*\&\ setReplacement)\ \textcolor{keyword}{const\ override}\ ;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00018\ \};}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PAWN\_\_H}}
+
+\end{DoxyCode}

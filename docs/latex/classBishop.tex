@@ -1,0 +1,134 @@
+\doxysection{Bishop Class Reference}
+\hypertarget{classBishop}{}\label{classBishop}\index{Bishop@{Bishop}}
+
+
+{\ttfamily \#include $<$Bishop.\+h$>$}
+
+
+
+Inheritance diagram for Bishop\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=126pt]{classBishop__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bishop\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=126pt]{classBishop__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBishop_a91c9938c3f7722ab62942875041ba05f}{Bishop}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} color)
+\item 
+\mbox{\hyperlink{classBishop_a3705b4537a39d09a59143fe01a62442f}{\texorpdfstring{$\sim$}{\string~}\+Bishop}} ()
+\item 
+std\+::string \mbox{\hyperlink{classBishop_ab0ca2dd9d66fbbe8169431083b2eb171}{Symbol}} () const override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classMove}{Move}} $>$ \mbox{\hyperlink{classBishop_a399c419d4fe7882b795b65be5503b2b8}{Possible\+Moves}} (\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}board, int currentX, int currentY) const override
+\item 
+bool \mbox{\hyperlink{classBishop_aada80a713ad52b68be931e2fa01848dd}{Is\+Valid\+Move}} (\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}target, \mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}board, \mbox{\hyperlink{classMove}{Move}} \&move, \mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}\&set\+Replacement) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPiece}{Piece}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f}{Piece}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} color)
+\item 
+virtual \mbox{\hyperlink{classPiece_ab63f5b3faabe6ce60c9eb1806511ff9d}{\texorpdfstring{$\sim$}{\string~}\+Piece}} ()=default
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} \mbox{\hyperlink{classPiece_ad31a695453335fbbc36a9c749395f7c1}{Color}} () const
+\item 
+virtual bool \mbox{\hyperlink{classPiece_a392fecd481d60993e7d6d73116b2e171}{Is\+King}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classPiece}{Piece}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} \mbox{\hyperlink{classPiece_a757a577b6dfb06c6558021b828ca7c1d}{m\+\_\+color}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBishop_a91c9938c3f7722ab62942875041ba05f}\index{Bishop@{Bishop}!Bishop@{Bishop}}
+\index{Bishop@{Bishop}!Bishop@{Bishop}}
+\doxysubsubsection{\texorpdfstring{Bishop()}{Bishop()}}
+{\footnotesize\ttfamily \label{classBishop_a91c9938c3f7722ab62942875041ba05f} 
+Bishop\+::\+Bishop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}}}]{color}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{classBishop_a91c9938c3f7722ab62942875041ba05f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBishop_a3705b4537a39d09a59143fe01a62442f}\index{Bishop@{Bishop}!````~Bishop@{\texorpdfstring{$\sim$}{\string~}Bishop}}
+\index{````~Bishop@{\texorpdfstring{$\sim$}{\string~}Bishop}!Bishop@{Bishop}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Bishop()}{\string~Bishop()}}
+{\footnotesize\ttfamily \label{classBishop_a3705b4537a39d09a59143fe01a62442f} 
+Bishop\+::\texorpdfstring{$\sim$}{\string~}\+Bishop (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBishop_aada80a713ad52b68be931e2fa01848dd}\index{Bishop@{Bishop}!IsValidMove@{IsValidMove}}
+\index{IsValidMove@{IsValidMove}!Bishop@{Bishop}}
+\doxysubsubsection{\texorpdfstring{IsValidMove()}{IsValidMove()}}
+{\footnotesize\ttfamily \label{classBishop_aada80a713ad52b68be931e2fa01848dd} 
+bool Bishop\+::\+Is\+Valid\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}}]{target}{, }\item[{\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{\mbox{\hyperlink{classMove}{Move}} \&}]{move}{, }\item[{\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}\&}]{set\+Replacement}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_a363193ff97c3e10b77feb6aec81d1a35}{Piece}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBishop_aada80a713ad52b68be931e2fa01848dd_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBishop_a399c419d4fe7882b795b65be5503b2b8}\index{Bishop@{Bishop}!PossibleMoves@{PossibleMoves}}
+\index{PossibleMoves@{PossibleMoves}!Bishop@{Bishop}}
+\doxysubsubsection{\texorpdfstring{PossibleMoves()}{PossibleMoves()}}
+{\footnotesize\ttfamily \label{classBishop_a399c419d4fe7882b795b65be5503b2b8} 
+std\+::vector$<$ \mbox{\hyperlink{classMove}{Move}} $>$ Bishop\+::\+Possible\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{int}]{currentX}{, }\item[{int}]{currentY}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_a1c67fd5e66c3e7b6c1f4ebf3207e65e2}{Piece}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=323pt]{classBishop_a399c419d4fe7882b795b65be5503b2b8_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBishop_ab0ca2dd9d66fbbe8169431083b2eb171}\index{Bishop@{Bishop}!Symbol@{Symbol}}
+\index{Symbol@{Symbol}!Bishop@{Bishop}}
+\doxysubsubsection{\texorpdfstring{Symbol()}{Symbol()}}
+{\footnotesize\ttfamily \label{classBishop_ab0ca2dd9d66fbbe8169431083b2eb171} 
+std\+::string Bishop\+::\+Symbol (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_abc54f78cfc3e6c4ed3d103ddaeb1d96f}{Piece}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/huplo/\+Coding/\+Projects/\+C++/chess-\/game/include/\mbox{\hyperlink{Bishop_8h}{Bishop.\+h}}\item 
+\mbox{\hyperlink{Bishop_8cpp}{Bishop.\+cpp}}\end{DoxyCompactItemize}

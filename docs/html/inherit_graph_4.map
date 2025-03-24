@@ -1,0 +1,15 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" href="$classPiece.html" title=" " alt="" coords="5,132,60,159"/>
+<area shape="rect" id="Node000001" href="$classBishop.html" title=" " alt="" coords="108,5,169,32"/>
+<area shape="poly" id="edge6_Node000000_Node000001" title=" " alt="" coords="48,117,74,81,106,42,118,31,121,34,110,46,78,84,53,120"/>
+<area shape="rect" id="Node000002" href="$classKing.html" title=" " alt="" coords="115,56,162,83"/>
+<area shape="poly" id="edge7_Node000000_Node000002" title=" " alt="" coords="63,121,117,81,120,85,66,125"/>
+<area shape="rect" id="Node000003" href="$classKnight.html" title=" " alt="" coords="109,107,168,133"/>
+<area shape="poly" id="edge8_Node000000_Node000003" title=" " alt="" coords="74,133,108,124,109,130,75,138"/>
+<area shape="rect" id="Node000004" href="$classPawn.html" title=" " alt="" coords="111,157,166,184"/>
+<area shape="poly" id="edge9_Node000000_Node000004" title=" " alt="" coords="75,153,111,162,110,167,74,158"/>
+<area shape="rect" id="Node000005" href="$classQueen.html" title=" " alt="" coords="109,208,168,235"/>
+<area shape="poly" id="edge10_Node000000_Node000005" title=" " alt="" coords="66,166,120,205,117,210,63,170"/>
+<area shape="rect" id="Node000006" href="$classRook.html" title=" " alt="" coords="112,259,164,285"/>
+<area shape="poly" id="edge11_Node000000_Node000006" title=" " alt="" coords="53,170,78,207,110,245,121,256,118,260,106,248,74,210,48,173"/>
+</map>

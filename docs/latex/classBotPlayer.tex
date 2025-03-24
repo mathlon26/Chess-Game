@@ -1,0 +1,154 @@
+\doxysection{Bot\+Player Class Reference}
+\hypertarget{classBotPlayer}{}\label{classBotPlayer}\index{BotPlayer@{BotPlayer}}
+
+
+{\ttfamily \#include $<$Bot\+Player.\+h$>$}
+
+
+
+Inheritance diagram for Bot\+Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classBotPlayer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bot\+Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=139pt]{classBotPlayer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBotPlayer_ad520b04b07027663107b8ad003753fff}{Bot\+Player}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}} color)
+\item 
+\mbox{\hyperlink{classBotPlayer_a526b7fc1214d8e2e2c009679f18e177d}{\texorpdfstring{$\sim$}{\string~}\+Bot\+Player}} ()
+\item 
+bool \mbox{\hyperlink{classBotPlayer_a5e79536cccb4c8d9452a79950a598351}{Is\+Bot}} () override
+\item 
+std\+::string \mbox{\hyperlink{classBotPlayer_aa6c9035eac0ad8b34c124eeb3876d92a}{Get\+Input}} (const \mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}const board) const override
+\item 
+std\+::string \mbox{\hyperlink{classBotPlayer_aaf2580fa12448259b5142bff4062f0ab}{Name}} () const override
+\item 
+void \mbox{\hyperlink{classBotPlayer_a36fb5ce4f6a78a751d7a95b7b8ebc1ea}{Add\+Cache}} (std\+::string move\+Str)
+\item 
+void \mbox{\hyperlink{classBotPlayer_ada837bf49ac76c75947bc77d4af07088}{Empty\+Cache}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPlayer}{Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer_ad061cf938c523c0e7d529d5591224250}{Player}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}} color)
+\item 
+virtual \mbox{\hyperlink{classPlayer_a278aa7f854813b3d53589d51e74c6cf1}{\texorpdfstring{$\sim$}{\string~}\+Player}} ()=0
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}} \mbox{\hyperlink{classPlayer_af97f460cbb2594def32e32d9046f73ec}{Color}} () const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classPlayer_a8248c589e9edeb32a290f48d82bad7ac}{Get\+Captures}} () const
+\item 
+void \mbox{\hyperlink{classPlayer_a8600584d0d313d9c9183f8676e30b9c2}{Add\+Capture}} (\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}captured)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classPlayer}{Player}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}} \mbox{\hyperlink{classPlayer_adff61d6fe8f9e732c4dbe5a6bbcb5e42}{m\+\_\+color}}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*} $>$ \mbox{\hyperlink{classPlayer_aaef4079e864580e1b197620491d74130}{m\+\_\+captures}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBotPlayer_ad520b04b07027663107b8ad003753fff}\index{BotPlayer@{BotPlayer}!BotPlayer@{BotPlayer}}
+\index{BotPlayer@{BotPlayer}!BotPlayer@{BotPlayer}}
+\doxysubsubsection{\texorpdfstring{BotPlayer()}{BotPlayer()}}
+{\footnotesize\ttfamily \label{classBotPlayer_ad520b04b07027663107b8ad003753fff} 
+Bot\+Player\+::\+Bot\+Player (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Player\+Color}}}]{color}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=301pt]{classBotPlayer_ad520b04b07027663107b8ad003753fff_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBotPlayer_a526b7fc1214d8e2e2c009679f18e177d}\index{BotPlayer@{BotPlayer}!````~BotPlayer@{\texorpdfstring{$\sim$}{\string~}BotPlayer}}
+\index{````~BotPlayer@{\texorpdfstring{$\sim$}{\string~}BotPlayer}!BotPlayer@{BotPlayer}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}BotPlayer()}{\string~BotPlayer()}}
+{\footnotesize\ttfamily \label{classBotPlayer_a526b7fc1214d8e2e2c009679f18e177d} 
+Bot\+Player\+::\texorpdfstring{$\sim$}{\string~}\+Bot\+Player (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBotPlayer_a36fb5ce4f6a78a751d7a95b7b8ebc1ea}\index{BotPlayer@{BotPlayer}!AddCache@{AddCache}}
+\index{AddCache@{AddCache}!BotPlayer@{BotPlayer}}
+\doxysubsubsection{\texorpdfstring{AddCache()}{AddCache()}}
+{\footnotesize\ttfamily \label{classBotPlayer_a36fb5ce4f6a78a751d7a95b7b8ebc1ea} 
+void Bot\+Player\+::\+Add\+Cache (\begin{DoxyParamCaption}\item[{std\+::string}]{move\+Str}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classBotPlayer_ada837bf49ac76c75947bc77d4af07088}\index{BotPlayer@{BotPlayer}!EmptyCache@{EmptyCache}}
+\index{EmptyCache@{EmptyCache}!BotPlayer@{BotPlayer}}
+\doxysubsubsection{\texorpdfstring{EmptyCache()}{EmptyCache()}}
+{\footnotesize\ttfamily \label{classBotPlayer_ada837bf49ac76c75947bc77d4af07088} 
+void Bot\+Player\+::\+Empty\+Cache (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{classBotPlayer_aa6c9035eac0ad8b34c124eeb3876d92a}\index{BotPlayer@{BotPlayer}!GetInput@{GetInput}}
+\index{GetInput@{GetInput}!BotPlayer@{BotPlayer}}
+\doxysubsubsection{\texorpdfstring{GetInput()}{GetInput()}}
+{\footnotesize\ttfamily \label{classBotPlayer_aa6c9035eac0ad8b34c124eeb3876d92a} 
+std\+::string Bot\+Player\+::\+Get\+Input (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}const}]{board}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPlayer_a5afb4b96be0f18b4bc840f44e06072cb}{Player}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBotPlayer_aa6c9035eac0ad8b34c124eeb3876d92a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBotPlayer_a5e79536cccb4c8d9452a79950a598351}\index{BotPlayer@{BotPlayer}!IsBot@{IsBot}}
+\index{IsBot@{IsBot}!BotPlayer@{BotPlayer}}
+\doxysubsubsection{\texorpdfstring{IsBot()}{IsBot()}}
+{\footnotesize\ttfamily \label{classBotPlayer_a5e79536cccb4c8d9452a79950a598351} 
+bool Bot\+Player\+::\+Is\+Bot (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented from \mbox{\hyperlink{classPlayer_a09eaaa8872fcb43e72c7739ab619c866}{Player}}.
+
+\Hypertarget{classBotPlayer_aaf2580fa12448259b5142bff4062f0ab}\index{BotPlayer@{BotPlayer}!Name@{Name}}
+\index{Name@{Name}!BotPlayer@{BotPlayer}}
+\doxysubsubsection{\texorpdfstring{Name()}{Name()}}
+{\footnotesize\ttfamily \label{classBotPlayer_aaf2580fa12448259b5142bff4062f0ab} 
+std\+::string Bot\+Player\+::\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPlayer_a313b6e73fb54e242e318579901ee93da}{Player}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{classBotPlayer_aaf2580fa12448259b5142bff4062f0ab_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/huplo/\+Coding/\+Projects/\+C++/chess-\/game/include/\mbox{\hyperlink{BotPlayer_8h}{Bot\+Player.\+h}}\item 
+\mbox{\hyperlink{BotPlayer_8cpp}{Bot\+Player.\+cpp}}\end{DoxyCompactItemize}

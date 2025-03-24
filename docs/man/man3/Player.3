@@ -1,0 +1,86 @@
+.TH "Player" 3 "Version V4.2.0" "Chess Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+Player
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <Player\&.h>\fP
+.PP
+Inherited by \fBBotPlayer\fP, and \fBHumanPlayer\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayer\fP (\fBPlayerColor\fP color)"
+.br
+.ti -1c
+.RI "virtual \fB~Player\fP ()=0"
+.br
+.ti -1c
+.RI "virtual std::string \fBGetInput\fP (const \fBBoard\fP *const board) const =0"
+.br
+.ti -1c
+.RI "virtual std::string \fBName\fP () const =0"
+.br
+.ti -1c
+.RI "virtual bool \fBIsBot\fP ()"
+.br
+.ti -1c
+.RI "\fBPlayerColor\fP \fBColor\fP () const"
+.br
+.ti -1c
+.RI "std::vector< \fBPiece\fP * > \fBGetCaptures\fP () const"
+.br
+.ti -1c
+.RI "void \fBAddCapture\fP (\fBPiece\fP *captured)"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayerColor\fP \fBm_color\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBPiece\fP * > \fBm_captures\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "Player::Player (\fBPlayerColor\fP color)"
+
+.SS "Player::~Player ()\fR [pure virtual]\fP"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void Player::AddCapture (\fBPiece\fP * captured)"
+
+.SS "\fBPlayerColor\fP Player::Color () const"
+
+.SS "std::vector< \fBPiece\fP * > Player::GetCaptures () const"
+
+.SS "virtual std::string Player::GetInput (const \fBBoard\fP *const board) const\fR [pure virtual]\fP"
+
+.PP
+Implemented in \fBBotPlayer\fP, and \fBHumanPlayer\fP\&.
+.SS "virtual bool Player::IsBot ()\fR [inline]\fP, \fR [virtual]\fP"
+
+.PP
+Reimplemented in \fBBotPlayer\fP\&.
+.SS "virtual std::string Player::Name () const\fR [pure virtual]\fP"
+
+.PP
+Implemented in \fBBotPlayer\fP, and \fBHumanPlayer\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "std::vector<\fBPiece\fP *> Player::m_captures\fR [protected]\fP"
+
+.SS "\fBPlayerColor\fP Player::m_color\fR [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chess Game from the source code\&.

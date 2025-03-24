@@ -1,0 +1,124 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classKnight" xml:lang="en-US">
+<title>Knight Class Reference</title>
+<indexterm><primary>Knight</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Knight.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Knight:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classKnight__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Knight:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classKnight__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classKnight_1ae9ca30e7b96ba6e49701152dd811113e">Knight</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PieceColor</link> color)</para>
+</listitem>
+            <listitem><para><link linkend="_classKnight_1a2754123d6876babe915f4da8f761361b">~Knight</link> ()</para>
+</listitem>
+            <listitem><para>std::string <link linkend="_classKnight_1a69fee9f48cef83fddc0db12895a3daa8">Symbol</link> () const override</para>
+</listitem>
+            <listitem><para>std::vector&lt; <link linkend="_classMove">Move</link> &gt; <link linkend="_classKnight_1a5480f41f242d9069cf48603212124f33">PossibleMoves</link> (<link linkend="_classBoard">Board</link> *board, int currentX, int currentY) const override</para>
+</listitem>
+            <listitem><para>bool <link linkend="_classKnight_1a356a4572773c6b3d415eb4ceaa676bb8">IsValidMove</link> (<link linkend="_classPiece">Piece</link> *target, <link linkend="_classBoard">Board</link> *board, <link linkend="_classMove">Move</link> &amp;move, <link linkend="_classPiece">Piece</link> *&amp;setReplacement) const override</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+Public Member Functions inherited from <link linkend="_classPiece">Piece</link>        <itemizedlist>
+            <listitem><para><link linkend="_classPiece_1a4f0ea7928c9d57ec8f8b14c88358d01f">Piece</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PieceColor</link> color)</para>
+</listitem>
+            <listitem><para>virtual <link linkend="_classPiece_1ab63f5b3faabe6ce60c9eb1806511ff9d">~Piece</link> ()=default</para>
+</listitem>
+            <listitem><para><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PieceColor</link> <link linkend="_classPiece_1ad31a695453335fbbc36a9c749395f7c1">Color</link> () const</para>
+</listitem>
+            <listitem><para>virtual bool <link linkend="_classPiece_1a392fecd481d60993e7d6d73116b2e171">IsKing</link> () const</para>
+</listitem>
+        </itemizedlist>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Protected Attributes inherited from <link linkend="_classPiece">Piece</link>        <itemizedlist>
+            <listitem><para><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PieceColor</link> <link linkend="_classPiece_1a757a577b6dfb06c6558021b828ca7c1d">m_color</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classKnight_1ae9ca30e7b96ba6e49701152dd811113e"/><section>
+    <title>Knight()</title>
+<indexterm><primary>Knight</primary><secondary>Knight</secondary></indexterm>
+<indexterm><primary>Knight</primary><secondary>Knight</secondary></indexterm>
+<para><computeroutput>Knight::Knight (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">PieceColor</link> color)</computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classKnight_ae9ca30e7b96ba6e49701152dd811113e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classKnight_1a2754123d6876babe915f4da8f761361b"/><section>
+    <title>~Knight()</title>
+<indexterm><primary>~Knight</primary><secondary>Knight</secondary></indexterm>
+<indexterm><primary>Knight</primary><secondary>~Knight</secondary></indexterm>
+<para><computeroutput>Knight::~Knight ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classKnight_1a356a4572773c6b3d415eb4ceaa676bb8"/><section>
+    <title>IsValidMove()</title>
+<indexterm><primary>IsValidMove</primary><secondary>Knight</secondary></indexterm>
+<indexterm><primary>Knight</primary><secondary>IsValidMove</secondary></indexterm>
+<para><computeroutput>bool Knight::IsValidMove (<link linkend="_classPiece">Piece</link> * target, <link linkend="_classBoard">Board</link> * board, <link linkend="_classMove">Move</link> &amp; move, <link linkend="_classPiece">Piece</link> *&amp; setReplacement) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classPiece_1a363193ff97c3e10b77feb6aec81d1a35">Piece</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classKnight_a356a4572773c6b3d415eb4ceaa676bb8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classKnight_1a5480f41f242d9069cf48603212124f33"/><section>
+    <title>PossibleMoves()</title>
+<indexterm><primary>PossibleMoves</primary><secondary>Knight</secondary></indexterm>
+<indexterm><primary>Knight</primary><secondary>PossibleMoves</secondary></indexterm>
+<para><computeroutput>std::vector&lt; <link linkend="_classMove">Move</link> &gt; Knight::PossibleMoves (<link linkend="_classBoard">Board</link> * board, int currentX, int currentY) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classPiece_1a1c67fd5e66c3e7b6c1f4ebf3207e65e2">Piece</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classKnight_a5480f41f242d9069cf48603212124f33_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classKnight_1a69fee9f48cef83fddc0db12895a3daa8"/><section>
+    <title>Symbol()</title>
+<indexterm><primary>Symbol</primary><secondary>Knight</secondary></indexterm>
+<indexterm><primary>Knight</primary><secondary>Symbol</secondary></indexterm>
+<para><computeroutput>std::string Knight::Symbol ( ) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+Implements <link linkend="_classPiece_1abc54f78cfc3e6c4ed3d103ddaeb1d96f">Piece</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/huplo/Coding/Projects/C++/chess-game/include/<link linkend="_Knight_8h">Knight.h</link><link linkend="_Knight_8cpp">Knight.cpp</link></section>
+</section>

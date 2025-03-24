@@ -1,0 +1,111 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classCanvas" xml:lang="en-US">
+<title>Canvas Class Reference</title>
+<indexterm><primary>Canvas</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Canvas.h&gt;</computeroutput>
+</para>
+Inheritance diagram for Canvas:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCanvas__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for Canvas:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classCanvas__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classCanvas_1a5fce53f080ad6540094901f9768805a8">Canvas</link> ()</para>
+</listitem>
+            <listitem><para><link linkend="_classCanvas_1ac64895ae1cdfc39c58e95097873e861e">~Canvas</link> ()=default</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classCanvas_1a2b7be68cbe6f527b77c35416ae066f7f">Draw</link> () const =0</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+Static Public Member Functions inherited from <link linkend="_classStyle">Style</link>        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_classStyle_1a38a11d09d6371559e5795c952d44f9d0">Cts</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_classStyle_1a2d36d13fd41a5853a88c269494976e6d">BoldText</link> (const std::string &amp;text)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_classStyle_1ae8e0c4a440744134528e61f912cb5fde">UnderlineText</link> (const std::string &amp;text)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_classStyle_1aa4a805980672163f52cedd6e54082bfe">LinkText</link> (const std::string &amp;text, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> continueColor=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link> ()</para>
+</listitem>
+            <listitem><para>static size_t <link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link> (const std::string &amp;text)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a3b124c68a49d02984eda201c45582731">PrintColored</link> (const std::string &amp;text, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6">PrintColoredLine</link> (const std::string &amp;text, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>, bool endl=true)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1afbf27e0a1814fcdb41a52431451a5752">PrintLine</link> (std::string ch=&quot;─&quot;, int length=50, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a350f6310e8e2c5ed0a3781d56a9617a3">PrintTitle</link> (const std::string &amp;title, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link>)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a5614a5f517f754485702cc7067efc823">PrintBox</link> (const std::string &amp;text, const std::string &amp;title=&quot;&quot;, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</link>, int fixOffset=0)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1aa8360afc84f1305765126889fc2fdca1">PrintSuccess</link> (const std::string &amp;message)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1ae625221bb6eca80773f7f9d2ccada911">PrintWarning</link> (const std::string &amp;message)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a0a7907c969753a314a4d49c0f94ba636">PrintError</link> (const std::string &amp;message)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a32fd215387199b8a96cf7bac5a7fada8">PrintErrorExit</link> (const std::string &amp;error, int code=-1)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1afa7af12144de17dbf2e3c5bb35547ca0">PrintInfo</link> (const std::string &amp;message)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a86d28d05ce8974b1ff88317c5d294eb5">ClearConsole</link> ()</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_classStyle_1a75154acfcb8de2f37fb8d340cef4e83e">GetBoolInput</link> (const std::string &amp;prompt, const std::string &amp;title=&quot;&quot;, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</link>, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> titleColor=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link>)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_classStyle_1ae6c4e5b5dce135d7d912be726271fb3f">GetStringInput</link> (const std::string &amp;prompt, const std::string &amp;title=&quot;&quot;, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</link>, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> titleColor=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link>)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a40fea464a1020972692160df497f3efb">PrintDivider</link> (const std::string &amp;message=&quot;&quot;, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1afe6790c9756b548e74177f1aac11efbd">PrintTable</link> (const std::string &amp;title, const std::vector&lt; std::string &gt; &amp;header, const std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;rows, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classCanvas_1a5fce53f080ad6540094901f9768805a8"/><section>
+    <title>Canvas()</title>
+<indexterm><primary>Canvas</primary><secondary>Canvas</secondary></indexterm>
+<indexterm><primary>Canvas</primary><secondary>Canvas</secondary></indexterm>
+<para><computeroutput>Canvas::Canvas ( )<computeroutput>[inline]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classCanvas_1ac64895ae1cdfc39c58e95097873e861e"/><section>
+    <title>~Canvas()</title>
+<indexterm><primary>~Canvas</primary><secondary>Canvas</secondary></indexterm>
+<indexterm><primary>Canvas</primary><secondary>~Canvas</secondary></indexterm>
+<para><computeroutput>Canvas::~Canvas ( )<computeroutput>[default]</computeroutput></computeroutput></para></section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classCanvas_1a2b7be68cbe6f527b77c35416ae066f7f"/><section>
+    <title>Draw()</title>
+<indexterm><primary>Draw</primary><secondary>Canvas</secondary></indexterm>
+<indexterm><primary>Canvas</primary><secondary>Draw</secondary></indexterm>
+<para><computeroutput>virtual void Canvas::Draw ( ) const<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+Implemented in <link linkend="_classCanvasApp_1a7ce1991bf3631e05017d04781f0d49e3">CanvasApp</link>, and <link linkend="_classChessGame_1a84e2d266d40a56cc33e094087a205b8f">ChessGame</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/huplo/Coding/Projects/C++/chess-game/include/<link linkend="_Canvas_8h">Canvas.h</link></section>
+</section>

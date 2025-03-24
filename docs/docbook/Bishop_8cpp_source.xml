@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_Bishop_8cpp_source" xml:lang="en-US">
+<title>Bishop.cpp</title>
+<indexterm><primary>source/Bishop.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_Bishop_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;../include/Bishop.h&quot;</emphasis>
+<anchor xml:id="_Bishop_8cpp_source_1l00002"/>00002 
+<anchor xml:id="_Bishop_8cpp_source_1l00003"/>00003 Bishop::Bishop(PieceColor&#32;color)
+<anchor xml:id="_Bishop_8cpp_source_1l00004"/>00004 &#32;&#32;&#32;&#32;:
+<anchor xml:id="_Bishop_8cpp_source_1l00005"/>00005 &#32;&#32;&#32;&#32;Piece{color}
+<anchor xml:id="_Bishop_8cpp_source_1l00006"/>00006 {
+<anchor xml:id="_Bishop_8cpp_source_1l00007"/>00007 }
+<anchor xml:id="_Bishop_8cpp_source_1l00008"/>00008 
+<anchor xml:id="_Bishop_8cpp_source_1l00009"/>00009 
+<anchor xml:id="_Bishop_8cpp_source_1l00010"/>00010 std::string&#32;Bishop::Symbol()<emphasis role="keyword">&#32;const&#32;</emphasis>
+<anchor xml:id="_Bishop_8cpp_source_1l00011"/>00011 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_Bishop_8cpp_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="stringliteral">&quot;B&quot;</emphasis>;
+<anchor xml:id="_Bishop_8cpp_source_1l00013"/>00013 }
+<anchor xml:id="_Bishop_8cpp_source_1l00014"/>00014 
+<anchor xml:id="_Bishop_8cpp_source_1l00015"/>00015 <emphasis role="comment">//&#32;Generates&#32;all&#32;possible&#32;moves&#32;for&#32;a&#32;bishop&#32;from&#32;its&#32;current&#32;position.</emphasis>
+<anchor xml:id="_Bishop_8cpp_source_1l00016"/>00016 std::vector&lt;Move&gt;&#32;Bishop::PossibleMoves(Board*&#32;board,&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentX,&#32;<emphasis role="keywordtype">int</emphasis>&#32;currentY)<emphasis role="keyword">&#32;const&#32;</emphasis>{
+<anchor xml:id="_Bishop_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;std::vector&lt;Move&gt;&#32;moves;
+<anchor xml:id="_Bishop_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Diagonal&#32;directions.</emphasis>
+<anchor xml:id="_Bishop_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;directions[4][2]&#32;=&#32;{&#32;{1,1},&#32;{1,-1},&#32;{-1,1},&#32;{-1,-1}&#32;};
+<anchor xml:id="_Bishop_8cpp_source_1l00020"/>00020 
+<anchor xml:id="_Bishop_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">auto</emphasis>&#32;&amp;dir&#32;:&#32;directions)&#32;{
+<anchor xml:id="_Bishop_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;x&#32;=&#32;currentX,&#32;y&#32;=&#32;currentY;
+<anchor xml:id="_Bishop_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(<emphasis role="keyword">true</emphasis>)&#32;{
+<anchor xml:id="_Bishop_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;x&#32;+=&#32;dir[0];
+<anchor xml:id="_Bishop_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;y&#32;+=&#32;dir[1];
+<anchor xml:id="_Bishop_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;bounds.</emphasis>
+<anchor xml:id="_Bishop_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x&#32;&lt;&#32;0&#32;||&#32;x&#32;&gt;=&#32;8&#32;||&#32;y&#32;&lt;&#32;0&#32;||&#32;y&#32;&gt;=&#32;8)
+<anchor xml:id="_Bishop_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_Bishop_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Piece*&#32;piece&#32;=&#32;board-&gt;GetPiece(x,&#32;y);
+<anchor xml:id="_Bishop_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(piece&#32;==&#32;<emphasis role="keyword">nullptr</emphasis>)&#32;{
+<anchor xml:id="_Bishop_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;moves.push_back(Move{currentX,&#32;currentY,&#32;x,&#32;y});
+<anchor xml:id="_Bishop_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{
+<anchor xml:id="_Bishop_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Capture&#32;enemy&#32;piece.</emphasis>
+<anchor xml:id="_Bishop_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(piece-&gt;Color()&#32;!=&#32;m_color)
+<anchor xml:id="_Bishop_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;moves.push_back(Move{currentX,&#32;currentY,&#32;x,&#32;y});
+<anchor xml:id="_Bishop_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_Bishop_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Bishop_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_Bishop_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_Bishop_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;moves;
+<anchor xml:id="_Bishop_8cpp_source_1l00041"/>00041 }
+<anchor xml:id="_Bishop_8cpp_source_1l00042"/>00042 
+<anchor xml:id="_Bishop_8cpp_source_1l00043"/>00043 <emphasis role="comment">//&#32;Uses&#32;the&#32;list&#32;of&#32;possible&#32;moves&#32;to&#32;determine&#32;if&#32;the&#32;move&#32;is&#32;valid.</emphasis>
+<anchor xml:id="_Bishop_8cpp_source_1l00044"/>00044 <emphasis role="keywordtype">bool</emphasis>&#32;Bishop::IsValidMove(Piece*&#32;target,&#32;Board*&#32;board,&#32;Move&amp;&#32;move,&#32;Piece*&amp;&#32;setReplacement)<emphasis role="keyword">&#32;const&#32;</emphasis>{
+<anchor xml:id="_Bishop_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;candidates&#32;=&#32;PossibleMoves(board,&#32;move.getStartX(),&#32;move.getStartY());
+<anchor xml:id="_Bishop_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;Move&amp;&#32;candidate&#32;:&#32;candidates)&#32;{
+<anchor xml:id="_Bishop_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(candidate.getStartX()&#32;==&#32;move.getStartX()&#32;&amp;&amp;
+<anchor xml:id="_Bishop_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;candidate.getStartY()&#32;==&#32;move.getStartY()&#32;&amp;&amp;
+<anchor xml:id="_Bishop_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;candidate.getEndX()&#32;==&#32;move.getEndX()&#32;&amp;&amp;
+<anchor xml:id="_Bishop_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;candidate.getEndY()&#32;==&#32;move.getEndY())
+<anchor xml:id="_Bishop_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_Bishop_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_Bishop_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_Bishop_8cpp_source_1l00054"/>00054 }
+</programlisting></section>

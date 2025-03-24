@@ -1,0 +1,31 @@
+\doxysection{Bot\+Player.\+h}
+\hypertarget{BotPlayer_8h_source}{}\label{BotPlayer_8h_source}\index{/home/huplo/Coding/Projects/C++/chess-\/game/include/BotPlayer.h@{/home/huplo/Coding/Projects/C++/chess-\/game/include/BotPlayer.h}}
+\mbox{\hyperlink{BotPlayer_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BOT\_PLAYER\_\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BOT\_PLAYER\_\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Player_8h}{Player.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <random>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <unordered\_set>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBotPlayer_ad520b04b07027663107b8ad003753fff}{BotPlayer}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classPlayer_ad061cf938c523c0e7d529d5591224250}{Player}}}
+\DoxyCodeLine{00010\ \{}
+\DoxyCodeLine{00011\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classBotPlayer_ad520b04b07027663107b8ad003753fff}{BotPlayer}}(\mbox{\hyperlink{Player_8h_a301cfd5fe9a22cb30292f6e1523247d7}{PlayerColor}}\ color);}
+\DoxyCodeLine{00013\ \ \ \ \ \mbox{\hyperlink{classBotPlayer_a526b7fc1214d8e2e2c009679f18e177d}{\string~BotPlayer}}();}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBotPlayer_a5e79536cccb4c8d9452a79950a598351}{IsBot}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ std::string\ \mbox{\hyperlink{classBotPlayer_aa6c9035eac0ad8b34c124eeb3876d92a}{GetInput}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classBoard}{Board}}*\ \textcolor{keyword}{const}\ board)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00018\ \ \ \ \ std::string\ \mbox{\hyperlink{classBotPlayer_aaf2580fa12448259b5142bff4062f0ab}{Name}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBotPlayer_a36fb5ce4f6a78a751d7a95b7b8ebc1ea}{AddCache}}(std::string\ moveStr);}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBotPlayer_ada837bf49ac76c75947bc77d4af07088}{EmptyCache}}();}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00022\ \ \ \ \ std::unordered\_set<std::string>\ m\_cache\{\};}
+\DoxyCodeLine{00023\ \};}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BOT\_PLAYER\_\_H}}
+
+\end{DoxyCode}

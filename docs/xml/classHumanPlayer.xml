@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classHumanPlayer" kind="class" language="C++" prot="public">
+    <compoundname>HumanPlayer</compoundname>
+    <basecompoundref refid="classPlayer" prot="public" virt="non-virtual">Player</basecompoundref>
+    <includes refid="HumanPlayer_8h" local="no">HumanPlayer.h</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classHumanPlayer_1a0d9e4734d10e497c6b7c7944bfda4a76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HumanPlayer::HumanPlayer</definition>
+        <argsstring>(PlayerColor color)</argsstring>
+        <name>HumanPlayer</name>
+        <qualifiedname>HumanPlayer::HumanPlayer</qualifiedname>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">PlayerColor</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/HumanPlayer.h" line="9" column="5" bodyfile="HumanPlayer.cpp" bodystart="4" bodyend="8"/>
+        <references refid="classPlayer_1ad061cf938c523c0e7d529d5591224250" compoundref="Player_8cpp" startline="3" endline="8">Player::Player</references>
+      </memberdef>
+      <memberdef kind="function" id="classHumanPlayer_1abdeb9d120fc74c8d82ec0c688883f16f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>HumanPlayer::~HumanPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>~HumanPlayer</name>
+        <qualifiedname>HumanPlayer::~HumanPlayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/HumanPlayer.h" line="10" column="5" bodyfile="HumanPlayer.cpp" bodystart="10" bodyend="14"/>
+        <references refid="classPlayer_1aaef4079e864580e1b197620491d74130" compoundref="Player_8h" startline="28">Player::m_captures</references>
+      </memberdef>
+      <memberdef kind="function" id="classHumanPlayer_1a445fac75f6cac55fd6879ed277f010ac" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string HumanPlayer::GetInput</definition>
+        <argsstring>(const Board *const board) const override</argsstring>
+        <name>GetInput</name>
+        <qualifiedname>HumanPlayer::GetInput</qualifiedname>
+        <reimplements refid="classPlayer_1a5afb4b96be0f18b4bc840f44e06072cb">GetInput</reimplements>
+        <param>
+          <type>const <ref refid="classBoard" kindref="compound">Board</ref> *const</type>
+          <declname>board</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/HumanPlayer.h" line="12" column="17" bodyfile="HumanPlayer.cpp" bodystart="21" bodyend="27"/>
+        <references refid="classStyle_1a2dc09d093782de7527aa3b8fec1a79c5" compoundref="Style_8hpp" startline="20" endline="37">Style::Cta</references>
+        <references refid="classStyle_1a38a11d09d6371559e5795c952d44f9d0" compoundref="Style_8hpp" startline="40" endline="57">Style::Cts</references>
+        <references refid="classStyle_1ae6c4e5b5dce135d7d912be726271fb3f" compoundref="Style_8hpp" startline="228" endline="237">Style::GetStringInput</references>
+        <references refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0" compoundref="Style_8hpp" startline="14">GREEN</references>
+        <references refid="classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42" compoundref="Player_8h" startline="27">Player::m_color</references>
+      </memberdef>
+      <memberdef kind="function" id="classHumanPlayer_1a4999d6c988fcc037600e3e8db6f9bbf4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string HumanPlayer::Name</definition>
+        <argsstring>() const override</argsstring>
+        <name>Name</name>
+        <qualifiedname>HumanPlayer::Name</qualifiedname>
+        <reimplements refid="classPlayer_1a313b6e73fb54e242e318579901ee93da">Name</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/HumanPlayer.h" line="13" column="17" bodyfile="HumanPlayer.cpp" bodystart="16" bodyend="19"/>
+        <references refid="classStyle_1a38a11d09d6371559e5795c952d44f9d0" compoundref="Style_8hpp" startline="40" endline="57">Style::Cts</references>
+        <references refid="classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42" compoundref="Player_8h" startline="27">Player::m_color</references>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>HumanPlayer</label>
+        <link refid="classHumanPlayer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Player</label>
+        <link refid="classPlayer"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>HumanPlayer</label>
+        <link refid="classHumanPlayer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Player</label>
+        <link refid="classPlayer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/include/HumanPlayer.h" line="6" column="1" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/HumanPlayer.h" bodystart="7" bodyend="15"/>
+    <listofallmembers>
+      <member refid="classPlayer_1a8600584d0d313d9c9183f8676e30b9c2" prot="public" virt="non-virtual"><scope>HumanPlayer</scope><name>AddCapture</name></member>
+      <member refid="classPlayer_1af97f460cbb2594def32e32d9046f73ec" prot="public" virt="non-virtual"><scope>HumanPlayer</scope><name>Color</name></member>
+      <member refid="classPlayer_1a8248c589e9edeb32a290f48d82bad7ac" prot="public" virt="non-virtual"><scope>HumanPlayer</scope><name>GetCaptures</name></member>
+      <member refid="classHumanPlayer_1a445fac75f6cac55fd6879ed277f010ac" prot="public" virt="virtual"><scope>HumanPlayer</scope><name>GetInput</name></member>
+      <member refid="classHumanPlayer_1a0d9e4734d10e497c6b7c7944bfda4a76" prot="public" virt="non-virtual"><scope>HumanPlayer</scope><name>HumanPlayer</name></member>
+      <member refid="classPlayer_1a09eaaa8872fcb43e72c7739ab619c866" prot="public" virt="virtual"><scope>HumanPlayer</scope><name>IsBot</name></member>
+      <member refid="classPlayer_1aaef4079e864580e1b197620491d74130" prot="protected" virt="non-virtual"><scope>HumanPlayer</scope><name>m_captures</name></member>
+      <member refid="classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42" prot="protected" virt="non-virtual"><scope>HumanPlayer</scope><name>m_color</name></member>
+      <member refid="classHumanPlayer_1a4999d6c988fcc037600e3e8db6f9bbf4" prot="public" virt="virtual"><scope>HumanPlayer</scope><name>Name</name></member>
+      <member refid="classPlayer_1ad061cf938c523c0e7d529d5591224250" prot="public" virt="non-virtual"><scope>HumanPlayer</scope><name>Player</name></member>
+      <member refid="classHumanPlayer_1abdeb9d120fc74c8d82ec0c688883f16f" prot="public" virt="non-virtual"><scope>HumanPlayer</scope><name>~HumanPlayer</name></member>
+      <member refid="classPlayer_1a278aa7f854813b3d53589d51e74c6cf1" prot="public" virt="pure-virtual"><scope>HumanPlayer</scope><name>~Player</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

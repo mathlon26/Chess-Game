@@ -1,0 +1,124 @@
+\doxysection{Piece Class Reference}
+\hypertarget{classPiece}{}\label{classPiece}\index{Piece@{Piece}}
+
+
+{\ttfamily \#include $<$Piece.\+h$>$}
+
+
+
+Inheritance diagram for Piece\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPiece__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f}{Piece}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} color)
+\item 
+virtual \mbox{\hyperlink{classPiece_ab63f5b3faabe6ce60c9eb1806511ff9d}{\texorpdfstring{$\sim$}{\string~}\+Piece}} ()=default
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} \mbox{\hyperlink{classPiece_ad31a695453335fbbc36a9c749395f7c1}{Color}} () const
+\item 
+virtual std\+::string \mbox{\hyperlink{classPiece_abc54f78cfc3e6c4ed3d103ddaeb1d96f}{Symbol}} () const =0
+\item 
+virtual std\+::vector$<$ \mbox{\hyperlink{classMove}{Move}} $>$ \mbox{\hyperlink{classPiece_a1c67fd5e66c3e7b6c1f4ebf3207e65e2}{Possible\+Moves}} (\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}board, int currentX, int currentY) const =0
+\item 
+virtual bool \mbox{\hyperlink{classPiece_a363193ff97c3e10b77feb6aec81d1a35}{Is\+Valid\+Move}} (\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}target, \mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}board, \mbox{\hyperlink{classMove}{Move}} \&move, \mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}\&set\+Replacement) const =0
+\item 
+virtual bool \mbox{\hyperlink{classPiece_a392fecd481d60993e7d6d73116b2e171}{Is\+King}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} \mbox{\hyperlink{classPiece_a757a577b6dfb06c6558021b828ca7c1d}{m\+\_\+color}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f}\index{Piece@{Piece}!Piece@{Piece}}
+\index{Piece@{Piece}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{Piece()}{Piece()}}
+{\footnotesize\ttfamily \label{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f} 
+Piece\+::\+Piece (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}}}]{color}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classPiece_ab63f5b3faabe6ce60c9eb1806511ff9d}\index{Piece@{Piece}!````~Piece@{\texorpdfstring{$\sim$}{\string~}Piece}}
+\index{````~Piece@{\texorpdfstring{$\sim$}{\string~}Piece}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Piece()}{\string~Piece()}}
+{\footnotesize\ttfamily \label{classPiece_ab63f5b3faabe6ce60c9eb1806511ff9d} 
+virtual Piece\+::\texorpdfstring{$\sim$}{\string~}\+Piece (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}, {\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPiece_ad31a695453335fbbc36a9c749395f7c1}\index{Piece@{Piece}!Color@{Color}}
+\index{Color@{Color}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{Color()}{Color()}}
+{\footnotesize\ttfamily \label{classPiece_ad31a695453335fbbc36a9c749395f7c1} 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} Piece\+::\+Color (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+\Hypertarget{classPiece_a392fecd481d60993e7d6d73116b2e171}\index{Piece@{Piece}!IsKing@{IsKing}}
+\index{IsKing@{IsKing}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{IsKing()}{IsKing()}}
+{\footnotesize\ttfamily \label{classPiece_a392fecd481d60993e7d6d73116b2e171} 
+virtual bool Piece\+::\+Is\+King (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Reimplemented in \mbox{\hyperlink{classKing_ae5f6eaa800f8ef88416ab92953451265}{King}}.
+
+\Hypertarget{classPiece_a363193ff97c3e10b77feb6aec81d1a35}\index{Piece@{Piece}!IsValidMove@{IsValidMove}}
+\index{IsValidMove@{IsValidMove}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{IsValidMove()}{IsValidMove()}}
+{\footnotesize\ttfamily \label{classPiece_a363193ff97c3e10b77feb6aec81d1a35} 
+virtual bool Piece\+::\+Is\+Valid\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}}]{target}{, }\item[{\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{\mbox{\hyperlink{classMove}{Move}} \&}]{move}{, }\item[{\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}\&}]{set\+Replacement}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classBishop_aada80a713ad52b68be931e2fa01848dd}{Bishop}}, \mbox{\hyperlink{classKing_ad69ed8cd25086881cabde8d3ad9bb503}{King}}, \mbox{\hyperlink{classKnight_a356a4572773c6b3d415eb4ceaa676bb8}{Knight}}, \mbox{\hyperlink{classPawn_af11d10b5d5f2456eb97d835bf0d8b4f8}{Pawn}}, \mbox{\hyperlink{classQueen_a2263566de92069f92c77f74b0e2175f8}{Queen}}, and \mbox{\hyperlink{classRook_a7ede965f60fe8acd7d673475b04430a7}{Rook}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=288pt]{classPiece_a363193ff97c3e10b77feb6aec81d1a35_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classPiece_a1c67fd5e66c3e7b6c1f4ebf3207e65e2}\index{Piece@{Piece}!PossibleMoves@{PossibleMoves}}
+\index{PossibleMoves@{PossibleMoves}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{PossibleMoves()}{PossibleMoves()}}
+{\footnotesize\ttfamily \label{classPiece_a1c67fd5e66c3e7b6c1f4ebf3207e65e2} 
+virtual std\+::vector$<$ \mbox{\hyperlink{classMove}{Move}} $>$ Piece\+::\+Possible\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{int}]{currentX}{, }\item[{int}]{currentY}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classBishop_a399c419d4fe7882b795b65be5503b2b8}{Bishop}}, \mbox{\hyperlink{classKing_adceeb19b6efe066f1d6882aa859925fd}{King}}, \mbox{\hyperlink{classKnight_a5480f41f242d9069cf48603212124f33}{Knight}}, \mbox{\hyperlink{classPawn_a8e427faba3cb063c2564f8ee7f2cb7f3}{Pawn}}, \mbox{\hyperlink{classQueen_aa5e962499e46e9ea8cdfa25c24404f6d}{Queen}}, and \mbox{\hyperlink{classRook_a0fe3c6cddea8fefe9972c663400bce27}{Rook}}.
+
+\Hypertarget{classPiece_abc54f78cfc3e6c4ed3d103ddaeb1d96f}\index{Piece@{Piece}!Symbol@{Symbol}}
+\index{Symbol@{Symbol}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{Symbol()}{Symbol()}}
+{\footnotesize\ttfamily \label{classPiece_abc54f78cfc3e6c4ed3d103ddaeb1d96f} 
+virtual std\+::string Piece\+::\+Symbol (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{classBishop_ab0ca2dd9d66fbbe8169431083b2eb171}{Bishop}}, \mbox{\hyperlink{classKing_a665e0aa25a08ca43bfa3fbaa7f68d24b}{King}}, \mbox{\hyperlink{classKnight_a69fee9f48cef83fddc0db12895a3daa8}{Knight}}, \mbox{\hyperlink{classPawn_a04ed6a9744fe13c85fee3331df8c8aca}{Pawn}}, \mbox{\hyperlink{classQueen_a60a43f14bf5934550dd3a4d1830754b3}{Queen}}, and \mbox{\hyperlink{classRook_ae7a3c121c8b653efeae7e1b248dffd0a}{Rook}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classPiece_a757a577b6dfb06c6558021b828ca7c1d}\index{Piece@{Piece}!m\_color@{m\_color}}
+\index{m\_color@{m\_color}!Piece@{Piece}}
+\doxysubsubsection{\texorpdfstring{m\_color}{m\_color}}
+{\footnotesize\ttfamily \label{classPiece_a757a577b6dfb06c6558021b828ca7c1d} 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} Piece\+::m\+\_\+color\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/huplo/\+Coding/\+Projects/\+C++/chess-\/game/include/\mbox{\hyperlink{Piece_8h}{Piece.\+h}}\end{DoxyCompactItemize}

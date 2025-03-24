@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.13.2" xml:lang="en-US">
+  <compounddef id="classBotPlayer" kind="class" language="C++" prot="public">
+    <compoundname>BotPlayer</compoundname>
+    <basecompoundref refid="classPlayer" prot="public" virt="non-virtual">Player</basecompoundref>
+    <includes refid="BotPlayer_8h" local="no">BotPlayer.h</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classBotPlayer_1a18677df3a38def55539f32ddfa87e9e8" prot="private" static="no" mutable="no">
+        <type>std::unordered_set&lt; std::string &gt;</type>
+        <definition>std::unordered_set&lt;std::string&gt; BotPlayer::m_cache</definition>
+        <argsstring></argsstring>
+        <name>m_cache</name>
+        <qualifiedname>BotPlayer::m_cache</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/BotPlayer.h" line="22" column="24" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/BotPlayer.h" bodystart="22" bodyend="22"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classBotPlayer_1ad520b04b07027663107b8ad003753fff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BotPlayer::BotPlayer</definition>
+        <argsstring>(PlayerColor color)</argsstring>
+        <name>BotPlayer</name>
+        <qualifiedname>BotPlayer::BotPlayer</qualifiedname>
+        <param>
+          <type><ref refid="Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c" kindref="member">PlayerColor</ref></type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/BotPlayer.h" line="12" column="5" bodyfile="BotPlayer.cpp" bodystart="5" bodyend="9"/>
+        <references refid="classPlayer_1ad061cf938c523c0e7d529d5591224250" compoundref="Player_8cpp" startline="3" endline="8">Player::Player</references>
+      </memberdef>
+      <memberdef kind="function" id="classBotPlayer_1a526b7fc1214d8e2e2c009679f18e177d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BotPlayer::~BotPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>~BotPlayer</name>
+        <qualifiedname>BotPlayer::~BotPlayer</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/BotPlayer.h" line="13" column="5" bodyfile="BotPlayer.cpp" bodystart="11" bodyend="15"/>
+        <references refid="classPlayer_1aaef4079e864580e1b197620491d74130" compoundref="Player_8h" startline="28">Player::m_captures</references>
+      </memberdef>
+      <memberdef kind="function" id="classBotPlayer_1a5e79536cccb4c8d9452a79950a598351" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool BotPlayer::IsBot</definition>
+        <argsstring>() override</argsstring>
+        <name>IsBot</name>
+        <qualifiedname>BotPlayer::IsBot</qualifiedname>
+        <reimplements refid="classPlayer_1a09eaaa8872fcb43e72c7739ab619c866">IsBot</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/BotPlayer.h" line="15" column="10" bodyfile="BotPlayer.cpp" bodystart="54" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="classBotPlayer_1aa6c9035eac0ad8b34c124eeb3876d92a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string BotPlayer::GetInput</definition>
+        <argsstring>(const Board *const board) const override</argsstring>
+        <name>GetInput</name>
+        <qualifiedname>BotPlayer::GetInput</qualifiedname>
+        <reimplements refid="classPlayer_1a5afb4b96be0f18b4bc840f44e06072cb">GetInput</reimplements>
+        <param>
+          <type>const <ref refid="classBoard" kindref="compound">Board</ref> *const</type>
+          <declname>board</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/BotPlayer.h" line="17" column="17" bodyfile="BotPlayer.cpp" bodystart="22" bodyend="52"/>
+        <references refid="classBoard_1a1ff64194b703edb37a5c9770de17e48a" compoundref="Board_8cpp" startline="336" endline="351">Board::GetPossibleMoves</references>
+        <references refid="classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42" compoundref="Player_8h" startline="27">Player::m_color</references>
+        <references refid="classMove_1a1f1dd54e4ef974f1f24277ee14c61beb" compoundref="Move_8cpp" startline="72" endline="79">Move::toString</references>
+      </memberdef>
+      <memberdef kind="function" id="classBotPlayer_1aaf2580fa12448259b5142bff4062f0ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>std::string BotPlayer::Name</definition>
+        <argsstring>() const override</argsstring>
+        <name>Name</name>
+        <qualifiedname>BotPlayer::Name</qualifiedname>
+        <reimplements refid="classPlayer_1a313b6e73fb54e242e318579901ee93da">Name</reimplements>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/BotPlayer.h" line="18" column="17" bodyfile="BotPlayer.cpp" bodystart="17" bodyend="20"/>
+        <references refid="classStyle_1a38a11d09d6371559e5795c952d44f9d0" compoundref="Style_8hpp" startline="40" endline="57">Style::Cts</references>
+        <references refid="classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42" compoundref="Player_8h" startline="27">Player::m_color</references>
+      </memberdef>
+      <memberdef kind="function" id="classBotPlayer_1a36fb5ce4f6a78a751d7a95b7b8ebc1ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BotPlayer::AddCache</definition>
+        <argsstring>(std::string moveStr)</argsstring>
+        <name>AddCache</name>
+        <qualifiedname>BotPlayer::AddCache</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>moveStr</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/BotPlayer.h" line="19" column="10" bodyfile="BotPlayer.cpp" bodystart="59" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="classBotPlayer_1ada837bf49ac76c75947bc77d4af07088" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BotPlayer::EmptyCache</definition>
+        <argsstring>()</argsstring>
+        <name>EmptyCache</name>
+        <qualifiedname>BotPlayer::EmptyCache</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/huplo/Coding/Projects/C++/chess-game/include/BotPlayer.h" line="20" column="10" bodyfile="BotPlayer.cpp" bodystart="64" bodyend="67"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>BotPlayer</label>
+        <link refid="classBotPlayer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Player</label>
+        <link refid="classPlayer"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>BotPlayer</label>
+        <link refid="classBotPlayer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Player</label>
+        <link refid="classPlayer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/huplo/Coding/Projects/C++/chess-game/include/BotPlayer.h" line="9" column="1" bodyfile="/home/huplo/Coding/Projects/C++/chess-game/include/BotPlayer.h" bodystart="10" bodyend="23"/>
+    <listofallmembers>
+      <member refid="classBotPlayer_1a36fb5ce4f6a78a751d7a95b7b8ebc1ea" prot="public" virt="non-virtual"><scope>BotPlayer</scope><name>AddCache</name></member>
+      <member refid="classPlayer_1a8600584d0d313d9c9183f8676e30b9c2" prot="public" virt="non-virtual"><scope>BotPlayer</scope><name>AddCapture</name></member>
+      <member refid="classBotPlayer_1ad520b04b07027663107b8ad003753fff" prot="public" virt="non-virtual"><scope>BotPlayer</scope><name>BotPlayer</name></member>
+      <member refid="classPlayer_1af97f460cbb2594def32e32d9046f73ec" prot="public" virt="non-virtual"><scope>BotPlayer</scope><name>Color</name></member>
+      <member refid="classBotPlayer_1ada837bf49ac76c75947bc77d4af07088" prot="public" virt="non-virtual"><scope>BotPlayer</scope><name>EmptyCache</name></member>
+      <member refid="classPlayer_1a8248c589e9edeb32a290f48d82bad7ac" prot="public" virt="non-virtual"><scope>BotPlayer</scope><name>GetCaptures</name></member>
+      <member refid="classBotPlayer_1aa6c9035eac0ad8b34c124eeb3876d92a" prot="public" virt="virtual"><scope>BotPlayer</scope><name>GetInput</name></member>
+      <member refid="classBotPlayer_1a5e79536cccb4c8d9452a79950a598351" prot="public" virt="virtual"><scope>BotPlayer</scope><name>IsBot</name></member>
+      <member refid="classBotPlayer_1a18677df3a38def55539f32ddfa87e9e8" prot="private" virt="non-virtual"><scope>BotPlayer</scope><name>m_cache</name></member>
+      <member refid="classPlayer_1aaef4079e864580e1b197620491d74130" prot="protected" virt="non-virtual"><scope>BotPlayer</scope><name>m_captures</name></member>
+      <member refid="classPlayer_1adff61d6fe8f9e732c4dbe5a6bbcb5e42" prot="protected" virt="non-virtual"><scope>BotPlayer</scope><name>m_color</name></member>
+      <member refid="classBotPlayer_1aaf2580fa12448259b5142bff4062f0ab" prot="public" virt="virtual"><scope>BotPlayer</scope><name>Name</name></member>
+      <member refid="classPlayer_1ad061cf938c523c0e7d529d5591224250" prot="public" virt="non-virtual"><scope>BotPlayer</scope><name>Player</name></member>
+      <member refid="classBotPlayer_1a526b7fc1214d8e2e2c009679f18e177d" prot="public" virt="non-virtual"><scope>BotPlayer</scope><name>~BotPlayer</name></member>
+      <member refid="classPlayer_1a278aa7f854813b3d53589d51e74c6cf1" prot="public" virt="pure-virtual"><scope>BotPlayer</scope><name>~Player</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

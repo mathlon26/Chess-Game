@@ -1,0 +1,9 @@
+<map id="Bishop::PossibleMoves" name="Bishop::PossibleMoves">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,56,164,83"/>
+<area shape="rect" id="Node000002" href="$classPiece.html#ad31a695453335fbbc36a9c749395f7c1" title=" " alt="" coords="224,5,317,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="136,53,208,33,210,38,137,58"/>
+<area shape="rect" id="Node000003" href="$classBoard.html#ad23c997a2d137d40511dfd327248de3d" title=" " alt="" coords="212,56,329,83"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,67,196,67,196,72,164,72"/>
+<area shape="rect" id="Node000004" href="$classPiece.html#a4f0ea7928c9d57ec8f8b14c88358d01f" title=" " alt="" coords="223,107,318,133"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="137,81,208,100,207,106,136,86"/>
+</map>

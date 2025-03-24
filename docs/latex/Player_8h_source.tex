@@ -1,0 +1,37 @@
+\doxysection{Player.\+h}
+\hypertarget{Player_8h_source}{}\label{Player_8h_source}\index{/home/huplo/Coding/Projects/C++/chess-\/game/include/Player.h@{/home/huplo/Coding/Projects/C++/chess-\/game/include/Player.h}}
+\mbox{\hyperlink{Player_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ PLAYER\_\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ PLAYER\_\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Move_8h}{Move.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Piece_8h}{Piece.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Style_8hpp}{../dependencies/Style.hpp}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Color}}\ \mbox{\hyperlink{Player_8h_a301cfd5fe9a22cb30292f6e1523247d7}{PlayerColor}};}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPlayer_ad061cf938c523c0e7d529d5591224250}{Player}}}
+\DoxyCodeLine{00012\ \{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \mbox{\hyperlink{classPlayer_ad061cf938c523c0e7d529d5591224250}{Player}}(\mbox{\hyperlink{Player_8h_a301cfd5fe9a22cb30292f6e1523247d7}{PlayerColor}}\ color);}
+\DoxyCodeLine{00015\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPlayer_a278aa7f854813b3d53589d51e74c6cf1}{\string~Player}}()\ =\ 0;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classPlayer_a5afb4b96be0f18b4bc840f44e06072cb}{GetInput}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classBoard}{Board}}*\ \textcolor{keyword}{const}\ board)\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keyword}{virtual}\ std::string\ \mbox{\hyperlink{classPlayer_a313b6e73fb54e242e318579901ee93da}{Name}}()\ \textcolor{keyword}{const}\ =\ 0;}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classPlayer_a09eaaa8872fcb43e72c7739ab619c866}{IsBot}}()\ \{\textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\}}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{Player_8h_a301cfd5fe9a22cb30292f6e1523247d7}{PlayerColor}}\ \mbox{\hyperlink{classPlayer_af97f460cbb2594def32e32d9046f73ec}{Color}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00023\ \ \ \ \ std::vector<Piece\ *>\ \mbox{\hyperlink{classPlayer_a8248c589e9edeb32a290f48d82bad7ac}{GetCaptures}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlayer_a8600584d0d313d9c9183f8676e30b9c2}{AddCapture}}(\mbox{\hyperlink{classPiece}{Piece}}\ *captured);}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \textcolor{keyword}{protected}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{Player_8h_a301cfd5fe9a22cb30292f6e1523247d7}{PlayerColor}}\ \mbox{\hyperlink{classPlayer_adff61d6fe8f9e732c4dbe5a6bbcb5e42}{m\_color}};}
+\DoxyCodeLine{00028\ \ \ \ \ std::vector<Piece\ *>\ \mbox{\hyperlink{classPlayer_aaef4079e864580e1b197620491d74130}{m\_captures}};}
+\DoxyCodeLine{00029\ \};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ PLAYER\_\_H}}
+
+\end{DoxyCode}

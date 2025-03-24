@@ -1,0 +1,82 @@
+.TH "HumanPlayer" 3 "Version V4.2.0" "Chess Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+HumanPlayer
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <HumanPlayer\&.h>\fP
+.PP
+Inherits \fBPlayer\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBHumanPlayer\fP (\fBPlayerColor\fP color)"
+.br
+.ti -1c
+.RI "\fB~HumanPlayer\fP ()"
+.br
+.ti -1c
+.RI "std::string \fBGetInput\fP (const \fBBoard\fP *const board) const override"
+.br
+.ti -1c
+.RI "std::string \fBName\fP () const override"
+.br
+.in -1c
+
+Public Member Functions inherited from \fBPlayer\fP
+.in +1c
+.ti -1c
+.RI "\fBPlayer\fP (\fBPlayerColor\fP color)"
+.br
+.ti -1c
+.RI "virtual \fB~Player\fP ()=0"
+.br
+.ti -1c
+.RI "virtual bool \fBIsBot\fP ()"
+.br
+.ti -1c
+.RI "\fBPlayerColor\fP \fBColor\fP () const"
+.br
+.ti -1c
+.RI "std::vector< \fBPiece\fP * > \fBGetCaptures\fP () const"
+.br
+.ti -1c
+.RI "void \fBAddCapture\fP (\fBPiece\fP *captured)"
+.br
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Protected Attributes inherited from \fBPlayer\fP
+.in +1c
+.ti -1c
+.RI "\fBPlayerColor\fP \fBm_color\fP"
+.br
+.ti -1c
+.RI "std::vector< \fBPiece\fP * > \fBm_captures\fP"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "HumanPlayer::HumanPlayer (\fBPlayerColor\fP color)"
+
+.SS "HumanPlayer::~HumanPlayer ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "std::string HumanPlayer::GetInput (const \fBBoard\fP *const board) const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBPlayer\fP\&.
+.SS "std::string HumanPlayer::Name () const\fR [override]\fP, \fR [virtual]\fP"
+
+.PP
+Implements \fBPlayer\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chess Game from the source code\&.

@@ -1,0 +1,134 @@
+\doxysection{Rook Class Reference}
+\hypertarget{classRook}{}\label{classRook}\index{Rook@{Rook}}
+
+
+{\ttfamily \#include $<$Rook.\+h$>$}
+
+
+
+Inheritance diagram for Rook\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=121pt]{classRook__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Rook\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=121pt]{classRook__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRook_ab931760f937ec2cc6934c38c5b92aa86}{Rook}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} color)
+\item 
+\mbox{\hyperlink{classRook_a70d445b94848b22ded850b6f58bc2972}{\texorpdfstring{$\sim$}{\string~}\+Rook}} ()
+\item 
+std\+::string \mbox{\hyperlink{classRook_ae7a3c121c8b653efeae7e1b248dffd0a}{Symbol}} () const override
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classMove}{Move}} $>$ \mbox{\hyperlink{classRook_a0fe3c6cddea8fefe9972c663400bce27}{Possible\+Moves}} (\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}board, int currentX, int currentY) const override
+\item 
+bool \mbox{\hyperlink{classRook_a7ede965f60fe8acd7d673475b04430a7}{Is\+Valid\+Move}} (\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}target, \mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}board, \mbox{\hyperlink{classMove}{Move}} \&move, \mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}\&set\+Replacement) const override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classPiece}{Piece}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f}{Piece}} (\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} color)
+\item 
+virtual \mbox{\hyperlink{classPiece_ab63f5b3faabe6ce60c9eb1806511ff9d}{\texorpdfstring{$\sim$}{\string~}\+Piece}} ()=default
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} \mbox{\hyperlink{classPiece_ad31a695453335fbbc36a9c749395f7c1}{Color}} () const
+\item 
+virtual bool \mbox{\hyperlink{classPiece_a392fecd481d60993e7d6d73116b2e171}{Is\+King}} () const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classPiece}{Piece}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}} \mbox{\hyperlink{classPiece_a757a577b6dfb06c6558021b828ca7c1d}{m\+\_\+color}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRook_ab931760f937ec2cc6934c38c5b92aa86}\index{Rook@{Rook}!Rook@{Rook}}
+\index{Rook@{Rook}!Rook@{Rook}}
+\doxysubsubsection{\texorpdfstring{Rook()}{Rook()}}
+{\footnotesize\ttfamily \label{classRook_ab931760f937ec2cc6934c38c5b92aa86} 
+Rook\+::\+Rook (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{Style_8hpp_ab87bacfdad76e61b9412d7124be44c1c}{Piece\+Color}}}]{color}{}\end{DoxyParamCaption})}
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=256pt]{classRook_ab931760f937ec2cc6934c38c5b92aa86_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRook_a70d445b94848b22ded850b6f58bc2972}\index{Rook@{Rook}!````~Rook@{\texorpdfstring{$\sim$}{\string~}Rook}}
+\index{````~Rook@{\texorpdfstring{$\sim$}{\string~}Rook}!Rook@{Rook}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Rook()}{\string~Rook()}}
+{\footnotesize\ttfamily \label{classRook_a70d445b94848b22ded850b6f58bc2972} 
+Rook\+::\texorpdfstring{$\sim$}{\string~}\+Rook (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRook_a7ede965f60fe8acd7d673475b04430a7}\index{Rook@{Rook}!IsValidMove@{IsValidMove}}
+\index{IsValidMove@{IsValidMove}!Rook@{Rook}}
+\doxysubsubsection{\texorpdfstring{IsValidMove()}{IsValidMove()}}
+{\footnotesize\ttfamily \label{classRook_a7ede965f60fe8acd7d673475b04430a7} 
+bool Rook\+::\+Is\+Valid\+Move (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}}]{target}{, }\item[{\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{\mbox{\hyperlink{classMove}{Move}} \&}]{move}{, }\item[{\mbox{\hyperlink{classPiece}{Piece}} \texorpdfstring{$\ast$}{*}\&}]{set\+Replacement}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_a363193ff97c3e10b77feb6aec81d1a35}{Piece}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classRook_a7ede965f60fe8acd7d673475b04430a7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRook_a0fe3c6cddea8fefe9972c663400bce27}\index{Rook@{Rook}!PossibleMoves@{PossibleMoves}}
+\index{PossibleMoves@{PossibleMoves}!Rook@{Rook}}
+\doxysubsubsection{\texorpdfstring{PossibleMoves()}{PossibleMoves()}}
+{\footnotesize\ttfamily \label{classRook_a0fe3c6cddea8fefe9972c663400bce27} 
+std\+::vector$<$ \mbox{\hyperlink{classMove}{Move}} $>$ Rook\+::\+Possible\+Moves (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classBoard}{Board}} \texorpdfstring{$\ast$}{*}}]{board}{, }\item[{int}]{currentX}{, }\item[{int}]{currentY}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_a1c67fd5e66c3e7b6c1f4ebf3207e65e2}{Piece}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=316pt]{classRook_a0fe3c6cddea8fefe9972c663400bce27_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRook_ae7a3c121c8b653efeae7e1b248dffd0a}\index{Rook@{Rook}!Symbol@{Symbol}}
+\index{Symbol@{Symbol}!Rook@{Rook}}
+\doxysubsubsection{\texorpdfstring{Symbol()}{Symbol()}}
+{\footnotesize\ttfamily \label{classRook_ae7a3c121c8b653efeae7e1b248dffd0a} 
+std\+::string Rook\+::\+Symbol (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Implements \mbox{\hyperlink{classPiece_abc54f78cfc3e6c4ed3d103ddaeb1d96f}{Piece}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/huplo/\+Coding/\+Projects/\+C++/chess-\/game/include/\mbox{\hyperlink{Rook_8h}{Rook.\+h}}\item 
+\mbox{\hyperlink{Rook_8cpp}{Rook.\+cpp}}\end{DoxyCompactItemize}

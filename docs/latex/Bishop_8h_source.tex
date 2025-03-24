@@ -1,0 +1,27 @@
+\doxysection{Bishop.\+h}
+\hypertarget{Bishop_8h_source}{}\label{Bishop_8h_source}\index{/home/huplo/Coding/Projects/C++/chess-\/game/include/Bishop.h@{/home/huplo/Coding/Projects/C++/chess-\/game/include/Bishop.h}}
+\mbox{\hyperlink{Bishop_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ BISHOP\_\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ BISHOP\_\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Piece_8h}{Piece.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Move_8h}{Move.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Player_8h}{Player.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBishop_a91c9938c3f7722ab62942875041ba05f}{Bishop}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classPiece_a4f0ea7928c9d57ec8f8b14c88358d01f}{Piece}}}
+\DoxyCodeLine{00009\ \{}
+\DoxyCodeLine{00010\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00011\ \ \ \ \ \mbox{\hyperlink{classBishop_a91c9938c3f7722ab62942875041ba05f}{Bishop}}(\mbox{\hyperlink{Piece_8h_a3287fa298adf5d748c8fe84b0b2742ec}{PieceColor}}\ color);}
+\DoxyCodeLine{00012\ \ \ \ \ \mbox{\hyperlink{classBishop_a3705b4537a39d09a59143fe01a62442f}{\string~Bishop}}()\ \{\};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \ \ \ \ std::string\ \mbox{\hyperlink{classBishop_ab0ca2dd9d66fbbe8169431083b2eb171}{Symbol}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00015\ \ \ \ \ std::vector<Move>\ \mbox{\hyperlink{classBishop_a399c419d4fe7882b795b65be5503b2b8}{PossibleMoves}}(\mbox{\hyperlink{classBoard}{Board}}*\ board,\ \textcolor{keywordtype}{int}\ currentX,\ \textcolor{keywordtype}{int}\ currentY)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00016\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classBishop_aada80a713ad52b68be931e2fa01848dd}{IsValidMove}}(\mbox{\hyperlink{classPiece}{Piece}}*\ target,\ \mbox{\hyperlink{classBoard}{Board}}*\ board,\ \mbox{\hyperlink{classMove}{Move}}\&\ move,\ \mbox{\hyperlink{classPiece}{Piece}}*\&\ setReplacement)\ \textcolor{keyword}{const\ override}\ ;}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00021\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ BISHOP\_\_H}}
+
+\end{DoxyCode}

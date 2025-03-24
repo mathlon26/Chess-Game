@@ -1,0 +1,337 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classStyle" xml:lang="en-US">
+<title>Style Class Reference</title>
+<indexterm><primary>Style</primary></indexterm>
+<para>
+<computeroutput>#include &lt;Style.hpp&gt;</computeroutput>
+</para>
+Inheritance diagram for Style:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static std::string <link linkend="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5">Cta</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_classStyle_1a38a11d09d6371559e5795c952d44f9d0">Cts</link> (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_classStyle_1a2d36d13fd41a5853a88c269494976e6d">BoldText</link> (const std::string &amp;text)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_classStyle_1ae8e0c4a440744134528e61f912cb5fde">UnderlineText</link> (const std::string &amp;text)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_classStyle_1aa4a805980672163f52cedd6e54082bfe">LinkText</link> (const std::string &amp;text, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> continueColor=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e">ResetColor</link> ()</para>
+</listitem>
+            <listitem><para>static size_t <link linkend="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793">DisplayLength</link> (const std::string &amp;text)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a3b124c68a49d02984eda201c45582731">PrintColored</link> (const std::string &amp;text, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6">PrintColoredLine</link> (const std::string &amp;text, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>, bool endl=true)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1afbf27e0a1814fcdb41a52431451a5752">PrintLine</link> (std::string ch=&quot;─&quot;, int length=50, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a350f6310e8e2c5ed0a3781d56a9617a3">PrintTitle</link> (const std::string &amp;title, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link>)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a5614a5f517f754485702cc7067efc823">PrintBox</link> (const std::string &amp;text, const std::string &amp;title=&quot;&quot;, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</link>, int fixOffset=0)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1aa8360afc84f1305765126889fc2fdca1">PrintSuccess</link> (const std::string &amp;message)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1ae625221bb6eca80773f7f9d2ccada911">PrintWarning</link> (const std::string &amp;message)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a0a7907c969753a314a4d49c0f94ba636">PrintError</link> (const std::string &amp;message)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a32fd215387199b8a96cf7bac5a7fada8">PrintErrorExit</link> (const std::string &amp;error, int code=-1)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1afa7af12144de17dbf2e3c5bb35547ca0">PrintInfo</link> (const std::string &amp;message)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a86d28d05ce8974b1ff88317c5d294eb5">ClearConsole</link> ()</para>
+</listitem>
+            <listitem><para>static bool <link linkend="_classStyle_1a75154acfcb8de2f37fb8d340cef4e83e">GetBoolInput</link> (const std::string &amp;prompt, const std::string &amp;title=&quot;&quot;, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</link>, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> titleColor=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link>)</para>
+</listitem>
+            <listitem><para>static std::string <link linkend="_classStyle_1ae6c4e5b5dce135d7d912be726271fb3f">GetStringInput</link> (const std::string &amp;prompt, const std::string &amp;title=&quot;&quot;, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</link>, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> titleColor=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link>)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1a40fea464a1020972692160df497f3efb">PrintDivider</link> (const std::string &amp;message=&quot;&quot;, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)</para>
+</listitem>
+            <listitem><para>static void <link linkend="_classStyle_1afe6790c9756b548e74177f1aac11efbd">PrintTable</link> (const std::string &amp;title, const std::vector&lt; std::string &gt; &amp;header, const std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp;rows, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color=<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link>)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classStyle_1a2d36d13fd41a5853a88c269494976e6d"/><section>
+    <title>BoldText()</title>
+<indexterm><primary>BoldText</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>BoldText</secondary></indexterm>
+<para><computeroutput>static std::string Style::BoldText (const std::string &amp; text)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classStyle_1a86d28d05ce8974b1ff88317c5d294eb5"/><section>
+    <title>ClearConsole()</title>
+<indexterm><primary>ClearConsole</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>ClearConsole</secondary></indexterm>
+<para><computeroutput>static void Style::ClearConsole ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classStyle_1a2dc09d093782de7527aa3b8fec1a79c5"/><section>
+    <title>Cta()</title>
+<indexterm><primary>Cta</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>Cta</secondary></indexterm>
+<para><computeroutput>static std::string Style::Cta (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classStyle_1a38a11d09d6371559e5795c952d44f9d0"/><section>
+    <title>Cts()</title>
+<indexterm><primary>Cts</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>Cts</secondary></indexterm>
+<para><computeroutput>static std::string Style::Cts (<link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classStyle_1a05aca5e3ba0656e599a9355d5bfa3793"/><section>
+    <title>DisplayLength()</title>
+<indexterm><primary>DisplayLength</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>DisplayLength</secondary></indexterm>
+<para><computeroutput>static size_t Style::DisplayLength (const std::string &amp; text)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classStyle_1a75154acfcb8de2f37fb8d340cef4e83e"/><section>
+    <title>GetBoolInput()</title>
+<indexterm><primary>GetBoolInput</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>GetBoolInput</secondary></indexterm>
+<para><computeroutput>static bool Style::GetBoolInput (const std::string &amp; prompt, const std::string &amp; title = <computeroutput>&quot;&quot;</computeroutput>
+, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color = <computeroutput><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</link></computeroutput>
+, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> titleColor = <computeroutput><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link></computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_a75154acfcb8de2f37fb8d340cef4e83e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1ae6c4e5b5dce135d7d912be726271fb3f"/><section>
+    <title>GetStringInput()</title>
+<indexterm><primary>GetStringInput</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>GetStringInput</secondary></indexterm>
+<para><computeroutput>static std::string Style::GetStringInput (const std::string &amp; prompt, const std::string &amp; title = <computeroutput>&quot;&quot;</computeroutput>
+, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color = <computeroutput><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca8a568e5f41b7e4da88fe5c4a00aad34e">Color::YELLOW</link></computeroutput>
+, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> titleColor = <computeroutput><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link></computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_ae6c4e5b5dce135d7d912be726271fb3f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1aa4a805980672163f52cedd6e54082bfe"/><section>
+    <title>LinkText()</title>
+<indexterm><primary>LinkText</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>LinkText</secondary></indexterm>
+<para><computeroutput>static std::string Style::LinkText (const std::string &amp; text, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> continueColor = <computeroutput><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link></computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_aa4a805980672163f52cedd6e54082bfe_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1a5614a5f517f754485702cc7067efc823"/><section>
+    <title>PrintBox()</title>
+<indexterm><primary>PrintBox</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>PrintBox</secondary></indexterm>
+<para><computeroutput>static void Style::PrintBox (const std::string &amp; text, const std::string &amp; title = <computeroutput>&quot;&quot;</computeroutput>
+, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color = <computeroutput><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca9de0e5dd94e861317e74964bed179fa0">Color::GREEN</link></computeroutput>
+, int fixOffset = <computeroutput>0</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_a5614a5f517f754485702cc7067efc823_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1a3b124c68a49d02984eda201c45582731"/><section>
+    <title>PrintColored()</title>
+<indexterm><primary>PrintColored</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>PrintColored</secondary></indexterm>
+<para><computeroutput>static void Style::PrintColored (const std::string &amp; text, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color = <computeroutput><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link></computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_a3b124c68a49d02984eda201c45582731_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1a44cd112d7cf5f3ff9f7a54835cb177d6"/><section>
+    <title>PrintColoredLine()</title>
+<indexterm><primary>PrintColoredLine</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>PrintColoredLine</secondary></indexterm>
+<para><computeroutput>static void Style::PrintColoredLine (const std::string &amp; text, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color = <computeroutput><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link></computeroutput>
+, bool endl = <computeroutput>true</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_a44cd112d7cf5f3ff9f7a54835cb177d6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1a40fea464a1020972692160df497f3efb"/><section>
+    <title>PrintDivider()</title>
+<indexterm><primary>PrintDivider</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>PrintDivider</secondary></indexterm>
+<para><computeroutput>static void Style::PrintDivider (const std::string &amp; message = <computeroutput>&quot;&quot;</computeroutput>
+, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color = <computeroutput><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link></computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_a40fea464a1020972692160df497f3efb_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1a0a7907c969753a314a4d49c0f94ba636"/><section>
+    <title>PrintError()</title>
+<indexterm><primary>PrintError</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>PrintError</secondary></indexterm>
+<para><computeroutput>static void Style::PrintError (const std::string &amp; message)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_a0a7907c969753a314a4d49c0f94ba636_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1a32fd215387199b8a96cf7bac5a7fada8"/><section>
+    <title>PrintErrorExit()</title>
+<indexterm><primary>PrintErrorExit</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>PrintErrorExit</secondary></indexterm>
+<para><computeroutput>static void Style::PrintErrorExit (const std::string &amp; error, int code = <computeroutput>-1</computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_a32fd215387199b8a96cf7bac5a7fada8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1afa7af12144de17dbf2e3c5bb35547ca0"/><section>
+    <title>PrintInfo()</title>
+<indexterm><primary>PrintInfo</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>PrintInfo</secondary></indexterm>
+<para><computeroutput>static void Style::PrintInfo (const std::string &amp; message)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_afa7af12144de17dbf2e3c5bb35547ca0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1afbf27e0a1814fcdb41a52431451a5752"/><section>
+    <title>PrintLine()</title>
+<indexterm><primary>PrintLine</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>PrintLine</secondary></indexterm>
+<para><computeroutput>static void Style::PrintLine (std::string ch = <computeroutput>&quot;─&quot;</computeroutput>
+, int length = <computeroutput>50</computeroutput>
+, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color = <computeroutput><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link></computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_afbf27e0a1814fcdb41a52431451a5752_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1aa8360afc84f1305765126889fc2fdca1"/><section>
+    <title>PrintSuccess()</title>
+<indexterm><primary>PrintSuccess</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>PrintSuccess</secondary></indexterm>
+<para><computeroutput>static void Style::PrintSuccess (const std::string &amp; message)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_aa8360afc84f1305765126889fc2fdca1_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1afe6790c9756b548e74177f1aac11efbd"/><section>
+    <title>PrintTable()</title>
+<indexterm><primary>PrintTable</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>PrintTable</secondary></indexterm>
+<para><computeroutput>static void Style::PrintTable (const std::string &amp; title, const std::vector&lt; std::string &gt; &amp; header, const std::vector&lt; std::vector&lt; std::string &gt; &gt; &amp; rows, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color = <computeroutput><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca5b39c8b553c821e7cddc6da64b5bd2ee">Color::DEFAULT</link></computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_afe6790c9756b548e74177f1aac11efbd_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1a350f6310e8e2c5ed0a3781d56a9617a3"/><section>
+    <title>PrintTitle()</title>
+<indexterm><primary>PrintTitle</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>PrintTitle</secondary></indexterm>
+<para><computeroutput>static void Style::PrintTitle (const std::string &amp; title, <link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1c">Color</link> color = <computeroutput><link linkend="_Style_8hpp_1ab87bacfdad76e61b9412d7124be44c1ca344dd8cd533280795b9db82ef0c92749">Color::CYAN</link></computeroutput>
+)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_a350f6310e8e2c5ed0a3781d56a9617a3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1ae625221bb6eca80773f7f9d2ccada911"/><section>
+    <title>PrintWarning()</title>
+<indexterm><primary>PrintWarning</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>PrintWarning</secondary></indexterm>
+<para><computeroutput>static void Style::PrintWarning (const std::string &amp; message)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para>Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classStyle_ae625221bb6eca80773f7f9d2ccada911_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classStyle_1ac28a3cd98cd6983e617e7d455bd4098e"/><section>
+    <title>ResetColor()</title>
+<indexterm><primary>ResetColor</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>ResetColor</secondary></indexterm>
+<para><computeroutput>static std::string Style::ResetColor ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<anchor xml:id="_classStyle_1ae8e0c4a440744134528e61f912cb5fde"/><section>
+    <title>UnderlineText()</title>
+<indexterm><primary>UnderlineText</primary><secondary>Style</secondary></indexterm>
+<indexterm><primary>Style</primary><secondary>UnderlineText</secondary></indexterm>
+<para><computeroutput>static std::string Style::UnderlineText (const std::string &amp; text)<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para></section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/huplo/Coding/Projects/C++/chess-game/dependencies/<link linkend="_Style_8hpp">Style.hpp</link></section>
+</section>

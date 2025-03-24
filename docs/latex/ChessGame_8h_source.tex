@@ -1,0 +1,50 @@
+\doxysection{Chess\+Game.\+h}
+\hypertarget{ChessGame_8h_source}{}\label{ChessGame_8h_source}\index{/home/huplo/Coding/Projects/C++/chess-\/game/include/ChessGame.h@{/home/huplo/Coding/Projects/C++/chess-\/game/include/ChessGame.h}}
+\mbox{\hyperlink{ChessGame_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CHESS\_GAME\_\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CHESS\_GAME\_\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{CanvasApp_8h}{CanvasApp.h}}"{}}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{TwoPlayerGame_8h}{TwoPlayerGame.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Board_8h}{Board.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <atomic>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <thread>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ <chrono>}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classChessGame_a7c9d1caa97c7ca5737f187a6066662b2}{ChessGame}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCanvasApp_af9ee675c88f6e09bc052de53d5afd4b5}{CanvasApp}},\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classTwoPlayerGame_ab72050bd05184152737eac9567c63aa9}{TwoPlayerGame}}}
+\DoxyCodeLine{00013\ \{}
+\DoxyCodeLine{00014\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00015\ \ \ \ \ \mbox{\hyperlink{classChessGame_a7c9d1caa97c7ca5737f187a6066662b2}{ChessGame}}();}
+\DoxyCodeLine{00016\ \ \ \ \ \mbox{\hyperlink{classChessGame_a9c7f4475dcd31ab4e1f98f033fb0c60f}{\string~ChessGame}}();}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChessGame_a5db0ea5be23412676881812bd9056e56}{Run}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChessGame_a2640c47a2ac9aa47f4db38d5e521c123}{SetupPlayers}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChessGame_af3b9c1ca3bdb26f1e808487b94e0ddde}{Init}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChessGame_ab121238a7f75644fb772fec4491865a8}{Update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChessGame_a84e2d266d40a56cc33e094087a205b8f}{Draw}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChessGame_a435491b07e8ed046f58f6ab6aa6b642c}{EndGame}}(\mbox{\hyperlink{classPlayer}{Player}}*\ winner,\ \textcolor{keywordtype}{bool}\ resign=\textcolor{keyword}{false},\ \textcolor{keywordtype}{bool}\ notime=\textcolor{keyword}{false});}
+\DoxyCodeLine{00025\ }
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChessGame_a8da52c5aea5b9eb826ee1f2ea4bccb47}{SetupTimers}}();}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChessGame_ada39148a5117f4ad234761eea1381280}{TimerThreadFunction}}();}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChessGame_ab09da31d868fcfd772b7746670add659}{StartTimer}}();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classChessGame_a9d0066f004b8097e53bdc941d4d6c34d}{StopTimer}}();}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ }
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{classMove}{Move}}\ \mbox{\hyperlink{classChessGame_a87facfa390c37a8fcaf36279c098fc1e}{GetPlayerMove}}();}
+\DoxyCodeLine{00033\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00034\ \ \ \ \ \mbox{\hyperlink{classBoard}{Board}}*\ m\_board;}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ m\_increment;}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ m\_timerOne;}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{size\_t}\ m\_timerTwo;}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ std::atomic<bool>\ m\_timerActive\{\textcolor{keyword}{false}\};}
+\DoxyCodeLine{00040\ \ \ \ \ std::chrono::steady\_clock::time\_point\ m\_moveStartTime;}
+\DoxyCodeLine{00041\ \ \ \ \ std::thread\ m\_timerThread;}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ CHESS\_GAME\_\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,72 @@
+.TH "TwoPlayerGame" 3 "Version V4.2.0" "Chess Game" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+TwoPlayerGame
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fR#include <TwoPlayerGame\&.h>\fP
+.PP
+Inherited by \fBChessGame\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTwoPlayerGame\fP ()"
+.br
+.ti -1c
+.RI "\fB~TwoPlayerGame\fP ()"
+.br
+.ti -1c
+.RI "\fBPlayer\fP * \fBGetPlayerOnTurn\fP ()"
+.br
+.ti -1c
+.RI "\fBPlayer\fP * \fBSwitchTurn\fP ()"
+.br
+.ti -1c
+.RI "virtual void \fBSetupPlayers\fP ()=0"
+.br
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBPlayer\fP * \fBm_playerOne\fP {nullptr}"
+.br
+.ti -1c
+.RI "\fBPlayer\fP * \fBm_playerTwo\fP {nullptr}"
+.br
+.ti -1c
+.RI "\fBPlayer\fP * \fBm_playerOnTurn\fP {nullptr}"
+.br
+.in -1c
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "TwoPlayerGame::TwoPlayerGame ()"
+
+.SS "TwoPlayerGame::~TwoPlayerGame ()"
+
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBPlayer\fP * TwoPlayerGame::GetPlayerOnTurn ()"
+
+.SS "virtual void TwoPlayerGame::SetupPlayers ()\fR [pure virtual]\fP"
+
+.PP
+Implemented in \fBChessGame\fP\&.
+.SS "\fBPlayer\fP * TwoPlayerGame::SwitchTurn ()"
+
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBPlayer\fP* TwoPlayerGame::m_playerOne {nullptr}\fR [protected]\fP"
+
+.SS "\fBPlayer\fP* TwoPlayerGame::m_playerOnTurn {nullptr}\fR [protected]\fP"
+
+.SS "\fBPlayer\fP* TwoPlayerGame::m_playerTwo {nullptr}\fR [protected]\fP"
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Chess Game from the source code\&.
